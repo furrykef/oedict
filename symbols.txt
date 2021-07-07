@@ -1,0 +1,31 @@
+Noun types:
+  * n[g]: [gender] strong noun [e.g., nm: stān]
+  * n[g]w: [gender] weak noun [e.g., nfw: dūce]
+  * n[g]v: [gender] vocalic noun [e.g., nmv: mann]
+  * sg: singular only
+  * pl: plural only
+
+Adjectives:
+  * adj: adjective
+  * adjs: strong-only adjective
+
+Verb types:
+  * vw[n]: weak class n (1-3)
+  * vs[n]: strong class n (1-7)
+  * vi: irregular verb
+
+Verb forms:
+  * 1sg: first-person present singular indicative form
+  * 2sg: second-person present singular indicative form
+  * 3sg: third-person present singular indicative form
+  * pl: plural present singular indicative [needed only for wesan]
+  * subj: singular present subjunctive form
+  * past: weak verb past tense stem (without -e)
+  * past.s: strong verb past tense forms (first-person singular and plural)
+  * pp: past participle
+
+In many cases, irregular forms can be inferred: 
+  * the present plural indicative and imperative plural are inferred from the infinitive
+  * past subjunctive forms are inferred from the past indicative
+  * a vw1 ending in -ellan will be assumed to have the past tense stem -eald
+

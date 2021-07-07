@@ -1,0 +1,532 @@
+ac, conj:
+    but
+ān, adj: masc.acc.sg. ǣnne|ānne
+    one; a certain
+and, conj:
+    and
+andswarian, vw1, vw2:
+    to answer
+andswerian, vw1, vw2: see andswarian
+āscian, vw2:
+    to ask
+assa, nmw:
+    donkey, ass
+āxian, vw2: see āscian
+ǣlċ, adj:
+    each
+ǣniġ, adj:
+    any
+bān, nn:
+    bone
+bār, nm:
+    boar
+bāt, nm, nf:
+    boat
+be, prep:
+    by, about
+bearn, nn:
+    child
+bēo, nf: acc.sg bēo; gen.sg bēo; dat.sg bēo; nom.pl bēon; gen.pl bēona; dat.pl bēom
+    bee
+bēon, vi: 1sg bēo; 2sg bist; 3sg biþ; past.s wæs, wǣron
+    to be, esp. in the future
+bera, nmw:
+    bear (animal)
+beran, vs4:
+    to bear, carry
+berstan, vs3:
+    to burst
+biblioþēċe, nfw:
+    library; collection of books in one volume; the Bible
+biċċe, nfw:
+    bitch, female dog
+bindan, vs3:
+    to bind
+bird, nm:
+    chick, young bird
+blāwan, vs7:
+    to blow
+brid, nm: see bird
+bringan, vw1: past brōht
+    to bring
+bōc, nfv:
+    book
+brytta, nmw:
+    vendor
+būtan, conj:
+    except; unless
+būtan, adv:
+    only
+byċġan, vw1: 2sg byġst; 3sg byġþ; past boht
+    to buy
+byrdling, nm:
+    turtle
+catt, nm:
+    cat
+catte, nfw:
+    female cat
+ċēapstōw, nf:
+    market
+ċēosan, vs2:
+    to choose
+ċicen, nm:
+    chicken
+ċīese, nm:
+    cheese
+ċild, nn: nom.pl ċild|ċildru|ċildra; gen.pl ċilda|ċildra; dat.pl ċildum|ċildrum
+    child
+cniht, nm:
+    boy; knight
+cocc, nm:
+    rooster, cock, male bird
+cū, nfv:
+    cow
+cuman, vs5: past.s cōm, cōmon
+    to come
+cūþ, adj:
+    known
+cwellan, vw1:
+    to kill; quell
+cwēn, nf:
+    queen; wife
+cweþan, vs5:
+    to say
+cyċene, nfw:
+    kitchen
+cyning, nm:
+    king
+cynn, nn:
+    kind; family; grammatical gender
+dā, nfw: acc.sg dān; gen.sg dān; dat.sg dān; nom.pl dān; gen.pl dāna; dat.pl dām|dāum
+    doe, female deer
+dæġ, nm:
+    day
+dǣl, nm:
+    part, portion
+dēad, adj:
+    dead
+dēman, vw1:
+    to deem, consider
+dēofol, nn:
+    devil
+dēor, nn:
+    wild animal, beast
+dōn, vi: 2sg dēst; 3sg dēþ; past dyd; pp dōn
+    to do
+drīfan, vs1:
+    to drive
+drincan, vs3:
+    to drink
+dūce, nfw:
+    duck (bird)
+dūfan, vs2:
+    to dive
+dwellan, vw1:
+    to mislead; to linger
+ēa, nf: acc.sg ēa; gen.sg ēa; dat.sg ēa; nom.pl ēa; gen.pl ēa; dat.pl ēam|ēaum
+    river
+ēac, adv:
+    also
+ēage, nnw:
+    eye
+ēalā, int:
+    lo, hey; hello
+eall, adjs:
+    all, whole, entire
+ēare, nnw:
+    ear
+earm, nm:
+    arm
+ellen, nm, nn:
+    valor
+esol, nm:
+    donkey
+etan, vs5: past ǣt, ǣton
+    to eat
+faran, vs6:
+    to travel; fare
+feoh, nns: gen.sg. fēos; dat.sg. fēo
+    money, goods, wealth; cattle
+feohtan, vs3:
+    to fight
+finger, nm:
+    finger
+fisċ, nm: nom.pl fisċas|fixas; gen.pl fisċa|fixa; dat.pl fisċum|fixum
+    fish
+flā, nfw: acc.sg flān; gen.sg flān; dat.sg flān; nom.pl flān; gen.pl flāna; dat.pl flām|flāum
+    arrow
+flān, nm, nf:
+    arrow
+flǣsċ, nn:
+    meat, flesh
+for, prep:
+    for; because of
+forþām, adv: see forþȳ
+forþǣm, adv: see forþȳ
+forþon, adv: see forþȳ
+forþȳ, adv:
+    because of this, therefore, thus; [esp. with þe] because; since; for
+fōt, nmv:
+    foot
+fox, nm:
+    fox
+fram, prep:
+    from
+fremman, vw1:
+    to do, perform
+fugol, nm:
+    bird, fowl
+fyxen, nf:
+    vixen, female fox
+gān, vi: 2sg gǣst; 3sg gǣþ; past ēod; pp gān
+    to do
+gangern, nn:
+    privy, outhouse, toilet
+gāst, nm:
+    spirit, ghost; breath
+gǣst, nm: see gāst
+ġēa, int:
+    yes, yea, yeah
+ġeendian, vw2:
+    to end
+ġēse, int:
+    yes
+ġe-sēon, vs5: 2sg ġesiehst; 3sg ġesiehþ; past.s ġeseah, ġesāwon; pp ġesewen
+    to see
+ġiefan, vs5:
+    to give
+ġiefu, nf:
+    gift
+ġieldan, vs3:
+    to yield
+god, nm:
+    god; God (Jehovah)
+gōd, adj: comp betera; sup betst; adv well
+    good
+gōs, nfv:
+    goose
+gold, nn:
+    gold
+guma, nmw:
+    man
+gylden, adj:
+    golden
+habban, vw3: 1sg hæbbe; 2sg hæfst|hafast; 3sg hæfþ|hafaþ; past hæfd; imp hafa; pres.p hæbbende
+    to have
+hāl, adj:
+    healthy, hale
+hām, nm:
+    home
+hām, adv:
+    home, homeward
+hana, nmw:
+    rooster; cock
+hand, nf:
+    hand
+hātan, vs7: past.s hēt, hēton
+    to call; order, command
+hatian, vw2:
+    to hate
+hēafod, nn:
+    head
+healdan, vs7:
+    to hold
+helpan, vs3:
+    to help
+henn, nf:
+    hen
+heofon, nm:
+    heaven
+hīeran, vw1:
+    to hear
+hlāf, nm:
+    bread
+hlāford, nm:
+    lord
+hors, nn:
+    horse
+hran, nm:
+    whale
+hring, nm:
+    ring
+hrinġan, vw1:
+    to ring
+hunta, nmw:
+    hunter
+huntian, vw2:
+    to hunt
+hūs, nn: dat.sg hūs|hūse
+    house
+hwā, pron:
+    who
+hwæl, nm:
+    whale
+hwæt, pron:
+    what
+hyċġan, vw3: 2sg hyġst; 3sg hyġþ; past hogd
+    to think, cogitate
+land, nn:
+    land
+lārēow, nm:
+    teacher
+Lǣden, nm, sg:
+    Latin
+lǣran, vw1:
+    to teach
+leornian, vw2:
+    to learn
+libban, vw3: 2sg leofast; 3sg leofaþ; past lifd
+    to live
+līcian, vw2:
+    to be liked [+dat: by someone]; to be pleasing
+lufian, vw2:
+    to love
+lȳtel, adj: comp lǣssa; sup lǣst
+    little, small
+macian, vw2:
+    to make
+maniġ, adjs:
+    many
+mann, nmv:
+    man, person
+meolc, nf:
+    milk
+meolcan, vs3:
+    to milk
+mere, nm:
+    lake, lagoon
+mete, nm:
+    food
+miċel, adj: comp māra; sup mǣst
+    big, large
+mīere, nfw:
+    mare, female horse
+mid, prep:
+    [+dat] with; [+instr] using
+mōna, nmw:
+    moon
+mūs, nf:
+    mouse
+nama, nmw:
+    name
+nǣniġ, adj:
+    not any, no, none
+nā, int:
+    no, nay, nah
+nān, adj:
+    not a, not one, none
+nāwiht, pron:
+    nothing
+ne, adv:
+    not
+    [ne ... ne] neither ... nor
+nerian, vw1:
+    to save
+nesan, vi: 1sg neom; 2sg neart; 3sg nis; pl ne_sind|ne_sindon; subj ne_sīe; past.s næs, nǣron; imp nes
+    to not be
+nēse, int:
+    no, nay
+niht, nf:
+    night
+niman, vs4: past.s nōm, nōmon
+    to take
+nū, adv:
+    now
+nyllan, vi: 1sg nylle; 2sg nylt; 3sg nyle; past nold
+    to not want
+of, prep:
+    from, out of
+ofer, prep:
+    over
+on, prep:
+    on, in, at
+on-ġinnan, vs3:
+    to begin
+oþ, prep:
+    until
+ōþer, adjs:
+    other, another, second
+oþþe, conj:
+    or
+oxa, nmw:
+    ox
+rā, nmw: acc.sg rān; gen.sg rān; dat.sg rān; nom.pl rān; gen.pl rāna; dat.pl rām|rāum
+    roe deer, roebuck
+rād, nf:
+    ride
+ramm, nm:
+    ram (animal); battering ram
+rǣdan, vs7:
+    to read; to advise
+rīċe, adj:
+    rich
+rīċe, nn:
+    kingdom
+rīdan, vs1:
+    to ride
+riht, adj:
+    right; straight
+sǣ, nm: acc.sg sǣ, dat.sg sǣ, gen.pl sǣ, nom.pl sǣ, gen.pl sǣwa, dat.pl sǣm|sǣwum
+    sea
+sǣd, nn:
+    seed
+sċēap, nf:
+    sheep
+sċēaphierde, nm:
+    shepherd
+sċīnan, vs1:
+    to shine
+sċip, nn:
+    ship
+se, pron:
+    the, that
+seċġan, vw3: 2sg sæġst; 3sg sæġþ; past sæġd; imp saga
+    to say
+sellan, vw1:
+    to give; to sell
+sēoc, adj:
+    sick, ill, unwell
+seolfren, adj:
+    silver
+seolfor, nn:
+    silver
+sēon, vs5: 2sg siehst; 3sg siehþ; past.s seah, sāwon; pp sewen
+    to see
+singan, vs3:
+    to sing
+slǣpan, vs7:
+    to sleep
+slēpan, vs7: see slǣpan
+sōþ, nn:
+    truth
+spillan, vw1:
+    to destroy
+spinnan, vs3:
+    to spin
+sprecan, vs5:
+    to speak
+stān, nm:
+    stone
+standan, vs6:
+    to stand
+steorfan, vs3:
+    to die
+steorra, nmw:
+    star
+stincan, vs3:
+    to give off a smell; to stink
+stingan, vs3:
+    to sting
+stōw, nf:
+    place
+sunne, nfw:
+    sun
+swā, adv:
+    so, to that extent, in that way
+    [swā ... swā] as ... as
+swan, nm:
+    swan
+swefan, vs5:
+    to sleep
+swellan, vs3:
+    to swell
+sweltan, vs3:
+    to die
+swīn, nn:
+    swine, pig; pork
+swīnhierde, nm:
+    swineherd, pig farmer
+swīþe, adv:
+    very, quite
+tā, nmw: acc.sg tān; gen.sg tān; dat.sg tān; nom.pl tān; gen.pl tāna; dat.pl tām|tāum
+    toe
+tellan, vw1:
+    to count; to tell
+teors, nm:
+    penis
+titt, nm:
+    teat, nipple; breast
+tō, adv:
+    too
+tō, prep:
+    to
+tōdæġ, adv:
+    today
+trēow, nn:
+    tree
+tunge, nfw:
+    tongue; language
+tungol, nn:
+    star
+þancian, vw2:
+    to thank [+dat: someone] [+gen: for something]
+þæt, conj:
+    that
+þe, part:
+    that, who [optionally preceded by a form of se]
+þenċan, vw1: past þōht
+    to think, opine
+þes, pron:
+    this
+þing, nn:
+    thing
+þus, adv:
+    thus, in this way
+þynċan, vw1: past þūht
+    to seem [+acc: to someone]
+under, prep:
+    under
+understandan, vs6:
+    to understand
+uton, part:
+    let us, let's
+wacian, vw2:
+    to stay awake; to guard, watch
+wæps, nf:
+    wasp
+wæsp, nf: see wæps
+wearm, adj:
+    warm
+wendan, vw1:
+    to go
+weorold, nf:
+    world
+wepan, vs7:
+    to weep
+wer, nm:
+    man, male
+werewulf, nm: see werwulf
+werwulf, nm:
+    werewolf
+wesan, vi: 1sg eom; 2sg eart; 3sg is; pl sind|sindon; subj sīe; past.s wæs, wǣron; imp wes
+    to be
+wīf, nn:
+    woman
+wīfmann, nm:
+    woman
+wiht, nn:
+    thing; creature
+willan, vi: 1sg wille; 2sg wilt; 3sg wile; past wold
+    to want
+wīs, adj:
+    wise
+wiþ, prep:
+    against
+wrang, nn:
+    wrong, injustice
+wrang, adj:
+    rough, uneven; wrong
+wrītan, vs1:
+    to write
+wulf, nm:
+    wolf
+wull, nf:
+    wool
+wyllen, adj:
+    woolen
+wuton, int: see uton
+ymb, prep:
+    around; about, concerning
+yfel, adj: comp wyrsa; sup wyrst
+    bad, unskilled; evil
+
