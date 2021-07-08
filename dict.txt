@@ -4,9 +4,9 @@ ac, conj:
     one; a certain
 and, conj:
     and
-andswarian, vw1, vw2:
+and-swarian, vw1, vw2:
     to answer
-andswerian, vw1, vw2: see andswarian
+and-swerian, vw1, vw2: see andswarian
 āscian, vw2:
     to ask
 assa, nmw:
@@ -51,6 +51,8 @@ bringan, vw1: past brōht
     to bring
 bōc, nfv:
     book
+brēost, nn, nf:
+    chest, bosom, breast
 brytta, nmw:
     vendor
 būtan, conj:
@@ -79,6 +81,8 @@ cniht, nm:
     boy; knight
 cocc, nm:
     rooster, cock, male bird
+cræft, nm:
+    art, craft, skill
 cū, nfv:
     cow
 cuman, vs5: past.s cōm, cōmon
@@ -108,7 +112,7 @@ dēad, adj:
 dēman, vw1:
     to deem, consider
 dēofol, nn:
-    devil
+    devil, Satan
 dēor, nn:
     wild animal, beast
 dōn, vi: 2sg dēst; 3sg dēþ; past dyd; pp dōn
@@ -123,6 +127,10 @@ dūce, nfw:
     duck (bird)
 dūfan, vs2:
     to dive
+dung, nf:
+    dung, manure, feces
+dung, nfv:
+    underground chamber; dungeon
 dwellan, vw1:
     to mislead; to linger
 ēa, nf: acc.sg ēa; gen.sg ēa; dat.sg ēa; nom.pl ēa; gen.pl ēa; dat.pl ēam|ēaum
@@ -141,6 +149,8 @@ earm, nm:
     arm
 ellen, nm, nn:
     courage, bravery, valor
+ēower, adjs:
+    your (of multiple people)
 esol, nm:
     donkey
 etan, vs5: past ǣt, ǣton
@@ -151,6 +161,8 @@ feoh, nns: gen.sg. fēos; dat.sg. fēo
     money, goods, wealth; cattle
 feohtan, vs3:
     to fight
+fēond, nm:
+    enemy, fiend
 finger, nm:
     finger
 fisċ, nm: nom.pl fisċas|fixas; gen.pl fisċa|fixa; dat.pl fisċum|fixum
@@ -168,6 +180,11 @@ forþǣm, adv: see forþȳ
 forþon, adv: see forþȳ
 forþȳ, adv:
     because of this, therefore, thus; [esp. with þe] because; since; for
+forhwām, adv: see forhwȳ
+forhwǣm, adv: see forhwȳ
+forhwon, adv: see forhwȳ
+forhwȳ, adv:
+    why
 fōt, nmv:
     foot
 fox, nm:
@@ -176,6 +193,8 @@ fram, prep:
     from
 fremman, vw1:
     to do, perform
+frēond, nm, nmv:
+    friend
 fugol, nm:
     bird, fowl
 fyxen, nf:
@@ -187,10 +206,17 @@ gangern, nn:
 gāst, nm:
     spirit, ghost; breath
 gǣst, nm: see gāst
+ġe, conj:
+    and
+    [ġe ... ġe] both ... and
+ġē, pron: acc ēow; gen ēower; dat ēow
+    you (plural)
 ġēa, int:
     yes, yea, yeah
-ġeendian, vw2:
+ġe-endian, vw2:
     to end
+ġeō, adv:
+    once (upon a time), formerly
 ġēse, int:
     yes
 ġe-sēon, vs5: 2sg ġesiehst; 3sg ġesiehþ; past.s ġeseah, ġesāwon; pp ġesewen
@@ -201,6 +227,8 @@ gǣst, nm: see gāst
     gift
 ġieldan, vs3:
     to yield
+ġit, pron: acc inc; gen incer; dat inc
+    you two
 god, nm:
     god; God, Jehovah
 gōd, adj: comp betera; sup betst; adv wel
@@ -209,6 +237,8 @@ gōs, nfv:
     goose
 gold, nn:
     gold
+grēat, adj:
+    big, large
 guma, nmw:
     man
 gylden, adj:
@@ -235,6 +265,8 @@ hǣlend, nm:
     healer; Jesus Christ
 hæleþ, nm:
     hero
+hē, pron: acc hine; gen his; dat him
+    he, him; it (referring to a masculine noun)
 hēafod, nn:
     head
 healdan, vs7:
@@ -243,10 +275,16 @@ helpan, vs3:
     to help
 henn, nf:
     hen
+hēo, pron: acc hīe; gen hire; dat hire
+    she, her; it (referring to a feminine noun)
 heofon, nm:
     heaven
+hīe, pron: acc hīe; gen heora; dat him
+    they, them
 hīeran, vw1:
     to hear
+hit, pron: acc hit; gen his; dat him
+    it
 hlāf, nm:
     bread
 hlāford, nm:
@@ -267,14 +305,18 @@ huntian, vw2:
     to hunt
 hūs, nn: dat.sg hūs|hūse
     house
-hwā, pron:
+hwā, pron: acc hwone; gen hwæs; dat hwǣm|hwām
     who
 hwæl, nm:
     whale
-hwæt, pron:
+hwæt, pron: acc hwæt; gen hwæs; dat hwǣm|hwām
     what
 hyċġan, vw3: 2sg hyġst; 3sg hyġþ; past hogd
     to think, cogitate
+iċ, pron: acc mē; gen mīn; dat mē
+    I, me
+incer, adjs:
+    your (of two people)
 land, nn:
     land
 lārēow, nm:
@@ -287,6 +329,8 @@ lǣrestre, nfw:
     female teacher
 leornian, vw2:
     to learn
+lēoþ, nn:
+    song, poem
 libban, vw3: 2sg leofast; 3sg leofaþ; past lifd
     to live
 līcian, vw2:
@@ -315,6 +359,8 @@ mīere, nfw:
     mare, female horse
 mid, prep:
     [+dat] with; [+instr] using
+mīn, adjs:
+    my, mine
 mōna, nmw:
     moon
 mūs, nf:
@@ -327,7 +373,7 @@ nā, int:
     no, nay, nah
 nān, adj:
     not a, not one, none
-nāwiht, pron:
+nāwiht, pron: acc nāwiht; gen nāwihtes; dat nāwihte
     nothing
 ne, adv:
     not
@@ -382,6 +428,8 @@ sǣ, nm: acc.sg sǣ, dat.sg sǣ, gen.pl sǣ, nom.pl sǣ, gen.pl sǣwa, dat.pl s�
     sea
 sǣd, nn:
     seed
+sæl, nn:
+    hall, esp. a great hall
 sċēap, nf:
     sheep
 sċēaphierde, nm:
@@ -390,20 +438,24 @@ sċīnan, vs1:
     to shine
 sċip, nn:
     ship
-se, pron:
-    the, that
+se, pron: acc þone; gen þæs; dat þǣm|þām; inst þȳ|þon|þē
+    the, that (masculine)
 seċġan, vw3: 2sg sæġst; 3sg sæġþ; past sæġd; imp saga
     to say
 sellan, vw1:
     to give; to sell
+sēo, pron: acc þā; gen þǣre; dat þǣre
+    the, that (feminine)
 sēoc, adj:
     sick, ill, unwell
 seolfren, adj:
-    silver
+    silver, silvery
 seolfor, nn:
     silver
 sēon, vs5: 2sg siehst; 3sg siehþ; past.s seah, sāwon; pp sewen
     to see
+simle, adv:
+    always
 singan, vs3:
     to sing
 slǣpan, vs7:
@@ -470,8 +522,19 @@ tunge, nfw:
     tongue; language
 tungol, nn:
     star
+þā, pron: acc þā; gen þāra; dat þǣm|þām
+    the, those
+þā, adv:
+    then (in some time past)
+þā, conj:
+    then
+    [þā ... þā] when ... then
+þās, pron: acc þās; gen þissa; dat þissum
+    these
 þancian, vw2:
     to thank [+dat: someone] [+gen: for something]
+þæt, pron: acc þæt; gen þæs; dat þǣm|þām; inst þȳ|þon|þē
+    the, that (neuter)
 þæt, conj:
     that
 þætte, conj: see þæt
@@ -479,20 +542,37 @@ tungol, nn:
     that, who [optionally preceded by a form of se]
 þenċan, vw1: past þōht
     to think, opine
-þes, pron:
-    this
+þēos, pron: acc þās; gen þisse|þisre; dat þisse|þisre
+    this (feminine)
+þes, pron: acc þisne; gen þisses; dat þissum; inst þȳs
+    this (masculine)
+þīn, adjs:
+    thy, thine, your (singular)
 þing, nn:
     thing
+þis, pron: acc þis; gen þisses; dat þissum; inst þȳs
+    this (neuter)
+þonne, adv:
+    then
+þonne, conj:
+    then
+    [þonne ... þonne] when ... then
+þū, pron: acc þē; gen þīn; dat þē
+    thou, thee, you (singular)
 þurh, prep:
     through
 þus, adv:
     thus, in this way
 þynċan, vw1: past þūht
     to seem [+acc: to someone]
+uncer, adjs:
+    our (of two people)
 under, prep:
     under
 understandan, vs6:
     to understand
+ūre, adjs:
+    our, ours
 uton, part:
     let us, let's
 wacian, vw2:
@@ -500,6 +580,8 @@ wacian, vw2:
 wæps, nf:
     wasp
 wæsp, nf: see wæps
+wē, pron: acc ūs; gen ūre; dat ūs
+    we, us
 wearm, adj:
     warm
 wel, adv: comp bet; sup betest
@@ -527,8 +609,12 @@ willan, vi: 1sg wille; 2sg wilt; 3sg wile; past wold
     to want
 wīs, adj:
     wise
+wit, pron: acc unc; gen uncer; dat unc
+    we two, us two
 wiþ, prep:
     against
+word, nn:
+    word
 wrang, nn:
     wrong, injustice
 wrang, adj:
