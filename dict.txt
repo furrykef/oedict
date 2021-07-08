@@ -117,6 +117,8 @@ drīfan, vs1:
     to drive
 drincan, vs3:
     to drink
+dryhten, nm:
+    lord; God, Jehovah
 dūce, nfw:
     duck (bird)
 dūfan, vs2:
@@ -200,7 +202,7 @@ gǣst, nm: see gāst
 ġieldan, vs3:
     to yield
 god, nm:
-    god; God (Jehovah)
+    god; God, Jehovah
 gōd, adj: comp betera; sup betst; adv wel
     good
 gōs, nfv:
@@ -227,6 +229,12 @@ hātan, vs7: past.s hēt, hēton
     to call; order, command
 hatian, vw2:
     to hate
+hǣlan, vw1:
+    to heal, cure
+hǣlend, nm:
+    healer; Jesus Christ
+hæleþ, nm:
+    hero
 hēafod, nn:
     head
 healdan, vs7:
@@ -242,7 +250,7 @@ hīeran, vw1:
 hlāf, nm:
     bread
 hlāford, nm:
-    lord
+    lord; God, Jehovah
 hors, nn:
     horse
 hran, nm:
@@ -466,6 +474,7 @@ tungol, nn:
     to thank [+dat: someone] [+gen: for something]
 þæt, conj:
     that
+þætte, conj: see þæt
 þe, part:
     that, who [optionally preceded by a form of se]
 þenċan, vw1: past þōht
@@ -474,6 +483,8 @@ tungol, nn:
     this
 þing, nn:
     thing
+þurh, prep:
+    through
 þus, adv:
     thus, in this way
 þynċan, vw1: past þūht

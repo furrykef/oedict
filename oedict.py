@@ -8,6 +8,10 @@ class Entry(object):
         self.definition = ""
 
 
+class LexiconError(Exception):
+    pass
+
+
 def main(argv=None):
     if argv is None:
         argv = sys.argv[1:]
@@ -20,30 +24,32 @@ def read_lexicon(filename):
     entry = None
     line_num = 0
     with open(filename, "r") as infile:
-        for line in infile:
-            line_num += 1
-            if line.startswith(" "):
-                # Add to most recent entry's definition
-                entry.definition += line
-            else:
-                # Create a new entry if there's anything on this line
-                line = line.strip()
-                if len(line) == 0:
-                    continue
-                if ':' not in line:
-                    print("Line", line_num, ": where's the colon?", file=sys.stderr)
-                    sys.exit(1)
-                split_line = line.split(':')
-                if len(split_line) > 2:
-                    print("Line", line_num, ": too many colons!", file=sys.stderr)
-                    sys.exit(1)
-                lemma = [x.strip() for x in split_line[0].split(",")]
-                headword = lemma[0]
-                types = lemma[1:]
-                special = parse_special(split_line[0]) if len(split_line) > 0 else []
-                entry = Entry(headword)
-                for form in gen_forms(headword, types[0], special):
-                    words[form] = entry
+        try:
+            for line in infile:
+                line_num += 1
+                if line.startswith(" "):
+                    # Add to most recent entry's definition
+                    entry.definition += line
+                else:
+                    # Create a new entry if there's anything on this line
+                    line = line.strip()
+                    if len(line) == 0:
+                        continue
+                    if ':' not in line:
+                        raise LexiconError("Where's the colon?")
+                    split_line = line.split(':')
+                    if len(split_line) > 2:
+                        raise LexiconError("Too many colons!")
+                    lemma = [x.strip() for x in split_line[0].split(",")]
+                    headword = lemma[0]
+                    types = lemma[1:]
+                    special = parse_special(split_line[0]) if len(split_line) > 0 else []
+                    entry = Entry(headword)
+                    for form in gen_forms(headword, types[0], special):
+                        words[form] = entry
+        except LexiconError as err:
+            print("Line", line_num, ":", err, file=sys.stderr)
+            sys.exit(1)
     return words
 
 
@@ -102,6 +108,9 @@ def gen_noun(headword, word_type, special):
             stem + 'a',         # gen.pl
             stem + 'um',        # dat.pl
         ]
+    elif word_type[1:] in ('mv', 'fv'):
+        # Vocalic noun
+        return [headword]
     else:
         # Other
         return [headword]
@@ -130,6 +139,8 @@ def gen_verb(headword, word_type, special):
                 past_stem = short_stem + 'd'
         elif word_type[2] == '2':
             # Weak class II
+            if not headword.endswith("ian"):
+                raise LexiconError("Weak class II verbs must end in -ian")
             short_stem = headword[:-3] + 'a'
             past_stem = headword[:-3] + 'od'
         else:

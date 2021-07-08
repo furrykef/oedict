@@ -2,6 +2,8 @@ Preterite-present verbs
 
 More strong verbs with irregular infinitives
 
+Inflected forms of present and past participles
+
 dæġ, dagas
 
 fugol and lȳtel should contract in inflected forms
@@ -10,7 +12,9 @@ fyxen should have -nn- in forms other than nominative
 
 gōd: don't generate adverbial forms (or else add a way to provide the comparative and superlative of "wel")
 
+hātan has a passive form (iċ hātte, þū hāttest, hē hātte, wē hātton), which we should probably consider a separate, defective verb.
+
 sǣ can be masc. or fem. with different irregular declensions
 
-hātan has a passive form (iċ hātte, þū hāttest, hē hātte, wē hātton), which we should probably consider a separate, defective verb.
+þætte should redirect only to the conjunction form of þæt
 
