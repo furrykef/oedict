@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+import unicodedata
+import unidecode
 import sys
 
 
@@ -46,6 +48,7 @@ def read_lexicon(filename):
                     special = parse_special(split_line[0]) if len(split_line) > 0 else []
                     entry = Entry(headword)
                     for form in gen_forms(headword, types[0], special):
+                        form = normalize(form)
                         if form not in words:
                             words[form] = set()
                         words[form].add(entry)
@@ -171,6 +174,17 @@ def gen_verb(headword, word_type, special):
         return [headword]
 
 
+def normalize(string):
+    string = unicodedata.normalize('NFC', string)
+    string = string.lower()
+    string = string.replace('ð', 'þ')
+    string = unidecode.unidecode(string)
+    if len(string) >= 2 and string[-2] == string[-1]:
+        # Word ends with double letter; reduce
+        string = string[:-1]
+    return string
+
+
 def interactive_mode(words):
     while True:
         try:
@@ -179,7 +193,7 @@ def interactive_mode(words):
             print()
             break
         try:
-            entries = words[inp]
+            entries = words[normalize(inp)]
         except KeyError:
             print("That's not in the dictionary")
             continue
