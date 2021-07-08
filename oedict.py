@@ -46,7 +46,9 @@ def read_lexicon(filename):
                     special = parse_special(split_line[0]) if len(split_line) > 0 else []
                     entry = Entry(headword)
                     for form in gen_forms(headword, types[0], special):
-                        words[form] = entry
+                        if form not in words:
+                            words[form] = set()
+                        words[form].add(entry)
         except LexiconError as err:
             print("Line", line_num, ":", err, file=sys.stderr)
             sys.exit(1)
@@ -105,7 +107,7 @@ def gen_noun(headword, word_type, special):
         return [
             headword,           # nom.sg, sometimes acc.sg
             oblique,            # dat/gen.sg; nom/acc.pl; usu. acc.sg
-            stem + 'a',         # gen.pl
+            stem + 'ena',       # gen.pl
             stem + 'um',        # dat.pl
         ]
     elif word_type[1:] in ('mv', 'fv'):
@@ -177,12 +179,13 @@ def interactive_mode(words):
             print()
             break
         try:
-            entry = words[inp]
+            entries = words[inp]
         except KeyError:
             print("That's not in the dictionary")
             continue
-        print(entry.lemma, ':')
-        print(entry.definition.rstrip())
+        for entry in entries:
+            print(entry.lemma, ':')
+            print(entry.definition.rstrip())
 
 
 if __name__ == '__main__':
