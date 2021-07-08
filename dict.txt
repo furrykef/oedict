@@ -138,7 +138,7 @@ eall, adjs:
 earm, nm:
     arm
 ellen, nm, nn:
-    valor
+    courage, bravery, valor
 esol, nm:
     donkey
 etan, vs5: past ǣt, ǣton
@@ -201,7 +201,7 @@ gǣst, nm: see gāst
     to yield
 god, nm:
     god; God (Jehovah)
-gōd, adj: comp betera; sup betst; adv well
+gōd, adj: comp betera; sup betst; adv wel
     good
 gōs, nfv:
     goose
@@ -251,6 +251,8 @@ hring, nm:
     ring
 hrinġan, vw1:
     to ring
+hund, nm:
+    dog, hound
 hunta, nmw:
     hunter
 huntian, vw2:
@@ -273,6 +275,8 @@ Lǣden, nm, sg:
     Latin
 lǣran, vw1:
     to teach
+lǣrestre, nfw:
+    female teacher
 leornian, vw2:
     to learn
 libban, vw3: 2sg leofast; 3sg leofaþ; past lifd
@@ -487,6 +491,8 @@ wæps, nf:
 wæsp, nf: see wæps
 wearm, adj:
     warm
+wel, adv: comp bet; sup betest
+    well; fastidiously; about, approximately
 wendan, vw1:
     to go
 weorold, nf:
