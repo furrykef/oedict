@@ -14,6 +14,14 @@ assa, nmw:
 āxian, vw2: see āscian
 ǣlċ, adj:
     each
+# TODO: BT and Wiktionary disagree on the vowel length
+æmethyll, nm:
+    anthill
+# TODO: BT and Wiktionary disagree on the vowel length
+æmette, nfw:
+    ant
+# TODO: BT and Wiktionary disagree on the vowel length
+æmetthyll, nm: see æmethyll
 ǣniġ, adj:
     any
 bān, nn:
@@ -24,6 +32,8 @@ bāt, nm, nf:
     boat
 be, prep:
     by, about
+bēam, nm:
+    tree
 bearn, nn:
     child
 bēo, nf: acc.sg bēo; gen.sg bēo; dat.sg bēo; nom.pl bēon; gen.pl bēona; dat.pl bēom
@@ -163,6 +173,8 @@ feohtan, vs3:
     to fight
 fēond, nm:
     enemy, fiend
+feorting, nf:
+    fart, flatulence
 finger, nm:
     finger
 fisċ, nm: nom.pl fisċas|fixas; gen.pl fisċa|fixa; dat.pl fisċum|fixum
@@ -313,6 +325,8 @@ hwæt, pron: acc hwæt; gen hwæs; dat hwǣm|hwām
     what
 hyċġan, vw3: 2sg hyġst; 3sg hyġþ; past hogd
     to think, cogitate
+hyll, nm, nf:
+    hill
 iċ, pron: acc mē; gen mīn; dat mē
     I, me
 incer, adjs:
@@ -502,6 +516,7 @@ swīnhierde, nm:
     swineherd, pig farmer
 swīþe, adv:
     very, quite
+syllan, vw1: see sellan
 tā, nmw: acc.sg tān; gen.sg tān; dat.sg tān; nom.pl tān; gen.pl tāna; dat.pl tām|tāum
     toe
 tellan, vw1:

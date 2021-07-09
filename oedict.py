@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import argparse
 import unicodedata
 import unidecode
 import sys
@@ -17,8 +18,16 @@ class LexiconError(Exception):
 def main(argv=None):
     if argv is None:
         argv = sys.argv[1:]
-    words = read_lexicon("dict.txt")
-    interactive_mode(words)
+    p = argparse.ArgumentParser(description="Kef's Old English dictionary")
+    p.add_argument('-d', '--dict', default='dict.txt', help="filename of dictionary")
+    p.add_argument('-i', '--interactive', action='store_true', help="interactive mode")
+    p.add_argument('word', nargs='*')
+    args = p.parse_args(argv)
+    index = read_lexicon(args.dict)
+    for word in args.word:
+        lookup(index, word)
+    if args.interactive:
+        interactive_mode(index)
 
 
 def read_lexicon(filename):
@@ -35,7 +44,7 @@ def read_lexicon(filename):
                 else:
                     # Create a new entry if there's anything on this line
                     line = line.strip()
-                    if len(line) == 0:
+                    if len(line) == 0 or line[0] == '#':
                         continue
                     if ':' not in line:
                         raise LexiconError("Where's the colon?")
@@ -185,18 +194,22 @@ def normalize(string):
     return string
 
 
-def interactive_mode(words):
+def interactive_mode(index):
     while True:
         try:
-            inp = input("Input a word: ").strip()
+            word = input("Input a word: ").strip()
         except KeyboardInterrupt:
             print()
             break
-        try:
-            entries = words[normalize(inp)]
-        except KeyError:
-            print("That's not in the dictionary")
-            continue
+        lookup(index, word)
+
+
+def lookup(index, word):
+    try:
+        entries = index[normalize(word)]
+    except KeyError:
+        print("Not found:", word)
+    else:
         for entry in entries:
             print(entry.lemma, ':')
             print(entry.definition.rstrip())
