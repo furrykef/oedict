@@ -6,12 +6,14 @@ and, conj:
     and
 and-swarian, vw1, vw2:
     to answer
-and-swerian, vw1, vw2: see andswarian
+and-swerian, vw1, vw2:
+    SEE andswarian
 āscian, vw2:
     to ask
 assa, nmw:
     donkey, ass
-āxian, vw2: see āscian
+āxian, vw2:
+    SEE āscian
 ǣlċ, adj:
     each
 # TODO: BT and Wiktionary disagree on the vowel length
@@ -21,9 +23,12 @@ assa, nmw:
 æmette, nfw:
     ant
 # TODO: BT and Wiktionary disagree on the vowel length
-æmett-hyll, nm: see æmethyll
+æmett-hyll, nm:
+    SEE æmethyll
 ǣniġ, adj:
     any
+bā, pron:
+    both
 bān, nn:
     bone
 bār, nm:
@@ -38,7 +43,7 @@ bearn, nn:
     child
 bēo, nf: acc.sg bēo; gen.sg bēo; dat.sg bēo; nom.pl bēon; gen.pl bēona; dat.pl bēom
     bee
-bēon, vi: 1sg bēo; 2sg bist; 3sg biþ; past.s wæs, wǣron
+bēon, vi: 1sg bēo; 2sg bist; 3sg biþ; past.1sg wæs; past.pl wǣron
     to be, esp. in the future
 bera, nmw:
     bear (animal)
@@ -56,7 +61,8 @@ bird, nm:
     chick, young bird
 blāwan, vs7:
     to blow
-brid, nm: see bird
+brid, nm:
+    SEE bird
 bringan, vw1: past brōht
     to bring
 bōc, nfv:
@@ -95,7 +101,7 @@ cræft, nm:
     art, craft, skill
 cū, nfv:
     cow
-cuman, vs5: past.s cōm, cōmon
+cuman, vs5: past.1sg cōm; past.pl cōmon
     to come
 cūþ, adj:
     known
@@ -161,10 +167,18 @@ dwellan, vw1:
     lo, hey; hello
 eall, adjs:
     all, whole, entire
-ealu, nni: gen.sg ealoþ; dat.sg ealoþ; gen.pl ealeþa
+ealu, nn: gen.sg ealoþ; dat.sg ealoþ; nom.pl -; gen.pl ealeþa; dat.pl -
     ale, beer, intoxicating drink
 ēare, nnw:
     ear
+earfoþ, nn:
+    difficulty, trouble
+earfoþe, adj:
+    hard, difficult
+ēaþe, adv:
+    easily
+ēaþelīċ, adj:
+    easy
 earm, nm:
     arm
 ellen, nm, nn:
@@ -173,7 +187,7 @@ ellen, nm, nn:
     your (of multiple people)
 esol, nm:
     donkey
-etan, vs5: past ǣt, ǣton
+etan, vs5: past.1sg ǣt; past.pl ǣton
     to eat
 faran, vs6:
     to travel; fare
@@ -197,14 +211,20 @@ flǣsċ, nn:
     meat, flesh
 for, prep:
     for; because of
-forþām, adv: see forþȳ
-forþǣm, adv: see forþȳ
-forþon, adv: see forþȳ
+forþām, adv:
+    SEE forþȳ
+forþǣm, adv:
+    SEE forþȳ
+forþon, adv:
+    SEE forþȳ
 forþȳ, adv:
     because of this, therefore, thus; [esp. with þe] because; since; for
-forhwām, adv: see forhwȳ
-forhwǣm, adv: see forhwȳ
-forhwon, adv: see forhwȳ
+forhwām, adv:
+    SEE forhwȳ
+forhwǣm, adv:
+    SEE forhwȳ
+forhwon, adv:
+    SEE forhwȳ
 forhwȳ, adv:
     why
 fōt, nmv:
@@ -229,7 +249,8 @@ gangern, nn:
     privy, outhouse, toilet
 gāst, nm:
     spirit, ghost; breath
-gǣst, nm: see gāst
+gǣst, nm:
+    SEE gāst
 ġe, conj:
     and
     [ġe ... ġe] both ... and
@@ -243,7 +264,7 @@ gǣst, nm: see gāst
     once (upon a time), formerly
 ġēse, int:
     yes
-ġe-sēon, vs5: 2sg ġesiehst; 3sg ġesiehþ; past.s ġeseah, ġesāwon; pp ġesewen
+ġe-sēon, vs5: 2sg ġesiehst; 3sg ġesiehþ; past.1sg ġeseah; past.pl ġesāwon; pp ġesewen
     to see
 ġiefan, vs5:
     to give
@@ -279,7 +300,7 @@ hana, nmw:
     rooster; cock
 hand, nf:
     hand
-hātan, vs7: past.s hēt, hēton
+hātan, vs7: past.1sg hēt; past.pl hēton
     to call; order, command
 hatian, vw2:
     to hate
@@ -287,7 +308,8 @@ hǣlan, vw1:
     to heal, cure
 hǣlend, nm:
     healer; Jesus Christ
-hæle, nm: see hæleþ
+hæle, nm:
+    SEE hæleþ
 hæleþ, nm:
     hero
 hē, pron: acc hine; gen his; dat him
@@ -414,13 +436,15 @@ ne, adv:
     [ne ... ne] neither ... nor
 nerian, vw1:
     to save
-nesan, vi: 1sg neom; 2sg neart; 3sg nis; pl ne_sind|ne_sindon; subj ne_sīe; past.s næs, nǣron; imp nes
+nesan, vi: 1sg neom; 2sg neart; 3sg nis; pl ne_sind|ne_sindon; subj ne_sīe; past.1sg næs; past.pl nǣron; imp nes
     to not be
 nēse, int:
     no, nay
+nīeten, nn:
+    animal
 niht, nf:
     night
-niman, vs4: past.s nōm, nōmon
+niman, vs4: past.1sg nōm; past.pl nōmon
     to take
 nū, adv:
     now
@@ -462,7 +486,7 @@ sārian, vw2:
     to hurt, be sore (physically or emotionally); to be sorry
 sāriġ, adj:
     sorry, grieving
-sǣ, nm: acc.sg sǣ, dat.sg sǣ, gen.pl sǣ, nom.pl sǣ, gen.pl sǣwa, dat.pl sǣm|sǣwum
+sǣ, nm: acc.sg sǣ; dat.sg sǣ; gen.pl sǣ; nom.pl sǣ; gen.pl sǣwa; dat.pl sǣm|sǣwum
     sea
 sǣd, nn:
     seed
@@ -494,7 +518,7 @@ seolfren, adj:
     silver, silvery
 seolfor, nn:
     silver
-sēon, vs5: 2sg siehst; 3sg siehþ; past.s seah, sāwon; pp sewen
+sēon, vs5: 2sg siehst; 3sg siehþ; past.1sg seah; past.pl sāwon; pp sewen
     to see
 simle, adv:
     always
@@ -504,7 +528,8 @@ singan, vs3:
     to sing
 slǣpan, vs7:
     to sleep
-slēpan, vs7: see slǣpan
+slēpan, vs7:
+    SEE slǣpan
 smeortan, vs3:
     to smart, sting, hurt
 sōþ, nn:
@@ -548,7 +573,8 @@ swīn-hierde, nm:
     swineherd, pig farmer
 swīþe, adv:
     very, quite
-syllan, vw1: see sellan
+syllan, vw1:
+    SEE sellan
 tā, nmw: acc.sg tān; gen.sg tān; dat.sg tān; nom.pl tān; gen.pl tāna; dat.pl tām|tāum
     toe
 tellan, vw1:
@@ -584,7 +610,8 @@ tungol, nn:
     the, that (neuter)
 þæt, conj:
     that
-þætte, conj: see þæt
+þætte, conj:
+    SEE þæt
 þe, part:
     that, who [optionally preceded by a form of se]
 þenċan, vw1: past þōht
@@ -626,7 +653,8 @@ wacian, vw2:
     to be awake; to guard, watch
 wæps, nf:
     wasp
-wæsp, nf: see wæps
+wæsp, nf:
+    SEE wæps
 wē, pron: acc ūs; gen ūre; dat ūs
     we, us
 wealh, nm:
@@ -649,10 +677,11 @@ wepan, vs7:
     to weep
 wer, nm:
     man, male
-werewulf, nm: see werwulf
+werewulf, nm:
+    SEE werwulf
 werwulf, nm:
     werewolf
-wesan, vi: 1sg eom; 2sg eart; 3sg is; pl sind|sindon; subj sīe; past.s wæs, wǣron; imp wes
+wesan, vi: 1sg eom; 2sg eart; 3sg is; pl sind|sindon; subj sīe; past.1sg wæs; past.pl wǣron; imp wes
     to be
 wīf, nn:
     woman
@@ -686,7 +715,8 @@ wull, nf:
     wool
 wyllen, adj:
     woolen
-wuton, int: see uton
+wuton, int:
+    SEE uton
 ymb, prep:
     around; about, concerning
 yfel, adj: comp wyrsa; sup wyrst

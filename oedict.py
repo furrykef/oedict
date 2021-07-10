@@ -54,21 +54,33 @@ def read_lexicon(filename):
                     lemma = [x.strip() for x in split_line[0].split(",")]
                     headword = lemma[0]
                     types = lemma[1:]
-                    special = parse_special(split_line[0]) if len(split_line) > 0 else []
+                    special = parse_special(split_line[1])
                     entry = Entry(headword)
-                    for form in gen_forms(headword, types[0], special):
-                        form = normalize(form)
-                        if form not in words:
-                            words[form] = set()
-                        words[form].add(entry)
+                    for forms in gen_forms(headword, types[0], special):
+                        for form in forms:
+                            if form != '-':
+                                form = normalize(form)
+                                if form not in words:
+                                    words[form] = set()
+                                words[form].add(entry)
         except LexiconError as err:
             print("Line", line_num, ":", err, file=sys.stderr)
             sys.exit(1)
     return words
 
 
+# Parses a list of special forms
+# Input: "2sg eart; 3sg sind|sindon"
+# Output: {'2sg': ['eart'], '3sg': ['sind', 'sindon']}
 def parse_special(special):
-    return []
+    if len(special) == 0:
+        return {}
+    special = [x.strip() for x in special.split(';')]
+    result = {}
+    for item in special:
+        form, args = item.split(maxsplit=1)
+        result[form] = args.split('|')
+    return result
 
 
 def gen_forms(headword, word_type, special):
@@ -84,12 +96,14 @@ def gen_noun(headword, word_type, special):
     if word_type[1:] == 'm':
         # Strong masculine noun
         return [
-            headword,           # nom/acc.sg
-            headword + 'es',    # gen.sg
-            headword + 'e',     # dat.sg
-            headword + 'as',    # nom/acc.pl
-            headword + 'a',     # gen.pl
-            headword + 'um',    # dat.pl
+            special.get('nom.sg') or [headword],
+            special.get('acc.sg') or special.get('nom.sg') or [headword],
+            special.get('gen.sg') or [headword + 'es'],
+            special.get('dat.sg') or [headword + 'e'],
+            special.get('nom.pl') or [headword + 'as'],
+            special.get('acc.pl') or special.get('nom.pl') or [headword + 'as'],
+            special.get('gen.pl') or [headword + 'a'],
+            special.get('dat.pl') or [headword + 'um'],
         ]
     elif word_type[1:] == 'f':
         # Strong feminine noun
@@ -98,29 +112,46 @@ def gen_noun(headword, word_type, special):
         else:
             stem = headword
         return [
-            headword,           # nom.sg
-            stem + 'e',         # acc/gen/dat.sg; alt. nom/acc plural
-            stem + 'a',         # nom/acc/gen.pl
-            stem + 'um',        # dat.pl
+            special.get('nom.sg') or [headword],
+            special.get('acc.sg') or [stem + 'e'],
+            special.get('gen.sg') or [stem + 'e'],
+            special.get('dat.sg') or [stem + 'e'],
+            special.get('nom.pl') or [stem + 'a', stem + 'e'],
+            special.get('acc.pl') or special.get('nom.pl') or [stem + 'a', stem + 'e'],
+            special.get('gen.pl') or [stem + 'a'],
+            special.get('dat.pl') or [stem + 'um'],
         ]
     elif word_type[1:] == 'n':
         # Strong neuter noun
         return [
-            headword,           # nom/acc.sg; nom/acc.pl
-            headword + 'es',    # gen.sg
-            headword + 'e',     # dat.sg
-            headword + 'a',     # gen.pl
-            headword + 'um',    # dat.pl
+            special.get('nom.sg') or [headword],
+            special.get('acc.sg') or special.get('nom.sg') or [headword],
+            special.get('gen.sg') or [headword + 'es'],
+            special.get('dat.sg') or [headword + 'e'],
+            special.get('nom.pl') or [headword],
+            special.get('acc.pl') or special.get('nom.pl') or [headword],
+            special.get('gen.pl') or [headword + 'a'],
+            special.get('dat.pl') or [headword + 'um'],
         ]
     elif word_type[1:] in ('mw', 'fw', 'nw'):
         # Weak noun
         stem = headword[:-1]
         oblique = stem + 'an'
+        if 'acc.sg' in special:
+            acc = special['acc.sg']
+        elif word_type[1:] == 'nw':
+            acc = special.get('nom.sg') or [headword]
+        else:
+            acc = oblique
         return [
-            headword,           # nom.sg, sometimes acc.sg
-            oblique,            # dat/gen.sg; nom/acc.pl; usu. acc.sg
-            stem + 'ena',       # gen.pl
-            stem + 'um',        # dat.pl
+            special.get('nom.sg') or [headword],
+            acc,
+            special.get('gen.sg') or oblique,
+            special.get('dat.sg') or oblique,
+            special.get('nom.pl') or oblique,
+            special.get('acc.pl') or special.get('nom.pl') or oblique,
+            special.get('gen.pl') or [stem + 'ena'],
+            special.get('dat.pl') or [stem + 'um'],
         ]
     elif word_type[1:] in ('mv', 'fv'):
         # Vocalic noun
@@ -159,28 +190,28 @@ def gen_verb(headword, word_type, special):
             past_stem = headword[:-3] + 'od'
         else:
             # Weak class III, we hope
-            return [headword]
+            return [[headword]]
         return [
-            headword,               # infinitive
-            long_stem + 'enne',     # long infinitive
-            long_stem + 'anne',     # variant long infinitive
-            long_stem + 'e',        # pres.ind.1sg & pres.subj.sg
-            short_stem + 'st',      # pres.ind.2sg
-            short_stem + 'þ',       # pres.ind.3sg
-            long_stem + 'aþ',       # pres.ind.pl
-            long_stem + 'en',       # pres.subj.pl
-            past_stem + 'e',        # past.ind.1sg/3sg & past.subj.sg
-            past_stem + 'est',      # past.ind.2sg
-            past_stem + 'on',       # past.ind.pl
-            past_stem + 'en',       # past.subj.pl
-            short_stem,             # imperative
-            long_stem + 'ende',     # pres. participle
-            past_stem,              # bare past participle
-            'ġe' + past_stem,       # past participle with ġe-
+            [headword],             # infinitive
+            [long_stem + 'enne'],   # long infinitive
+            [long_stem + 'anne'],   # variant long infinitive
+            [long_stem + 'e'],      # pres.ind.1sg & pres.subj.sg
+            [short_stem + 'st'],    # pres.ind.2sg
+            [short_stem + 'þ'],     # pres.ind.3sg
+            [long_stem + 'aþ'],     # pres.ind.pl
+            [long_stem + 'en'],     # pres.subj.pl
+            [past_stem + 'e'],      # past.ind.1sg/3sg & past.subj.sg
+            [past_stem + 'est'],    # past.ind.2sg
+            [past_stem + 'on'],     # past.ind.pl
+            [past_stem + 'en'],     # past.subj.pl
+            [short_stem],           # imperative
+            [long_stem + 'ende'],   # pres. participle
+            [past_stem],            # bare past participle
+            ['ġe' + past_stem],     # past participle with ġe-
         ]
     else:
         # Non-weak verb
-        return [headword]
+        return [[headword]]
 
 
 def normalize(text):

@@ -8,8 +8,10 @@ an/on folding: "monn" should look up "mann", but "ston" should not look up "stā
 
 Match lufiġan for lufian, etc.
 
-
 Forms such as sċipu
+
+
+bā: what part of speech?
 
 dæġ, dagas
 
