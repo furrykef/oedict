@@ -4,3 +4,5 @@ This project is currently a work in progress and not yet particularly functional
 
 It stands on the shoulders of giants: much of the content is derived, directly or indirectly, from various sources, especially Wiktionary and Bosworth-Toller. Non-copyrightable elements have also been taken from resources such as _An Old English Grammar_ by Quirk and Wrynn.
 
+Thanks to the Ænglisċ Discord (https://discord.gg/9rwnDRC) for all their help!
+

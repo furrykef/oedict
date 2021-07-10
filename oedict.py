@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import argparse
+import re
 import unicodedata
 import unidecode
 import sys
@@ -137,25 +138,37 @@ def gen_noun(headword, word_type, special):
         # Weak noun
         stem = headword[:-1]
         oblique = stem + 'an'
-        if 'acc.sg' in special:
-            acc = special['acc.sg']
-        elif word_type[1:] == 'nw':
-            acc = special.get('nom.sg') or [headword]
+        if word_type[1:] == 'nw':
+            accusative = special.get('nom.sg') or headword
         else:
-            acc = oblique
+            accusative = oblique
         return [
             special.get('nom.sg') or [headword],
-            acc,
-            special.get('gen.sg') or oblique,
-            special.get('dat.sg') or oblique,
-            special.get('nom.pl') or oblique,
-            special.get('acc.pl') or special.get('nom.pl') or oblique,
+            special.get('acc.sg') or [accusative],
+            special.get('gen.sg') or [oblique],
+            special.get('dat.sg') or [oblique],
+            special.get('nom.pl') or [oblique],
+            special.get('acc.pl') or special.get('nom.pl') or [oblique],
             special.get('gen.pl') or [stem + 'ena'],
             special.get('dat.pl') or [stem + 'um'],
         ]
     elif word_type[1:] in ('mv', 'fv'):
         # Vocalic noun
-        return [headword]
+        mutated = i_mutate(headword)
+        if word_type[1] == 'm':
+            genitives = [headword + 'es']
+        else:
+            genitives = [headword + 'e', mutated]
+        return [
+            special.get('nom.sg') or [headword],
+            special.get('acc.sg') or special.get('nom.sg') or [headword],
+            special.get('gen.sg') or genitives,     # no brackets!
+            special.get('dat.sg') or [mutated],
+            special.get('nom.pl') or [mutated],
+            special.get('acc.pl') or special.get('nom.pl') or [mutated],
+            special.get('gen.pl') or [headword + 'a'],
+            special.get('dat.pl') or [headword + 'um'],
+        ]
     else:
         # Other
         return [headword]
@@ -212,6 +225,23 @@ def gen_verb(headword, word_type, special):
     else:
         # Non-weak verb
         return [[headword]]
+
+
+# I-mutates the last vowel or diphthong in its argument
+# TODO: only works when the vowel and everything after it is lowercase.
+#   Is that OK?
+def i_mutate(word):
+    match = re.match(r"(.*?)(īe|ie|ēa|ea|ēo|eo|an|am|[āaǣæēeīiōoūuȳy])([b-df-hj-np-tv-zþ]*)$", word)
+    nucleus = match[2]
+    if nucleus in ('ēa', 'ēo'):
+        nucleus = 'īe'
+    elif nucleus in ('ea', 'eo'):
+        nucleus = 'ie'
+    elif nucleus in ('an', 'am'):
+        nucleus = 'e' + nucleus[1]
+    else:
+        nucleus = nucleus.translate(str.maketrans('āaæeōoūu', 'ǣæeiēeȳy'))
+    return match[1] + nucleus + match[3]
 
 
 def normalize(text):

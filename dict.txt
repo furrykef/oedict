@@ -1,5 +1,7 @@
 ac, conj:
     but
+āc, nfv: gen.sg āce|ǣċ; dat.sg ǣċ; nom.pl ǣċ
+    oak
 ān, adj: masc.acc.sg. ǣnne|ānne
     one; a certain
 and, conj:
@@ -65,7 +67,7 @@ brid, nm:
     SEE bird
 bringan, vw1: past brōht
     to bring
-bōc, nfv:
+bōc, nfv: gen.sg bōce|bēċ; dat.sg bēċ; nom.pl bēċ
     book
 brēost, nn, nf:
     chest, bosom, breast
@@ -99,7 +101,7 @@ cocc, nm:
     rooster, cock, male bird
 cræft, nm:
     art, craft, skill
-cū, nfv:
+cū, nfv: gen.sg cūe|cūs|cȳ; gen.pl cūa|cūna
     cow
 cuman, vs5: past.1sg cōm; past.pl cōmon
     to come
@@ -336,6 +338,8 @@ hlāf, nm:
     bread
 hlāford, nm:
     lord; God, Jehovah
+hnutu, nfv: gen.sg hnute|hnyte; dat.sg hnyte; nom.pl hnyte
+    nut
 hors, nn:
     horse
 hran, nm:
@@ -364,7 +368,7 @@ hyċġan, vw3: 2sg hyġst; 3sg hyġþ; past hogd
     to think, cogitate
 hyll, nm, nf:
     hill
-iċ, pron: acc mē; gen mīn; dat mē
+iċ, pron: acc mē|mec; gen mīn; dat mē
     I, me
 incer, adjs:
     your (of two people)
@@ -416,7 +420,7 @@ mīn, adjs:
     my, mine
 mōna, nmw:
     moon
-mūs, nf:
+mūs, nfv:
     mouse
 nama, nmw:
     name
@@ -631,7 +635,7 @@ tungol, nn:
 þonne, conj:
     then; when
     [þonne ... þonne] when ... then
-þū, pron: acc þē; gen þīn; dat þē
+þū, pron: acc þē|þec; gen þīn; dat þē
     thou, thee, you (singular)
 þurh, prep:
     through
