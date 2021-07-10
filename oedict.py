@@ -34,7 +34,7 @@ def read_lexicon(filename):
     words = {}
     entry = None
     line_num = 0
-    with open(filename, "r") as infile:
+    with open(filename, 'r') as infile:
         try:
             for line in infile:
                 line_num += 1
@@ -47,10 +47,10 @@ def read_lexicon(filename):
                     if len(line) == 0 or line[0] == '#':
                         continue
                     if ':' not in line:
-                        raise LexiconError("Where's the colon?")
+                        raise LexiconError("Missing colon")
                     split_line = line.split(':')
                     if len(split_line) > 2:
-                        raise LexiconError("Too many colons!")
+                        raise LexiconError("Too many colons")
                     lemma = [x.strip() for x in split_line[0].split(",")]
                     headword = lemma[0]
                     types = lemma[1:]
@@ -153,7 +153,7 @@ def gen_verb(headword, word_type, special):
                 past_stem = short_stem + 'd'
         elif word_type[2] == '2':
             # Weak class II
-            if not headword.endswith("ian"):
+            if not headword.endswith('ian'):
                 raise LexiconError("Weak class II verbs must end in -ian")
             short_stem = headword[:-3] + 'a'
             past_stem = headword[:-3] + 'od'
@@ -183,15 +183,18 @@ def gen_verb(headword, word_type, special):
         return [headword]
 
 
-def normalize(string):
-    string = unicodedata.normalize('NFC', string)
-    string = string.lower()
-    string = string.replace('ð', 'þ')
-    string = unidecode.unidecode(string)
-    if len(string) >= 2 and string[-2] == string[-1]:
+def normalize(text):
+    text = unicodedata.normalize('NFC', text)
+    text = (text.lower()
+                .replace('ð', 'þ')
+                .replace('&', 'and')
+                .replace('⁊', 'and')
+                .replace('-', ""))
+    text = unidecode.unidecode(text)
+    if len(text) >= 2 and text[-2] == text[-1]:
         # Word ends with double letter; reduce
-        string = string[:-1]
-    return string
+        text = text[:-1]
+    return text
 
 
 def interactive_mode(index):

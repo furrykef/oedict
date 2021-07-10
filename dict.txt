@@ -15,13 +15,13 @@ assa, nmw:
 ǣlċ, adj:
     each
 # TODO: BT and Wiktionary disagree on the vowel length
-æmethyll, nm:
+æmet-hyll, nm:
     anthill
 # TODO: BT and Wiktionary disagree on the vowel length
 æmette, nfw:
     ant
 # TODO: BT and Wiktionary disagree on the vowel length
-æmetthyll, nm: see æmethyll
+æmett-hyll, nm: see æmethyll
 ǣniġ, adj:
     any
 bān, nn:
@@ -125,6 +125,8 @@ dēofol, nn:
     devil, Satan
 dēor, nn:
     wild animal, beast
+dol, adj:
+    stupid, dumb, foolish, dimwitted
 dōn, vi: 2sg dēst; 3sg dēþ; past dyd; pp dōn
     to do
 drīfan, vs1:
@@ -141,18 +143,26 @@ dung, nf:
     dung, manure, feces
 dung, nfv:
     underground chamber; dungeon
+dysiġ, adj:
+    stupid, dumb, foolish, dimwitted
+dysiġ, nn:
+    folly, foolish or stupid act; foolishness, stupidity
 dwellan, vw1:
     to mislead; to linger
 ēa, nf: acc.sg ēa; gen.sg ēa; dat.sg ēa; nom.pl ēa; gen.pl ēa; dat.pl ēam|ēaum
     river
 ēac, adv:
     also
+ēac, prep:
+    together with, in addition to
 ēage, nnw:
     eye
 ēalā, int:
     lo, hey; hello
 eall, adjs:
     all, whole, entire
+ealu, nni: gen.sg ealoþ; dat.sg ealoþ; gen.pl ealeþa
+    ale, beer, intoxicating drink
 ēare, nnw:
     ear
 earm, nm:
@@ -167,7 +177,7 @@ etan, vs5: past ǣt, ǣton
     to eat
 faran, vs6:
     to travel; fare
-feoh, nns: gen.sg. fēos; dat.sg. fēo
+feoh, nn.sg: gen.sg fēos; dat.sg fēo
     money, goods, wealth; cattle
 feohtan, vs3:
     to fight
@@ -213,6 +223,8 @@ fyxen, nf:
     vixen, female fox
 gān, vi: 2sg gǣst; 3sg gǣþ; past ēod; pp gān
     to do
+gangan, vs7:
+    to go, walk
 gangern, nn:
     privy, outhouse, toilet
 gāst, nm:
@@ -275,6 +287,7 @@ hǣlan, vw1:
     to heal, cure
 hǣlend, nm:
     healer; Jesus Christ
+hæle, nm: see hæleþ
 hæleþ, nm:
     hero
 hē, pron: acc hine; gen his; dat him
@@ -323,6 +336,8 @@ hwæl, nm:
     whale
 hwæt, pron: acc hwæt; gen hwæs; dat hwǣm|hwām
     what
+hwæþre, adv:
+    however, still, yet, nevertheless, nonetheless
 hyċġan, vw3: 2sg hyġst; 3sg hyġþ; past hogd
     to think, cogitate
 hyll, nm, nf:
@@ -335,7 +350,7 @@ land, nn:
     land
 lārēow, nm:
     teacher
-Lǣden, nm, sg:
+Lǣden, nm.sg:
     Latin
 lǣran, vw1:
     to teach
@@ -349,6 +364,8 @@ libban, vw3: 2sg leofast; 3sg leofaþ; past lifd
     to live
 līcian, vw2:
     to be liked [+dat: by someone]; to be pleasing
+lōcian, vw2:
+    to look
 lufian, vw2:
     to love
 lȳtel, adj: comp lǣssa; sup lǣst
@@ -381,6 +398,9 @@ mūs, nf:
     mouse
 nama, nmw:
     name
+# TODO: Wiktionary and BT disagree on vowel length
+nædre, nfw:
+    snake
 nǣniġ, adj:
     not any, no, none
 nā, int:
@@ -438,16 +458,24 @@ rīdan, vs1:
     to ride
 riht, adj:
     right; straight
+sārian, vw2:
+    to hurt, be sore (physically or emotionally); to be sorry
+sāriġ, adj:
+    sorry, grieving
 sǣ, nm: acc.sg sǣ, dat.sg sǣ, gen.pl sǣ, nom.pl sǣ, gen.pl sǣwa, dat.pl sǣm|sǣwum
     sea
 sǣd, nn:
     seed
 sæl, nn:
     hall, esp. a great hall
+sċeap, nn:
+    genital, private part
 sċēap, nf:
     sheep
-sċēaphierde, nm:
+sċēap-hierde, nm:
     shepherd
+sċēawere, nm:
+    observer, spy; watchtower; mirror
 sċīnan, vs1:
     to shine
 sċip, nn:
@@ -470,11 +498,15 @@ sēon, vs5: 2sg siehst; 3sg siehþ; past.s seah, sāwon; pp sewen
     to see
 simle, adv:
     always
+sīn, adjs:
+    his, her, its, their
 singan, vs3:
     to sing
 slǣpan, vs7:
     to sleep
 slēpan, vs7: see slǣpan
+smeortan, vs3:
+    to smart, sting, hurt
 sōþ, nn:
     truth
 spillan, vw1:
@@ -512,7 +544,7 @@ sweltan, vs3:
     to die
 swīn, nn:
     swine, pig; pork
-swīnhierde, nm:
+swīn-hierde, nm:
     swineherd, pig farmer
 swīþe, adv:
     very, quite
@@ -570,7 +602,7 @@ tungol, nn:
 þonne, adv:
     then
 þonne, conj:
-    then
+    then; when
     [þonne ... þonne] when ... then
 þū, pron: acc þē; gen þīn; dat þē
     thou, thee, you (singular)
@@ -584,23 +616,31 @@ uncer, adjs:
     our (of two people)
 under, prep:
     under
-understandan, vs6:
+under-standan, vs6:
     to understand
 ūre, adjs:
     our, ours
 uton, part:
     let us, let's
 wacian, vw2:
-    to stay awake; to guard, watch
+    to be awake; to guard, watch
 wæps, nf:
     wasp
 wæsp, nf: see wæps
 wē, pron: acc ūs; gen ūre; dat ūs
     we, us
+wealh, nm:
+    foreigner; slave
+weard, nm:
+    guard, watchman, warden
+weard, nf:
+    guard, watch, act of guarding; guardianship
 wearm, adj:
     warm
 wel, adv: comp bet; sup betest
     well; fastidiously; about, approximately
+wela, nmw:
+    wealth, riches; prosperity
 wendan, vw1:
     to go
 weorold, nf:
@@ -622,10 +662,14 @@ wiht, nn:
     thing; creature
 willan, vi: 1sg wille; 2sg wilt; 3sg wile; past wold
     to want
+wīn, nn:
+    wine
 wīs, adj:
     wise
 wit, pron: acc unc; gen uncer; dat unc
     we two, us two
+wītega, nmw:
+    wise man, prophet
 wiþ, prep:
     against
 word, nn:
