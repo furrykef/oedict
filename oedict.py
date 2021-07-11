@@ -57,16 +57,17 @@ def read_lexicon(filename):
                         raise LexiconError("too many colons")
                     lemma = [x.strip() for x in split_line[0].split(",")]
                     headword = lemma[0]
-                    types = lemma[1:]
+                    word_types = lemma[1:]
                     special = parse_special(split_line[1])
                     entry = Entry(headword)
-                    for forms in gen_forms(headword, types[0], special):
-                        for form in forms:
-                            if form != '-':
-                                form = normalize(form)
-                                if form not in words:
-                                    words[form] = set()
-                                words[form].add(entry)
+                    for word_type in word_types:
+                        for forms in gen_forms(headword, word_type, special):
+                            for form in forms:
+                                if form != '-':
+                                    form = normalize(form)
+                                    if form not in words:
+                                        words[form] = set()
+                                    words[form].add(entry)
         except LexiconError as err:
             print("Line", line_num, ":", err, file=sys.stderr)
             sys.exit(1)
