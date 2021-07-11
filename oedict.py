@@ -22,9 +22,12 @@ def main(argv=None):
     p = argparse.ArgumentParser(description="Kef's Old English dictionary")
     p.add_argument('-d', '--dict', default='dict.txt', help="filename of dictionary")
     p.add_argument('-i', '--interactive', action='store_true', help="interactive mode")
+    p.add_argument('--dump', action='store_true', help="dump debug stuff")
     p.add_argument('word', nargs='*')
     args = p.parse_args(argv)
     index = read_lexicon(args.dict)
+    if args.dump:
+        dump(index)
     for word in args.word:
         lookup(index, word)
     if args.interactive:
@@ -48,10 +51,10 @@ def read_lexicon(filename):
                     if len(line) == 0 or line[0] == '#':
                         continue
                     if ':' not in line:
-                        raise LexiconError("Missing colon")
+                        raise LexiconError("missing colon")
                     split_line = line.split(':')
                     if len(split_line) > 2:
-                        raise LexiconError("Too many colons")
+                        raise LexiconError("too many colons")
                     lemma = [x.strip() for x in split_line[0].split(",")]
                     headword = lemma[0]
                     types = lemma[1:]
@@ -90,7 +93,7 @@ def gen_forms(headword, word_type, special):
     elif word_type[0] == 'v':
         return gen_verb(headword, word_type, special)
     else:
-        return [headword]
+        return [[headword]]
 
 
 def gen_noun(headword, word_type, special):
@@ -175,20 +178,43 @@ def gen_noun(headword, word_type, special):
 
 
 def gen_verb(headword, word_type, special):
+    long_infinitives = [headword + 'ne']
+    if headword.endswith(('ēan', 'ēon', 'ān', 'ōn')):
+        # Irregular infinitive
+        subjs = special.get('subj') or [headword[:-1]]
+        pres_participles = special.get('pres.p') or [headword + 'de']
+    elif headword.endswith('an'):
+        # Regular infinitive
+        long_infinitives.append(headword[:-2] + 'enne')
+        subjs = special.get('subj') or [headword[:-2] + 'e']
+        pres_participles = special.get('pres.p') or [headword[:-2] + 'ende']
+    else:
+        raise LexiconError("invalid infinitive")
+    result = [
+        [headword],
+        special.get("long.inf") or long_infinitives,
+        pres_participles,
+    ]
     if word_type[1] == 'w':
         # Weak verb
         long_stem = headword[:-2]
         if word_type[2] == '1':
             # Weak class I
+            if not headword.endswith('an'):
+                raise LexiconError("weak class I verbs must end in -an")
             if headword.endswith('bban'):
                 short_stem = headword[:-4] + 'f'
             elif headword.endswith('ċġan'):
                 short_stem = headword[:-4] + 'ġ'
             else:
-                if headword[-4:] in ('ċċan', 'ddan', 'llan', 'mman', 'nnan', 'ppan', 'rian', 'rran', 'ssan', 'ttan'):
+                if headword.endswith(('ċċan', 'ddan', 'llan', 'mman', 'nnan', 'ppan', 'rian', 'rran', 'ssan', 'ttan')):
                     short_stem = headword[:-3] + 'e'
                 else:
                     short_stem = long_stem
+            if 'past' in special:
+                if len(special['past']) > 1:
+                    raise LexiconError("multiple past stems not supported")
+                past_stem = special['past'][0]
             if headword.endswith('eċċan'):
                 past_stem = headword[:-5] + 'eaht'
             elif headword.endswith('ellan'):
@@ -198,50 +224,52 @@ def gen_verb(headword, word_type, special):
         elif word_type[2] == '2':
             # Weak class II
             if not headword.endswith('ian'):
-                raise LexiconError("Weak class II verbs must end in -ian")
+                raise LexiconError("weak class II verbs must end in -ian")
             short_stem = headword[:-3] + 'a'
             past_stem = headword[:-3] + 'od'
+        elif word_type[2] == '3':
+            # Weak class III
+            # These are so irregular that the lexicon file contains most of the forms
+            pass
         else:
-            # Weak class III, we hope
-            return [[headword]]
-        return [
-            [headword],             # infinitive
-            [long_stem + 'enne'],   # long infinitive
-            [long_stem + 'anne'],   # variant long infinitive
-            [long_stem + 'e'],      # pres.ind.1sg & pres.subj.sg
-            [short_stem + 'st'],    # pres.ind.2sg
-            [short_stem + 'þ'],     # pres.ind.3sg
-            [long_stem + 'aþ'],     # pres.ind.pl
-            [long_stem + 'en'],     # pres.subj.pl
-            [past_stem + 'e'],      # past.ind.1sg/3sg & past.subj.sg
-            [past_stem + 'est'],    # past.ind.2sg
-            [past_stem + 'on'],     # past.ind.pl
-            [past_stem + 'en'],     # past.subj.pl
-            [short_stem],           # imperative
-            [long_stem + 'ende'],   # pres. participle
-            [past_stem],            # bare past participle
-            ['ġe' + past_stem],     # past participle with ġe-
+            raise LexiconError("invalid weak verb class")
+        past_stems = special.get('past') or [past_stem]
+        past_participles = (special.get('pp') or past_stems)[:]
+        past_participles += ['ġe-' + x for x in past_participles if not x.startswith('ġe-')]
+        return result + [
+            special.get('1sg') or [long_stem + 'e'],
+            special.get('2sg') or [short_stem + 'st'],
+            special.get('3sg') or [short_stem + 'þ'],
+            special.get('pl') or [long_stem + 'aþ'],
+            subjs,
+            [subj + 'n' for subj in subjs],         # subj.pl
+            [x + 'e' for x in past_stems],          # past.1sg/3sg; past.subj.sg
+            [x + 'est' for x in past_stems],        # past.2sg
+            [x + 'on' for x in past_stems],         # past.pl
+            [x + 'en' for x in past_stems],         # past.subj.pl
+            special.get('imp') or [short_stem],
+            past_participles
         ]
     else:
         # Non-weak verb
-        return [[headword]]
+        return result
 
 
-# I-mutates the last vowel or diphthong in its argument
+# I-mutates the nucleus of the last syllable of its argument
 # TODO: only works when the vowel and everything after it is lowercase.
 #   Is that OK?
 def i_mutate(word):
-    match = re.match(r"(.*?)(īe|ie|ēa|ea|ēo|eo|an|am|[āaǣæēeīiōoūuȳy])([b-df-hj-np-tv-zþ]*)$", word)
-    nucleus = match[2]
+    match = re.match(r"(.*?)(īe|ie|ēa|ea|ēo|eo|[āaǣæēeīiōoūuȳy])([b-df-hj-np-tv-zþð]*)$", word)
+    initial, nucleus, final = match.groups()
     if nucleus in ('ēa', 'ēo'):
         nucleus = 'īe'
     elif nucleus in ('ea', 'eo'):
         nucleus = 'ie'
-    elif nucleus in ('an', 'am'):
-        nucleus = 'e' + nucleus[1]
+    elif nucleus == 'a':
+        nucleus = 'e' if final.startswith(('n', 'm')) else 'æ'
     else:
-        nucleus = nucleus.translate(str.maketrans('āaæeōoūu', 'ǣæeiēeȳy'))
-    return match[1] + nucleus + match[3]
+        nucleus = nucleus.translate(str.maketrans('āæeōoūu', 'ǣeiēeȳy'))
+    return initial + nucleus + final
 
 
 def normalize(text):
@@ -277,6 +305,11 @@ def lookup(index, word):
         for entry in entries:
             print(entry.lemma, ':')
             print(entry.definition.rstrip())
+
+
+def dump(index):
+    for word, entries in index.items():
+        print(word, ":", [entry.lemma for entry in entries])
 
 
 if __name__ == '__main__':

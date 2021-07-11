@@ -241,7 +241,8 @@ frēond, nm, nmv:
     friend
 fugol, nm:
     bird, fowl
-fyxen, nf:
+# Wiktionary instead has a strong feminine noun "fyxen", but this appears spurious or at least unattested
+fyxe, nfw:
     vixen, female fox
 gān, vi: 2sg gǣst; 3sg gǣþ; past ēod; pp gān
     to do
@@ -290,7 +291,7 @@ guma, nmw:
     man
 gylden, adj:
     golden
-habban, vw3: 1sg hæbbe; 2sg hæfst|hafast; 3sg hæfþ|hafaþ; past hæfd; imp hafa; pres.p hæbbende
+habban, vw3: long.inf hæbbenne|habbanne; 1sg hæbbe; 2sg hæfst|hafast; 3sg hæfþ|hafaþ; past hæfd; imp hafa; pres.p hæbbende
     to have
 hāl, adj:
     healthy, hale
@@ -302,6 +303,8 @@ hana, nmw:
     rooster; cock
 hand, nf:
     hand
+hara, nmw:
+    hare, rabbit, bunny
 hātan, vs7: past.1sg hēt; past.pl hēton
     to call; order, command
 hatian, vw2:
@@ -340,6 +343,8 @@ hlāford, nm:
     lord; God, Jehovah
 hnutu, nfv: gen.sg hnute|hnyte; dat.sg hnyte; nom.pl hnyte
     nut
+hogian, vw2:
+    SEE hyċġan
 hors, nn:
     horse
 hran, nm:
@@ -364,7 +369,7 @@ hwæt, pron: acc hwæt; gen hwæs; dat hwǣm|hwām
     what
 hwæþre, adv:
     however, still, yet, nevertheless, nonetheless
-hyċġan, vw3: 2sg hyġst; 3sg hyġþ; past hogd
+hyċġan, vw3: 2sg hyġst|hogast; 3sg hyġþ|hogaþ; past hogd|hogod; imp hyġe|hoga
     to think, cogitate
 hyll, nm, nf:
     hill
@@ -386,10 +391,14 @@ leornian, vw2:
     to learn
 lēoþ, nn:
     song, poem
-libban, vw3: 2sg leofast; 3sg leofaþ; past lifd
+libban, vw3: 2sg leofast|lifast; 3sg leofaþ|lifaþ; past lifd; imp leofa
     to live
 līcian, vw2:
     to be liked [+dat: by someone]; to be pleasing
+lifian, vw2:
+    SEE libban
+lim, nn:
+    limb (of body); limb, branch
 lōcian, vw2:
     to look
 lufian, vw2:
@@ -510,7 +519,7 @@ sċip, nn:
     ship
 se, pron: acc þone; gen þæs; dat þǣm|þām; inst þȳ|þon|þē
     the, that (masculine)
-seċġan, vw3: 2sg sæġst; 3sg sæġþ; past sæġd; imp saga
+seċġan, vw3: 2sg sæġst|sagast; 3sg sæġþ|sagaþ; past sæġd|sǣd; imp saga|sæġe
     to say
 sellan, vw1:
     to give; to sell
