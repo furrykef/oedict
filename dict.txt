@@ -87,7 +87,7 @@ catte, nfw:
     female cat
 ċēapstōw, nf:
     market
-ċēosan, vs2:
+ċēosan, vs2: past.pl curon; pp coren
     to choose
 ċicen, nm:
     chicken
@@ -323,6 +323,8 @@ hēafod, nn:
     head
 healdan, vs7:
     to hold
+heall, nf:
+    hall, large room
 helpan, vs3:
     to help
 henn, nf:
@@ -407,7 +409,7 @@ lȳtel, adj: comp lǣssa; sup lǣst
     little, small
 macian, vw2:
     to make
-maniġ, adjs:
+maniġ, adjs: comp -; sup -
     many
 mann, nmv:
     man, person
@@ -714,12 +716,16 @@ wītega, nmw:
     wise man, prophet
 wiþ, prep:
     against
+wōh, adj:
+    wrong, mistaken
+wōh, nn:
+    error, mistake; wrongness
 word, nn:
     word
 wrang, nn:
     wrong, injustice
 wrang, adj:
-    rough, uneven; wrong
+    rough, uneven; unjust
 wrītan, vs1:
     to write
 wulf, nm:

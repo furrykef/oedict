@@ -182,19 +182,29 @@ def gen_verb(headword, word_type, special):
     long_infinitives = [headword + 'ne']
     if headword.endswith(('ēan', 'ēon', 'ān', 'ōn')):
         # Irregular infinitive
-        subjs = special.get('subj') or [headword[:-1]]
+        inf_stem = headword[:-1]
+        pres_1sg = inf_stem
+        subjs = special.get('subj') or [inf_stem]
         pres_participles = special.get('pres.p') or [headword + 'de']
+        irregular_infinitive = True
     elif headword.endswith('an'):
         # Regular infinitive
-        long_infinitives.append(headword[:-2] + 'enne')
-        subjs = special.get('subj') or [headword[:-2] + 'e']
+        inf_stem = headword[:-2]
+        pres_1sg = inf_stem + 'e'
+        long_infinitives.append(inf_stem + 'enne')
+        subjs = special.get('subj') or [inf_stem + 'e']
         pres_participles = special.get('pres.p') or [headword[:-2] + 'ende']
+        irregular_infinitive = False
     else:
         raise LexiconError("invalid infinitive")
     result = [
         [headword],
         special.get("long.inf") or long_infinitives,
         pres_participles,
+        special.get('1sg') or [pres_1sg],
+        subjs,
+        [subj + 'n' for subj in subjs],             # subj.pl
+        [headword[:-1] + 'þ'],                      # imp.pl
     ]
     if word_type[1] == 'w':
         # Weak verb
@@ -238,39 +248,105 @@ def gen_verb(headword, word_type, special):
         past_participles = (special.get('pp') or past_stems)[:]
         past_participles += ['ġe-' + x for x in past_participles if not x.startswith('ġe-')]
         return result + [
-            special.get('1sg') or [long_stem + 'e'],
             special.get('2sg') or [short_stem + 'st'],
             special.get('3sg') or [short_stem + 'þ'],
-            special.get('pl') or [long_stem + 'aþ'],
-            subjs,
-            [subj + 'n' for subj in subjs],         # subj.pl
+            special.get('pl') or [inf_stem + 'þ'],
             [x + 'e' for x in past_stems],          # past.1sg/3sg; past.subj.sg
             [x + 'est' for x in past_stems],        # past.2sg
             [x + 'on' for x in past_stems],         # past.pl
             [x + 'en' for x in past_stems],         # past.subj.pl
             special.get('imp') or [short_stem],
-            past_participles
+            past_participles,
+        ]
+    elif word_type[1] == 's':
+        # Strong verb
+        # Me strong. Smash programmer with club.
+        if word_type[2] == '1':
+            past_1sg_repl = 'ā'
+            past_pl_repl = 'i'
+            pp_repl = 'i'
+        elif word_type[2] == '2':
+            past_1sg_repl = 'ēa'
+            past_pl_repl = 'u'
+            pp_repl = 'o'
+        elif word_type[2] == '3':
+            def past_1sg_repl(nucleus):
+                if nucleus == 'e':
+                    return 'æ'
+                elif nucleus == 'i':
+                    return 'a'
+                else:
+                    return 'ea'
+            past_pl_repl = 'u'
+            pp_repl = lambda nucleus: 'u' if nucleus == 'i' else 'o'
+        elif word_type[2] == '4':
+            past_1sg_repl = 'æ'
+            past_pl_repl = 'ǣ'
+            pp_repl = 'o'
+        elif word_type[2] == '5':
+            past_1sg_repl = 'æ'
+            past_pl_repl = 'ǣ'
+            pp_repl = 'e'
+        elif word_type[2] == '6':
+            past_1sg_repl = 'ō'
+            past_pl_repl = 'ō'
+            pp_repl = 'a'
+        elif word_type[2] == '7':
+            past_1sg_repl = 'ēo'
+            past_pl_repl = 'ēo'
+            pp_repl = lambda nucleus: nucleus
+        past_pls = special.get('past.pl') or [mutate(inf_stem, past_pl_repl) + 'on']
+        past_pl_stems = [x[:-2] for x in past_pls]
+        past_participles = (special.get('pp') or [mutate(inf_stem, pp_repl) + 'en'])[:]
+        past_participles += ['ġe-' + x for x in past_participles if not x.startswith('ġe-')]
+        return result + [
+            special.get('2sg') or [i_mutate(inf_stem) + 'st'],
+            special.get('3sg') or [i_mutate(inf_stem) + 'þ'],
+            special.get('pl') or [inf_stem + 'aþ'],
+            special.get('past.1sg') or [mutate(inf_stem, past_1sg_repl)],
+            [x + 'e' for x in past_pl_stems],           # past.2g
+            past_pls,
+            [x + 'en' for x in past_pl_stems],          # past.subj.pl
+            special.get('imp') or [inf_stem],
+            past_participles,
         ]
     else:
-        # Non-weak verb
+        # Irregular verb (TODO)
         return result
 
 
 # I-mutates the nucleus of the last syllable of its argument
-# TODO: only works when the vowel and everything after it is lowercase.
+# TODO: only works when the nucleus and everything after it is lowercase.
 #   Is that OK?
 def i_mutate(word):
-    match = re.match(r"(.*?)(īe|ie|ēa|ea|ēo|eo|[āaǣæēeīiōoūuȳy])([b-df-hj-np-tv-zþð]*)$", word)
-    initial, nucleus, final = match.groups()
+    initial, nucleus, final = split_word(word)
     if nucleus in ('ēa', 'ēo'):
         nucleus = 'īe'
     elif nucleus in ('ea', 'eo'):
         nucleus = 'ie'
     elif nucleus == 'a':
+        # This bit is why we can't just call mutate()
         nucleus = 'e' if final.startswith(('n', 'm')) else 'æ'
     else:
         nucleus = nucleus.translate(str.maketrans('āæeōoūu', 'ǣeiēeȳy'))
     return initial + nucleus + final
+
+# TODO: only works when the nucleus and everything after it is lowercase.
+#   Is that OK?
+def mutate(word, replacement):
+    initial, nucleus, final = split_word(word)
+    if callable(replacement):
+        nucleus = replacement(nucleus)
+    else:
+        nucleus = replacement
+    return initial + nucleus + final
+
+def split_word(word):
+    match = re.match(r"(.*?)(īe|ie|ēa|ea|ēo|eo|[āaǣæēeīiōoūuȳy])([b-df-hj-np-tv-zþð]*)$", word)
+    return match.groups()
+
+def get_nucleus(word):
+    return split_word(word)[1]
 
 
 def normalize(text):

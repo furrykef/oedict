@@ -10,6 +10,10 @@ Match lufiġan for lufian, etc.
 
 Forms such as sċipu
 
+"hall" wrongly pulls up "hāl"
+
+bint, not bindþ, etc.
+
 
 bā: what part of speech?
 
@@ -17,7 +21,11 @@ dæġ, dagas
 
 fugol and lȳtel should contract in inflected forms
 
+glæd, but se glada catt
+
 gōd: don't generate adverbial forms (or else add a way to provide the comparative and superlative of "wel")
+
+maniġ, mā, mǣst: but these latter two are indeclinable and take the genitive, so they're not true comparative and superlative forms.
 
 hātan has a passive form (iċ hātte, þū hāttest, hē hātte, wē hātton), which we should probably consider a separate, defective verb.
 
@@ -26,4 +34,6 @@ sǣ can be masc. or fem. with different irregular declensions
 þætte should redirect only to the conjunction form of þæt
 
 wealh should lose its h in inflected forms
+
+wōh's declension
 
