@@ -38,7 +38,7 @@ def read_lexicon(filename):
     words = {}
     entry = None
     line_num = 0
-    with open(filename, 'r') as infile:
+    with open(filename, 'r', encoding='utf-8') as infile:
         try:
             for line in infile:
                 line_num += 1

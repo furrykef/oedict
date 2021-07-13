@@ -165,8 +165,9 @@ dwellan, vw1:
     together with, in addition to
 ēage, nnw:
     eye
+# Usage as "hello" appears to be unattested
 ēalā, int:
-    lo, hey; hello
+    lo, hey
 eall, adjs:
     all, whole, entire
 ealu, nn: gen.sg ealoþ; dat.sg ealoþ; nom.pl -; gen.pl ealeþa; dat.pl -
