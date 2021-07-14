@@ -1,10 +1,14 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <title>Kef's Old English dictionary</title>
   </head>
   <body>
     <h1>Kef's Old English dictionary</h1>
+    <p>
+      Copyright © 2021 Kef Schecter.
+      <a href="https://github.com/furrykef/oedict">Check us out on github!</a>
+    </p>
     <p><input id="search_terms"> <button id="search" onclick="search()">🔍</button></p>
     <div id="definitions">
     </div>
@@ -24,7 +28,7 @@
         xhr.onload = function () {
           document.getElementById("definitions").innerHTML = xhr.responseText;
         };
-        xhr.open("GET", `dict/${encodeURIComponent(search_terms)}`);
+        xhr.open("GET", `search/oe/${encodeURIComponent(search_terms)}`);
         xhr.send();
       }
     </script>

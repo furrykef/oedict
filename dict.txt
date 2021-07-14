@@ -520,7 +520,7 @@ sċīnan, vs1:
     to shine
 sċip, nn:
     ship
-se, pron: acc þone; gen þæs; dat þǣm|þām; inst þȳ|þon|þē
+sē, pron: acc þone; gen þæs; dat þǣm|þām; inst þȳ|þon|þē
     the, that (masculine)
 seċġan, vw3: 2sg sæġst|sagast; 3sg sæġþ|sagaþ; past sæġd|sǣd; imp saga|sæġe
     to say
@@ -628,7 +628,7 @@ tungol, nn:
     that
 þætte, conj:
     SEE þæt
-þe, part:
+þe, particle:
     that, who [optionally preceded by a form of se]
 þenċan, vw1: past þōht
     to think, opine
@@ -663,7 +663,8 @@ under-standan, vs6:
     to understand
 ūre, adjs:
     our, ours
-uton, part:
+# TODO: Better word type?
+uton, particle:
     let us, let's
 wacian, vw2:
     to be awake; to guard, watch

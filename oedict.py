@@ -91,10 +91,16 @@ def parse_special(special):
 def gen_forms(headword, word_type, special):
     if word_type[0] == 'n':
         return gen_noun(headword, word_type, special)
+    elif word_type.startswith('adj'):
+        return gen_adjective(headword, word_type, special)
+    elif word_type == 'pron':
+        return gen_pronoun(headword, word_type, special)
     elif word_type[0] == 'v':
         return gen_verb(headword, word_type, special)
-    else:
+    elif word_type in ('adv', 'prep', 'conj', 'int', 'particle'):
         return [[headword]]
+    else:
+        raise LexiconError("Invalid word type: " + word_type)
 
 
 def gen_noun(headword, word_type, special):
@@ -176,6 +182,39 @@ def gen_noun(headword, word_type, special):
     else:
         # Other
         return [headword]
+
+
+def gen_adjective(headword, word_type, special):
+    has_strong = True               # TODO: not always!
+    has_weak = word_type != 'adjs'
+    stem = headword[:-1] if headword[-1] in ('a', 'e') else headword
+    if has_strong:
+        strong_forms = [
+            [headword],             # masc/neut/fem.nom.sg; masc/acc.sg
+            [stem + 'es'],          # masc/neut.gen.sg
+            [stem + 'e'],           # masc/neut.dat.sg; fem.acc.sg; nom/acc.pl
+            [stem + 're'],          # fem.gen/dat.sg
+            [stem + 'a'],           # gen.pl
+            [stem + 'um'],          # dat.pl
+        ]
+    else:
+        strong_forms = []
+    if has_weak:
+        weak_forms = [
+            [stem + 'a'],           # masc.nom.sg
+            [stem + 'e'],           # neut/fem.nom.sg; neut.acc.sg
+            [stem + 'an'],          # oblique
+            [stem + 'a'],           # gen.pl
+            [stem + 'um'],          # dat.pl
+        ]
+    else:
+        weak_forms = []
+    return strong_forms + weak_forms
+
+
+def gen_pronoun(headword, word_type, special):
+    # Pronouns in the lexicon file define all their forms explicitly
+    return [headword] + list(special.values())
 
 
 def gen_verb(headword, word_type, special):

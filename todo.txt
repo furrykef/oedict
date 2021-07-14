@@ -1,3 +1,9 @@
+Generate comparative and superlative of adjectives and adverbs
+
+Generate adverbs from adjectives (only if "adv" field not supplied)
+
+Parse specials for adjectives
+
 Preterite-present verbs
 
 More strong verbs with irregular infinitives
