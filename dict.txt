@@ -629,7 +629,7 @@ tungol, nn:
 þætte, conj:
     SEE þæt
 þe, particle:
-    that, who [optionally preceded by a form of se]
+    that, who [optionally preceded by a form of sē]
 þenċan, vw1: past þōht
     to think, opine
 þēos, pron: acc þās; gen þisse|þisre; dat þisse|þisre

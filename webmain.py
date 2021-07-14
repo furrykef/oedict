@@ -2,7 +2,7 @@
 import html
 from flask import Flask
 
-import oedict
+import lexicon
 
 
 application = Flask(__name__)
@@ -10,25 +10,15 @@ application = Flask(__name__)
 @application.route('/search/oe/')
 @application.route('/search/oe/<search_terms>')
 def dict(search_terms="nawiht"):
-    index = oedict.read_lexicon('dict.txt')
+    lex = lexicon.Lexicon('dict.txt')
     search_terms = search_terms.split()
     text = ""
     for term in search_terms:
-        try:
-            entries = index[oedict.normalize(term)]
-        except KeyError:
+        entries = lex.lookup(term)
+        if len(entries) == 0:
             text += "<h2>Not found: " + term + "</h2>\n"
         else:
             for entry in entries:
                 text += f"<h2 lang=\"ang\">{entry.lemma}</h2>\n<p>{html.escape(entry.definition.strip())}</p>\n"
-    return f"""
-<!doctype html>
-<html>
-  <head>
-    <title>oedict: {search_terms}</title>
-  </head>
-  <body>
-    {text}
-  </body>
-"""
+    return text
 
