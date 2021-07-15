@@ -15,7 +15,8 @@ class LexiconError(Exception):
 
 class Lexicon(object):
     def __init__(self, filename):
-        words = {}
+        self.entries = []
+        self.index = {}
         entry = None
         line_num = 0
         with open(filename, 'r', encoding='utf-8') as infile:
@@ -40,22 +41,32 @@ class Lexicon(object):
                         word_types = lemma[1:]
                         special = parse_special(split_line[1])
                         entry = Entry(headword)
+                        self.entries.append(entry)
                         for word_type in word_types:
                             for forms in gen_forms(headword, word_type, special):
                                 for form in forms:
                                     if form != '-':
                                         form = normalize(form)
-                                        if form not in words:
-                                            words[form] = set()
-                                        words[form].add(entry)
+                                        if form not in self.index:
+                                            self.index[form] = set()
+                                        self.index[form].add(entry)
             except LexiconError as err:
                 print("Line", line_num, ":", err, file=sys.stderr)
                 sys.exit(1)
-        self.index = words
 
     def lookup(self, word):
         word = normalize(word)
         return self.index[word] if word in self.index else []
+
+    def reverse_lookup(self, search_string):
+        search_string = search_string.lower()
+        result = []
+        for entry in self.entries:
+            definition = entry.definition.strip()
+            if not entry.definition.startswith("SEE"):
+                if search_string in definition.lower():
+                    result.append(entry)
+        return result
 
     def dump(self):
         for word, entries in self.index.items():
@@ -79,13 +90,13 @@ def parse_special(special):
 def gen_forms(headword, word_type, special):
     if word_type[0] == 'n':
         return gen_noun(headword, word_type, special)
-    elif word_type.startswith('adj'):
+    elif word_type in ('adj', 'adjs'):
         return gen_adjective(headword, word_type, special)
     elif word_type == 'pron':
         return gen_pronoun(headword, word_type, special)
     elif word_type[0] == 'v':
         return gen_verb(headword, word_type, special)
-    elif word_type in ('adv', 'prep', 'conj', 'int', 'particle'):
+    elif word_type in ('adji', 'adv', 'prep', 'conj', 'int', 'particle'):
         return [[headword]]
     else:
         raise LexiconError("Invalid word type: " + word_type)

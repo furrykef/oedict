@@ -10,6 +10,11 @@
       <a href="https://github.com/furrykef/oedict">Check us out on github!</a>
     </p>
     <p><input id="search_terms"> <button id="search" onclick="search()">🔍</button></p>
+    <input type="radio" id="oe" name="search_type" value="oe" checked>
+    <label for="oe">Old → Modern</label>
+    <br>
+    <input type="radio" id="reverse" name="search_type" value="reverse">
+    <label for="reverse">Modern → Old</label>
     <div id="definitions">
     </div>
     <script>
@@ -24,11 +29,12 @@
 
       function search() {
         let search_terms = document.getElementById("search_terms").value;
+        let search_type = document.querySelector("input[name=search_type]:checked").value;
         let xhr = new XMLHttpRequest();
         xhr.onload = function () {
           document.getElementById("definitions").innerHTML = xhr.responseText;
         };
-        xhr.open("GET", `search/oe/${encodeURIComponent(search_terms)}`);
+        xhr.open("GET", `search/${search_type}/${encodeURIComponent(search_terms)}`);
         xhr.send();
       }
     </script>

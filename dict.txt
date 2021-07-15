@@ -37,8 +37,15 @@ bār, nm:
     boar
 bāt, nm, nf:
     boat
+# Need to verify gender and declension if possible
+#batt, nm:
+#    bat, club, cudgel
+bæc, nn:
+    back (of a person or animal's body)
 be, prep:
     by, about
+beadu, nf:
+    battle, war
 bēam, nm:
     tree
 bearn, nn:
@@ -63,12 +70,18 @@ bird, nm:
     chick, young bird
 blāwan, vs7:
     to blow
+blīþe, adj:
+    happy, glad, cheerful
 brid, nm:
     SEE bird
 bringan, vw1: past brōht
     to bring
 bōc, nfv: gen.sg bōce|bēċ; dat.sg bēċ; nom.pl bēċ
     book
+boda, nmw:
+    messenger; prophet
+boga, nmw:
+    bow (weapon)
 brēost, nn, nf:
     chest, bosom, breast
 brytta, nmw:
@@ -194,16 +207,24 @@ etan, vs5: past.1sg ǣt; past.pl ǣton
     to eat
 faran, vs6:
     to travel; fare
+fela, adji:
+    many (usu. used w/ genitive)
 feoh, nn.sg: gen.sg fēos; dat.sg fēo
     money, goods, wealth; cattle
 feohtan, vs3:
     to fight
 fēond, nm:
     enemy, fiend
+feorr, adj:
+    faraway, distant
+feorr, adv:
+    far
 feorting, nf:
     fart, flatulence
 finger, nm:
     finger
+firen, nf:
+    crime, sin; suffering
 fisċ, nm: nom.pl fisċas|fixas; gen.pl fisċa|fixa; dat.pl fisċum|fixum
     fish
 flā, nfw: acc.sg flān; gen.sg flān; dat.sg flān; nom.pl flān; gen.pl flāna; dat.pl flām|flāum
@@ -304,6 +325,8 @@ hana, nmw:
     rooster; cock
 hand, nf:
     hand
+hand-bōc, nfv: gen.sg hand-bōce|hand-bēċ; dat.sg hand-bēċ; nom.pl hand-bēċ
+    handbook, manual
 hara, nmw:
     hare, rabbit, bunny
 hātan, vs7: past.1sg hēt; past.pl hēton
@@ -330,10 +353,16 @@ helpan, vs3:
     to help
 henn, nf:
     hen
+hēr, adv:
+    here, in this place
 hēo, pron: acc hīe; gen hire; dat hire
     she, her; it (referring to a feminine noun)
 heofon, nm:
     heaven
+heonan, adv:
+    from here, hence
+hider, adv:
+    to here, hither
 hīe, pron: acc hīe; gen heora; dat him
     they, them
 hīeran, vw1:
@@ -362,16 +391,32 @@ hunta, nmw:
     hunter
 huntian, vw2:
     to hunt
+hū, adv:
+    how, by what means, to what extent
 hūs, nn: dat.sg hūs|hūse
     house
 hwā, pron: acc hwone; gen hwæs; dat hwǣm|hwām
     who
+hwanan, adv:
+    from where, whence
+hwanne, adv:
+    when, at what time
+hwæder, adv:
+    to there, thither
 hwæl, nm:
     whale
+hwǣr, adv:
+    where, in what place
 hwæt, pron: acc hwæt; gen hwæs; dat hwǣm|hwām
     what
+hwæþer, adj:
+    which (of two)
+hwæþer, conj:
+    whether
 hwæþre, adv:
     however, still, yet, nevertheless, nonetheless
+hwilċ, adj:
+    which
 hyċġan, vw3: 2sg hyġst|hogast; 3sg hyġþ|hogaþ; past hogd|hogod; imp hyġe|hoga
     to think, cogitate
 hyll, nm, nf:
@@ -600,7 +645,7 @@ teors, nm:
 titt, nm:
     teat, nipple; breast
 tō, adv:
-    too
+    too, excessively
 tō, prep:
     to
 tōdæġ, adv:
@@ -611,6 +656,8 @@ tunge, nfw:
     tongue; language
 tungol, nn:
     star
+þus, adv:
+    this way, to this extent, thus
 þā, pron: acc þā; gen þāra; dat þǣm|þām
     the, those
 þā, adv:
@@ -618,10 +665,18 @@ tungol, nn:
 þā, conj:
     then
     [þā ... þā] when ... then
+þanan, adv:
+    from there, thence
 þās, pron: acc þās; gen þissa; dat þissum
     these
 þancian, vw2:
     to thank [+dat: someone] [+gen: for something]
+þanon, adv:
+    from there, thence
+þæder, adv:
+    to there, thither
+þǣr, adv:
+    there, in that place
 þæt, pron: acc þæt; gen þæs; dat þǣm|þām; inst þȳ|þon|þē
     the, that (neuter)
 þæt, conj:
@@ -736,7 +791,8 @@ wull, nf:
     wool
 wyllen, adj:
     woolen
-wuton, int:
+# TODO: Better word type?
+wuton, particle:
     SEE uton
 ymb, prep:
     around; about, concerning
