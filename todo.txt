@@ -20,8 +20,12 @@ bint, not bindþ, etc.
 
 nm.sg, nn.sg, nf.sg (e.g. "feoh")
 
+Specials for adjectives like masc.acc.sg
+
 
 bā: what part of speech?
+
+brōþor: make sure brōþer- vs. brōþr- is consistent in both special and generated forms (note that, I believe, broþeru is attested but perhaps e.g. sweosteru is not)
 
 dæġ, dagas
 

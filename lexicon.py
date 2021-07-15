@@ -1,6 +1,19 @@
 import re
+import sys
 import unicodedata
 import unidecode
+
+
+SPECIAL_TYPES = set((
+    '1sg', '2sg', '3sg', 'pl', 'subj',
+    'past', 'past.1sg', 'past.pl',
+    'long.inf', 'pres.p', 'pp', 'imp',
+    'acc', 'gen', 'dat', 'inst',
+    'acc.sg', 'gen.sg', 'dat.sg',
+    'nom.pl', 'acc.pl', 'gen.pl', 'dat.pl',
+    'masc.acc.sg',
+    'comp', 'sup', 'adv'
+))
 
 
 class Entry(object):
@@ -62,13 +75,13 @@ class Lexicon(object):
 
     def reverse_lookup(self, search_string):
         search_string = search_string.lower()
-        result = []
+        results = []
         for entry in self.entries:
             definition = entry.definition.strip()
-            if not entry.definition.startswith("SEE"):
+            if not definition.startswith("SEE"):
                 if search_string in definition.lower():
-                    result.append(entry)
-        return result
+                    results.append(entry)
+        return results
 
     def dump(self):
         for word, entries in self.index.items():
@@ -85,6 +98,8 @@ def parse_special(special):
     result = {}
     for item in special:
         form, args = item.split(maxsplit=1)
+        if not form in SPECIAL_TYPES:
+            raise LexiconError("Unknown special: " + form)
         result[form] = args.split('|')
     return result
 

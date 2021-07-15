@@ -4,7 +4,7 @@ ac, conj:
     oak
 āgan, vpp: 1sg āh; 2sg āhst; past āht; pp āgen
     to own
-ān, adj: masc.acc.sg. ǣnne|ānne
+ān, adj: masc.acc.sg ǣnne|ānne
     one; a certain
 and, conj:
     and
@@ -86,6 +86,8 @@ boga, nmw:
     bow (weapon), arch
 brēost, nn, nf:
     chest, bosom, breast
+brōþor, nf: gen.sg brōþor; dat.sg brēþer; nom.pl brōþor|brōþra|brōþru; gen.pl brōþra; dat.pl brōþrum
+    brother
 brytta, nmw:
     vendor
 būtan, conj:
@@ -154,6 +156,8 @@ dēofol, nn:
     devil, Satan
 dēor, nn:
     wild animal, beast
+dohtor, nf: acc.sg dohtor; gen.sg dohtor|dehter; dat.sg dehter; nom.pl dohtor|dohtra|dohtru; gen.pl dohtra; dat.pl dohtrum
+    daughter
 dol, adj:
     stupid, dumb, foolish, dimwitted
 dōn, vi: 2sg dēst; 3sg dēþ; past dyd; pp dōn
@@ -221,6 +225,8 @@ etan, vs5: past.1sg ǣt; past.pl ǣton
     to eat
 faran, vs6:
     to travel; fare
+fæder, nm:
+    father
 fela, adji:
     many (usu. used w/ genitive)
 feoh, nn.sg: gen.sg fēos; dat.sg fēo
@@ -499,6 +505,8 @@ miht, nf:
     might, power, strength, ability
 mīn, adjs:
     my, mine
+mōdor, nf: acc.sg mōdor; gen.sg mōdor|mēder; dat.sg mēder; nom.pl mōdor|mōdra|mōdru; gen.pl mōdra; dat.pl mōdrum
+    mother
 mōna, nmw:
     moon
 mōtan, vpp: 1sg mōt; 2sg mōst; past mōst; pp mōten
@@ -676,6 +684,8 @@ swellan, vs3:
     to swell
 sweltan, vs3:
     to die
+sweostor, nf: acc.sg sweostor; gen.sg sweostor; dat.sg sweostor; nom.pl sweostor|sweostra|sweostru; gen.pl sweostra; dat.pl sweostrum
+    mother
 swīn, nn:
     swine, pig; pork
 swīn-hierde, nm:
