@@ -2,6 +2,8 @@ ac, conj:
     but
 āc, nfv: gen.sg āce|ǣċ; dat.sg ǣċ; nom.pl ǣċ
     oak
+āgan, vpp: 1sg āh; 2sg āhst; past āht; pp āgen
+    to own
 ān, adj: masc.acc.sg. ǣnne|ānne
     one; a certain
 and, conj:
@@ -120,6 +122,8 @@ cū, nfv: gen.sg cūe|cūs|cȳ; gen.pl cūa|cūna
     cow
 cuman, vs5: past.1sg cōm; past.pl cōmon
     to come
+cunnan, vpp: 1sg cann; 2sg canst; past cūþ; pp cunnen
+    to be familiar with; to know how
 cūþ, adj:
     known
 cwellan, vw1:
@@ -166,10 +170,14 @@ dūce, nfw:
     duck (bird)
 dūfan, vs2:
     to dive
+dugan, vpp: 1sg dēag|dēah; 2sg dēaht; past doht; pp dugen
+    to be useful, avail
 dung, nf:
     dung, manure, feces
 dung, nfv:
     underground chamber; dungeon
+durran, vpp: 1sg dearr; 2sg dearst; past dorst; pp durren
+    to dare
 dysiġ, adj:
     stupid, dumb, foolish, dimwitted
 dysiġ, nn:
@@ -291,6 +299,10 @@ gǣst, nm:
     yes, yea, yeah
 ġe-endian, vw2:
     to end
+ġe-munan, vpp: 1sg ġe-man; 2sg ġe-manst; past ġe-mund; pp ġe-munen
+    to remember
+ġe-nugan, vpp: 1sg ġe-nēah; 2sg ġe-nēaht; past ġe-noht; pp ġe-nugen
+    to be enough, suffice
 ġeō, adv:
     once (upon a time), formerly
 ġēse, int:
@@ -461,6 +473,8 @@ lȳtel, adj: comp lǣssa; sup lǣst
     little, small
 macian, vw2:
     to make
+magan, vpp: 1sg mæġ; 2sg meaht|miht; subj mæġe; past meaht|miht; pp magen
+    can, may
 maniġ, adjs: comp -; sup -
     many
 mann, nmv:
@@ -481,10 +495,14 @@ mīere, nfw:
     mare, female horse
 mid, prep:
     [+dat] with; [+instr] using
+miht, nf:
+    might, power, strength, ability
 mīn, adjs:
     my, mine
 mōna, nmw:
     moon
+mōtan, vpp: 1sg mōt; 2sg mōst; past mōst; pp mōten
+    can, may, be allowed to; must
 mūs, nfv:
     mouse
 nama, nmw:
@@ -519,6 +537,8 @@ nū, adv:
     now
 nyllan, vi: 1sg nylle; 2sg nylt; 3sg nyle; past nold
     to not want
+nytan, vpp: 1sg nāt; 2sg nāst; past nyst|nyss; pp nyten
+    to not know (a fact)
 of, prep:
     from, out of
 ofer, prep:
@@ -583,6 +603,8 @@ sċīnan, vs1:
     to shine
 sċip, nn:
     ship
+sċulan, vpp: 1sg sċeal; 2sg sċealt; subj sċyle; past sċeold|sċold; pp sċulen
+    shall, should, must; to owe
 sē, pron: acc þone; gen þæs; dat þǣm|þām; inst þȳ|þon|þē
     the, that (masculine)
 seċġan, vw3: 2sg sæġst|sagast; 3sg sæġþ|sagaþ; past sæġd|sǣd; imp saga|sæġe
@@ -682,8 +704,6 @@ tunge, nfw:
     tongue; language
 tungol, nn:
     star
-þus, adv:
-    this way, to this extent, thus
 þā, pron: acc þā; gen þāra; dat þǣm|þām
     the, those
 þā, adv:
@@ -730,10 +750,12 @@ tungol, nn:
     [þonne ... þonne] when ... then
 þū, pron: acc þē|þec; gen þīn; dat þē
     thou, thee, you (singular)
+þurfan, vpp: 1sg þearf; 2sg þearft; subj þearfte|þyrfte; past þorft; pres.p þearfende|þurfende|þyrfende; pp þurfen
+    to need
 þurh, prep:
     through
 þus, adv:
-    thus, in this way
+    thus, in this way, to this extent
 þynċan, vw1: past þūht
     to seem [+acc: to someone]
 uncer, adjs:
@@ -742,6 +764,8 @@ under, prep:
     under
 under-standan, vs6:
     to understand
+unnan, vpp: 1sg ann; 2sg anst; past ūþ; pp unnen
+    to grant
 ūre, adjs:
     our, ours
 # TODO: Better word type?
@@ -795,6 +819,8 @@ wīs, adj:
     wise
 wit, pron: acc unc; gen uncer; dat unc
     we two, us two
+witan, vpp: 1sg wāt; 2sg wāst; past wist|wiss; pp witen
+    to know (a fact)
 wītega, nmw:
     wise man, prophet
 wiþ, prep:

@@ -44,6 +44,7 @@ class Lexicon(object):
                         self.entries.append(entry)
                         for word_type in word_types:
                             for forms in gen_forms(headword, word_type, special):
+                                assert isinstance(forms, list)  # we've had trouble with strings creeping in
                                 for form in forms:
                                     if form != '-':
                                         form = normalize(form)
@@ -51,6 +52,7 @@ class Lexicon(object):
                                             self.index[form] = set()
                                         self.index[form].add(entry)
             except LexiconError as err:
+                # TODO: do something else here??
                 print("Line", line_num, ":", err, file=sys.stderr)
                 sys.exit(1)
 
@@ -179,8 +181,8 @@ def gen_noun(headword, word_type, special):
             special.get('dat.pl') or [headword + 'um'],
         ]
     else:
-        # Other
-        return [headword]
+        # Other (TODO: implement all types and throw an error here instead)
+        return [[headword]]
 
 
 def gen_adjective(headword, word_type, special):
@@ -369,8 +371,12 @@ def gen_verb(headword, word_type, special):
                     [x + 'e' for x in stems],           # past.2sg
                     [x + 'en' for x in stems],          # past.subj.pl
                 ]
+            elif key == 'pp':
+                result.append(value + ['ġe-' + x for x in value if not x.startswith('ġe-')])
             else:
                 result.append(value)
+        if word_type == 'vpp':
+            result.append([inf_stem + 'on'])            # pres.pl
     else:
         raise LexiconError("Unrecognized verb type: " + word_type)
     return result

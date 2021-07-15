@@ -4,8 +4,6 @@ Generate adverbs from adjectives (only if "adv" field not supplied)
 
 Parse specials for adjectives
 
-Preterite-present verbs
-
 More strong verbs with irregular infinitives
 
 Inflected forms of present and past participles
@@ -20,7 +18,7 @@ Forms such as sċipu
 
 bint, not bindþ, etc.
 
-Replace "þonne" with "þanne"?
+nm.sg, nn.sg, nf.sg (e.g. "feoh")
 
 
 bā: what part of speech?
@@ -39,7 +37,11 @@ hātan has a passive form (iċ hātte, þū hāttest, hē hātte, wē hātton), 
 
 sǣ can be masc. or fem. with different irregular declensions
 
+sunu, wudu
+
 þætte should redirect only to the conjunction form of þæt
+
+þonne: replace with þanne?
 
 wealh should lose its h in inflected forms
 
