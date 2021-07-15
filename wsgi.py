@@ -10,7 +10,7 @@ application = Flask(__name__)
 @application.route('/search/oe/')
 @application.route('/search/oe/<search_terms>')
 def search_oe(search_terms="nawiht"):
-    lex = lexicon.Lexicon('dict.txt')
+    lex = lexicon.Lexicon('lexicon.txt')
     search_terms = search_terms.split()
     text = ""
     for term in search_terms:
@@ -26,7 +26,7 @@ def search_oe(search_terms="nawiht"):
 @application.route('/search/reverse/')
 @application.route('/search/reverse/<search_string>')
 def search_reverse(search_string="nothing"):
-    lex = lexicon.Lexicon('dict.txt')
+    lex = lexicon.Lexicon('lexicon.txt')
     entries = lex.reverse_lookup(search_string)
     text = ""
     if len(entries) == 0:

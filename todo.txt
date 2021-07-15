@@ -22,6 +22,8 @@ nm.sg, nn.sg, nf.sg (e.g. "feoh")
 
 Specials for adjectives like masc.acc.sg
 
+Verify all vs7 verbs conjugate correctly
+
 
 bā: what part of speech?
 

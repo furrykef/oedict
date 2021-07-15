@@ -9,13 +9,13 @@ def main(argv=None):
     if argv is None:
         argv = sys.argv[1:]
     p = argparse.ArgumentParser(description="Kef's Old English dictionary")
-    p.add_argument('-d', '--dict', default='dict.txt', help="filename of dictionary")
+    p.add_argument('-l', '--lexicon', default='lexicon.txt', help="filename of lexicon")
     p.add_argument('-i', '--interactive', action='store_true', help="interactive mode")
     p.add_argument('-r', '--reverse', action='store_true', help="reverse lookup")
     p.add_argument('--dump', action='store_true', help="dump debug stuff")
     p.add_argument('search_terms', nargs='*')
     args = p.parse_args(argv)
-    lex = lexicon.Lexicon(args.dict)
+    lex = lexicon.Lexicon(args.lexicon)
     if args.dump:
         lex.dump()
     for term in args.search_terms:
