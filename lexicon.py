@@ -213,7 +213,7 @@ def gen_adjective(headword, word_type, special):
 
 def gen_pronoun(headword, word_type, special):
     # Pronouns in the lexicon file define all their forms explicitly
-    return [headword] + list(special.values())
+    return [[headword]] + list(special.values())
 
 
 def gen_verb(headword, word_type, special):
@@ -285,7 +285,7 @@ def gen_verb(headword, word_type, special):
         past_stems = special.get('past') or [past_stem]
         past_participles = (special.get('pp') or past_stems)[:]
         past_participles += ['ġe-' + x for x in past_participles if not x.startswith('ġe-')]
-        return result + [
+        result += [
             special.get('2sg') or [short_stem + 'st'],
             special.get('3sg') or [short_stem + 'þ'],
             special.get('pl') or [inf_stem + 'þ'],
@@ -337,20 +337,43 @@ def gen_verb(headword, word_type, special):
         past_pl_stems = [x[:-2] for x in past_pls]
         past_participles = (special.get('pp') or [mutate(inf_stem, pp_repl) + 'en'])[:]
         past_participles += ['ġe-' + x for x in past_participles if not x.startswith('ġe-')]
-        return result + [
+        result += [
             special.get('2sg') or [i_mutate(inf_stem) + 'st'],
             special.get('3sg') or [i_mutate(inf_stem) + 'þ'],
             special.get('pl') or [inf_stem + 'aþ'],
             special.get('past.1sg') or [mutate(inf_stem, past_1sg_repl)],
-            [x + 'e' for x in past_pl_stems],           # past.2g
+            [x + 'e' for x in past_pl_stems],           # past.2sg
             past_pls,
             [x + 'en' for x in past_pl_stems],          # past.subj.pl
             special.get('imp') or [inf_stem],
             past_participles,
         ]
+    elif word_type in ('vpp', 'vi'):
+        # Preterite-present or irregular verb
+        # These define most of their forms explicitly
+        # Past participle is *not* inferred from "past" special
+        for key, value in special.items():
+            if key == 'past':
+                # Past conjugates like weak verb (e.g. ēodon)
+                result += [
+                    [x + 'e' for x in value],           # past.1sg/3sg
+                    [x + 'est' for x in value],         # past.2sg
+                    [x + 'on' for x in value],          # past.pl
+                    [x + 'en' for x in value],          # past.subj.pl
+                ]
+            elif key == 'past.pl':
+                # Past conjugates like strong verb (e.g. wǣron)
+                stems = [x[:-2] for x in value]
+                result += [
+                    value,
+                    [x + 'e' for x in stems],           # past.2sg
+                    [x + 'en' for x in stems],          # past.subj.pl
+                ]
+            else:
+                result.append(value)
     else:
-        # Irregular verb (TODO)
-        return result
+        raise LexiconError("Unrecognized verb type: " + word_type)
+    return result
 
 
 # I-mutates the nucleus of the last syllable of its argument

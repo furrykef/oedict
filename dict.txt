@@ -81,7 +81,7 @@ bōc, nfv: gen.sg bōce|bēċ; dat.sg bēċ; nom.pl bēċ
 boda, nmw:
     messenger; prophet
 boga, nmw:
-    bow (weapon)
+    bow (weapon), arch
 brēost, nn, nf:
     chest, bosom, breast
 brytta, nmw:
@@ -98,6 +98,8 @@ catt, nm:
     cat
 catte, nfw:
     female cat
+ċeald, adj:
+    cold
 ċēapstōw, nf:
     market
 ċēosan, vs2: past.pl curon; pp coren
@@ -134,6 +136,8 @@ cynn, nn:
     kind; family; grammatical gender
 dā, nfw: acc.sg dān; gen.sg dān; dat.sg dān; nom.pl dān; gen.pl dāna; dat.pl dām|dāum
     doe, female deer
+dǣd, nf:
+    deed, act
 dæġ, nm:
     day
 dǣl, nm:
@@ -150,6 +154,8 @@ dol, adj:
     stupid, dumb, foolish, dimwitted
 dōn, vi: 2sg dēst; 3sg dēþ; past dyd; pp dōn
     to do
+draca, nmw:
+    snake, serpent, dragon
 drīfan, vs1:
     to drive
 drincan, vs3:
@@ -469,6 +475,8 @@ mete, nm:
     food
 miċel, adj: comp māra; sup mǣst
     big, large
+mis-dǣd, nf:
+    misdeed
 mīere, nfw:
     mare, female horse
 mid, prep:
@@ -535,12 +543,22 @@ ramm, nm:
     ram (animal); battering ram
 rǣdan, vs7:
     to read; to advise
+reġn, nm:
+    rain
+reġn-boga, nmw:
+    rainbow
+reġnig, adj:
+    rainy
+reġn-wyrm, nm:
+    earthworm
 rīċe, adj:
     rich
 rīċe, nn:
     kingdom
 rīdan, vs1:
     to ride
+riġnan, vw1:
+    to rain; to cause rain to fall
 riht, adj:
     right; straight
 sārian, vw2:
@@ -593,6 +611,14 @@ slēpan, vs7:
     SEE slǣpan
 smeortan, vs3:
     to smart, sting, hurt
+snaca, nmw:
+    snake, serpent
+snāw, nm:
+    snow
+snāwiġ, adj:
+    snowy
+snīwan, vw1:
+    to snow
 sōþ, nn:
     truth
 spillan, vw1:
@@ -791,6 +817,8 @@ wull, nf:
     wool
 wyllen, adj:
     woolen
+wyrm, nm:
+    worm; snake, serpent, dragon
 # TODO: Better word type?
 wuton, particle:
     SEE uton
