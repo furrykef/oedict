@@ -278,7 +278,7 @@ def gen_verb(headword, word_type, special):
             elif headword.endswith('ċġan'):
                 short_stem = headword[:-4] + 'ġ'
             else:
-                if headword.endswith(('ċċan', 'ddan', 'llan', 'mman', 'nnan', 'ppan', 'rian', 'rran', 'ssan', 'ttan')):
+                if headword.endswith(('ċċan', 'ddan', 'llan', 'mman', 'nnan', 'ppan', 'rian', 'rran', 'ssan')):
                     short_stem = headword[:-3] + 'e'
                 else:
                     short_stem = long_stem
@@ -290,6 +290,8 @@ def gen_verb(headword, word_type, special):
                 past_stem = headword[:-5] + 'eaht'
             elif headword.endswith('ellan'):
                 past_stem = headword[:-5] + 'eald'
+            elif short_stem.endswith(('t', 'd')):
+                past_stem = short_stem
             else:
                 past_stem = short_stem + 'd'
         elif word_type[2] == '2':
@@ -310,7 +312,7 @@ def gen_verb(headword, word_type, special):
         result += [
             special.get('2sg') or [assimilate(short_stem, 'st')],
             special.get('3sg') or [assimilate(short_stem, 'þ')],
-            special.get('pl') or [inf_stem + 'þ'],
+            special.get('pl') or [inf_stem + 'aþ'],
             [x + 'e' for x in past_stems],          # past.1sg/3sg; past.subj.sg
             [x + 'est' for x in past_stems],        # past.2sg
             [x + 'on' for x in past_stems],         # past.pl

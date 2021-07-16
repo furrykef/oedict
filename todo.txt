@@ -23,9 +23,11 @@ Verify all vs7 verbs conjugate correctly
 
 <br> tags or something with multi-line results
 
-cȳþan, cȳþde|cȳdde
-sendan, sende
-settan, sette
+cȳþan's past tense is cȳþde *or* cȳdde
+
+Are there any -ttan verbs that conjugate like fremman?
+
+Don't index silly forms like sweryan
 
 
 bā: what part of speech?

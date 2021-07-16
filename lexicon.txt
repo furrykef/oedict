@@ -631,6 +631,8 @@ seċġan, vw3: 2sg sæġst|sagast; 3sg sæġþ|sagaþ; past sæġd|sǣd; imp sag
     to say
 sellan, vw1:
     to give; to sell
+sendan, vw1:
+    to send
 sēo, pron: acc þā; gen þǣre; dat þǣre
     the, that (feminine)
 sēoc, adj:
@@ -641,6 +643,8 @@ seolfor, nn:
     silver
 sēon, vs5: 2sg siehst; 3sg siehþ; past.1sg seah; past.pl sāwon; pp sewen
     to see
+settan, vw1:
+    to set, put down
 simle, adv:
     always
 sīn, adjs:
