@@ -60,10 +60,11 @@ class Lexicon(object):
                                 assert isinstance(forms, list)  # we've had trouble with strings creeping in
                                 for form in forms:
                                     if form != '-':
-                                        form = normalize(form)
-                                        if form not in self.index:
-                                            self.index[form] = set()
-                                        self.index[form].add(entry)
+                                        for variant in gen_variants(form):
+                                            variant = normalize(variant)
+                                            if variant not in self.index:
+                                                self.index[variant] = set()
+                                            self.index[variant].add(entry)
             except LexiconError as err:
                 # TODO: do something else here??
                 print("Line", line_num, ":", err, file=sys.stderr)
@@ -456,6 +457,38 @@ def assimilate(root, suffix):
         assert False
 
 
+def gen_variants(text):
+    results = []
+    gen_variants_impl(text, results)
+    return results
+
+# TODO: OK to ignore capitalization?
+def gen_variants_impl(next, results, preceding=""):
+    if len(next) == 0:
+        # Reached end of word
+        results.append(preceding)
+        return
+    if next.startswith('īe'):
+        gen_variants_impl(next[2:], results, preceding + 'ī')
+        gen_variants_impl(next[2:], results, preceding + 'ȳ')
+    elif next.startswith('ie'):
+        gen_variants_impl(next[2:], results, preceding + 'i')
+        gen_variants_impl(next[2:], results, preceding + 'y')
+    elif next.startswith('ī'):
+        gen_variants_impl(next[1:], results, preceding + 'ȳ')
+    elif next.startswith('i'):
+        gen_variants_impl(next[1:], results, preceding + 'y')
+    elif next.startswith('ȳ'):
+        gen_variants_impl(next[1:], results, preceding + 'ī')
+    elif next.startswith('y'):
+        gen_variants_impl(next[1:], results, preceding + 'i')
+    elif next.startswith('an') and not preceding.endswith(('ē', 'e')):
+        gen_variants_impl(next[2:], results, preceding + 'on')
+    elif next.startswith('on') and not preceding.endswith(('ē', 'e')):
+        gen_variants_impl(next[2:], results, preceding + 'an')
+    gen_variants_impl(next[1:], results, preceding + next[0])
+
+
 def normalize(text):
     text = unicodedata.normalize('NFC', text)
     text = (text.lower()
@@ -463,10 +496,13 @@ def normalize(text):
                 .replace('k', 'c')
                 .replace('&', 'and')
                 .replace('⁊', 'and')
+                .replace('ꝥ', 'thaet')
                 .replace('-', ""))
     text = unidecode.unidecode(text)
     if len(text) >= 2 and text[-2] == text[-1]:
         # Word ends with double letter; reduce
         text = text[:-1]
+    elif text.endswith(('ngc', 'ncg')):
+        text = text[:-3] + 'ng'
     return text
 

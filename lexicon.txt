@@ -467,6 +467,10 @@ lǣran, vw1:
     to teach
 lǣrestre, nfw:
     female teacher
+lēoht, adj:
+    light, lightweight
+lēoht, nn:
+    light, illumination
 leornian, vw2:
     to learn
 lēoþ, nn:
