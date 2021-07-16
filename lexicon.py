@@ -307,8 +307,8 @@ def gen_verb(headword, word_type, special):
         past_participles = (special.get('pp') or past_stems)[:]
         past_participles += ['ġe-' + x for x in past_participles if not x.startswith('ġe-')]
         result += [
-            special.get('2sg') or [short_stem + 'st'],
-            special.get('3sg') or [short_stem + 'þ'],
+            special.get('2sg') or [assimilate(short_stem, 'st')],
+            special.get('3sg') or [assimilate(short_stem, 'þ')],
             special.get('pl') or [inf_stem + 'þ'],
             [x + 'e' for x in past_stems],          # past.1sg/3sg; past.subj.sg
             [x + 'est' for x in past_stems],        # past.2sg
@@ -359,8 +359,8 @@ def gen_verb(headword, word_type, special):
         past_participles = (special.get('pp') or [mutate(inf_stem, pp_repl) + 'en'])[:]
         past_participles += ['ġe-' + x for x in past_participles if not x.startswith('ġe-')]
         result += [
-            special.get('2sg') or [i_mutate(inf_stem) + 'st'],
-            special.get('3sg') or [i_mutate(inf_stem) + 'þ'],
+            special.get('2sg') or [assimilate(i_mutate(inf_stem), 'st')],
+            special.get('3sg') or [assimilate(i_mutate(inf_stem), 'þ')],
             special.get('pl') or [inf_stem + 'aþ'],
             special.get('past.1sg') or [mutate(inf_stem, past_1sg_repl)],
             [x + 'e' for x in past_pl_stems],           # past.2sg
@@ -435,10 +435,32 @@ def get_nucleus(word):
     return split_word(word)[1]
 
 
+def assimilate(root, suffix):
+    if suffix == 'þ':
+        if root.endswith(('dd', 'tt')):
+            return root[:-2] + 'tt'
+        elif root.endswith(('d', 't', 's')):
+            return root[:-1] + 't'
+        else:
+            return root + suffix
+    elif suffix == 'st':
+        if root.endswith(('dd', 'tt')):
+            return root[:-2] + 'tst'
+        elif root.endswith(('d', 't')):
+            return root[:-1] + 'tst'
+        elif root.endswith(('s', 'þ')):
+            return root[:-1] + 'st'
+        else:
+            return root + suffix
+    else:
+        assert False
+
+
 def normalize(text):
     text = unicodedata.normalize('NFC', text)
     text = (text.lower()
                 .replace('ð', 'þ')
+                .replace('k', 'c')
                 .replace('&', 'and')
                 .replace('⁊', 'and')
                 .replace('-', ""))

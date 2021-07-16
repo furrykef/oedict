@@ -3,6 +3,7 @@ Generate comparative and superlative of adjectives and adverbs
 Generate adverbs from adjectives (only if "adv" field not supplied)
 
 Parse specials for adjectives
+Specials for adjectives like masc.acc.sg
 
 More strong verbs with irregular infinitives
 
@@ -16,15 +17,15 @@ Forms such as sċipu
 
 "hall" wrongly pulls up "hāl"
 
-bint, not bindþ, etc.
-
 nm.sg, nn.sg, nf.sg (e.g. "feoh")
-
-Specials for adjectives like masc.acc.sg
 
 Verify all vs7 verbs conjugate correctly
 
 <br> tags or something with multi-line results
+
+cȳþan, cȳþde|cȳdde
+sendan, sende
+settan, sette
 
 
 bā: what part of speech?

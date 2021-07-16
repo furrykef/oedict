@@ -4,6 +4,8 @@ ac, conj:
     oak
 āgan, vpp: 1sg āh; 2sg āhst; past āht; pp āgen
     to own
+āgen, adj:
+    (one's) own
 ān, adj: masc.acc.sg ǣnne|ānne
     one; a certain
 and, conj:
@@ -16,6 +18,8 @@ and-swerian, vw1, vw2:
     to ask
 assa, nmw:
     donkey, ass
+āþ, nm:
+    oath
 āxian, vw2:
     SEE āscian
 ǣlċ, adj:
@@ -31,6 +35,8 @@ assa, nmw:
     SEE æmethyll
 ǣniġ, adj:
     any
+æþeling, nm:
+    prince
 bā, pron:
     both
 bān, nn:
@@ -375,6 +381,8 @@ heall, nf:
     hall, large room
 helpan, vs3:
     to help
+henġest, nm:
+    stallion, male horse
 henn, nf:
     hen
 hēr, adv:
