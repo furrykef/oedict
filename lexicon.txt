@@ -673,6 +673,8 @@ stōw, nf:
     place
 sunne, nfw:
     sun
+sunu, nm: gen.sg suna; dat.sg suna; nom.pl suna
+    son
 swā, adv:
     so, to that extent, in that way
     [swā ... swā] as ... as
@@ -727,8 +729,11 @@ tungol, nn:
     these
 þancian, vw2:
     to thank [+dat: someone] [+gen: for something]
-þanon, adv:
-    from there, thence
+þanne, adv:
+    then
+þanne, conj:
+    then; when
+    [þanne ... þanne] when ... then
 þæder, adv:
     to there, thither
 þǣr, adv:
@@ -753,11 +758,6 @@ tungol, nn:
     thing
 þis, pron: acc þis; gen þisses; dat þissum; inst þȳs
     this (neuter)
-þonne, adv:
-    then
-þonne, conj:
-    then; when
-    [þonne ... þonne] when ... then
 þū, pron: acc þē|þec; gen þīn; dat þē
     thou, thee, you (singular)
 þurfan, vpp: 1sg þearf; 2sg þearft; subj þearfte|þyrfte; past þorft; pres.p þearfende|þurfende|þyrfende; pp þurfen
@@ -847,6 +847,8 @@ wrang, adj:
     rough, uneven; unjust
 wrītan, vs1:
     to write
+wudu, nm: gen.sg wuda; dat.sg wuda; nom.pl wuda
+    wood; tree
 wulf, nm:
     wolf
 wull, nf:

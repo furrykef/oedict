@@ -12,7 +12,7 @@ Thanks to the Ænglisċ Discord (https://discord.gg/9rwnDRC) for all their help!
 ## References
 
 * Wiktionary, by many authors
-* _An Anglo-Saxon Dictionary, by Joseph Bosworth and T. Northcote Toller
+* _An Anglo-Saxon Dictionary_, by Joseph Bosworth and T. Northcote Toller
 * _An Anglo-Saxon Reader_, by Henry Sweet
 * _An Old English Grammar_, by Randolph Quirk and C.L. Wrenn
 

@@ -24,6 +24,8 @@ Specials for adjectives like masc.acc.sg
 
 Verify all vs7 verbs conjugate correctly
 
+<br> tags or something with multi-line results
+
 
 bā: what part of speech?
 
@@ -43,11 +45,7 @@ hātan has a passive form (iċ hātte, þū hāttest, hē hātte, wē hātton), 
 
 sǣ can be masc. or fem. with different irregular declensions
 
-sunu, wudu
-
 þætte should redirect only to the conjunction form of þæt
-
-þonne: replace with þanne?
 
 wealh should lose its h in inflected forms
 

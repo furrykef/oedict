@@ -83,9 +83,13 @@ class Lexicon(object):
                     results.append(entry)
         return results
 
-    def dump(self):
+    def dump_index(self):
         for word, entries in self.index.items():
             print(word, ":", [entry.lemma for entry in entries])
+
+    def dump_lemmas(self):
+        for entry in self.entries:
+            print(entry.lemma)
 
 
 # Parses a list of special forms
