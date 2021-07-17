@@ -9,6 +9,7 @@ SPECIAL_TYPES = set((
     'past', 'past.1sg', 'past.pl',
     'long.inf', 'pres.p', 'pp', 'imp',
     'acc', 'gen', 'dat', 'inst',
+    'stem', 'stem.pl',
     'acc.sg', 'gen.sg', 'dat.sg',
     'nom.pl', 'acc.pl', 'gen.pl', 'dat.pl',
     'masc.acc.sg',
@@ -19,7 +20,7 @@ SPECIAL_TYPES = set((
 class Entry(object):
     def __init__(self, lemma):
         self.lemma = lemma
-        self.definition = ""
+        self.definitions = []
 
 
 class LexiconError(Exception):
@@ -38,7 +39,8 @@ class Lexicon(object):
                     line_num += 1
                     if line.startswith(" "):
                         # Add to most recent entry's definition
-                        entry.definition += line
+                        line = line.strip()
+                        entry.definitions.append(line)
                     else:
                         # Create a new entry if there's anything on this line
                         line = line.strip()
@@ -78,10 +80,10 @@ class Lexicon(object):
         search_string = search_string.lower()
         results = []
         for entry in self.entries:
-            definition = entry.definition.strip()
-            if not definition.startswith("SEE"):
-                if search_string in definition.lower():
-                    results.append(entry)
+            for definition in entry.definitions:
+                if not definition.startswith("SEE"):
+                    if search_string in definition.lower():
+                        results.append(entry)
         return results
 
     def dump_index(self):
@@ -104,7 +106,7 @@ def parse_special(special):
     for item in special:
         form, args = item.split(maxsplit=1)
         if not form in SPECIAL_TYPES:
-            raise LexiconError("Unknown special: " + form)
+            raise LexiconError(f"Unknown special: {form}")
         result[form] = args.split('|')
     return result
 
@@ -121,14 +123,24 @@ def gen_forms(headword, word_type, special):
     elif word_type in ('adji', 'adv', 'prep', 'conj', 'int', 'particle'):
         return [[headword]]
     else:
-        raise LexiconError("Invalid word type: " + word_type)
+        raise LexiconError(f"Invalid word type: {word_type}")
 
 
 def gen_noun(headword, word_type, special):
-    if headword[-1] in ('a', 'e', 'u', 'h'):
-        stem = headword[:-1]
+    if 'stem' in special:
+        if len(special['stem']) > 1:
+            raise LexiconError(f"{headword}: multiple stems not supported")
+        stem = special['stem'][0]
+    elif headword[-1] in ('a', 'e', 'u'):
+        stem = headword[-1]
     else:
         stem = headword
+    if 'stem.pl' in special:
+        if len(special['stem.pl']) > 1:
+            raise LexiconError(f"{headword}: multiple plural stems not supported")
+        stem_pl = special['stem.pl'][0]
+    else:
+        stem_pl = stem
     if word_type[1:] == 'm':
         # Strong masculine noun
         return [
@@ -136,10 +148,10 @@ def gen_noun(headword, word_type, special):
             special.get('acc.sg') or special.get('nom.sg') or [headword],
             special.get('gen.sg') or [stem + 'es'],
             special.get('dat.sg') or [stem + 'e'],
-            special.get('nom.pl') or [stem + 'as'],
-            special.get('acc.pl') or special.get('nom.pl') or [stem + 'as'],
-            special.get('gen.pl') or [stem + 'a'],
-            special.get('dat.pl') or [stem + 'um'],
+            special.get('nom.pl') or [stem_pl + 'as'],
+            special.get('acc.pl') or special.get('nom.pl') or [stem_pl + 'as'],
+            special.get('gen.pl') or [stem_pl + 'a'],
+            special.get('dat.pl') or [stem_pl + 'um'],
         ]
     elif word_type[1:] == 'f':
         return [
@@ -147,10 +159,10 @@ def gen_noun(headword, word_type, special):
             special.get('acc.sg') or [stem + 'e'],
             special.get('gen.sg') or [stem + 'e'],
             special.get('dat.sg') or [stem + 'e'],
-            special.get('nom.pl') or [stem + 'a', stem + 'e'],
-            special.get('acc.pl') or special.get('nom.pl') or [stem + 'a', stem + 'e'],
-            special.get('gen.pl') or [stem + 'a'],
-            special.get('dat.pl') or [stem + 'um'],
+            special.get('nom.pl') or [stem_pl + 'a', stem_pl + 'e'],
+            special.get('acc.pl') or special.get('nom.pl') or [stem_pl + 'a', stem_pl + 'e'],
+            special.get('gen.pl') or [stem_pl + 'a'],
+            special.get('dat.pl') or [stem_pl + 'um'],
         ]
     elif word_type[1:] == 'n':
         # Strong neuter noun
@@ -161,8 +173,8 @@ def gen_noun(headword, word_type, special):
             special.get('dat.sg') or [stem + 'e'],
             special.get('nom.pl') or [headword],
             special.get('acc.pl') or special.get('nom.pl') or [headword],
-            special.get('gen.pl') or [stem + 'a'],
-            special.get('dat.pl') or [stem + 'um'],
+            special.get('gen.pl') or [stem_pl + 'a'],
+            special.get('dat.pl') or [stem_pl + 'um'],
         ]
     elif word_type[1:] in ('mw', 'fw', 'nw'):
         # Weak noun
@@ -185,9 +197,9 @@ def gen_noun(headword, word_type, special):
         # Vocalic noun
         mutated = i_mutate(headword)
         if word_type[1] == 'm':
-            genitives = [headword + 'es']
+            genitives = [stem + 'es']
         else:
-            genitives = [headword + 'e', mutated]
+            genitives = [stem + 'e', mutated]
         return [
             special.get('nom.sg') or [headword],
             special.get('acc.sg') or special.get('nom.sg') or [headword],
@@ -195,8 +207,8 @@ def gen_noun(headword, word_type, special):
             special.get('dat.sg') or [mutated],
             special.get('nom.pl') or [mutated],
             special.get('acc.pl') or special.get('nom.pl') or [mutated],
-            special.get('gen.pl') or [headword + 'a'],
-            special.get('dat.pl') or [headword + 'um'],
+            special.get('gen.pl') or [stem_pl + 'a'],
+            special.get('dat.pl') or [stem_pl + 'um'],
         ]
     else:
         # Other (TODO: implement all types and throw an error here instead)
@@ -254,7 +266,7 @@ def gen_verb(headword, word_type, special):
         pres_participles = special.get('pres.p') or [headword[:-2] + 'ende']
         irregular_infinitive = False
     else:
-        raise LexiconError("invalid infinitive")
+        raise LexiconError(f"invalid infinitive: {headword}")
     result = [
         [headword],
         special.get("long.inf") or long_infinitives,
@@ -280,10 +292,6 @@ def gen_verb(headword, word_type, special):
                     short_stem = headword[:-3] + 'e'
                 else:
                     short_stem = long_stem
-            if 'past' in special:
-                if len(special['past']) > 1:
-                    raise LexiconError("multiple past stems not supported")
-                past_stem = special['past'][0]
             if headword.endswith('eċċan'):
                 past_stem = headword[:-5] + 'eaht'
             elif headword.endswith('ellan'):
@@ -398,7 +406,7 @@ def gen_verb(headword, word_type, special):
         if word_type == 'vpp':
             result.append([inf_stem + 'on'])            # pres.pl
     else:
-        raise LexiconError("Unrecognized verb type: " + word_type)
+        raise LexiconError(f"Unrecognized verb type: {word_type}")
     return result
 
 
@@ -482,10 +490,10 @@ def gen_variants_impl(next, results, preceding=""):
         gen_variants_impl(next[1:], results, preceding + 'ī')
     elif next.startswith('y'):
         gen_variants_impl(next[1:], results, preceding + 'i')
-    elif next.startswith('an') and not preceding.endswith(('ē', 'e')):
-        gen_variants_impl(next[2:], results, preceding + 'on')
-    elif next.startswith('on') and not preceding.endswith(('ē', 'e')):
-        gen_variants_impl(next[2:], results, preceding + 'an')
+    elif next.startswith(('an', 'am')) and not preceding.endswith(('ē', 'e')):
+        gen_variants_impl(next[1:], results, preceding + 'o')
+    elif next.startswith(('on', 'om')) and not preceding.endswith(('ē', 'e')):
+        gen_variants_impl(next[1:], results, preceding + 'a')
     gen_variants_impl(next[1:], results, preceding + next[0])
 
 

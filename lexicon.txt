@@ -14,8 +14,12 @@ and-swarian, vw1, vw2:
     to answer
 and-swerian, vw1, vw2:
     SEE andswarian
+angel, nm:
+    hook, such as for fishing
 āscian, vw2:
     to ask
+āscung, nf:
+    question
 assa, nmw:
     donkey, ass
 āþ, nm:
@@ -89,7 +93,9 @@ bearn, nn:
 bēo, nf: acc.sg bēo; gen.sg bēo; dat.sg bēo; nom.pl bēon; gen.pl bēona; dat.pl bēom
     bee
 bēon, vi: 1sg bēo; 2sg bist; 3sg biþ; past.1sg wæs; past.pl wǣron
-    to be, esp. in the future
+    to be, esp. in the future; [with past participle] to have (done something)
+bēor, nm:
+    beer, mead
 bera, nmw:
     bear (animal)
 beran, vs4:
@@ -168,7 +174,7 @@ cocc, nm:
     rooster, cock, male bird
 cræft, nm:
     art, craft, skill
-cū, nfv: gen.sg cūe|cūs|cȳ; gen.pl cūa|cūna
+cū, nfv: gen.sg cūe|cūs|cȳ; nom.pl cȳ|cȳe; gen.pl cūa|cūna
     cow
 cuman, vs5: past.1sg cōm; past.pl cōmon
     to come
@@ -195,7 +201,7 @@ dāg, nn:
     dough
 dǣd, nf:
     deed, act
-dæġ, nm:
+dæġ, nm: stem.pl dag
     day
 # TODO: Wiktionary seems to disagree
 dǣġe, nf:
@@ -204,6 +210,8 @@ dǣl, nm:
     part, portion
 dēad, adj:
     dead
+dēma, nmw:
+    judge
 dēman, vw1:
     to deem, consider
 denn, nn:
@@ -216,6 +224,8 @@ dohtor, nf: acc.sg dohtor; gen.sg dohtor|dehter; dat.sg dehter; nom.pl dohtor|do
     daughter
 dol, adj:
     stupid, dumb, foolish, dimwitted
+dōm, nm:
+    judgment
 dōn, vi: 2sg dēst; 3sg dēþ; past dyd; pp dōn
     to do
 draca, nmw:
@@ -254,7 +264,9 @@ dwellan, vw1:
     eye
 # Usage as "hello" appears to be unattested
 ēalā, int:
-    lo, hey
+    lo, hey, alas
+eald, adj: comp ieldra; sup ieldest
+    old
 ealdor-mann, nmv:
     high-ranking nobleman
 eall, adjs:
@@ -289,7 +301,7 @@ fæder, nm:
     father
 fela, adji:
     many (usu. used w/ genitive)
-feoh, nn.sg: dat.sg fēo
+feoh, nn.sg: stem fēo
     money, goods, property, wealth; cattle
 feohtan, vs3:
     to fight
@@ -393,6 +405,8 @@ gōs, nfv:
     goose
 gold, nn:
     gold
+gold-hord, nm:
+    treasury
 grēat, adj:
     big, large
 guma, nmw:
@@ -400,7 +414,7 @@ guma, nmw:
 gylden, adj:
     golden
 habban, vw3: long.inf hæbbenne|habbanne; 1sg hæbbe; 2sg hæfst|hafast; 3sg hæfþ|hafaþ; past hæfd; imp hafa; pres.p hæbbende
-    to have
+    to have, possess; to have (done something)
 hāl, adj:
     healthy, hale
 hām, nm:
@@ -467,6 +481,8 @@ hnutu, nfv: gen.sg hnute|hnyte; dat.sg hnyte; nom.pl hnyte
     nut
 hogian, vw2:
     SEE hyċġan
+hord, nm:
+    hoard, treasure
 hors, nn:
     horse
 hran, nm:
@@ -596,15 +612,20 @@ mūs, nfv:
 nama, nmw:
     name
 # TODO: Wiktionary and BT disagree on vowel length
+næddre, nfw:
+    SEE nædre
+# TODO: Wiktionary and BT disagree on vowel length
 nædre, nfw:
     snake
 nǣniġ, adj:
     not any, no, none
 nā, int:
     no, nay, nah
+nā-hwæþer, adj:
+    neither
 nān, adj:
     not a, not one, none
-nāwiht, pron: acc nāwiht; gen nāwihtes; dat nāwihte
+nā-wiht, pron: acc nā-wiht; gen nā-wihtes; dat nā-wihte
     nothing
 ne, adv:
     not
@@ -651,6 +672,8 @@ rād, nf:
     ride
 ramm, nm:
     ram (animal); battering ram
+rāp, nm:
+    rope, cord, cable
 rǣdan, vs7:
     to read; to advise
 reġn, nm:
@@ -703,6 +726,12 @@ sċīnan, vs1:
     to shine
 sċip, nn:
     ship
+sċōgan, vw1:
+    to shoe, put shoes on (someone or a horse)
+sċōh, nm: stem sċō; gen.pl sċōna
+    shoe
+sċōh-wyrhta, nmw:
+    shoemaker, cobbler
 sċop, nm:
     poet
 sċulan, vpp: 1sg sċeal; 2sg sċealt; subj sċyle; past sċeold|sċold; pp sċulen
@@ -790,6 +819,10 @@ sweord, nn:
     sword
 sweostor, nf: acc.sg sweostor; gen.sg sweostor; dat.sg sweostor; nom.pl sweostor|sweostra|sweostru; gen.pl sweostra; dat.pl sweostrum
     mother
+swefn, nn:
+    SEE swefen
+swefen, nn:
+    sleep; dream
 swīn, nn:
     swine, pig; pork
 swīn-hierde, nm:
@@ -805,7 +838,7 @@ tellan, vw1:
 teors, nm:
     penis
 titt, nm:
-    teat, nipple; breast
+    teat, nipple; breast, mammary
 tō, adv:
     too, excessively
 tō, prep:
@@ -814,6 +847,8 @@ tōdæġ, adv:
     today
 trēow, nn:
     tree
+trum, adj:
+    strong
 tunge, nfw:
     tongue; language
 tungol, nn:
@@ -878,6 +913,9 @@ tungol, nn:
     thus, in this way, to this extent
 þynċan, vw1: past þūht
     to seem [+acc: to someone]
+# TODO: BT has no indication of gender or declension
+ūder, nn:
+    udder, mammary, breast
 uncer, adjs:
     our (of two people)
 under, prep:
@@ -903,7 +941,7 @@ wæter, nn: nom.pl wæter|wætru|wæteru
     water
 wē, pron: acc ūs; gen ūre; dat ūs
     we, us
-wealh, nm:
+wealh, nm: stem wēal
     foreigner; slave
 weall, nm:
     wall
@@ -921,6 +959,8 @@ wela, nmw:
     wealth, riches; prosperity
 wendan, vw1:
     to go
+weorċan, vw1:
+    SEE wyrċan
 weorold, nf:
     world
 wepan, vs7:
@@ -936,7 +976,7 @@ wer-gild, nn:
 wer-wulf, nm:
     werewolf
 wesan, vi: 1sg eom; 2sg eart; 3sg is; pl sind|sindon; subj sīe; past.1sg wæs; past.pl wǣron; imp wes
-    to be
+    to be; [with past participle] to have (done something)
 wīf, nn:
     woman
 wīf-mann, nmv:
@@ -980,6 +1020,10 @@ wuton, particle:
     let's, let us
 wyllen, adj:
     woolen
+wyrċan, vw1: past worht|wroht
+    to work, make
+wyrhta, nmw:
+    worker, maker
 wyrm, nm:
     worm; snake, serpent, dragon
 ymb, prep:

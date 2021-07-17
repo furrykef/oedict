@@ -9,8 +9,6 @@ More strong verbs with irregular infinitives
 
 Inflected forms of present and past participles
 
-an/on folding: "monn" should look up "mann", but "ston" should not look up "stān"
-
 Match lufiġan for lufian, etc.
 
 Forms such as sċipu
@@ -20,8 +18,6 @@ Forms such as sċipu
 nm.sg, nn.sg, nf.sg (e.g. "feoh")
 
 Verify all vs7 verbs conjugate correctly
-
-<br> tags or something with multi-line results
 
 cȳþan's past tense is cȳþde *or* cȳdde
 
@@ -33,8 +29,6 @@ Don't index silly forms like sweryan
 bā: what part of speech?
 
 brōþor: make sure brōþer- vs. brōþr- is consistent in both special and generated forms (note that, I believe, broþeru is attested but perhaps e.g. sweosteru is not)
-
-dæġ, dagas
 
 fugol, lȳtel, wæter, and others should contract in inflected forms
 
@@ -50,7 +44,7 @@ sǣ can be masc. or fem. with different irregular declensions
 
 þætte should redirect only to the conjunction form of þæt
 
-weġ, wegas
+wōh
 
-wōh's declension
+weġ, wegas
 

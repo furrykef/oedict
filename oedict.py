@@ -43,11 +43,13 @@ def lookup(lex, search_str, reverse):
     else:
         entries = lex.lookup(search_str)
     if len(entries) == 0:
-        print("Not found:", search_str)
+        print("Not found:", search_str, "\n")
     else:
         for entry in entries:
             print(entry.lemma, ':')
-            print(entry.definition.rstrip())
+            for num, definition in enumerate(entry.definitions):
+                print(f"    {num+1}. {definition}")
+            print()
 
 
 if __name__ == '__main__':
