@@ -125,24 +125,23 @@ def gen_forms(headword, word_type, special):
 
 
 def gen_noun(headword, word_type, special):
+    if headword[-1] in ('a', 'e', 'u', 'h'):
+        stem = headword[:-1]
+    else:
+        stem = headword
     if word_type[1:] == 'm':
         # Strong masculine noun
         return [
             special.get('nom.sg') or [headword],
             special.get('acc.sg') or special.get('nom.sg') or [headword],
-            special.get('gen.sg') or [headword + 'es'],
-            special.get('dat.sg') or [headword + 'e'],
-            special.get('nom.pl') or [headword + 'as'],
-            special.get('acc.pl') or special.get('nom.pl') or [headword + 'as'],
-            special.get('gen.pl') or [headword + 'a'],
-            special.get('dat.pl') or [headword + 'um'],
+            special.get('gen.sg') or [stem + 'es'],
+            special.get('dat.sg') or [stem + 'e'],
+            special.get('nom.pl') or [stem + 'as'],
+            special.get('acc.pl') or special.get('nom.pl') or [stem + 'as'],
+            special.get('gen.pl') or [stem + 'a'],
+            special.get('dat.pl') or [stem + 'um'],
         ]
     elif word_type[1:] == 'f':
-        # Strong feminine noun
-        if headword[-1] == 'u':
-            stem = headword[:-1]
-        else:
-            stem = headword
         return [
             special.get('nom.sg') or [headword],
             special.get('acc.sg') or [stem + 'e'],
@@ -158,16 +157,15 @@ def gen_noun(headword, word_type, special):
         return [
             special.get('nom.sg') or [headword],
             special.get('acc.sg') or special.get('nom.sg') or [headword],
-            special.get('gen.sg') or [headword + 'es'],
-            special.get('dat.sg') or [headword + 'e'],
+            special.get('gen.sg') or [stem + 'es'],
+            special.get('dat.sg') or [stem + 'e'],
             special.get('nom.pl') or [headword],
             special.get('acc.pl') or special.get('nom.pl') or [headword],
-            special.get('gen.pl') or [headword + 'a'],
-            special.get('dat.pl') or [headword + 'um'],
+            special.get('gen.pl') or [stem + 'a'],
+            special.get('dat.pl') or [stem + 'um'],
         ]
     elif word_type[1:] in ('mw', 'fw', 'nw'):
         # Weak noun
-        stem = headword[:-1]
         oblique = stem + 'an'
         if word_type[1:] == 'nw':
             accusative = special.get('nom.sg') or headword
@@ -278,7 +276,7 @@ def gen_verb(headword, word_type, special):
             elif headword.endswith('ċġan'):
                 short_stem = headword[:-4] + 'ġ'
             else:
-                if headword.endswith(('ċċan', 'ddan', 'llan', 'mman', 'nnan', 'ppan', 'rian', 'rran', 'ssan')):
+                if headword.endswith(('ċċan', 'llan', 'mman', 'nnan', 'ppan', 'rian', 'rran', 'ssan')):
                     short_stem = headword[:-3] + 'e'
                 else:
                     short_stem = long_stem

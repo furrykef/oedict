@@ -22,6 +22,24 @@ assa, nmw:
     oath
 āxian, vw2:
     SEE āscian
+ǣġ, nn: nom.pl ǣġru; gen.pl ǣġra; dat.pl ǣġrum
+    egg
+ǣġ-hwā, pron: acc ǣġ-hwone; gen ǣġ-hwæs; dat ǣġ-hwǣm|ǣġ-hwām
+    everyone
+ǣġ-hwanan, adv:
+    from every direction
+ǣġ-hwār, adv:
+    SEE æġhwǣr
+ǣġ-hwæder, adv:
+    in every direction
+ǣġ-hwǣr, adv:
+    everywhere; in every respect or way
+ǣġ-hwæþer, adj:
+    both; all
+ǣġ-hwæt, pron: acc ǣġ-hwæt; gen ǣġ-hwæs; dat ǣġ-hwǣm|ǣġ-hwām
+    everything
+ǣġ-hwilċ, adj:
+    all
 ǣlċ, adj:
     each
 # TODO: BT and Wiktionary disagree on the vowel length
@@ -39,6 +57,8 @@ assa, nmw:
     prince
 bā, pron:
     both
+bacan, vs6:
+    to bake
 bān, nn:
     bone
 bār, nm:
@@ -50,6 +70,14 @@ bāt, nm, nf:
 #    bat, club, cudgel
 bæc, nn:
     back (of a person or animal's body)
+bæc-hūs, nn: dat.sg bæc-hūs|bæc-hūse
+    bakery
+bæcere, nm:
+    male baker
+bæcern, nn:
+    bakery
+bæcestre, nf:
+    female baker
 be, prep:
     by, about
 beadu, nf:
@@ -76,6 +104,10 @@ bindan, vs3:
     to bind
 bird, nm:
     chick, young bird
+bisċeop, nm:
+    bishop
+bisċop, nm:
+    SEE bisċeop
 blāwan, vs7:
     to blow
 blīþe, adj:
@@ -96,6 +128,10 @@ brōþor, nf: gen.sg brōþor; dat.sg brēþer; nom.pl brōþor|brōþra|brōþr
     brother
 brytta, nmw:
     vendor
+burg, nfv: gen.sg byrġ|byriġ; dat.sg byrġ|byriġ; nom.pl byrġ|byriġ
+    city; castle
+burh, nfv: gen.sg byrġ|byriġ; dat.sg byrġ|byriġ; nom.pl byrġ|byriġ; gen.pl burga; dat.pl burgum
+    SEE burg
 būtan, conj:
     except; unless
 būtan, adv:
@@ -104,14 +140,18 @@ byċġan, vw1: 2sg byġst; 3sg byġþ; past boht
     to buy
 byrdling, nm:
     turtle
+cāsere, nm:
+    emperor, esp. of Rome: caesar
 catt, nm:
     cat
 catte, nfw:
     female cat
 ċeald, adj:
     cold
-ċēapstōw, nf:
+ċēap-stōw, nf:
     market
+ċeorl, nm:
+    man; husband; free peasant
 ċēosan, vs2: past.pl curon; pp coren
     to choose
 ċicen, nm:
@@ -120,6 +160,8 @@ catte, nfw:
     cheese
 ċild, nn: nom.pl ċild|ċildru|ċildra; gen.pl ċilda|ċildra; dat.pl ċildum|ċildrum
     child
+cnīf, nm:
+    knife
 cniht, nm:
     boy; knight
 cocc, nm:
@@ -145,19 +187,27 @@ cyċene, nfw:
 cyning, nm:
     king
 cynn, nn:
-    kind; family; grammatical gender
+    kind; family; race; grammatical gender
 dā, nfw: acc.sg dān; gen.sg dān; dat.sg dān; nom.pl dān; gen.pl dāna; dat.pl dām|dāum
     doe, female deer
+# TODO: BT and Wiktionary disagree on gender. BT thinks it's neuter, but is uncertain; Wiktionary says masculine.
+dāg, nn:
+    dough
 dǣd, nf:
     deed, act
 dæġ, nm:
     day
+# TODO: Wiktionary seems to disagree
+dǣġe, nf:
+    female baker
 dǣl, nm:
     part, portion
 dēad, adj:
     dead
 dēman, vw1:
     to deem, consider
+denn, nn:
+    den, cave, lair
 dēofol, nn:
     devil, Satan
 dēor, nn:
@@ -205,6 +255,8 @@ dwellan, vw1:
 # Usage as "hello" appears to be unattested
 ēalā, int:
     lo, hey
+ealdor-mann, nmv:
+    high-ranking nobleman
 eall, adjs:
     all, whole, entire
 ealu, nn: gen.sg ealoþ; dat.sg ealoþ; nom.pl -; gen.pl ealeþa; dat.pl -
@@ -223,6 +275,8 @@ earm, nm:
     arm
 ellen, nm, nn:
     courage, bravery, valor
+eorl, nm:
+    nobleman of high rank, roughly equivalent to duke
 ēower, adjs:
     your (of multiple people)
 esol, nm:
@@ -235,8 +289,8 @@ fæder, nm:
     father
 fela, adji:
     many (usu. used w/ genitive)
-feoh, nn.sg: gen.sg fēos; dat.sg fēo
-    money, goods, wealth; cattle
+feoh, nn.sg: dat.sg fēo
+    money, goods, property, wealth; cattle
 feohtan, vs3:
     to fight
 fēond, nm:
@@ -247,6 +301,8 @@ feorr, adv:
     far
 feorting, nf:
     fart, flatulence
+folc, nn:
+    folk, people, tribe
 finger, nm:
     finger
 firen, nf:
@@ -403,6 +459,8 @@ hit, pron: acc hit; gen his; dat him
     it
 hlāf, nm:
     bread
+hlāfdīġe, nf:
+    lady; noblewoman; the Virgin Mary
 hlāford, nm:
     lord; God, Jehovah
 hnutu, nfv: gen.sg hnute|hnyte; dat.sg hnyte; nom.pl hnyte
@@ -413,6 +471,8 @@ hors, nn:
     horse
 hran, nm:
     whale
+hreddan, vw1:
+    to save, rescue, liberate
 hring, nm:
     ring
 hrinġan, vw1:
@@ -441,12 +501,18 @@ hwǣr, adv:
     where, in what place
 hwæt, pron: acc hwæt; gen hwæs; dat hwǣm|hwām
     what
+hwæt-hwugu, pron: acc hwæt-hwugu; gen hwæs-hwugu; dat hwǣm-hwugu|hwām-hwugu
+    something
+hwæt-hwugu, adv:
+    somewhat, a little
 hwæþer, adj:
     which (of two)
 hwæþer, conj:
     whether
 hwæþre, adv:
     however, still, yet, nevertheless, nonetheless
+hwider, adv:
+    SEE hwæder
 hwilċ, adj:
     which
 hyċġan, vw3: 2sg hyġst|hogast; 3sg hyġþ|hogaþ; past hogd|hogod; imp hyġe|hoga
@@ -523,6 +589,8 @@ mōna, nmw:
     moon
 mōtan, vpp: 1sg mōt; 2sg mōst; past mōst; pp mōten
     can, may, be allowed to; must
+munuc, nm:
+    monk
 mūs, nfv:
     mouse
 nama, nmw:
@@ -555,6 +623,8 @@ niman, vs4: past.1sg nōm; past.pl nōmon
     to take
 nū, adv:
     now
+nunne, nfw:
+    nun
 nyllan, vi: 1sg nylle; 2sg nylt; 3sg nyle; past nold
     to not want
 nytan, vpp: 1sg nāt; 2sg nāst; past nyst|nyss; pp nyten
@@ -601,6 +671,12 @@ riġnan, vw1:
     to rain; to cause rain to fall
 riht, adj:
     right; straight
+Rōm, nf.sg:
+    Rome
+Rōm-burg, nf.sg: gen.sg Rōm-byrġ|Rōm-byriġ; dat.sg Rōm-byrġ|Rōm-byriġ
+    the city of Rome
+Rōm-burh, nf.sg: gen.sg Rōm-byrġ|Rōm-byriġ; dat.sg Rōm-byrġ|Rōm-byriġ
+    SEE Rōm-burg
 sārian, vw2:
     to hurt, be sore (physically or emotionally); to be sorry
 sāriġ, adj:
@@ -619,14 +695,22 @@ sċēap-hierde, nm:
     shepherd
 sċēawere, nm:
     observer, spy; watchtower; mirror
+sċield, nm:
+    shield
+sċildan, vw1:
+    to shield, protect
 sċīnan, vs1:
     to shine
 sċip, nn:
     ship
+sċop, nm:
+    poet
 sċulan, vpp: 1sg sċeal; 2sg sċealt; subj sċyle; past sċeold|sċold; pp sċulen
     shall, should, must; to owe
 sē, pron: acc þone; gen þæs; dat þǣm|þām; inst þȳ|þon|þē
     the, that (masculine)
+seax, nn:
+    knife, dagger
 seċġan, vw3: 2sg sæġst|sagast; 3sg sæġþ|sagaþ; past sæġd|sǣd; imp saga|sæġe
     to say
 sellan, vw1:
@@ -675,7 +759,7 @@ sprecan, vs5:
     to speak
 stān, nm:
     stone
-standan, vs6:
+standan, vs6:  past.1sg stōd; past.pl stōdon
     to stand
 steorfan, vs3:
     to die
@@ -702,6 +786,8 @@ swellan, vs3:
     to swell
 sweltan, vs3:
     to die
+sweord, nn:
+    sword
 sweostor, nf: acc.sg sweostor; gen.sg sweostor; dat.sg sweostor; nom.pl sweostor|sweostra|sweostru; gen.pl sweostra; dat.pl sweostrum
     mother
 swīn, nn:
@@ -762,12 +848,20 @@ tungol, nn:
     SEE þæt
 þe, particle:
     that, who [optionally preceded by a form of sē]
+þeġn, nm:
+    thane, knight, mid-ranking nobleman
 þenċan, vw1: past þōht
     to think, opine
+þēof, nm:
+    thief
+þēof, nf:
+    theft
 þēos, pron: acc þās; gen þisse|þisre; dat þisse|þisre
     this (feminine)
-þes, pron: acc þisne; gen þisses; dat þissum; inst þȳs
+þēs, pron: acc þisne; gen þisses; dat þissum; inst þȳs
     this (masculine)
+þider, adv:
+    SEE þæder
 þīn, adjs:
     thy, thine, your (singular)
 þing, nn:
@@ -788,7 +882,7 @@ uncer, adjs:
     our (of two people)
 under, prep:
     under
-under-standan, vs6:
+under-standan, vs6: past.1sg under-stōd; past.pl under-stōdon
     to understand
 unnan, vpp: 1sg ann; 2sg anst; past ūþ; pp unnen
     to grant
@@ -796,23 +890,31 @@ unnan, vpp: 1sg ann; 2sg anst; past ūþ; pp unnen
     our, ours
 # TODO: Better word type?
 uton, particle:
-    let us, let's
+    SEE wuton
 wacian, vw2:
     to be awake; to guard, watch
+# TODO: BT and Wiktionary disagree on gender
 wæps, nf:
     wasp
+# TODO: BT and Wiktionary disagree on gender
 wæsp, nf:
     SEE wæps
+wæter, nn: nom.pl wæter|wætru|wæteru
+    water
 wē, pron: acc ūs; gen ūre; dat ūs
     we, us
 wealh, nm:
     foreigner; slave
+weall, nm:
+    wall
 weard, nm:
     guard, watchman, warden
 weard, nf:
     guard, watch, act of guarding; guardianship
 wearm, adj:
     warm
+weġ, nm:
+    way, path, road
 wel, adv: comp bet; sup betest
     well; fastidiously; about, approximately
 wela, nmw:
@@ -825,15 +927,19 @@ wepan, vs7:
     to weep
 wer, nm:
     man, male
-werewulf, nm:
+were-gild, nn:
+    SEE wergild
+were-wulf, nm:
     SEE werwulf
-werwulf, nm:
+wer-gild, nn:
+    weregild, money paid as compensation for the death or serious injury of a man
+wer-wulf, nm:
     werewolf
 wesan, vi: 1sg eom; 2sg eart; 3sg is; pl sind|sindon; subj sīe; past.1sg wæs; past.pl wǣron; imp wes
     to be
 wīf, nn:
     woman
-wīfmann, nm:
+wīf-mann, nmv:
     woman
 wiht, nn:
     thing; creature
@@ -869,13 +975,13 @@ wulf, nm:
     wolf
 wull, nf:
     wool
+# TODO: Better word type?
+wuton, particle:
+    let's, let us
 wyllen, adj:
     woolen
 wyrm, nm:
     worm; snake, serpent, dragon
-# TODO: Better word type?
-wuton, particle:
-    SEE uton
 ymb, prep:
     around; about, concerning
 yfel, adj: comp wyrsa; sup wyrst

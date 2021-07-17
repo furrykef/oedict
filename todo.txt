@@ -36,7 +36,7 @@ brōþor: make sure brōþer- vs. brōþr- is consistent in both special and gen
 
 dæġ, dagas
 
-fugol and lȳtel should contract in inflected forms
+fugol, lȳtel, wæter, and others should contract in inflected forms
 
 glæd, but se glada catt
 
@@ -50,7 +50,7 @@ sǣ can be masc. or fem. with different irregular declensions
 
 þætte should redirect only to the conjunction form of þæt
 
-wealh should lose its h in inflected forms
+weġ, wegas
 
 wōh's declension
 
