@@ -26,6 +26,8 @@ assa, nmw:
     oath
 āxian, vw2:
     SEE āscian
+ǣfre, adv:
+    ever, always
 ǣġ, nn: nom.pl ǣġru; gen.pl ǣġra; dat.pl ǣġrum
     egg
 ǣġ-hwā, pron: acc ǣġ-hwone; gen ǣġ-hwæs; dat ǣġ-hwǣm|ǣġ-hwām
@@ -80,7 +82,7 @@ bæcere, nm:
     male baker
 bæcern, nn:
     bakery
-bæcestre, nf:
+bæcestre, nfw:
     female baker
 be, prep:
     by, about
@@ -90,6 +92,8 @@ bēam, nm:
     tree
 bearn, nn:
     child
+belle, nfw:
+    bell
 bēo, nf:
     bee
 bēon, vi: 1sg bēo; 2sg bist; 3sg biþ; past.1sg wæs; past.pl wǣron
@@ -116,12 +120,10 @@ bisċop, nm:
     SEE bisċeop
 blāwan, vs7:
     to blow
+blæd, nn:
+    leaf; broad, flat blade, such as of an oar
 blīþe, adj:
     happy, glad, cheerful
-brid, nm:
-    SEE bird
-bringan, vw1: past brōht
-    to bring
 bōc, nfv: gen.sg bōce|bēċ; dat.sg bēċ; nom.pl bēċ
     book
 boda, nmw:
@@ -132,6 +134,12 @@ boga, nmw:
     bow (weapon), arch
 brēost, nn, nf:
     chest, bosom, breast
+briċġ, nf:
+    bridge
+brid, nm:
+    SEE bird
+bringan, vw1: past brōht
+    to bring
 brōþor, nf: gen.sg brōþor; dat.sg brēþer; nom.pl brōþor|brōþra|brōþru; gen.pl brōþra; dat.pl brōþrum
     brother
 brytta, nmw:
@@ -206,7 +214,7 @@ dǣd, nf:
 dæġ, nm: stem.pl dag
     day
 # TODO: Wiktionary seems to disagree
-dǣġe, nf:
+dǣġe, nfw:
     female baker
 dǣl, nm:
     part, portion
@@ -232,6 +240,10 @@ dōn, vi: 2sg dēst; 3sg dēþ; past dyd; pp dōn
     to do
 draca, nmw:
     snake, serpent, dragon
+drænċ, nm:
+    SEE drenċ
+drenċ, nm:
+    drink; draught
 drīfan, vs1:
     to drive
 drincan, vs3:
@@ -267,6 +279,8 @@ dwellan, vw1:
 # Usage as "hello" appears to be unattested
 ēalā, int:
     lo, hey, alas
+ēa-land, nn:
+    island
 eald, adj: comp ieldra; sup ieldest
     old
 ealdor-mann, nmv:
@@ -281,12 +295,20 @@ earfoþ, nn:
     difficulty, trouble
 earfoþe, adj:
     hard, difficult
+earm, nm:
+    arm
+ēast, nm:
+    the east
+ēast, adj:
+    east, eastern
+ēast, adv:
+    east, eastward
+ēastan, adv:
+    from the east
 ēaþe, adv:
     easily
 ēaþelīċ, adj:
     easy
-earm, nm:
-    arm
 ellen, nm, nn:
     courage, bravery, valor
 eorl, nm:
@@ -370,6 +392,8 @@ gangan, vs7:
     to go, walk
 gangern, nn:
     privy, outhouse, toilet
+gār, nm:
+    pointed weapon: spear, javelin, dart, etc.
 gāst, nm:
     spirit, ghost; breath
 gǣst, nm:
@@ -381,6 +405,10 @@ gǣst, nm:
     you (plural)
 ġēa, int:
     yes, yea, yeah
+ġēar, nn:
+    year
+ġēar-dagas, nm.pl:
+    days of yore
 ġe-endian, vw2:
     to end
 ġe-munan, vpp: 1sg ġe-man; 2sg ġe-manst; past ġe-mund; pp ġe-munen
@@ -399,8 +427,12 @@ gǣst, nm:
     gift
 ġieldan, vs3:
     to yield
+ġīese, int:
+    SEE ġēse
 ġit, pron: acc inc; gen incer; dat inc
     you two
+glæd, adj:
+    glad, cheerful
 god, nm:
     god; God, Jehovah
 gōd, adj: comp betera; sup betst; adv wel
@@ -413,6 +445,8 @@ gold-hord, nm:
     treasury
 grēat, adj:
     big, large
+grim, adj:
+    severe, cruel, savage
 guma, nmw:
     man
 gylden, adj:
@@ -477,10 +511,10 @@ hit, pron: acc hit; gen his; dat him
     it
 hlāf, nm:
     bread
-hlāfdīġe, nf:
-    lady; noblewoman; the Virgin Mary
 hlāford, nm:
     lord; God, Jehovah
+hlǣfdīġe, nfw:
+    lady; noblewoman; queen (wife of king)
 hnutu, nfv: gen.sg hnute|hnyte; dat.sg hnyte; nom.pl hnyte
     nut
 hogian, vw2:
@@ -541,8 +575,18 @@ hyll, nm, nf:
     hill
 iċ, pron: acc mē|mec; gen mīn; dat mē
     I, me
+īeġ, nf:
+    island
+īeġ-land, nn:
+    SEE ēaland
 incer, adjs:
     your (of two people)
+inn, adv:
+    in, within, inside
+innan, adv:
+    in, within, inside
+innan, prep:
+    in, within, inside
 land, nn:
     land
 lārēow, nm:
@@ -608,7 +652,7 @@ mōdor, nf: acc.sg mōdor; gen.sg mōdor|mēder; dat.sg mēder; nom.pl mōdor|m�
 mōna, nmw:
     moon
 mōtan, vpp: 1sg mōt; 2sg mōst; past mōst; pp mōten
-    can, may, be allowed to; must
+    can, may, be allowed to, have permission to; must
 munuc, nm:
     monk
 mūs, nfv:
@@ -625,12 +669,20 @@ nǣniġ, adj:
     not any, no, none
 nā, int:
     no, nay, nah
+nā-hwanan, adv:
+    from nowhere
+nā-hwǣr, adv:
+    nowhere
+nā-hwæder, adv:
+    to nowhere
 nā-hwæþer, adj:
     neither
 nān, adj:
     not a, not one, none
 nā-wiht, pron: acc nā-wiht; gen nā-wihtes; dat nā-wihte
     nothing
+nǣfre, adv:
+    never
 ne, adv:
     not
     [ne ... ne] neither ... nor
@@ -638,7 +690,7 @@ nerian, vw1:
     to save
 nesan, vi: 1sg neom; 2sg neart; 3sg nis; pl ne_sind|ne_sindon; subj ne_sīe; past.1sg næs; past.pl nǣron; imp nes
     to not be
-nēse, int:
+nese, int:
     no, nay
 niċ, pron:
     not I, not me
@@ -648,6 +700,12 @@ niht, nf:
     night
 niman, vs4: past.1sg nōm; past.pl nōmon
     to take
+norþ, adj:
+    north, northern
+norþ, adv:
+    north, northward
+norþan, adv:
+    from the north
 nū, adv:
     now
 nunne, nfw:
@@ -660,6 +718,8 @@ of, prep:
     from, out of
 ofer, prep:
     over
+oft, adv:
+    often
 on, prep:
     on, in, at
 on-ġinnan, vs3:
@@ -744,6 +804,8 @@ sċop, nm:
     poet
 sċulan, vpp: 1sg sċeal; 2sg sċealt; subj sċyle; past sċeold|sċold; pp sċulen
     shall, should, must; to owe
+sċūr, nm, nf:
+    shower, rainfall, downpour
 sē, pron: acc þone; gen þæs; dat þǣm|þām; inst þȳ|þon|þē
     the, that (masculine)
 seax, nn:
@@ -776,6 +838,8 @@ slǣpan, vs7:
     to sleep
 slēpan, vs7:
     SEE slǣpan
+smæl, adj:
+    small
 smeortan, vs3:
     to smart, sting, hurt
 snaca, nmw:
@@ -812,6 +876,12 @@ sunne, nfw:
     sun
 sunu, nm: gen.sg suna; dat.sg suna; nom.pl suna
     son
+sūþ, adj:
+    south, southern
+sūþ, adv:
+    south, southward
+sūþan, adv:
+    from the south
 swā, adv:
     so, to that extent, in that way
     [swā ... swā] as ... as
@@ -856,7 +926,7 @@ tōdæġ, adv:
 trēow, nn:
     tree
 trum, adj:
-    strong
+    strong, firm; healthy
 tunge, nfw:
     tongue; language
 tungol, nn:
@@ -932,8 +1002,12 @@ under-standan, vs6: past.1sg under-stōd; past.pl under-stōdon
     to understand
 unnan, vpp: 1sg ann; 2sg anst; past ūþ; pp unnen
     to grant
+un-trum, adj:
+    weak; sick, ill
 ūre, adjs:
     our, ours
+ūt, adv:
+    out, outward
 # TODO: Better word type?
 uton, particle:
     SEE wuton
@@ -985,6 +1059,12 @@ wer-wulf, nm:
     werewolf
 wesan, vi: 1sg eom; 2sg eart; 3sg is; pl sind|sindon; subj sīe; past.1sg wæs; past.pl wǣron; imp wes
     to be; [with past participle] to have (done something)
+west, adj:
+    west, western
+west, adv:
+    to the west, westward
+westan, adv:
+    from the west
 wīf, nn:
     woman
 wīf-mann, nmv:

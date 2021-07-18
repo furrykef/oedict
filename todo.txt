@@ -16,6 +16,7 @@ Forms such as sċipu
 "hall" wrongly pulls up "hāl"
 
 nm.sg, nn.sg, nf.sg (e.g. "feoh")
+nm.pl, nn.pl, nf.pl (e.g. "ġeardagas")
 
 Verify all vs7 verbs conjugate correctly
 
@@ -23,9 +24,12 @@ cȳþan's past tense is cȳþde *or* cȳdde
 
 Are there any -ttan verbs that conjugate like fremman?
 
-Don't index silly forms like sweryan
-
 pp ġehīered, not ġehīerd
+
+
+The code to generate variants is a bit of a joke right now. It generates many implausible forms and probably misses many plausible ones.
+
+Don't generate silly forms like sweryan
 
 
 bā: what part of speech?
@@ -34,7 +38,7 @@ brōþor: make sure brōþer- vs. brōþr- is consistent in both special and gen
 
 fugol, lȳtel, wæter, and others should contract in inflected forms
 
-glæd, but se glada catt
+glæd, smæl
 
 gōd: don't generate adverbial forms (or else add a way to provide the comparative and superlative of "wel")
 

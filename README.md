@@ -7,7 +7,16 @@ This project is currently a work in progress, but it should at least contain a f
 Thanks to the Ænglisċ Discord (https://discord.gg/9rwnDRC) for all their help!
 
 
+## About the dictionary
+
+This dictionary attempts to prefer Early West Saxon spellings, on the grounds that it is easier to predict later forms from earlier ones than the other way around, and Early West Saxon is reasonably well attested. This is contrary to the practice of some dictionaries to prefer Late West Saxon forms. However, it is often tricky to determine which spelling is the most conservative, especially with our limited knowledge and resources, so we may not have always been successful.
+
+In any case, the dictionary tool attempts to account for variations in spelling, so, for example, looking up "kiningc" will correctly pull up "cyning".
+
+
 ## References
+
+"The profession of lexicography is, inevitably, a plagiaristic one, a linguistic Pac-Man that moves on, gobbling up its predecessors as it goes." — Jonathon Green, _Cassell's Dictionary of Slang_
 
 Assume that any dictionaries or glossaries listed as public domain have been mercilessly ransacked for definitions. With other dictionaries, including Wiktionary, we have tried to be careful not to copy them too closely.
 

@@ -74,7 +74,16 @@ class Lexicon(object):
 
     def lookup(self, word):
         word = normalize(word)
-        return self.index[word] if word in self.index else []
+        entries = self.index.get(word, [])
+        results = []
+        for entry in entries:
+            matches = re.match(r"^SEE(?:\s+?)(.+)", entry.definitions[0])
+            if matches:
+                # Follow redirect
+                results += self.lookup(matches.group(1))
+            else:
+                results.append(entry)
+        return results
 
     def reverse_lookup(self, search_string):
         search_string = search_string.lower()
