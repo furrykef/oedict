@@ -90,7 +90,7 @@ bēam, nm:
     tree
 bearn, nn:
     child
-bēo, nf: acc.sg bēo; gen.sg bēo; dat.sg bēo; nom.pl bēon; gen.pl bēona; dat.pl bēom
+bēo, nf:
     bee
 bēon, vi: 1sg bēo; 2sg bist; 3sg biþ; past.1sg wæs; past.pl wǣron
     to be, esp. in the future; [with past participle] to have (done something)
@@ -174,7 +174,7 @@ cocc, nm:
     rooster, cock, male bird
 cræft, nm:
     art, craft, skill
-cū, nfv: gen.sg cūe|cūs|cȳ; nom.pl cȳ|cȳe; gen.pl cūa|cūna
+cū, nfv: gen.sg cūe|cūs|cȳ; nom.pl cȳ|cȳe; gen.pl cūa|cūna; dat.pl cūum
     cow
 cuman, vs5: past.1sg cōm; past.pl cōmon
     to come
@@ -728,7 +728,7 @@ sċip, nn:
     ship
 sċōgan, vw1:
     to shoe, put shoes on (someone or a horse)
-sċōh, nm: stem sċō; gen.pl sċōna
+sċōh, nm: stem sċō
     shoe
 sċōh-wyrhta, nmw:
     shoemaker, cobbler

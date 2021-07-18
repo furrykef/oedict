@@ -146,35 +146,35 @@ def gen_noun(headword, word_type, special):
         return [
             special.get('nom.sg') or [headword],
             special.get('acc.sg') or special.get('nom.sg') or [headword],
-            special.get('gen.sg') or [stem + 'es'],
-            special.get('dat.sg') or [stem + 'e'],
-            special.get('nom.pl') or [stem_pl + 'as'],
-            special.get('acc.pl') or special.get('nom.pl') or [stem_pl + 'as'],
-            special.get('gen.pl') or [stem_pl + 'a'],
-            special.get('dat.pl') or [stem_pl + 'um'],
+            special.get('gen.sg') or [stem + ('es' if not is_vowel(stem[-1]) else 's')],
+            special.get('dat.sg') or [stem + ('e' if not is_vowel(stem[-1]) else "")],
+            special.get('nom.pl') or [stem_pl + ('as' if not is_vowel(stem[-1]) else 's')],
+            special.get('acc.pl') or special.get('nom.pl') or [stem_pl + ('as' if not is_vowel(stem_pl[-1]) else 's')],
+            special.get('gen.pl') or [stem_pl + ('a' if not is_vowel(stem_pl[-1]) else 'na')],
+            special.get('dat.pl') or [stem_pl + ('um' if not is_vowel(stem_pl[-1]) else 'm')],
         ]
     elif word_type[1:] == 'f':
         return [
             special.get('nom.sg') or [headword],
-            special.get('acc.sg') or [stem + 'e'],
-            special.get('gen.sg') or [stem + 'e'],
-            special.get('dat.sg') or [stem + 'e'],
+            special.get('acc.sg') or [stem + ('e' if not is_vowel(stem[-1]) else "")],
+            special.get('gen.sg') or [stem + ('e' if not is_vowel(stem[-1]) else "")],
+            special.get('dat.sg') or [stem + ('e' if not is_vowel(stem[-1]) else "")],
             special.get('nom.pl') or [stem_pl + 'a', stem_pl + 'e'],
             special.get('acc.pl') or special.get('nom.pl') or [stem_pl + 'a', stem_pl + 'e'],
-            special.get('gen.pl') or [stem_pl + 'a'],
-            special.get('dat.pl') or [stem_pl + 'um'],
+            special.get('gen.pl') or [stem_pl + ('a' if not is_vowel(stem_pl[-1]) else 'na')],
+            special.get('dat.pl') or [stem_pl + ('um' if not is_vowel(stem_pl[-1]) else 'm')],
         ]
     elif word_type[1:] == 'n':
         # Strong neuter noun
         return [
             special.get('nom.sg') or [headword],
             special.get('acc.sg') or special.get('nom.sg') or [headword],
-            special.get('gen.sg') or [stem + 'es'],
-            special.get('dat.sg') or [stem + 'e'],
+            special.get('gen.sg') or [stem + ('es' if not is_vowel(stem[-1]) else 's')],
+            special.get('dat.sg') or [stem + ('e' if not is_vowel(stem[-1]) else "")],
             special.get('nom.pl') or [headword],
             special.get('acc.pl') or special.get('nom.pl') or [headword],
-            special.get('gen.pl') or [stem_pl + 'a'],
-            special.get('dat.pl') or [stem_pl + 'um'],
+            special.get('gen.pl') or [stem_pl + ('a' if not is_vowel(stem_pl[-1]) else 'na')],
+            special.get('dat.pl') or [stem_pl + ('um' if not is_vowel(stem_pl[-1]) else 'm')],
         ]
     elif word_type[1:] in ('mw', 'fw', 'nw'):
         # Weak noun
@@ -207,8 +207,8 @@ def gen_noun(headword, word_type, special):
             special.get('dat.sg') or [mutated],
             special.get('nom.pl') or [mutated],
             special.get('acc.pl') or special.get('nom.pl') or [mutated],
-            special.get('gen.pl') or [stem_pl + 'a'],
-            special.get('dat.pl') or [stem_pl + 'um'],
+            special.get('gen.pl') or [stem_pl + ('a' if not is_vowel(stem_pl[-1]) else 'na')],
+            special.get('dat.pl') or [stem_pl + ('um' if not is_vowel(stem_pl[-1]) else 'm')],
         ]
     else:
         # Other (TODO: implement all types and throw an error here instead)
@@ -408,6 +408,11 @@ def gen_verb(headword, word_type, special):
     else:
         raise LexiconError(f"Unrecognized verb type: {word_type}")
     return result
+
+
+def is_vowel(ch):
+    assert len(ch) == 1
+    return ch in 'AÆIOUYĀǢĪŌŪȲaæiouyāǣīōūȳ'
 
 
 # I-mutates the nucleus of the last syllable of its argument
