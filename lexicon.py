@@ -132,7 +132,7 @@ def gen_noun(headword, word_type, special):
             raise LexiconError(f"{headword}: multiple stems not supported")
         stem = special['stem'][0]
     elif headword[-1] in ('a', 'e', 'u'):
-        stem = headword[-1]
+        stem = headword[:-1]
     else:
         stem = headword
     if 'stem.pl' in special:
@@ -180,7 +180,7 @@ def gen_noun(headword, word_type, special):
         # Weak noun
         oblique = stem + 'an'
         if word_type[1:] == 'nw':
-            accusative = special.get('nom.sg') or headword
+            accusative = headword
         else:
             accusative = oblique
         return [

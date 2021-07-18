@@ -126,6 +126,8 @@ bōc, nfv: gen.sg bōce|bēċ; dat.sg bēċ; nom.pl bēċ
     book
 boda, nmw:
     messenger; prophet
+bodian, vw2:
+    to tell, announce; to foretell, predict
 boga, nmw:
     bow (weapon), arch
 brēost, nn, nf:
@@ -318,7 +320,9 @@ folc, nn:
 finger, nm:
     finger
 firen, nf:
-    crime, sin; suffering
+    sin, crime; suffering
+firenian, vw2:
+    to sin
 fisċ, nm: nom.pl fisċas|fixas; gen.pl fisċa|fixa; dat.pl fisċum|fixum
     fish
 flā, nfw: acc.sg flān; gen.sg flān; dat.sg flān; nom.pl flān; gen.pl flāna; dat.pl flām|flāum
@@ -636,6 +640,8 @@ nesan, vi: 1sg neom; 2sg neart; 3sg nis; pl ne_sind|ne_sindon; subj ne_sīe; pas
     to not be
 nēse, int:
     no, nay
+niċ, pron:
+    not I, not me
 nīeten, nn:
     animal
 niht, nf:
@@ -710,6 +716,8 @@ sǣd, nn:
     seed
 sæl, nn:
     hall, esp. a great hall
+sċeadu, nf: stem sċeadw
+    shadow
 sċeap, nn:
     genital, private part
 sċēap, nf:
