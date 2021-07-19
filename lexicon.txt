@@ -14,6 +14,8 @@ and-swarian, vw1, vw2:
     to answer
 and-swerian, vw1, vw2:
     SEE andswarian
+āne, adv:
+    SEE ǣne
 angel, nm:
     hook, such as for fishing
 āscian, vw2:
@@ -30,7 +32,7 @@ assa, nmw:
     ever, always
 ǣġ, nn: nom.pl ǣġru; gen.pl ǣġra; dat.pl ǣġrum
     egg
-ǣġ-hwā, pron: acc ǣġ-hwone; gen ǣġ-hwæs; dat ǣġ-hwǣm|ǣġ-hwām
+ǣġ-hwā, pron: acc ǣġ-hwone|ǣġ-hwæne; gen ǣġ-hwæs; dat ǣġ-hwǣm|ǣġ-hwām
     everyone
 ǣġ-hwanan, adv:
     from every direction
@@ -42,7 +44,7 @@ assa, nmw:
     everywhere; in every respect or way
 ǣġ-hwæþer, adj:
     both; all
-ǣġ-hwæt, pron: acc ǣġ-hwæt; gen ǣġ-hwæs; dat ǣġ-hwǣm|ǣġ-hwām
+ǣġ-hwæt, pron: acc ǣġ-hwæt; gen ǣġ-hwæs; dat ǣġ-hwǣm|ǣġ-hwām; inst ǣġ-hwȳ|ǣġ-hwon
     everything
 ǣġ-hwilċ, adj:
     all
@@ -57,8 +59,14 @@ assa, nmw:
 # TODO: BT and Wiktionary disagree on the vowel length
 æmett-hyll, nm:
     SEE æmethyll
+ǣne, adv:
+    once, one time
 ǣniġ, adj:
     any
+æppel, nm: stem æppl
+    fruit, apple
+æppel-wīn, nn:
+    cider
 æþeling, nm:
     prince
 bā, pron:
@@ -178,6 +186,8 @@ catte, nfw:
     cheese
 ċild, nn: nom.pl ċild|ċildru|ċildra; gen.pl ċilda|ċildra; dat.pl ċildum|ċildrum
     child
+cnāwan, vs7:
+    to know
 cnīf, nm:
     knife
 cniht, nm:
@@ -230,7 +240,7 @@ dēman, vw1:
     to deem, consider
 denn, nn:
     den, cave, lair
-dēofol, nn:
+dēofol, nn: stem dēofl
     devil, Satan
 dēor, nn:
     wild animal, beast
@@ -280,6 +290,12 @@ dwellan, vw1:
     together with, in addition to
 ēage, nnw:
     eye
+eahta, adji:
+    eight
+eahtatīene, adji:
+    eighteen
+eahtoþa, adjw:
+    eighth
 # Usage as "hello" appears to be unattested
 ēalā, int:
     lo, hey, alas
@@ -313,8 +329,16 @@ earm, nm:
     easily
 ēaþelīċ, adj:
     easy
+eċġ, nf:
+    edge; blade, sword
+efete, nfw:
+    eft, newt, lizard
 ellen, nm, nn:
     courage, bravery, valor
+endleofan, adji:
+    eleven
+endleofta, adjw:
+    eleventh
 eorl, nm:
     nobleman of high rank, roughly equivalent to duke
 ēower, adjs:
@@ -341,8 +365,32 @@ feorr, adv:
     far
 feorting, nf:
     fart, flatulence
+fēower, adji:
+    four
+fēowerþa, adjw:
+    fourth
+fēowertīene, adji:
+    fourteen
+fēowertiġ, adji:
+    forty
+fēowertigoþa, adjw:
+    fortieth
+# TODO: redirect to faran?
+# BT and Wiktionary disagree on vowel length, but it's likely long as this seems to be derived from the verb fōr ("fēr-" would thus be its i-mutation).
+fēran, vw1:
+    to go, travel
 folc, nn:
     folk, people, tribe
+fīf, adji:
+    five
+fīfta, adjw:
+    fifth
+fīftīene, adji:
+    fifteen
+fīftiġ, adji:
+    fifty
+fīftigoþa, adjw:
+    fiftieth
 finger, nm:
     finger
 firen, nf:
@@ -359,6 +407,8 @@ flǣsċ, nn:
     meat, flesh
 for, prep:
     for; because of
+forma, adjw:
+    first
 forþām, adv:
     SEE forþȳ
 forþǣm, adv:
@@ -385,7 +435,13 @@ fremman, vw1:
     to do, perform
 frēond, nm, nmv:
     friend
-fugol, nm:
+frocga, nmw:
+    SEE frogga
+frogga, nmw:
+    frog
+fuglere, nm:
+    fowler
+fugol, nm: stem fugl
     bird, fowl
 # Wiktionary instead has a strong feminine noun "fyxen", but this appears spurious or at least unattested
 fyxe, nfw:
@@ -405,7 +461,7 @@ gǣst, nm:
 ġe, conj:
     and
     [ġe ... ġe] both ... and
-ġē, pron: acc ēow; gen ēower; dat ēow
+ġē, pron: acc ēowic; gen ēower; dat ēow
     you (plural)
 ġēa, int:
     yes, yea, yeah
@@ -437,13 +493,13 @@ gǣst, nm:
     to yield
 ġīese, int:
     SEE ġēse
-ġit, pron: acc inc; gen incer; dat inc
+ġit, pron: acc inc|incet; gen incer; dat inc
     you two
 glæd, adj:
     glad, cheerful
 god, nm:
     god; God, Jehovah
-gōd, adj: comp betera; sup betst; adv wel
+gōd, adj: comp betera|sēlra; sup betst|sēlest; adv wel
     good
 gōs, nfv:
     goose
@@ -495,6 +551,8 @@ healdan, vs7:
     to hold
 heall, nf:
     hall, large room
+heċġ, nf:
+    hedge
 helpan, vs3:
     to help
 henġest, nm:
@@ -541,6 +599,34 @@ hrinġan, vw1:
     to ring
 hund, nm:
     dog, hound
+hund, adji:
+    hundred
+hund-eahtatiġ, adji:
+    eighty
+hund-eahtatigoþaa, adjw:
+    eightieth
+hund-endleftiġ, adji:
+    hundred and ten
+hund-endleftigoþa, adjw:
+    hundred and tenth
+hund-nigontiġ, adji:
+    ninety
+hund-nigontigoþa, adjw:
+    ninetieth
+hundred, adji:
+    hundred
+hund-seofontiġ, adji:
+    seventy
+hund-seofontigoþa, adjw:
+    seventieth
+hund-tēontiġ, adji:
+    hundred
+hund-tēontigoþa, adjw:
+    hundredth
+hund-twelftiġ, adji:
+    hundred and twenty
+hund-twelfigoþa, adjw:
+    hundred and twentieth
 hunta, nmw:
     hunter
 huntian, vw2:
@@ -549,7 +635,7 @@ hū, adv:
     how, by what means, to what extent
 hūs, nn: dat.sg hūs|hūse
     house
-hwā, pron: acc hwone; gen hwæs; dat hwǣm|hwām
+hwā, pron: acc hwone|hwæne; gen hwæs; dat hwǣm|hwām
     who
 hwanan, adv:
     from where, whence
@@ -557,13 +643,17 @@ hwanne, adv:
     when, at what time
 hwæder, adv:
     to there, thither
+hwæder-hwugu, adv:
+    to somewhere, to some place
 hwæl, nm:
     whale
 hwǣr, adv:
     where, in what place
-hwæt, pron: acc hwæt; gen hwæs; dat hwǣm|hwām
+hwǣr-hwugu, adv:
+    somewhere
+hwæt, pron: acc hwæt; gen hwæs; dat hwǣm|hwām; inst hwȳ|hwon
     what
-hwæt-hwugu, pron: acc hwæt-hwugu; gen hwæs-hwugu; dat hwǣm-hwugu|hwām-hwugu
+hwæt-hwugu, pron: acc hwæt-hwugu; gen hwæs-hwugu; dat hwǣm-hwugu|hwām-hwugu; inst hwȳ-hwugu|hwon-hwugu
     something
 hwæt-hwugu, adv:
     somewhat, a little
@@ -573,10 +663,22 @@ hwæþer, conj:
     whether
 hwæþre, adv:
     however, still, yet, nevertheless, nonetheless
+hwelċ, adj:
+    which
+hwelċ-hwugu, pron:
+    someone
 hwider, adv:
     SEE hwæder
+hwider-hwugu, adv:
+    SEE hwæderhwugu
+hwīl, nf:
+    while, some length of time
 hwilċ, adj:
-    which
+    SEE hwelċ
+hwilċ-hwugu, pron:
+    SEE hwelċ-hwugu
+hwīlum, adv:
+    sometimes; once, formerly
 hyċġan, vw3: 2sg hyġst|hogast; 3sg hyġþ|hogaþ; past hogd|hogod; imp hyġe|hoga
     to think, cogitate
 hyll, nm, nf:
@@ -587,6 +689,8 @@ iċ, pron: acc mē|mec; gen mīn; dat mē
     island
 īeġ-land, nn:
     SEE ēaland
+ilca, adjw:
+    same
 incer, adjs:
     your (of two people)
 inn, adv:
@@ -605,6 +709,8 @@ lǣran, vw1:
     to teach
 lǣrestre, nfw:
     female teacher
+leċċan, vw1:
+    to wet, water, moisten
 lēoht, adj:
     light, lightweight
 lēoht, nn:
@@ -615,6 +721,8 @@ lēoþ, nn:
     song, poem
 libban, vw3: 2sg leofast|lifast; 3sg leofaþ|lifaþ; past lifd; imp leofa
     to live
+liccian, vw2:
+    to lick
 līcian, vw2:
     to be liked [+dat: by someone]; to be pleasing
 lifian, vw2:
@@ -625,7 +733,9 @@ lōcian, vw2:
     to look
 lufian, vw2:
     to love
-lȳtel, adj: comp lǣssa; sup lǣst
+lȳt, adv: comp lǣs; sup lǣst
+    little
+lȳtel, adj: comp lǣssa; sup lǣst; adv lȳt
     little, small
 macian, vw2:
     to make
@@ -645,6 +755,8 @@ mete, nm:
     food
 miċel, adj: comp māra; sup mǣst
     big, large
+miċle, adv: comp mā; sup mǣst
+    greatly, much
 mis-dǣd, nf:
     misdeed
 mīere, nfw:
@@ -655,16 +767,22 @@ miht, nf:
     might, power, strength, ability
 mīn, adjs:
     my, mine
+minte, nfw:
+    mint plant
 mōdor, nf: acc.sg mōdor; gen.sg mōdor|mēder; dat.sg mēder; nom.pl mōdor|mōdra|mōdru; gen.pl mōdra; dat.pl mōdrum
     mother
 mōna, nmw:
     moon
+morgen, nm:
+    morning; the next day
 mōtan, vpp: 1sg mōt; 2sg mōst; past mōst; pp mōten
     can, may, be allowed to, have permission to; must
 munuc, nm:
     monk
 mūs, nfv:
     mouse
+mynet, nn:
+    coin
 nama, nmw:
     name
 # TODO: Wiktionary and BT disagree on vowel length
@@ -704,6 +822,14 @@ niċ, pron:
     not I, not me
 nīeten, nn:
     animal
+nīewe, adj:
+    new
+nigon, adji:
+    nine
+nigontīene, adji:
+    nineteen
+nigoþa, adjw:
+    ninth
 niht, nf:
     night
 niman, vs4: past.1sg nōm; past.pl nōmon
@@ -761,7 +887,7 @@ reġnig, adj:
 reġn-wyrm, nm:
     earthworm
 regol, nm:
-    rule
+    rule, regulation
 rīċe, adj:
     rich
 rīċe, nn:
@@ -834,6 +960,12 @@ sēo, pron: acc þā; gen þǣre; dat þǣre
     the, that (feminine)
 sēoc, adj:
     sick, ill, unwell
+seofon, adji:
+    seven
+seofontīen, adji:
+    seventeen
+seofoþa, adjw:
+    seventh
 seolfren, adj:
     silver, silvery
 seolfor, nn:
@@ -842,6 +974,16 @@ sēon, vs5: 2sg siehst; 3sg siehþ; past.1sg seah; past.pl sāwon; pp sewen
     to see
 settan, vw1:
     to set, put down
+siex, adji:
+    six
+siexta, adjw:
+    sixth
+siextīene, adji:
+    sixteen
+siextiġ, adji:
+    sixty
+siextigoþa, adjw:
+    sixtieth
 simle, adv:
     always
 sīn, adjs:
@@ -870,6 +1012,10 @@ spillan, vw1:
     to destroy
 spinnan, vs3:
     to spin
+sprǣc, nf:
+    speech
+sprǣdan, vw1:
+    to spread, expand
 sprecan, vs5:
     to speak
 stān, nm:
@@ -929,10 +1075,18 @@ syllan, vw1:
     SEE sellan
 tā, nmw: acc.sg tān; gen.sg tān; dat.sg tān; nom.pl tān; gen.pl tāna; dat.pl tām|tāum
     toe
+tāxe, nfw:
+    toad
 tellan, vw1:
     to count; to tell
 teors, nm:
     penis
+tēoþa, adjw:
+    tenth
+tīd, nf:
+    time, hour; grammatical tense
+tīen, adji:
+    ten
 titt, nm:
     teat, nipple; breast, mammary
 tō, adv:
@@ -947,8 +1101,20 @@ trum, adj:
     strong, firm; healthy
 tunge, nfw:
     tongue; language
-tungol, nn:
+tungol, nn: stem tung
     star
+twēġen, adjs.pl: fem.nom.pl twā; neut.nom.pl tū|twā; gen.pl twēġra|twēġa; dat.pl twǣm|twām
+    two
+twelf, adji:
+    twelve
+twentiġ, adji:
+    twenty
+twentigoþa, adjw:
+    twentieth
+tweowa, adv:
+    twice, two times
+twiġ, nn:
+    twig
 þā, pron: acc þā; gen þāra; dat þǣm|þām
     the, those
 þā, adv:
@@ -999,6 +1165,19 @@ tungol, nn:
     thing
 þis, pron: acc þis; gen þisses; dat þissum; inst þȳs
     this (neuter)
+þrēotīene, adji:
+    thirteen
+þrēowa, adv:
+    three times, thrice
+# TODO: Wiktionary and Quirk & Wrenn disagree on vowel length of þrīm
+þrī, adjs.pl: fem.nom.pl þrēo; neut.nom.pl þrēo; gen.pl þrēora; dat.pl þrīm
+    three
+þridda, adjw:
+    third
+þrītiġ, adji:
+    thirty
+þrītigoþa, adjw:
+    thirtieth
 þū, pron: acc þē|þec; gen þīn; dat þē
     thou, thee, you (singular)
 þurfan, vpp: 1sg þearf; 2sg þearft; subj þearfte|þyrfte; past þorft; pres.p þearfende|þurfende|þyrfende; pp þurfen
@@ -1007,6 +1186,8 @@ tungol, nn:
     through
 þus, adv:
     thus, in this way, to this extent
+þūsend, adji:
+    thousand
 þynċan, vw1: past þūht
     to seem [+acc: to someone]
 # TODO: BT has no indication of gender or declension
@@ -1039,7 +1220,7 @@ wæsp, nf:
     SEE wæps
 wæter, nn: nom.pl wæter|wætru|wæteru
     water
-wē, pron: acc ūs; gen ūre; dat ūs
+wē, pron: acc ūs|ūsic; gen ūre; dat ūs
     we, us
 wealh, nm: stem wēal
     foreigner; slave
@@ -1051,9 +1232,13 @@ weard, nf:
     guard, watch, act of guarding; guardianship
 wearm, adj:
     warm
+weċġ, nm:
+    wedge
+weċġan, vw1:
+    to wag, shake
 weġ, nm:
     way, path, road
-wel, adv: comp bet; sup betest
+wel, adv: comp bet|sēl; sup betest|betst|sēlest
     well; fastidiously; about, approximately
 wela, nmw:
     wealth, riches; prosperity
@@ -1099,9 +1284,11 @@ willan, vi: 1sg wille; 2sg wilt; 3sg wile; past wold
     to want
 wīn, nn:
     wine
+wīn-trēow, nn:
+    vine
 wīs, adj:
     wise
-wit, pron: acc unc; gen uncer; dat unc
+wit, pron: acc unc|uncet; gen uncer; dat unc
     we two, us two
 witan, vpp: 1sg wāt; 2sg wāst; past wist|wiss; pp witen
     to know (a fact)
@@ -1136,6 +1323,8 @@ wuton, particle:
     let's, let us
 wyllen, adj:
     woolen
+wynn, nf:
+    delight, pleasure
 wyrċan, vw1: past worht|wroht
     to work, make
 wyrhta, nmw:
@@ -1150,4 +1339,6 @@ ymb, prep:
     around; about, concerning
 yfel, adj: comp wyrsa; sup wyrst
     bad, unskilled; evil
+yfle, adv: comp wyrs; sup wyrst
+    badly
 

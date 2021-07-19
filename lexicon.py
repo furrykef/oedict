@@ -12,7 +12,7 @@ SPECIAL_TYPES = set((
     'stem', 'stem.pl',
     'acc.sg', 'gen.sg', 'dat.sg',
     'nom.pl', 'acc.pl', 'gen.pl', 'dat.pl',
-    'masc.acc.sg',
+    'masc.acc.sg', 'fem.nom.pl', 'neut.nom.pl',
     'comp', 'sup', 'adv'
 ))
 
@@ -126,13 +126,13 @@ def parse_special(special):
 def gen_forms(headword, word_type, special):
     if word_type[0] == 'n':
         return gen_noun(headword, word_type, special)
-    elif word_type in ('adj', 'adjs'):
+    elif word_type.startswith('adj'):
         return gen_adjective(headword, word_type, special)
     elif word_type == 'pron':
         return gen_pronoun(headword, word_type, special)
     elif word_type[0] == 'v':
         return gen_verb(headword, word_type, special)
-    elif word_type in ('adji', 'adv', 'prep', 'conj', 'int', 'particle'):
+    elif word_type in ('adv', 'prep', 'conj', 'int', 'particle'):
         return [[headword]]
     else:
         raise LexiconError(f"Invalid word type: {word_type}")
@@ -228,7 +228,9 @@ def gen_noun(headword, word_type, special):
 
 
 def gen_adjective(headword, word_type, special):
-    has_strong = True               # TODO: not always!
+    if word_type == 'adji':
+        return [[headword]]
+    has_strong = word_type != 'adjw'
     has_weak = word_type != 'adjs'
     stem = headword[:-1] if headword[-1] in ('a', 'e') else headword
     if has_strong:
