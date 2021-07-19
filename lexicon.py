@@ -73,17 +73,20 @@ class Lexicon(object):
                 sys.exit(1)
 
     def lookup(self, word):
+        results = []
+        self._lookup_impl(word, results)
+        return results
+
+    def _lookup_impl(self, word, results):
         word = normalize(word)
         entries = self.index.get(word, [])
-        results = []
         for entry in entries:
-            matches = re.match(r"^SEE(?:\s+?)(.+)", entry.definitions[0])
-            if matches:
-                # Follow redirect
-                results += self.lookup(matches.group(1))
-            else:
+            if entry not in results:
                 results.append(entry)
-        return results
+                matches = re.match(r"^SEE(?:\s+?)(.+)", entry.definitions[0])
+                if matches:
+                    # Follow redirect
+                    self._lookup_impl(matches.group(1), results)
 
     def reverse_lookup(self, search_string):
         search_string = search_string.lower()

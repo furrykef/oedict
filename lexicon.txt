@@ -92,6 +92,8 @@ bēam, nm:
     tree
 bearn, nn:
     child
+be-lādian, vw1:
+    to excuse, forgive
 belle, nfw:
     bell
 bēo, nf:
@@ -200,6 +202,8 @@ cweþan, vs5:
     to say
 cyċene, nfw:
     kitchen
+cyng, nm:
+    SEE cyning
 cyning, nm:
     king
 cynn, nn:
@@ -421,6 +425,10 @@ gǣst, nm:
     yes
 ġe-sēon, vs5: 2sg ġesiehst; 3sg ġesiehþ; past.1sg ġeseah; past.pl ġesāwon; pp ġesewen
     to see
+ġe-strēonan, vw1:
+    SEE strēonan
+ġe-strīenan, vw1:
+    SEE strēonan
 ġiefan, vs5:
     to give
 ġiefu, nf:
@@ -689,7 +697,7 @@ ne, adv:
 nerian, vw1:
     to save
 nesan, vi: 1sg neom; 2sg neart; 3sg nis; pl ne_sind|ne_sindon; subj ne_sīe; past.1sg næs; past.pl nǣron; imp nes
-    to not be
+    to not be; [with past participle] to have (done something)
 nese, int:
     no, nay
 niċ, pron:
@@ -720,6 +728,8 @@ ofer, prep:
     over
 oft, adv:
     often
+of-þynċan, vw1:
+    to cause regret or sorrow; to offend
 on, prep:
     on, in, at
 on-ġinnan, vs3:
@@ -750,6 +760,8 @@ reġnig, adj:
     rainy
 reġn-wyrm, nm:
     earthworm
+regol, nm:
+    rule
 rīċe, adj:
     rich
 rīċe, nn:
@@ -766,10 +778,12 @@ Rōm-burg, nf.sg: gen.sg Rōm-byrġ|Rōm-byriġ; dat.sg Rōm-byrġ|Rōm-byriġ
     the city of Rome
 Rōm-burh, nf.sg: gen.sg Rōm-byrġ|Rōm-byriġ; dat.sg Rōm-byrġ|Rōm-byriġ
     SEE Rōm-burg
+# Sense of "to be sorry" seems to be unattested
 sārian, vw2:
-    to hurt, be sore (physically or emotionally); to be sorry
+    to hurt, be sore (physically or emotionally)
+# Sense of "(I'm) sorry" seems to be unattested
 sāriġ, adj:
-    sorry, grieving
+    grieving
 sǣ, nm: acc.sg sǣ; dat.sg sǣ; gen.pl sǣ; nom.pl sǣ; gen.pl sǣwa; dat.pl sǣm|sǣwum
     sea
 sǣd, nn:
@@ -872,6 +886,10 @@ stingan, vs3:
     to sting
 stōw, nf:
     place
+strēonan, vw1:
+    get, gain, acquire; beget, produce, sire, father
+strīenan, vw1:
+    SEE strēonan
 sunne, nfw:
     sun
 sunu, nm: gen.sg suna; dat.sg suna; nom.pl suna
@@ -1045,6 +1063,12 @@ weorċan, vw1:
     SEE wyrċan
 weorold, nf:
     world
+weorþ, nn:
+    worth, value
+weorþ, adj:
+    worth [+gen: thing of equivalent value]
+weorþan, vs3:
+    to become; to happen; [with past participle] to be (done), get (done)
 wepan, vs7:
     to weep
 wer, nm:
@@ -1066,9 +1090,9 @@ west, adv:
 westan, adv:
     from the west
 wīf, nn:
-    woman
+    woman; wife
 wīf-mann, nmv:
-    woman
+    woman; wife
 wiht, nn:
     thing; creature
 willan, vi: 1sg wille; 2sg wilt; 3sg wile; past wold
@@ -1099,6 +1123,10 @@ wrītan, vs1:
     to write
 wudu, nm: gen.sg wuda; dat.sg wuda; nom.pl wuda
     wood; tree
+wurþ, nn, adj:
+    SEE weorþ
+wurþan, vs3:
+    SEE weorþan
 wulf, nm:
     wolf
 wull, nf:
@@ -1114,6 +1142,10 @@ wyrhta, nmw:
     worker, maker
 wyrm, nm:
     worm; snake, serpent, dragon
+wyrþ, nn, adj:
+    SEE weorþ
+wyrþan, vs3:
+    SEE weorþan
 ymb, prep:
     around; about, concerning
 yfel, adj: comp wyrsa; sup wyrst
