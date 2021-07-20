@@ -434,9 +434,9 @@ def is_vowel(ch):
 #   Is that OK?
 def i_mutate(word):
     initial, nucleus, final = split_word(word)
-    if nucleus in ('ēa', 'ēo'):
+    if nucleus in ('ēa', 'ēo', 'īe'):
         nucleus = 'īe'
-    elif nucleus in ('ea', 'eo'):
+    elif nucleus in ('ea', 'eo', 'ie'):
         nucleus = 'ie'
     elif nucleus == 'a':
         # This bit is why we can't just call mutate()

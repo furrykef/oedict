@@ -31,7 +31,7 @@ def interactive_mode(lex, reverse):
     while True:
         try:
             search_str = input("> ").strip()
-        except KeyboardInterrupt:
+        except (KeyboardInterrupt, EOFError):
             print()
             break
         lookup(lex, search_str, reverse)

@@ -7,27 +7,36 @@ ac, conj:
 āgen, adj:
     (one's) own
 ān, adj: masc.acc.sg ǣnne|ānne
-    one; a certain
+    one; a certain; lone, alone
 and, conj:
     and
 and-swarian, vw1, vw2:
     to answer
+and-swaru, nf:
+    answer
 and-swerian, vw1, vw2:
     SEE andswarian
+and-wyrde, nn:
+    answer
+and-wyrdan, vw1:
+    to answer
 āne, adv:
     SEE ǣne
+# TODO: verify no palatalization
 angel, nm:
     hook, such as for fishing
 āscian, vw2:
     to ask
 āscung, nf:
-    question
+    question, asking
 assa, nmw:
     donkey, ass
 āþ, nm:
     oath
 āxian, vw2:
     SEE āscian
+āxung, nf:
+    SEE āscung
 ǣfre, adv:
     ever, always
 ǣġ, nn: nom.pl ǣġru; gen.pl ǣġra; dat.pl ǣġrum
@@ -59,6 +68,13 @@ assa, nmw:
 # TODO: BT and Wiktionary disagree on the vowel length
 æmett-hyll, nm:
     SEE æmethyll
+ænglisċ, adj:
+    English
+ænglisċ, nn.sg:
+    the English language
+# BT seems to be mistaken in parsing this as on-drǣdan
+and-rǣdan, vs7:
+    to fear, be scared
 ǣne, adv:
     once, one time
 ǣniġ, adj:
@@ -130,6 +146,8 @@ bisċop, nm:
     SEE bisċeop
 blāwan, vs7:
     to blow
+blæc, adj:
+    black
 blæd, nn:
     leaf; broad, flat blade, such as of an oar
 blīþe, adj:
@@ -144,6 +162,8 @@ boga, nmw:
     bow (weapon), arch
 brēost, nn, nf:
     chest, bosom, breast
+brēowan, vs2:
+    to brew
 briċġ, nf:
     bridge
 brid, nm:
@@ -242,6 +262,8 @@ denn, nn:
     den, cave, lair
 dēofol, nn: stem dēofl
     devil, Satan
+dēop, adj:
+    deep
 dēor, nn:
     wild animal, beast
 dohtor, nf: acc.sg dohtor; gen.sg dohtor|dehter; dat.sg dehter; nom.pl dohtor|dohtra|dohtru; gen.pl dohtra; dat.pl dohtrum
@@ -265,7 +287,7 @@ drincan, vs3:
 dryhten, nm:
     lord; God, Jehovah
 dūce, nfw:
-    duck (bird)
+    duck
 dūfan, vs2:
     to dive
 dugan, vpp: 1sg dēag|dēah; 2sg dēaht; past doht; pp dugen
@@ -317,7 +339,7 @@ earfoþe, adj:
     hard, difficult
 earm, nm:
     arm
-ēast, nm:
+ēast, nm.sg:
     the east
 ēast, adj:
     east, eastern
@@ -329,6 +351,8 @@ earm, nm:
     easily
 ēaþelīċ, adj:
     easy
+eax, nf:
+    axe
 eċġ, nf:
     edge; blade, sword
 efete, nfw:
@@ -339,6 +363,10 @@ endleofan, adji:
     eleven
 endleofta, adjw:
     eleventh
+englisċ, adj:
+    SEE ænglisċ
+englisċ, nn.sg:
+    SEE ænglisċ
 eorl, nm:
     nobleman of high rank, roughly equivalent to duke
 ēower, adjs:
@@ -351,6 +379,12 @@ faran, vs6:
     to travel; fare
 fæder, nm:
     father
+fearh, nm: stem fēar
+    piglet
+fēawa, adjw:
+    few
+fēawe, adj.pl:
+    few
 fela, adji:
     many (usu. used w/ genitive)
 feoh, nn.sg: stem fēo
@@ -391,13 +425,13 @@ fīftiġ, adji:
     fifty
 fīftigoþa, adjw:
     fiftieth
-finger, nm:
+finger, nm: stem fingr
     finger
 firen, nf:
     sin, crime; suffering
 firenian, vw2:
     to sin
-fisċ, nm: nom.pl fisċas|fixas; gen.pl fisċa|fixa; dat.pl fisċum|fixum
+fisċ, nm: nom.pl fiscas|fixas; gen.pl fisca|fixa; dat.pl fiscum|fixum
     fish
 flā, nfw: acc.sg flān; gen.sg flān; dat.sg flān; nom.pl flān; gen.pl flāna; dat.pl flām|flāum
     arrow
@@ -471,8 +505,28 @@ gǣst, nm:
     days of yore
 ġe-endian, vw2:
     to end
+ġeon, adj:
+    yon, yonder, that over there
+ġeond, prep:
+    through, throughout; beyond
+ġeond, adv:
+    to yonder, over there
+ġeong, adj: comp ġingra; sup ġinġest
+    young
+ġeondan, prep:
+    beyond
+ġeonre, adv:
+    to yonder, over there
 ġe-munan, vpp: 1sg ġe-man; 2sg ġe-manst; past ġe-mund; pp ġe-munen
     to remember
+ġe-nōg, adj:
+    enough, sufficient
+ġe-nōg, adv:
+    enough, sufficiently
+ġe-nōh, adj:
+    SEE ġenōg
+ġe-nōh, adv:
+    SEE ġenōg
 ġe-nugan, vpp: 1sg ġe-nēah; 2sg ġe-nēaht; past ġe-noht; pp ġe-nugen
     to be enough, suffice
 ġeō, adv:
@@ -509,6 +563,8 @@ gold-hord, nm:
     treasury
 grēat, adj:
     big, large
+grēne, adj:
+    green
 grim, adj:
     severe, cruel, savage
 guma, nmw:
@@ -547,6 +603,8 @@ hē, pron: acc hine; gen his; dat him
     he, him; it (referring to a masculine noun)
 hēafod, nn:
     head
+hēah, adj: stem hēa
+    high, tall; exalted
 healdan, vs7:
     to hold
 heall, nf:
@@ -559,14 +617,14 @@ henġest, nm:
     stallion, male horse
 henn, nf:
     hen
-hēr, adv:
-    here, in this place
 hēo, pron: acc hīe; gen hire; dat hire
     she, her; it (referring to a feminine noun)
 heofon, nm:
     heaven
 heonan, adv:
     from here, hence
+hēr, adv:
+    here, in this place
 hider, adv:
     to here, hither
 hīe, pron: acc hīe; gen heora; dat him
@@ -627,6 +685,10 @@ hund-twelftiġ, adji:
     hundred and twenty
 hund-twelfigoþa, adjw:
     hundred and twentieth
+hungor, nm: stem hungr
+    hunger
+hungriġ, adj:
+    hungry, famished
 hunta, nmw:
     hunter
 huntian, vw2:
@@ -667,6 +729,8 @@ hwelċ, adj:
     which
 hwelċ-hwugu, pron:
     someone
+hwelp, nm:
+    pup, cub, whelp
 hwider, adv:
     SEE hwæder
 hwider-hwugu, adv:
@@ -679,6 +743,8 @@ hwilċ-hwugu, pron:
     SEE hwelċ-hwugu
 hwīlum, adv:
     sometimes; once, formerly
+hwīt, adj:
+    white
 hyċġan, vw3: 2sg hyġst|hogast; 3sg hyġþ|hogaþ; past hogd|hogod; imp hyġe|hoga
     to think, cogitate
 hyll, nm, nf:
@@ -699,12 +765,20 @@ innan, adv:
     in, within, inside
 innan, prep:
     in, within, inside
+lā, int:
+    ah!, oh!, lo!
+lā, adv:
+    then, ever (adds emphasis or expresses surprise, esp. in questions)
+lamb, nn: nom.pl lambru; stem.pl lambr
+    lamb
 land, nn:
     land
 lārēow, nm:
     teacher
-Lǣden, nm.sg:
+lǣden, adj:
     Latin
+lǣden, nm.sg:
+    the Latin language
 lǣran, vw1:
     to teach
 lǣrestre, nfw:
@@ -721,6 +795,8 @@ lēoþ, nn:
     song, poem
 libban, vw3: 2sg leofast|lifast; 3sg leofaþ|lifaþ; past lifd; imp leofa
     to live
+līċ, nn: stem.pl līc
+    body, esp. dead; corpse, cadaver
 liccian, vw2:
     to lick
 līcian, vw2:
@@ -745,6 +821,8 @@ maniġ, adjs: comp -; sup -
     many
 mann, nmv:
     man, person
+mǣd, nf: stem mǣdw
+    meadow
 meolc, nf:
     milk
 meolcan, vs3:
@@ -773,6 +851,8 @@ mōdor, nf: acc.sg mōdor; gen.sg mōdor|mēder; dat.sg mēder; nom.pl mōdor|m�
     mother
 mōna, nmw:
     moon
+mōnaþ, nm: nom.pl mōnaþ|mōnaþas
+    month
 morgen, nm:
     morning; the next day
 mōtan, vpp: 1sg mōt; 2sg mōst; past mōst; pp mōten
@@ -834,6 +914,12 @@ niht, nf:
     night
 niman, vs4: past.1sg nōm; past.pl nōmon
     to take
+niþer, adv:
+    down, downward, downstairs
+niþerlīc, adj:
+    low; mere, lowly
+niþre, adv:
+    down, low, in a low position
 norþ, adj:
     north, northern
 norþ, adv:
@@ -868,6 +954,14 @@ oþþe, conj:
     or
 oxa, nmw:
     ox
+pere, nfw:
+    SEE peru
+peru, nf:
+    pear
+pīc, nm:
+    pick; pike
+purpuren, adj:
+    purple
 rā, nmw: acc.sg rān; gen.sg rān; dat.sg rān; nom.pl rān; gen.pl rāna; dat.pl rām|rāum
     roe deer, roebuck
 rād, nf:
@@ -878,6 +972,8 @@ rāp, nm:
     rope, cord, cable
 rǣdan, vs7:
     to read; to advise
+rēad, adj:
+    red
 reġn, nm:
     rain
 reġn-boga, nmw:
@@ -952,6 +1048,8 @@ seax, nn:
     knife, dagger
 seċġan, vw3: 2sg sæġst|sagast; 3sg sæġþ|sagaþ; past sæġd|sǣd; imp saga|sæġe
     to say
+self, pron:
+    oneself
 sellan, vw1:
     to give; to sell
 sendan, vw1:
@@ -968,7 +1066,7 @@ seofoþa, adjw:
     seventh
 seolfren, adj:
     silver, silvery
-seolfor, nn:
+seolfor, nn: stem seolfr
     silver
 sēon, vs5: 2sg siehst; 3sg siehþ; past.1sg seah; past.pl sāwon; pp sewen
     to see
@@ -1051,8 +1149,13 @@ swā, adv:
     [swā ... swā] as ... as
 swan, nm:
     swan
+sweart, adj:
+    dark, black, swarthy
 swefan, vs5:
     to sleep
+# TODO: other sources call this a pronoun, but is it?
+swelċ, adj:
+    such
 swellan, vs3:
     to swell
 sweltan, vs3:
@@ -1065,6 +1168,9 @@ swefn, nn:
     SEE swefen
 swefen, nn:
     sleep; dream
+# TODO: other sources call this a pronoun, but is it?
+swilċ, adj:
+    SEE swelċ
 swīn, nn:
     swine, pig; pork
 swīn-hierde, nm:
@@ -1093,8 +1199,10 @@ tō, adv:
     too, excessively
 tō, prep:
     to
-tōdæġ, adv:
+tō-dæġ, adv:
     today
+tō-morgen, adv:
+    tomorrow
 trēow, nn:
     tree
 trum, adj:
@@ -1113,7 +1221,7 @@ twentigoþa, adjw:
     twentieth
 tweowa, adv:
     twice, two times
-twiġ, nn:
+twiġ, nn: stem.pl twig
     twig
 þā, pron: acc þā; gen þāra; dat þǣm|þām
     the, those
@@ -1165,6 +1273,9 @@ twiġ, nn:
     thing
 þis, pron: acc þis; gen þisses; dat þissum; inst þȳs
     this (neuter)
+þrēat, nm:
+    crowd, band, multitude, army
+    violence, force
 þrēotīene, adji:
     thirteen
 þrēowa, adv:
@@ -1191,7 +1302,7 @@ twiġ, nn:
 þynċan, vw1: past þūht
     to seem [+acc: to someone]
 # TODO: BT has no indication of gender or declension
-ūder, nn:
+ūder, nn: stem ūdr
     udder, mammary, breast
 uncer, adjs:
     our (of two people)
@@ -1201,6 +1312,10 @@ under-standan, vs6: past.1sg under-stōd; past.pl under-stōdon
     to understand
 unnan, vpp: 1sg ann; 2sg anst; past ūþ; pp unnen
     to grant
+upp, adv:
+    up, upward, upstairs
+uppe, adv:
+    up, in a high position
 un-trum, adj:
     weak; sick, ill
 ūre, adjs:
@@ -1210,6 +1325,12 @@ un-trum, adj:
 # TODO: Better word type?
 uton, particle:
     SEE wuton
+wā, int:
+    woe
+wāc, adj:
+    weak
+wāc, nn:
+    a weakness
 wacian, vw2:
     to be awake; to guard, watch
 # TODO: BT and Wiktionary disagree on gender
@@ -1218,7 +1339,7 @@ wæps, nf:
 # TODO: BT and Wiktionary disagree on gender
 wæsp, nf:
     SEE wæps
-wæter, nn: nom.pl wæter|wætru|wæteru
+wæter, nn: nom.pl wæter|wætru|wæteru; gen.pl wætra|wætera; dat.pl wætrum|wæterum
     water
 wē, pron: acc ūs|ūsic; gen ūre; dat ūs
     we, us
@@ -1236,12 +1357,16 @@ weċġ, nm:
     wedge
 weċġan, vw1:
     to wag, shake
-weġ, nm:
+weġ, nm: stem.pl weg
     way, path, road
 wel, adv: comp bet|sēl; sup betest|betst|sēlest
-    well; fastidiously; about, approximately
+    well; fastidiously
+    about, approximately
 wela, nmw:
     wealth, riches; prosperity
+wēnan, vw1:
+    to think, suppose, believe, imagine
+    to hope for, expect
 wendan, vw1:
     to go
 weorċan, vw1:
@@ -1331,12 +1456,16 @@ wyrhta, nmw:
     worker, maker
 wyrm, nm:
     worm; snake, serpent, dragon
+wyrt, nf:
+    herb, plant, vegetable, wort
 wyrþ, nn, adj:
     SEE weorþ
 wyrþan, vs3:
     SEE weorþan
 ymb, prep:
     around; about, concerning
+ymbe, prep:
+    SEE ymb
 yfel, adj: comp wyrsa; sup wyrst
     bad, unskilled; evil
 yfle, adv: comp wyrs; sup wyrst

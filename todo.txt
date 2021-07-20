@@ -40,9 +40,11 @@ Add a way to optionally specify part of speech when following redirects
 
 The code to generate variants is a bit of a joke right now. It generates many implausible forms and probably misses many plausible ones.
 
-Don't generate silly forms like sweryan
+Don't generate silly forms like sweryan, or lufi (from 'lufie').
 
-Why are we generating forms like gyyfst?
+'stem' special for adjectives (e.g. "hēah")
+
+Forms such as hīereþ (as opposed to hīerþ)
 
 
 bā: what part of speech?
@@ -64,6 +66,8 @@ hātan has a passive form (iċ hātte, þū hāttest, hē hātte, wē hātton), 
 hwelċhwugu (and hwilċhwugu)
 
 sǣ can be masc. or fem. with different irregular declensions
+
+twigu: ensure its "g" is hard
 
 þætte should redirect only to the conjunction form of þæt
 
