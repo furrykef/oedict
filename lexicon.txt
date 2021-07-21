@@ -37,8 +37,14 @@ assa, nmw:
     SEE āscian
 āxung, nf:
     SEE āscung
+ǣcern, nn:
+    acorn
 ǣfre, adv:
     ever, always
+æfter, prep:
+    after
+æfter, adv:
+    afterwards
 ǣġ, nn: nom.pl ǣġru; gen.pl ǣġra; dat.pl ǣġrum
     egg
 ǣġ-hwā, pron: acc ǣġ-hwone|ǣġ-hwæne; gen ǣġ-hwæs; dat ǣġ-hwǣm|ǣġ-hwām
@@ -85,6 +91,7 @@ and-rǣdan, vs7:
     cider
 æþeling, nm:
     prince
+# TODO: what part of speech?
 bā, pron:
     both
 bacan, vs6:
@@ -116,16 +123,26 @@ bēam, nm:
     tree
 bearn, nn:
     child
+be-fōran, prep:
+    before
 be-lādian, vw1:
     to excuse, forgive
 belle, nfw:
     bell
 bēo, nf:
     bee
+bēodan, vs2:
+    to command, order, bid
 bēon, vi: 1sg bēo; 2sg bist; 3sg biþ; past.1sg wæs; past.pl wǣron
     to be, esp. in the future; [with past participle] to have (done something)
 bēor, nm:
     beer, mead
+beorg, nm:
+    hill, mountain
+beorh, nm: stem beorg
+    SEE beorg
+beorht, adj:
+    bright
 bera, nmw:
     bear (animal)
 beran, vs4:
@@ -136,6 +153,8 @@ biblioþēċe, nfw:
     library; collection of books in one volume; the Bible
 biċċe, nfw:
     bitch, female dog
+biddan, vs5:
+    to request, ask for
 bindan, vs3:
     to bind
 bird, nm:
@@ -172,10 +191,14 @@ bringan, vw1: past brōht
     to bring
 brōþor, nf: gen.sg brōþor; dat.sg brēþer; nom.pl brōþor|brōþra|brōþru; gen.pl brōþra; dat.pl brōþrum
     brother
+brū, nf: stem brūw
+    eyebrow; eyelash
 brytta, nmw:
     vendor
+bucca, nm:
+    male goat
 burg, nfv: gen.sg byrġ|byriġ; dat.sg byrġ|byriġ; nom.pl byrġ|byriġ
-    city; castle
+    city; fortress, castle
 burh, nfv: gen.sg byrġ|byriġ; dat.sg byrġ|byriġ; nom.pl byrġ|byriġ; gen.pl burga; dat.pl burgum
     SEE burg
 būtan, conj:
@@ -196,6 +219,8 @@ catte, nfw:
     cold
 ċēap-stōw, nf:
     market
+ċeaster, nf: stem ċeastr
+    city; fortress, castle
 ċeorl, nm:
     man; husband; free peasant
 ċēosan, vs2: past.pl curon; pp coren
@@ -206,6 +231,8 @@ catte, nfw:
     cheese
 ċild, nn: nom.pl ċild|ċildru|ċildra; gen.pl ċilda|ċildra; dat.pl ċildum|ċildrum
     child
+ċirice, nfw:
+    church
 cnāwan, vs7:
     to know
 cnīf, nm:
@@ -214,8 +241,13 @@ cniht, nm:
     boy; knight
 cocc, nm:
     rooster, cock, male bird
+corn, nn:
+    grain, cereal plant; seed, berry
 cræft, nm:
     art, craft, skill
+# TODO: Vowel length. BT and Wiktionary have a short vowel. Eagles has a long vowel, and the modern pronunciation suggests a long vowel, too.
+Crīst, nm:
+    Christ, messiah
 cū, nfv: gen.sg cūe|cūs|cȳ; nom.pl cȳ|cȳe; gen.pl cūa|cūna; dat.pl cūum
     cow
 cuman, vs5: past.1sg cōm; past.pl cōmon
@@ -284,7 +316,7 @@ drīfan, vs1:
     to drive
 drincan, vs3:
     to drink
-dryhten, nm:
+dryhten, nm: stem dryhtn
     lord; God, Jehovah
 dūce, nfw:
     duck
@@ -357,7 +389,9 @@ eċġ, nf:
     edge; blade, sword
 efete, nfw:
     eft, newt, lizard
-ellen, nm, nn:
+eft, adv:
+    again; then, in turn; back (having returned)
+ellen, nm, nn: stem eln
     courage, bravery, valor
 endleofan, adji:
     eleven
@@ -373,12 +407,15 @@ eorl, nm:
     your (of multiple people)
 esol, nm:
     donkey
+# BT has "æt", but it's since been found it was ēt in PGmc (I'm told Ringe mentions this)
 etan, vs5: past.1sg ǣt; past.pl ǣton
     to eat
 faran, vs6:
     to travel; fare
 fæder, nm:
     father
+fǣtt, adj:
+    fat
 fearh, nm: stem fēar
     piglet
 fēawa, adjw:
@@ -441,34 +478,43 @@ flǣsċ, nn:
     meat, flesh
 for, prep:
     for; because of
+# TODO: past participle (see ġiefan)
+for-ġiefan, vs5: past.1sg for-ġeaf; past.pl for-ġēafon
+    to give; to forgive [+dat: someone] [+acc: for something]
+for-ġietan, vs5: past.1sg for-ġeat; past.pl for-ġēaton
+    forget
+for-hwām, adv:
+    SEE forhwȳ
+for-hwǣm, adv:
+    SEE forhwȳ
+for-hwon, adv:
+    SEE forhwȳ
+for-hwȳ, adv:
+    why
+for-lǣtan, vs7:
+    to leave
 forma, adjw:
     first
-forþām, adv:
+for-þām, adv:
     SEE forþȳ
-forþǣm, adv:
+for-þǣm, adv:
     SEE forþȳ
-forþon, adv:
+for-þon, adv:
     SEE forþȳ
-forþȳ, adv:
+for-þȳ, adv:
     because of this, therefore, thus; [esp. with þe] because; since; for
-forhwām, adv:
-    SEE forhwȳ
-forhwǣm, adv:
-    SEE forhwȳ
-forhwon, adv:
-    SEE forhwȳ
-forhwȳ, adv:
-    why
 fōt, nmv:
     foot
 fox, nm:
     fox
 fram, prep:
-    from
+    from; by (someone; specifies agent of passive voice)
 fremman, vw1:
     to do, perform
 frēond, nm, nmv:
     friend
+frēond-līċ, adj:
+    friendly
 frocga, nmw:
     SEE frogga
 frogga, nmw:
@@ -477,11 +523,20 @@ fuglere, nm:
     fowler
 fugol, nm: stem fugl
     bird, fowl
+full, adj:
+    full
+full, adv:
+    fully
+full, nn:
+    cup
 # Wiktionary instead has a strong feminine noun "fyxen", but this appears spurious or at least unattested
 fyxe, nfw:
     vixen, female fox
 gān, vi: 2sg gǣst; 3sg gǣþ; past ēod; pp gān
     to do
+gang, nm:
+    going, journey; way, path
+    privy, outhouse, toilet
 gangan, vs7:
     to go, walk
 gangern, nn:
@@ -490,6 +545,10 @@ gār, nm:
     pointed weapon: spear, javelin, dart, etc.
 gāst, nm:
     spirit, ghost; breath
+gāt, nf:
+    female goat
+gāt-hierde, nm:
+    goatherd
 gǣst, nm:
     SEE gāst
 ġe, conj:
@@ -505,6 +564,12 @@ gǣst, nm:
     days of yore
 ġe-endian, vw2:
     to end
+ġe-hwelċ, pron:
+    everyone
+ġe-hwilċ, pron:
+    SEE ġehwelċ
+ġe-līċ, adj:
+    similar
 ġeon, adj:
     yon, yonder, that over there
 ġeond, prep:
@@ -531,15 +596,24 @@ gǣst, nm:
     to be enough, suffice
 ġeō, adv:
     once (upon a time), formerly
+ġēol, nn:
+    yule, yuletide, Christmas
+ġe-lēafa, nmw:
+    belief, faith
+ġe-reorde, nn:
+    language
 ġēse, int:
     yes
-ġe-sēon, vs5: 2sg ġesiehst; 3sg ġesiehþ; past.1sg ġeseah; past.pl ġesāwon; pp ġesewen
+ġe-sēon, vs5: 2sg ġe-siehst; 3sg ġe-siehþ; past.1sg ġe-seah; past.pl ġe-sāwon; pp ġe-sewen
     to see
 ġe-strēonan, vw1:
     SEE strēonan
 ġe-strīenan, vw1:
     SEE strēonan
-ġiefan, vs5:
+ġe-þēode, nn:
+    language
+# TODO: BT has pp "ġifen", Eagles has "ġiefen", Wiktionary has "ġefen" (which is also generated by our tool). When this is resolved, be sure to do this for derived forms as well.
+ġiefan, vs5: past.1sg ġeaf; past.pl ġēafon
     to give
 ġiefu, nf:
     gift
@@ -547,6 +621,8 @@ gǣst, nm:
     to yield
 ġīese, int:
     SEE ġēse
+ġif, conj:
+    if
 ġit, pron: acc inc|incet; gen incer; dat inc
     you two
 glæd, adj:
@@ -555,12 +631,18 @@ god, nm:
     god; God, Jehovah
 gōd, adj: comp betera|sēlra; sup betst|sēlest; adv wel
     good
-gōs, nfv:
-    goose
+god-līċ, adj:
+    godly
+god-spell, nn:
+    gospel
 gold, nn:
     gold
 gold-hord, nm:
     treasury
+gōs, nfv:
+    goose
+grǣġ, adj:
+    gray, grey
 grēat, adj:
     big, large
 grēne, adj:
@@ -573,12 +655,18 @@ gylden, adj:
     golden
 habban, vw3: long.inf hæbbenne|habbanne; 1sg hæbbe; 2sg hæfst|hafast; 3sg hæfþ|hafaþ; past hæfd; imp hafa; pres.p hæbbende
     to have, possess; to have (done something)
+hafoc, nm:
+    hawk
 hāl, adj:
-    healthy, hale
+    whole; healthy, hale
+hāliġ, adj:
+    holy, sacred
 hām, nm:
     home
 hām, adv:
     home, homeward
+hama, nmw:
+    covering
 hana, nmw:
     rooster; cock
 hand, nf:
@@ -587,6 +675,8 @@ hand-bōc, nfv: gen.sg hand-bōce|hand-bēċ; dat.sg hand-bēċ; nom.pl hand-bē
     handbook, manual
 hara, nmw:
     hare, rabbit, bunny
+hāt, adj:
+    hot
 hātan, vs7: past.1sg hēt; past.pl hēton
     to call; order, command
 hatian, vw2:
@@ -599,6 +689,10 @@ hæle, nm:
     SEE hæleþ
 hæleþ, nm:
     hero
+hærfest, nm:
+    harvest; autumn, harvest season
+hætt, nm:
+    hat
 hē, pron: acc hine; gen his; dat him
     he, him; it (referring to a masculine noun)
 hēafod, nn:
@@ -769,10 +863,20 @@ lā, int:
     ah!, oh!, lo!
 lā, adv:
     then, ever (adds emphasis or expresses surprise, esp. in questions)
+lacu, nf:
+    lake, pond, pool
+lagu, nm: gen.sg laga; dat.sg laga; nom.pl laga
+    sea, water
+lagu, nf:
+    law
 lamb, nn: nom.pl lambru; stem.pl lambr
     lamb
 land, nn:
     land
+lang, adj:
+    long
+lār, nf:
+    teaching, instruction, lore
 lārēow, nm:
     teacher
 lǣden, adj:
@@ -783,8 +887,12 @@ lǣran, vw1:
     to teach
 lǣrestre, nfw:
     female teacher
+lǣtan, vs7:
+    to let, allow
 leċċan, vw1:
     to wet, water, moisten
+lencten, nm:
+    spring, Lent
 lēoht, adj:
     light, lightweight
 lēoht, nn:
@@ -797,10 +905,14 @@ libban, vw3: 2sg leofast|lifast; 3sg leofaþ|lifaþ; past lifd; imp leofa
     to live
 līċ, nn: stem.pl līc
     body, esp. dead; corpse, cadaver
+līċ-hama, nmw:
+    body, esp. of a living person
 liccian, vw2:
     to lick
 līcian, vw2:
     to be liked [+dat: by someone]; to be pleasing
+līf, nn:
+    life
 lifian, vw2:
     SEE libban
 lim, nn:
@@ -811,7 +923,7 @@ lufian, vw2:
     to love
 lȳt, adv: comp lǣs; sup lǣst
     little
-lȳtel, adj: comp lǣssa; sup lǣst; adv lȳt
+lȳtel, adj: stem lȳtl; comp lǣssa; sup lǣst; adv lȳt
     little, small
 macian, vw2:
     to make
@@ -823,6 +935,8 @@ mann, nmv:
     man, person
 mǣd, nf: stem mǣdw
     meadow
+mæsse, nfw:
+    mass, church service; religious holiday
 meolc, nf:
     milk
 meolcan, vs3:
@@ -853,7 +967,7 @@ mōna, nmw:
     moon
 mōnaþ, nm: nom.pl mōnaþ|mōnaþas
     month
-morgen, nm:
+morgen, nm: stem morgn
     morning; the next day
 mōtan, vpp: 1sg mōt; 2sg mōst; past mōst; pp mōten
     can, may, be allowed to, have permission to; must
@@ -916,7 +1030,7 @@ niman, vs4: past.1sg nōm; past.pl nōmon
     to take
 niþer, adv:
     down, downward, downstairs
-niþerlīc, adj:
+niþer-līċ, adj:
     low; mere, lowly
 niþre, adv:
     down, low, in a low position
@@ -935,7 +1049,7 @@ nyllan, vi: 1sg nylle; 2sg nylt; 3sg nyle; past nold
 nytan, vpp: 1sg nāt; 2sg nāst; past nyst|nyss; pp nyten
     to not know (a fact)
 of, prep:
-    from, out of
+    from, out of; by (someone; specifies agent of passive voice)
 ofer, prep:
     over
 oft, adv:
@@ -960,6 +1074,14 @@ peru, nf:
     pear
 pīc, nm:
     pick; pike
+pitt, nm:
+    pit, hole in ground; grave
+pleġan, vw1:
+    to play, frolic; to play (a game, instrument, etc.)
+pleġian, vw2:
+    SEE pleġan
+prēost, nm:
+    priest
 purpuren, adj:
     purple
 rā, nmw: acc.sg rān; gen.sg rān; dat.sg rān; nom.pl rān; gen.pl rāna; dat.pl rām|rāum
@@ -1038,6 +1160,8 @@ sċōh-wyrhta, nmw:
     shoemaker, cobbler
 sċop, nm:
     poet
+sċort, adj:
+    short
 sċulan, vpp: 1sg sċeal; 2sg sċealt; subj sċyle; past sċeold|sċold; pp sċulen
     shall, should, must; to owe
 sċūr, nm, nf:
@@ -1104,8 +1228,19 @@ snāwiġ, adj:
     snowy
 snīwan, vw1:
     to snow
+sōna, adv:
+    soon, immediately
+sorg, nf:
+    sorrow, grief
 sōþ, nn:
     truth
+spearwa, nmw:
+    sparrow
+spell, nn:
+    story, narrative, account, speech, sermon
+spellian, vw2:
+    [trans.] to tell, announce, proclaim
+    [intrans.] to talk, speak, converse
 spillan, vw1:
     to destroy
 spinnan, vs3:
@@ -1116,6 +1251,11 @@ sprǣdan, vw1:
     to spread, expand
 sprecan, vs5:
     to speak
+spring, nm:
+    spring, source of water
+    ulcer
+springan, vs3:
+    to jump, leap, spring
 stān, nm:
     stone
 standan, vs6:  past.1sg stōd; past.pl stōdon
@@ -1134,6 +1274,12 @@ strēonan, vw1:
     get, gain, acquire; beget, produce, sire, father
 strīenan, vw1:
     SEE strēonan
+sumer, nm:
+    SEE sumor
+sumor, nm:
+    summer
+sumur, nm:
+    SEE sumor
 sunne, nfw:
     sun
 sunu, nm: gen.sg suna; dat.sg suna; nom.pl suna
@@ -1166,7 +1312,7 @@ sweostor, nf: acc.sg sweostor; gen.sg sweostor; dat.sg sweostor; nom.pl sweostor
     mother
 swefn, nn:
     SEE swefen
-swefen, nn:
+swefen, nn: stem swefn
     sleep; dream
 # TODO: other sources call this a pronoun, but is it?
 swilċ, adj:
@@ -1183,6 +1329,8 @@ tā, nmw: acc.sg tān; gen.sg tān; dat.sg tān; nom.pl tān; gen.pl tāna; dat.
     toe
 tāxe, nfw:
     toad
+tēar, nm:
+    tear, teardrop
 tellan, vw1:
     to count; to tell
 teors, nm:
@@ -1253,6 +1401,10 @@ twiġ, nn: stem.pl twig
     SEE þæt
 þe, particle:
     that, who [optionally preceded by a form of sē]
+þēah, conj:
+    though, although
+þēah, adv:
+    yet, still, however, nevertheless
 þeġn, nm:
     thane, knight, mid-ranking nobleman
 þenċan, vw1: past þōht
@@ -1310,6 +1462,8 @@ under, prep:
     under
 under-standan, vs6: past.1sg under-stōd; past.pl under-stōdon
     to understand
+un-ġe-līċ, adj:
+    different
 unnan, vpp: 1sg ann; 2sg anst; past ūþ; pp unnen
     to grant
 upp, adv:
@@ -1387,6 +1541,8 @@ were-gild, nn:
     SEE wergild
 were-wulf, nm:
     SEE werwulf
+wēriġ, adj:
+    weary, tired, exhausted
 wer-gild, nn:
     weregild, money paid as compensation for the death or serious injury of a man
 wer-wulf, nm:
@@ -1409,6 +1565,9 @@ willan, vi: 1sg wille; 2sg wilt; 3sg wile; past wold
     to want
 wīn, nn:
     wine
+# TODO: BT notes neuter plural form wintru; does this make the noun actually neuter in such a case?
+winter, nm: stem wintr; dat.sg wintre|wintra
+    winter
 wīn-trēow, nn:
     vine
 wīs, adj:

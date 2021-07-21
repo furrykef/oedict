@@ -20,6 +20,8 @@ nm.pl, nn.pl, nf.pl (e.g. "ġeardagas")
 
 Verify all vs7 verbs conjugate correctly
 
+vs5 verbs with -ie- stems
+
 cȳþan's past tense is cȳþde *or* cȳdde
 
 Are there any -ttan verbs that conjugate like fremman?
@@ -47,11 +49,9 @@ Don't generate silly forms like sweryan, or lufi (from 'lufie').
 Forms such as hīereþ (as opposed to hīerþ)
 
 
-bā: what part of speech?
-
 brōþor: make sure brōþer- vs. brōþr- is consistent in both special and generated forms (note that, I believe, broþeru is attested but perhaps e.g. sweosteru is not)
 
-fugol, lȳtel, wæter, and others should contract in inflected forms
+ġehwelc (and ġehwilc)
 
 glæd, smæl
 
