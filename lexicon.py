@@ -1,3 +1,4 @@
+import collections
 import re
 import sys
 import unicodedata
@@ -111,10 +112,10 @@ class Lexicon(object):
 # Input: "2sg eart; 3sg sind|sindon"
 # Output: {'2sg': ['eart'], '3sg': ['sind', 'sindon']}
 def parse_special(special):
+    result = collections.defaultdict(list)
     if len(special) == 0:
-        return {}
+        return result
     special = [x.strip() for x in special.split(';')]
-    result = {}
     for item in special:
         form, args = item.split(maxsplit=1)
         if not form in SPECIAL_TYPES:
@@ -156,37 +157,37 @@ def gen_noun(headword, word_type, special):
     if word_type[1:] == 'm':
         # Strong masculine noun
         return [
-            special.get('nom.sg') or [headword],
-            special.get('acc.sg') or special.get('nom.sg') or [headword],
-            special.get('gen.sg') or [stem + ('es' if not is_vowel(stem[-1]) else 's')],
-            special.get('dat.sg') or [stem + ('e' if not is_vowel(stem[-1]) else "")],
-            special.get('nom.pl') or [stem_pl + ('as' if not is_vowel(stem[-1]) else 's')],
-            special.get('acc.pl') or special.get('nom.pl') or [stem_pl + ('as' if not is_vowel(stem_pl[-1]) else 's')],
-            special.get('gen.pl') or [stem_pl + ('a' if not is_vowel(stem_pl[-1]) else 'na')],
-            special.get('dat.pl') or [stem_pl + ('um' if not is_vowel(stem_pl[-1]) else 'm')],
+            special['nom.sg'] or [headword],
+            special['acc.sg'] or special['nom.sg'] or [headword],
+            special['gen.sg'] or [stem + ('es' if not is_vowel(stem[-1]) else 's')],
+            special['dat.sg'] or [stem + ('e' if not is_vowel(stem[-1]) else "")],
+            special['nom.pl'] or [stem_pl + ('as' if not is_vowel(stem[-1]) else 's')],
+            special['acc.pl'] or special['nom.pl'] or [stem_pl + ('as' if not is_vowel(stem_pl[-1]) else 's')],
+            special['gen.pl'] or [stem_pl + ('a' if not is_vowel(stem_pl[-1]) else 'na')],
+            special['dat.pl'] or [stem_pl + ('um' if not is_vowel(stem_pl[-1]) else 'm')],
         ]
     elif word_type[1:] == 'f':
         return [
-            special.get('nom.sg') or [headword],
-            special.get('acc.sg') or [stem + ('e' if not is_vowel(stem[-1]) else "")],
-            special.get('gen.sg') or [stem + ('e' if not is_vowel(stem[-1]) else "")],
-            special.get('dat.sg') or [stem + ('e' if not is_vowel(stem[-1]) else "")],
-            special.get('nom.pl') or [stem_pl + 'a', stem_pl + 'e'],
-            special.get('acc.pl') or special.get('nom.pl') or [stem_pl + 'a', stem_pl + 'e'],
-            special.get('gen.pl') or [stem_pl + ('a' if not is_vowel(stem_pl[-1]) else 'na')],
-            special.get('dat.pl') or [stem_pl + ('um' if not is_vowel(stem_pl[-1]) else 'm')],
+            special['nom.sg'] or [headword],
+            special['acc.sg'] or [stem + ('e' if not is_vowel(stem[-1]) else "")],
+            special['gen.sg'] or [stem + ('e' if not is_vowel(stem[-1]) else "")],
+            special['dat.sg'] or [stem + ('e' if not is_vowel(stem[-1]) else "")],
+            special['nom.pl'] or [stem_pl + 'a', stem_pl + 'e'],
+            special['acc.pl'] or special['nom.pl'] or [stem_pl + 'a', stem_pl + 'e'],
+            special['gen.pl'] or [stem_pl + ('a' if not is_vowel(stem_pl[-1]) else 'na')],
+            special['dat.pl'] or [stem_pl + ('um' if not is_vowel(stem_pl[-1]) else 'm')],
         ]
     elif word_type[1:] == 'n':
         # Strong neuter noun
         return [
-            special.get('nom.sg') or [headword],
-            special.get('acc.sg') or special.get('nom.sg') or [headword],
-            special.get('gen.sg') or [stem + ('es' if not is_vowel(stem[-1]) else 's')],
-            special.get('dat.sg') or [stem + ('e' if not is_vowel(stem[-1]) else "")],
-            special.get('nom.pl') or [headword],
-            special.get('acc.pl') or special.get('nom.pl') or [headword],
-            special.get('gen.pl') or [stem_pl + ('a' if not is_vowel(stem_pl[-1]) else 'na')],
-            special.get('dat.pl') or [stem_pl + ('um' if not is_vowel(stem_pl[-1]) else 'm')],
+            special['nom.sg'] or [headword],
+            special['acc.sg'] or special['nom.sg'] or [headword],
+            special['gen.sg'] or [stem + ('es' if not is_vowel(stem[-1]) else 's')],
+            special['dat.sg'] or [stem + ('e' if not is_vowel(stem[-1]) else "")],
+            special['nom.pl'] or [headword],
+            special['acc.pl'] or special['nom.pl'] or [headword],
+            special['gen.pl'] or [stem_pl + ('a' if not is_vowel(stem_pl[-1]) else 'na')],
+            special['dat.pl'] or [stem_pl + ('um' if not is_vowel(stem_pl[-1]) else 'm')],
         ]
     elif word_type[1:] in ('mw', 'fw', 'nw'):
         # Weak noun
@@ -196,14 +197,14 @@ def gen_noun(headword, word_type, special):
         else:
             accusative = oblique
         return [
-            special.get('nom.sg') or [headword],
-            special.get('acc.sg') or [accusative],
-            special.get('gen.sg') or [oblique],
-            special.get('dat.sg') or [oblique],
-            special.get('nom.pl') or [oblique],
-            special.get('acc.pl') or special.get('nom.pl') or [oblique],
-            special.get('gen.pl') or [stem + 'ena'],
-            special.get('dat.pl') or [stem + 'um'],
+            special['nom.sg'] or [headword],
+            special['acc.sg'] or [accusative],
+            special['gen.sg'] or [oblique],
+            special['dat.sg'] or [oblique],
+            special['nom.pl'] or [oblique],
+            special['acc.pl'] or special['nom.pl'] or [oblique],
+            special['gen.pl'] or [stem + 'ena'],
+            special['dat.pl'] or [stem + 'um'],
         ]
     elif word_type[1:] in ('mv', 'fv'):
         # Vocalic noun
@@ -213,14 +214,14 @@ def gen_noun(headword, word_type, special):
         else:
             genitives = [stem + 'e', mutated]
         return [
-            special.get('nom.sg') or [headword],
-            special.get('acc.sg') or special.get('nom.sg') or [headword],
-            special.get('gen.sg') or genitives,     # no brackets!
-            special.get('dat.sg') or [mutated],
-            special.get('nom.pl') or [mutated],
-            special.get('acc.pl') or special.get('nom.pl') or [mutated],
-            special.get('gen.pl') or [stem_pl + ('a' if not is_vowel(stem_pl[-1]) else 'na')],
-            special.get('dat.pl') or [stem_pl + ('um' if not is_vowel(stem_pl[-1]) else 'm')],
+            special['nom.sg'] or [headword],
+            special['acc.sg'] or special['nom.sg'] or [headword],
+            special['gen.sg'] or genitives,     # no brackets!
+            special['dat.sg'] or [mutated],
+            special['nom.pl'] or [mutated],
+            special['acc.pl'] or special['nom.pl'] or [mutated],
+            special['gen.pl'] or [stem_pl + ('a' if not is_vowel(stem_pl[-1]) else 'na')],
+            special['dat.pl'] or [stem_pl + ('um' if not is_vowel(stem_pl[-1]) else 'm')],
         ]
     else:
         # Other (TODO: implement all types and throw an error here instead)
@@ -268,24 +269,24 @@ def gen_verb(headword, word_type, special):
         # Irregular infinitive
         inf_stem = headword[:-1]
         pres_1sg = inf_stem
-        subjs = special.get('subj') or [inf_stem]
-        pres_participles = special.get('pres.p') or [headword + 'de']
+        subjs = special['subj'] or [inf_stem]
+        pres_participles = special['pres.p'] or [headword + 'de']
         irregular_infinitive = True
     elif headword.endswith('an'):
         # Regular infinitive
         inf_stem = headword[:-2]
         pres_1sg = inf_stem + 'e'
         long_infinitives.append(inf_stem + 'enne')
-        subjs = special.get('subj') or [inf_stem + 'e']
-        pres_participles = special.get('pres.p') or [headword[:-2] + 'ende']
+        subjs = special['subj'] or [inf_stem + 'e']
+        pres_participles = special['pres.p'] or [headword[:-2] + 'ende']
         irregular_infinitive = False
     else:
         raise LexiconError(f"invalid infinitive: {headword}")
     result = [
         [headword],
-        special.get("long.inf") or long_infinitives,
+        special["long.inf"] or long_infinitives,
         pres_participles,
-        special.get('1sg') or [pres_1sg],
+        special['1sg'] or [pres_1sg],
         subjs,
         [subj + 'n' for subj in subjs],             # subj.pl
         [headword[:-1] + 'þ'],                      # imp.pl
@@ -326,18 +327,18 @@ def gen_verb(headword, word_type, special):
             pass
         else:
             raise LexiconError("invalid weak verb class")
-        past_stems = special.get('past') or [past_stem]
-        past_participles = (special.get('pp') or past_stems)[:]
+        past_stems = special['past'] or [past_stem]
+        past_participles = (special['pp'] or past_stems)[:]
         past_participles += ['ġe-' + x for x in past_participles if not x.startswith('ġe-')]
         result += [
-            special.get('2sg') or [assimilate(short_stem, 'st')],
-            special.get('3sg') or [assimilate(short_stem, 'þ')],
-            special.get('pl') or [inf_stem + 'aþ'],
+            special['2sg'] or [assimilate(short_stem, 'st')],
+            special['3sg'] or [assimilate(short_stem, 'þ')],
+            special['pl'] or [inf_stem + 'aþ'],
             [x + 'e' for x in past_stems],          # past.1sg/3sg; past.subj.sg
             [x + 'est' for x in past_stems],        # past.2sg
             [x + 'on' for x in past_stems],         # past.pl
             [x + 'en' for x in past_stems],         # past.subj.pl
-            special.get('imp') or [short_stem],
+            special['imp'] or [short_stem],
             past_participles,
         ]
     elif word_type[1] == 's':
@@ -377,19 +378,19 @@ def gen_verb(headword, word_type, special):
             past_1sg_repl = 'ēo'
             past_pl_repl = 'ēo'
             pp_repl = lambda nucleus: nucleus
-        past_pls = special.get('past.pl') or [mutate(inf_stem, past_pl_repl) + 'on']
+        past_pls = special['past.pl'] or [mutate(inf_stem, past_pl_repl) + 'on']
         past_pl_stems = [x[:-2] for x in past_pls]
-        past_participles = (special.get('pp') or [mutate(inf_stem, pp_repl) + 'en'])[:]
+        past_participles = (special['pp'] or [mutate(inf_stem, pp_repl) + 'en'])[:]
         past_participles += ['ġe-' + x for x in past_participles if not x.startswith('ġe-')]
         result += [
-            special.get('2sg') or [assimilate(i_mutate(inf_stem), 'st')],
-            special.get('3sg') or [assimilate(i_mutate(inf_stem), 'þ')],
-            special.get('pl') or [inf_stem + 'aþ'],
-            special.get('past.1sg') or [mutate(inf_stem, past_1sg_repl)],
+            special['2sg'] or [assimilate(i_mutate(inf_stem), 'st')],
+            special['3sg'] or [assimilate(i_mutate(inf_stem), 'þ')],
+            special['pl'] or [inf_stem + 'aþ'],
+            special['past.1sg'] or [mutate(inf_stem, past_1sg_repl)],
             [x + 'e' for x in past_pl_stems],           # past.2sg
             past_pls,
             [x + 'en' for x in past_pl_stems],          # past.subj.pl
-            special.get('imp') or [inf_stem],
+            special['imp'] or [inf_stem],
             past_participles,
         ]
     elif word_type in ('vpp', 'vi'):

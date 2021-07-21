@@ -492,7 +492,8 @@ for-hwon, adv:
 for-hwȳ, adv:
     why
 for-lǣtan, vs7:
-    to leave
+    [intransitive] to leave
+    [transitive] to leave a place; to relinquish, give up, abandon (something)
 forma, adjw:
     first
 for-þām, adv:
