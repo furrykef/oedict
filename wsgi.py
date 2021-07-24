@@ -16,7 +16,7 @@ def search_oe(search_terms="nawiht"):
     for term in search_terms:
         entries = lex.lookup(term)
         if len(entries) == 0:
-            text += f"<h2>Not found: {term}</h2>\n"
+            text += f"<h2>Not found: {html.escape(term)}</h2>\n"
         else:
             text += format_entries(entries)
     return text
@@ -29,7 +29,7 @@ def search_reverse(search_string="nothing"):
     entries = lex.reverse_lookup(search_string)
     text = ""
     if len(entries) == 0:
-        text += f"<h2>Not found: {search_string}</h2>\n"
+        text += f"<h2>Not found: {html.escape(search_string)}</h2>\n"
     else:
         text += format_entries(entries)
     return text
@@ -38,7 +38,7 @@ def search_reverse(search_string="nothing"):
 def format_entries(entries):
     text = ""
     for entry in entries:
-        text += f"<h2 lang=\"ang\">{entry.lemma}</h2>\n"
+        text += f"<h2 lang=\"ang\">{html.escape(entry.lemma)}</h2>\n"
         text += "<ol>\n"
         for definition in entry.definitions:
             text += f"<li>{html.escape(definition)}</li>\n"
