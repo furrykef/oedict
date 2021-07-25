@@ -427,7 +427,7 @@ def gen_verb(headword, word_type, special):
 
 def is_vowel(ch):
     assert len(ch) == 1
-    return ch in 'AÆIOUYĀǢĪŌŪȲaæiouyāǣīōūȳ'
+    return ch in 'AÆEIOUYĀǢĒĪŌŪȲaæeiouyāǣēīōūȳ'
 
 
 # I-mutates the nucleus of the last syllable of its argument

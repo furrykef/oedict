@@ -56,6 +56,8 @@ assa, nmw:
     acorn
 æl-mihtiġ, adj:
     SEE ealmihtiġ
+ǣfen, nm:
+    evening, eve
 ǣfre, adv:
     ever, always
 æfter, prep:
