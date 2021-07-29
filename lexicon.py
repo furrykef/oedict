@@ -13,7 +13,7 @@ SPECIAL_TYPES = set((
     'stem', 'stem.pl',
     'acc.sg', 'gen.sg', 'dat.sg',
     'nom.pl', 'acc.pl', 'gen.pl', 'dat.pl',
-    'masc.acc.sg', 'fem.nom.pl', 'neut.nom.pl',
+    'masc.acc.sg', 'fem.nom.sg', 'fem.nom.pl', 'neut.nom.pl',
     'comp', 'sup', 'adv'
 ))
 
@@ -59,9 +59,10 @@ class Lexicon(object):
                         entry = Entry(headword)
                         self.entries.append(entry)
                         for word_type in word_types:
-                            for forms in gen_forms(headword, word_type, special):
-                                assert isinstance(forms, list)  # we've had trouble with strings creeping in
-                                for form in forms:
+                            forms = gen_forms(headword, word_type, special)
+                            for key, value in forms.items():
+                                assert isinstance(value, list)
+                                for form in value:
                                     if form != '-':
                                         for variant in gen_variants(form):
                                             variant = normalize(variant)
@@ -112,7 +113,7 @@ class Lexicon(object):
 # Input: "2sg eart; 3sg sind|sindon"
 # Output: {'2sg': ['eart'], '3sg': ['sind', 'sindon']}
 def parse_special(special):
-    result = collections.defaultdict(list)
+    result = {}
     if len(special) == 0:
         return result
     special = [x.strip() for x in special.split(';')]
@@ -125,7 +126,9 @@ def parse_special(special):
 
 
 def gen_forms(headword, word_type, special):
-    if word_type[0] == 'n':
+    if word_type in ('adji', 'adv', 'prep', 'conj', 'int', 'particle'):
+        return {'invariable': [headword]}
+    elif word_type[0] == 'n':
         return gen_noun(headword, word_type, special)
     elif word_type.startswith('adj'):
         return gen_adjective(headword, word_type, special)
@@ -133,8 +136,6 @@ def gen_forms(headword, word_type, special):
         return gen_pronoun(headword, word_type, special)
     elif word_type[0] == 'v':
         return gen_verb(headword, word_type, special)
-    elif word_type in ('adv', 'prep', 'conj', 'int', 'particle'):
-        return [[headword]]
     else:
         raise LexiconError(f"Invalid word type: {word_type}")
 
@@ -156,39 +157,39 @@ def gen_noun(headword, word_type, special):
         stem_pl = stem
     if word_type[1:] == 'm':
         # Strong masculine noun
-        return [
-            special['nom.sg'] or [headword],
-            special['acc.sg'] or special['nom.sg'] or [headword],
-            special['gen.sg'] or [stem + ('es' if not is_vowel(stem[-1]) else 's')],
-            special['dat.sg'] or [stem + ('e' if not is_vowel(stem[-1]) else "")],
-            special['nom.pl'] or [stem_pl + ('as' if not is_vowel(stem[-1]) else 's')],
-            special['acc.pl'] or special['nom.pl'] or [stem_pl + ('as' if not is_vowel(stem_pl[-1]) else 's')],
-            special['gen.pl'] or [stem_pl + ('a' if not is_vowel(stem_pl[-1]) else 'na')],
-            special['dat.pl'] or [stem_pl + ('um' if not is_vowel(stem_pl[-1]) else 'm')],
-        ]
+        forms = {
+            'nom.sg': [headword],
+            'acc.sg': special.get('nom.sg') or [headword],
+            'gen.sg': [stem + ('es' if not is_vowel(stem[-1]) else 's')],
+            'dat.sg': [stem + ('e' if not is_vowel(stem[-1]) else "")],
+            'nom.pl': [stem_pl + ('as' if not is_vowel(stem[-1]) else 's')],
+            'acc.pl': special.get('nom.pl') or [stem_pl + ('as' if not is_vowel(stem_pl[-1]) else 's')],
+            'gen.pl': [stem_pl + ('a' if not is_vowel(stem_pl[-1]) else 'na')],
+            'dat.pl': [stem_pl + ('um' if not is_vowel(stem_pl[-1]) else 'm')],
+        }
     elif word_type[1:] == 'f':
-        return [
-            special['nom.sg'] or [headword],
-            special['acc.sg'] or [stem + ('e' if not is_vowel(stem[-1]) else "")],
-            special['gen.sg'] or [stem + ('e' if not is_vowel(stem[-1]) else "")],
-            special['dat.sg'] or [stem + ('e' if not is_vowel(stem[-1]) else "")],
-            special['nom.pl'] or [stem_pl + 'a', stem_pl + 'e'],
-            special['acc.pl'] or special['nom.pl'] or [stem_pl + 'a', stem_pl + 'e'],
-            special['gen.pl'] or [stem_pl + ('a' if not is_vowel(stem_pl[-1]) else 'na')],
-            special['dat.pl'] or [stem_pl + ('um' if not is_vowel(stem_pl[-1]) else 'm')],
-        ]
+        forms = {
+            'nom.sg': [headword],
+            'acc.sg': [stem + ('e' if not is_vowel(stem[-1]) else "")],
+            'gen.sg': [stem + ('e' if not is_vowel(stem[-1]) else "")],
+            'dat.sg': [stem + ('e' if not is_vowel(stem[-1]) else "")],
+            'nom.pl': [stem_pl + 'a', stem_pl + 'e'],
+            'acc.pl': special.get('nom.pl') or [stem_pl + 'a', stem_pl + 'e'],
+            'gen.pl': [stem_pl + ('a' if not is_vowel(stem_pl[-1]) else 'na')],
+            'dat.pl': [stem_pl + ('um' if not is_vowel(stem_pl[-1]) else 'm')],
+        }
     elif word_type[1:] == 'n':
         # Strong neuter noun
-        return [
-            special['nom.sg'] or [headword],
-            special['acc.sg'] or special['nom.sg'] or [headword],
-            special['gen.sg'] or [stem + ('es' if not is_vowel(stem[-1]) else 's')],
-            special['dat.sg'] or [stem + ('e' if not is_vowel(stem[-1]) else "")],
-            special['nom.pl'] or [headword],
-            special['acc.pl'] or special['nom.pl'] or [headword],
-            special['gen.pl'] or [stem_pl + ('a' if not is_vowel(stem_pl[-1]) else 'na')],
-            special['dat.pl'] or [stem_pl + ('um' if not is_vowel(stem_pl[-1]) else 'm')],
-        ]
+        forms = {
+            'nom.sg': [headword],
+            'acc.sg': special.get('nom.sg') or [headword],
+            'gen.sg': [stem + ('es' if not is_vowel(stem[-1]) else 's')],
+            'dat.sg': [stem + ('e' if not is_vowel(stem[-1]) else "")],
+            'nom.pl': [headword],
+            'acc.pl': special.get('nom.pl') or [headword],
+            'gen.pl': [stem_pl + ('a' if not is_vowel(stem_pl[-1]) else 'na')],
+            'dat.pl': [stem_pl + ('um' if not is_vowel(stem_pl[-1]) else 'm')],
+        }
     elif word_type[1:] in ('mw', 'fw', 'nw'):
         # Weak noun
         oblique = stem + 'an'
@@ -196,16 +197,16 @@ def gen_noun(headword, word_type, special):
             accusative = headword
         else:
             accusative = oblique
-        return [
-            special['nom.sg'] or [headword],
-            special['acc.sg'] or [accusative],
-            special['gen.sg'] or [oblique],
-            special['dat.sg'] or [oblique],
-            special['nom.pl'] or [oblique],
-            special['acc.pl'] or special['nom.pl'] or [oblique],
-            special['gen.pl'] or [stem + 'ena'],
-            special['dat.pl'] or [stem + 'um'],
-        ]
+        forms = {
+            'nom.sg': [headword],
+            'acc.sg': [accusative],
+            'gen.sg': [oblique],
+            'dat.sg': [oblique],
+            'nom.pl': [oblique],
+            'acc.pl': special.get('nom.pl') or [oblique],
+            'gen.pl': [stem + 'ena'],
+            'dat.pl': [stem + 'um'],
+        }
     elif word_type[1:] in ('mv', 'fv'):
         # Vocalic noun
         mutated = i_mutate(headword)
@@ -213,54 +214,111 @@ def gen_noun(headword, word_type, special):
             genitives = [stem + 'es']
         else:
             genitives = [stem + 'e', mutated]
-        return [
-            special['nom.sg'] or [headword],
-            special['acc.sg'] or special['nom.sg'] or [headword],
-            special['gen.sg'] or genitives,     # no brackets!
-            special['dat.sg'] or [mutated],
-            special['nom.pl'] or [mutated],
-            special['acc.pl'] or special['nom.pl'] or [mutated],
-            special['gen.pl'] or [stem_pl + ('a' if not is_vowel(stem_pl[-1]) else 'na')],
-            special['dat.pl'] or [stem_pl + ('um' if not is_vowel(stem_pl[-1]) else 'm')],
-        ]
+        forms = {
+            'nom.sg': [headword],
+            'acc.sg': special.get('nom.sg') or [headword],
+            'gen.sg': genitives,     # no brackets!
+            'dat.sg': [mutated],
+            'nom.pl': [mutated],
+            'acc.pl': special.get('nom.pl') or [mutated],
+            'gen.pl': [stem_pl + ('a' if not is_vowel(stem_pl[-1]) else 'na')],
+            'dat.pl': [stem_pl + ('um' if not is_vowel(stem_pl[-1]) else 'm')],
+        }
     else:
         # Other (TODO: implement all types and throw an error here instead)
-        return [[headword]]
+        forms = {'nom.sg': [headword]}
+    special_forms = { key: value for (key, value) in special.items() if key in [
+        'nom.sg', 'acc.sg', 'gen.sg', 'dat.sg',
+        'nom.pl', 'acc.pl', 'gen.pl', 'dat.pl',
+    ] }
+    forms.update(special_forms)
+    return forms
 
 
 def gen_adjective(headword, word_type, special):
-    if word_type == 'adji':
-        return [[headword]]
     has_strong = word_type != 'adjw'
     has_weak = word_type != 'adjs'
     stem = headword[:-1] if headword[-1] in ('a', 'e') else headword
+    forms = {}
     if has_strong:
-        strong_forms = [
-            [headword],             # masc/neut/fem.nom.sg; masc/acc.sg
-            [stem + 'es'],          # masc/neut.gen.sg
-            [stem + 'e'],           # masc/neut.dat.sg; fem.acc.sg; nom/acc.pl
-            [stem + 're'],          # fem.gen/dat.sg
-            [stem + 'a'],           # gen.pl
-            [stem + 'um'],          # dat.pl
-        ]
-    else:
-        strong_forms = []
+        forms.update({
+            'masc.nom.sg': [headword],
+            'masc.acc.sg': [stem + 'ne'],
+            'masc.gen.sg': [stem + 'es'],
+            'masc.dat.sg': [stem + 'um'],
+            'masc.nom.pl': [stem + 'e'],
+            'masc.acc.pl': [stem + 'e'],
+            'masc.gen.pl': [stem + 'ra'],
+            'masc.dat.pl': [stem + 'um'],
+            'fem.nom.sg': [headword],
+            'fem.acc.sg': [stem + 'e'],
+            'fem.gen.sg': [stem + 're'],
+            'fem.dat.sg': [stem + 're'],
+            'fem.nom.pl': [stem + 'e', stem + 'a'],
+            'fem.acc.pl': [stem + 'e', stem + 'a'],
+            'fem.gen.pl': [stem + 'ra'],
+            'fem.dat.pl': [stem + 'um'],
+            'neut.nom.sg': [headword],
+            'neut.acc.sg': [headword],
+            'neut.gen.sg': [stem + 'es'],
+            'neut.dat.sg': [stem + 'um'],
+            'neut.nom.pl': [stem + 'e'],
+            'neut.acc.pl': [stem + 'e'],
+            'neut.gen.pl': [stem + 'ra'],
+            'neut.dat.pl': [stem + 'um'],
+        })
     if has_weak:
-        weak_forms = [
-            [stem + 'a'],           # masc.nom.sg
-            [stem + 'e'],           # neut/fem.nom.sg; neut.acc.sg
-            [stem + 'an'],          # oblique
-            [stem + 'a'],           # gen.pl
-            [stem + 'um'],          # dat.pl
-        ]
-    else:
-        weak_forms = []
-    return strong_forms + weak_forms
+        forms.update({
+            'w.masc.nom.sg': [stem + 'a'],
+            'w.masc.acc.sg': [stem + 'an'],
+            'w.masc.gen.sg': [stem + 'an'],
+            'w.masc.dat.sg': [stem + 'an'],
+            'w.masc.nom.pl': [stem + 'an'],
+            'w.masc.acc.pl': [stem + 'an'],
+            'w.masc.gen.pl': [stem + 'ra', stem + 'ena'],
+            'w.masc.dat.pl': [stem + 'um'],
+            'w.fem.nom.sg': [stem + 'e'],
+            'w.fem.acc.sg': [stem + 'an'],
+            'w.fem.gen.sg': [stem + 'an'],
+            'w.fem.dat.sg': [stem + 'an'],
+            'w.fem.nom.pl': [stem + 'an'],
+            'w.fem.acc.pl': [stem + 'an'],
+            'w.fem.gen.pl': [stem + 'ra', stem + 'ena'],
+            'w.fem.dat.pl': [stem + 'um'],
+            'w.neut.nom.sg': [stem + 'e'],
+            'w.neut.acc.sg': [stem + 'e'],
+            'w.neut.gen.sg': [stem + 'an'],
+            'w.neut.dat.sg': [stem + 'an'],
+            'w.neut.nom.pl': [stem + 'an'],
+            'w.neut.acc.pl': [stem + 'an'],
+            'w.neut.gen.pl': [stem + 'ra', stem + 'ena'],
+            'w.neut.dat.pl': [stem + 'um'],
+        })
+    special_forms = { key: value for (key, value) in special.items() if key in [
+        'masc.nom.sg', 'masc.acc.sg', 'masc.gen.sg', 'masc.dat.sg',
+        'masc.nom.pl', 'masc.acc.pl', 'masc.gen.pl', 'masc.dat.pl',
+        'fem.nom.sg', 'fem.acc.sg', 'fem.gen.sg', 'fem.dat.sg',
+        'fem.nom.pl', 'fem.acc.pl', 'fem.gen.pl', 'fem.dat.pl',
+        'neut.nom.sg', 'neut.acc.sg', 'neut.gen.sg', 'neut.dat.sg',
+        'neut.nom.pl', 'neut.acc.pl', 'neut.gen.pl', 'neut.dat.pl',
+        'w.masc.nom.sg', 'w.masc.acc.sg', 'w.masc.gen.sg', 'w.masc.dat.sg',
+        'w.masc.nom.pl', 'w.masc.acc.pl', 'w.masc.gen.pl', 'w.masc.dat.pl',
+        'w.fem.nom.sg', 'w.fem.acc.sg', 'w.fem.gen.sg', 'w.fem.dat.sg',
+        'w.fem.nom.pl', 'w.fem.acc.pl', 'w.fem.gen.pl', 'w.fem.dat.pl',
+        'w.neut.nom.sg', 'w.neut.acc.sg', 'w.neut.gen.sg', 'w.neut.dat.sg',
+        'w.neut.nom.pl', 'w.neut.acc.pl', 'w.neut.gen.pl', 'w.neut.dat.pl',
+    ] }
+    forms.update(special_forms)
+    return forms
 
 
 def gen_pronoun(headword, word_type, special):
     # Pronouns in the lexicon file define all their forms explicitly
-    return [[headword]] + list(special.values())
+    forms = {'nom': [headword]}
+    forms.update({key: value for (key, value) in special.items() if key in [
+        'acc', 'dat', 'gen'
+    ]})
+    return forms
 
 
 def gen_verb(headword, word_type, special):
@@ -269,28 +327,28 @@ def gen_verb(headword, word_type, special):
         # Irregular infinitive
         inf_stem = headword[:-1]
         pres_1sg = inf_stem
-        subjs = special['subj'] or [inf_stem]
-        pres_participles = special['pres.p'] or [headword + 'de']
+        subjs = special.get('subj') or [inf_stem]
+        pres_participles = special.get('pres.p') or [headword + 'de']
         irregular_infinitive = True
     elif headword.endswith('an'):
         # Regular infinitive
         inf_stem = headword[:-2]
         pres_1sg = inf_stem + 'e'
         long_infinitives.append(inf_stem + 'enne')
-        subjs = special['subj'] or [inf_stem + 'e']
-        pres_participles = special['pres.p'] or [headword[:-2] + 'ende']
+        subjs = special.get('subj') or [inf_stem + 'e']
+        pres_participles = special.get('pres.p') or [headword[:-2] + 'ende']
         irregular_infinitive = False
     else:
         raise LexiconError(f"invalid infinitive: {headword}")
-    result = [
-        [headword],
-        special["long.inf"] or long_infinitives,
-        pres_participles,
-        special['1sg'] or [pres_1sg],
-        subjs,
-        [subj + 'n' for subj in subjs],             # subj.pl
-        [headword[:-1] + 'þ'],                      # imp.pl
-    ]
+    result = {
+        'inf': [headword],
+        'long.inf': long_infinitives,
+        'pres.p': pres_participles,
+        '1sg': [pres_1sg],
+        'subj.sg': subjs,
+        'subj.pl': [subj + 'n' for subj in subjs],
+        'imp.pl': [headword[:-1] + 'þ'],
+    }
     if word_type[1] == 'w':
         # Weak verb
         long_stem = headword[:-2]
@@ -324,23 +382,25 @@ def gen_verb(headword, word_type, special):
         elif word_type[2] == '3':
             # Weak class III
             # These are so irregular that the lexicon file contains most of the forms
-            pass
+            short_stem = ""     # TODO: hacky. Result gets overwritten
         else:
             raise LexiconError("invalid weak verb class")
-        past_stems = special['past'] or [past_stem]
-        past_participles = (special['pp'] or past_stems)[:]
+        past_stems = special.get('past') or [past_stem]
+        past_participles = (special.get('pp') or past_stems)[:]
         past_participles += ['ġe-' + x for x in past_participles if not x.startswith('ġe-')]
-        result += [
-            special['2sg'] or [assimilate(short_stem, 'st')],
-            special['3sg'] or [assimilate(short_stem, 'þ')],
-            special['pl'] or [inf_stem + 'aþ'],
-            [x + 'e' for x in past_stems],          # past.1sg/3sg; past.subj.sg
-            [x + 'est' for x in past_stems],        # past.2sg
-            [x + 'on' for x in past_stems],         # past.pl
-            [x + 'en' for x in past_stems],         # past.subj.pl
-            special['imp'] or [short_stem],
-            past_participles,
-        ]
+        result.update({
+            '2sg': [assimilate(short_stem, 'st')],
+            '3sg': [assimilate(short_stem, 'þ')],
+            'pl': [inf_stem + 'aþ'],
+            'past.1sg': [x + 'e' for x in past_stems],
+            'past.2sg': [x + 'est' for x in past_stems],
+            'past.3sg': [x + 'e' for x in past_stems],
+            'past.pl': [x + 'on' for x in past_stems],
+            'past.subj.sg': [x + 'e' for x in past_stems],
+            'past.subj.pl': [x + 'en' for x in past_stems],
+            'imp': [short_stem],
+            'pp': past_participles,
+        })
     elif word_type[1] == 's':
         # Strong verb
         # Me strong. Smash programmer with club.
@@ -378,50 +438,58 @@ def gen_verb(headword, word_type, special):
             past_1sg_repl = 'ēo'
             past_pl_repl = 'ēo'
             pp_repl = lambda nucleus: nucleus
-        past_pls = special['past.pl'] or [mutate(inf_stem, past_pl_repl) + 'on']
+        past_pls = special.get('past.pl') or [mutate(inf_stem, past_pl_repl) + 'on']
         past_pl_stems = [x[:-2] for x in past_pls]
-        past_participles = (special['pp'] or [mutate(inf_stem, pp_repl) + 'en'])[:]
+        past_participles = (special.get('pp') or [mutate(inf_stem, pp_repl) + 'en'])[:]
         past_participles += ['ġe-' + x for x in past_participles if not x.startswith('ġe-')]
-        result += [
-            special['2sg'] or [assimilate(i_mutate(inf_stem), 'st')],
-            special['3sg'] or [assimilate(i_mutate(inf_stem), 'þ')],
-            special['pl'] or [inf_stem + 'aþ'],
-            special['past.1sg'] or [mutate(inf_stem, past_1sg_repl)],
-            [x + 'e' for x in past_pl_stems],           # past.2sg
-            past_pls,
-            [x + 'en' for x in past_pl_stems],          # past.subj.pl
-            special['imp'] or [inf_stem],
-            past_participles,
-        ]
+        result.update({
+            '2sg': [assimilate(i_mutate(inf_stem), 'st')],
+            '3sg': [assimilate(i_mutate(inf_stem), 'þ')],
+            'pl': [inf_stem + 'aþ'],
+            'past.1sg': [mutate(inf_stem, past_1sg_repl)],
+            'past.2sg': [x + 'e' for x in past_pl_stems],
+            'past.3sg': [mutate(inf_stem, past_1sg_repl)],
+            'past.pl': past_pls,
+            'past.subj.sg': [x + 'e' for x in past_pl_stems],
+            'past.subj.pl': [x + 'en' for x in past_pl_stems],
+            'imp': [inf_stem],
+            'pp': past_participles,
+        })
     elif word_type in ('vpp', 'vi'):
         # Preterite-present or irregular verb
         # These define most of their forms explicitly
         # Past participle is *not* inferred from "past" special
-        for key, value in special.items():
-            if key == 'past':
-                # Past conjugates like weak verb (e.g. ēodon)
-                result += [
-                    [x + 'e' for x in value],           # past.1sg/3sg
-                    [x + 'est' for x in value],         # past.2sg
-                    [x + 'on' for x in value],          # past.pl
-                    [x + 'en' for x in value],          # past.subj.pl
-                ]
-            elif key == 'past.pl':
-                # Past conjugates like strong verb (e.g. wǣron)
-                stems = [x[:-2] for x in value]
-                result += [
-                    value,
-                    [x + 'e' for x in stems],           # past.2sg
-                    [x + 'en' for x in stems],          # past.subj.pl
-                ]
-            elif key == 'pp':
-                result.append(value + ['ġe-' + x for x in value if not x.startswith('ġe-')])
-            else:
-                result.append(value)
+        if 'past' in special:
+            # Past conjugates like weak verb (e.g. ēodon)
+            result.update({
+                'past.1sg': [x + 'e' for x in special['past']],
+                'past.2sg': [x + 'est' for x in special['past']],
+                'past.3sg': [x + 'e' for x in special['past']],
+                'past.pl': [x + 'on' for x in special['past']],
+                'past.subj.sg': [x + 'e' for x in special['past']],
+                'past.subj.pl': [x + 'en' for x in special['past']],
+            })
+        elif 'past.pl' in special:
+            # Past conjugates like strong verb (e.g. wǣron)
+            stems = [x[:-2] for x in special['past.pl']]
+            result.update({
+                'past.2sg': [x + 'e' for x in stems],
+                'past.subj.sg': [x + 'e' for x in stems],
+                'past.subj.pl': [x + 'en' for x in stems],
+            })
         if word_type == 'vpp':
-            result.append([inf_stem + 'on'])            # pres.pl
+            result['pres.pl'] = [inf_stem + 'on']
     else:
         raise LexiconError(f"Unrecognized verb type: {word_type}")
+    special_forms = { key: value for (key, value) in special.items() if key in [
+        'inf', 'long.inf',
+        '1sg', '2sg', '3sg', 'pl',
+        'subj.sg', 'subj.pl',
+        'past.1sg', 'past.2sg', 'past.3sg', 'past.pl',
+        'past.subj.sg', 'past.subj.pl',
+        'imp', 'imp.pl', 'pres.p', 'pp'
+    ] }
+    result.update(special_forms)
     return result
 
 
