@@ -17,8 +17,8 @@ ac, conj:
 āgan, vpp: 1sg āh; 2sg āhst; past āht; pp āgen
     to own
 ā-gān, vi: 2sg ā-gǣst; 3sg ā-gǣþ; past ā-ēod; pp ā-gān
-    to go out or away
-    to happen
+    1. to go out or away
+    2. to happen
 āgen, adj: fem.nom.sg āgenu
     (one's) own
 ān, adj: masc.acc.sg ǣnne|ānne
@@ -556,8 +556,6 @@ fēowertigoþa, adjw:
 # BT and Wiktionary disagree on vowel length, but it's likely long as this seems to be derived from the verb fōr ("fēr-" would thus be its i-mutation).
 fēran, vw1:
     to go, travel
-folc, nn:
-    folk, people, tribe
 fīf, adji:
     five
 fīfta, adjw:
@@ -582,6 +580,8 @@ flān, nm, nf:
     arrow
 flǣsċ, nn:
     meat, flesh
+folc, nn:
+    folk, people, tribe
 for, prep:
     for; because of
 # TODO: past participle (see ġiefan)
@@ -598,8 +598,8 @@ for-hwon, adv:
 for-hwȳ, adv:
     why
 for-lǣtan, vs7:
-    [intransitive] to leave
-    [transitive] to leave a place; to relinquish, give up, abandon (something)
+    1. [intransitive] to leave
+    2. [transitive] to leave a place; to relinquish, give up, abandon (something)
 forma, adjw:
     first
 forþ, adv:
@@ -646,8 +646,8 @@ fyxe, nfw:
 gān, vi: 2sg gǣst; 3sg gǣþ; past ēod; pp gān
     to go
 gang, nm:
-    going, journey; way, path
-    privy, outhouse, toilet
+    1. going, journey; way, path
+    2. privy, outhouse, toilet
 gangan, vs7:
     to go, walk
 gangern, nn:
@@ -665,8 +665,8 @@ gāt-hierde, nm:
 gǣst, nm:
     SEE gāst
 ġe, conj:
-    and
-    [ġe ... ġe] both ... and
+    1. and
+    2. [ġe ... ġe] both ... and
 ġē, pron: acc ēowic; gen ēower; dat ēow
     you (plural)
 ġēa, int:
@@ -1200,8 +1200,8 @@ nā-wiht, pron: acc nā-wiht; gen nā-wihtes; dat nā-wihte
 nǣfre, adv:
     never
 ne, adv:
-    not
-    [ne ... ne] neither ... nor
+    1. not
+    2. [ne ... ne] neither ... nor
 nēah, adj: stem nēa
     near
 nēah, prep:
@@ -1510,8 +1510,8 @@ spearwa, nmw:
 spell, nn:
     story, narrative, account, speech, sermon
 spellian, vw2:
-    [trans.] to tell, announce, proclaim
-    [intrans.] to talk, speak, converse
+    1. [trans.] to tell, announce, proclaim
+    2. [intrans.] to talk, speak, converse
 spere, nn: nom.pl speru
     spear, lance, pike, javelin
 spillan, vw1:
@@ -1525,8 +1525,8 @@ sprǣdan, vw1:
 sprecan, vs5:
     to speak
 spring, nm:
-    spring, source of water
-    ulcer
+    1. spring, source of water
+    2. ulcer
 springan, vs3:
     to jump, leap, spring
 stān, nm:
@@ -1579,8 +1579,8 @@ sūþ, adv:
 sūþan, adv:
     from the south
 swā, adv:
-    so, to that extent, in that way
-    [swā ... swā] as ... as
+    1. so, to that extent, in that way
+    2. [swā ... swā] as ... as
 swamm, nm:
     mushroom, fungus; sponge
 swan, nm:
@@ -1676,8 +1676,8 @@ twiġ, nn: stem.pl twig; nom.pl twigu
 þā, adv:
     then (in some time past)
 þā, conj:
-    then
-    [þā ... þā] when ... then
+    1. then
+    2. [þā ... þā] when ... then
 þanan, adv:
     from there, thence
 þās, pron: acc þās; gen þissa; dat þissum
@@ -1687,8 +1687,8 @@ twiġ, nn: stem.pl twig; nom.pl twigu
 þanne, adv:
     then
 þanne, conj:
-    then; when
-    [þanne ... þanne] when ... then
+    1. then; when
+    2. [þanne ... þanne] when ... then
 þūma, nmw:
     thumb
 þæder, adv:
@@ -1730,8 +1730,8 @@ twiġ, nn: stem.pl twig; nom.pl twigu
 þrǣd, nm:
     thread
 þrēat, nm:
-    crowd, band, multitude, army
-    violence, force
+    1. crowd, band, multitude, army
+    2. violence, force
 þrēotīene, adji:
     thirteen
 þrēowa, adv:
@@ -1840,13 +1840,13 @@ weċġan, vw1:
 weġ, nm: stem.pl weg
     way, path, road
 wel, adv: comp bet|sēl; sup betest|betst|sēlest
-    well; fastidiously
-    about, approximately
+    1. well; fastidiously
+    2. about, approximately
 wela, nmw:
     wealth, riches; prosperity
 wēnan, vw1:
-    to think, suppose, believe, imagine
-    to hope for, expect
+    1. to think, suppose, believe, imagine
+    2. to hope for, expect
 wendan, vw1:
     to go
 weorċan, vw1:
@@ -1939,8 +1939,8 @@ wundor, nn:
 wundor-līċ:
     wonderful, wondrous
 wundrian, vw2:
-    to wonder with amazement or awe
-    to make wonderful
+    1. to wonder with amazement or awe
+    2. to make wonderful
 wunian, vw2:
     to dwell, remain; inhabit
 wuniġend, nm:

@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import argparse
 import sys
+import textwrap
 
 import lexicon
 
@@ -47,9 +48,7 @@ def lookup(lex, search_str, reverse):
     else:
         for entry in entries:
             print(entry.lemma, ':')
-            for num, definition in enumerate(entry.definitions):
-                print(f"    {num+1}. {definition}")
-            print()
+            print(textwrap.indent(entry.text, " "*4))
 
 
 if __name__ == '__main__':

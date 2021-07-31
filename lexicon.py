@@ -1,4 +1,3 @@
-import collections
 import re
 import sys
 import unicodedata
@@ -19,9 +18,10 @@ SPECIAL_TYPES = set((
 
 
 class Entry(object):
-    def __init__(self, lemma):
+    def __init__(self, lemma, word_types):
         self.lemma = lemma
-        self.definitions = []
+        self.word_types = word_types
+        self.text = ""
 
 
 class LexiconError(Exception):
@@ -41,7 +41,7 @@ class Lexicon(object):
                     if line.startswith(" "):
                         # Add to most recent entry's definition
                         line = line.strip()
-                        entry.definitions.append(line)
+                        entry.text += line + "\n"
                     else:
                         # Create a new entry if there's anything on this line
                         line = line.strip()
@@ -52,14 +52,14 @@ class Lexicon(object):
                         split_line = line.split(':')
                         if len(split_line) > 2:
                             raise LexiconError("too many colons")
-                        lemma = [x.strip() for x in split_line[0].split(",")]
-                        headword = lemma[0]
-                        word_types = lemma[1:]
+                        lemma_section = [x.strip() for x in split_line[0].split(",")]
+                        lemma = lemma_section[0]
+                        word_types = lemma_section[1:]
                         special = parse_special(split_line[1])
-                        entry = Entry(headword)
+                        entry = Entry(lemma, word_types)
                         self.entries.append(entry)
                         for word_type in word_types:
-                            forms = gen_forms(headword, word_type, special)
+                            forms = gen_forms(lemma, word_type, special)
                             for key, value in forms.items():
                                 assert isinstance(value, list)
                                 for form in value:
@@ -85,7 +85,7 @@ class Lexicon(object):
         for entry in entries:
             if entry not in results:
                 results.append(entry)
-                matches = re.match(r"^SEE(?:\s+?)(.+)", entry.definitions[0])
+                matches = re.match(r"^SEE(?:\s+?)(.+)", entry.text)
                 if matches:
                     # Follow redirect
                     self._lookup_impl(matches.group(1), results)
@@ -94,10 +94,9 @@ class Lexicon(object):
         search_string = search_string.lower()
         results = []
         for entry in self.entries:
-            for definition in entry.definitions:
-                if not definition.startswith("SEE"):
-                    if search_string in definition.lower():
-                        results.append(entry)
+            if not entry.text.startswith("SEE"):
+                if search_string in entry.text.lower():
+                    results.append(entry)
         return results
 
     def dump_index(self):
@@ -125,41 +124,41 @@ def parse_special(special):
     return result
 
 
-def gen_forms(headword, word_type, special):
+def gen_forms(lemma, word_type, special):
     if word_type in ('adji', 'adv', 'prep', 'conj', 'int', 'particle'):
-        return {'invariable': [headword]}
+        return {'invariable': [lemma]}
     elif word_type[0] == 'n':
-        return gen_noun(headword, word_type, special)
+        return gen_noun(lemma, word_type, special)
     elif word_type.startswith('adj'):
-        return gen_adjective(headword, word_type, special)
+        return gen_adjective(lemma, word_type, special)
     elif word_type == 'pron':
-        return gen_pronoun(headword, word_type, special)
+        return gen_pronoun(lemma, word_type, special)
     elif word_type[0] == 'v':
-        return gen_verb(headword, word_type, special)
+        return gen_verb(lemma, word_type, special)
     else:
         raise LexiconError(f"Invalid word type: {word_type}")
 
 
-def gen_noun(headword, word_type, special):
+def gen_noun(lemma, word_type, special):
     if 'stem' in special:
         if len(special['stem']) > 1:
-            raise LexiconError(f"{headword}: multiple stems not supported")
+            raise LexiconError(f"{lemma}: multiple stems not supported")
         stem = special['stem'][0]
-    elif headword[-1] in ('a', 'e', 'u'):
-        stem = headword[:-1]
+    elif lemma[-1] in ('a', 'e', 'u'):
+        stem = lemma[:-1]
     else:
-        stem = headword
+        stem = lemma
     if 'stem.pl' in special:
         if len(special['stem.pl']) > 1:
-            raise LexiconError(f"{headword}: multiple plural stems not supported")
+            raise LexiconError(f"{lemma}: multiple plural stems not supported")
         stem_pl = special['stem.pl'][0]
     else:
         stem_pl = stem
     if word_type[1:] == 'm':
         # Strong masculine noun
         forms = {
-            'nom.sg': [headword],
-            'acc.sg': special.get('nom.sg') or [headword],
+            'nom.sg': [lemma],
+            'acc.sg': special.get('nom.sg') or [lemma],
             'gen.sg': [stem + ('es' if not is_vowel(stem[-1]) else 's')],
             'dat.sg': [stem + ('e' if not is_vowel(stem[-1]) else "")],
             'nom.pl': [stem_pl + ('as' if not is_vowel(stem[-1]) else 's')],
@@ -169,7 +168,7 @@ def gen_noun(headword, word_type, special):
         }
     elif word_type[1:] == 'f':
         forms = {
-            'nom.sg': [headword],
+            'nom.sg': [lemma],
             'acc.sg': [stem + ('e' if not is_vowel(stem[-1]) else "")],
             'gen.sg': [stem + ('e' if not is_vowel(stem[-1]) else "")],
             'dat.sg': [stem + ('e' if not is_vowel(stem[-1]) else "")],
@@ -181,12 +180,12 @@ def gen_noun(headword, word_type, special):
     elif word_type[1:] == 'n':
         # Strong neuter noun
         forms = {
-            'nom.sg': [headword],
-            'acc.sg': special.get('nom.sg') or [headword],
+            'nom.sg': [lemma],
+            'acc.sg': special.get('nom.sg') or [lemma],
             'gen.sg': [stem + ('es' if not is_vowel(stem[-1]) else 's')],
             'dat.sg': [stem + ('e' if not is_vowel(stem[-1]) else "")],
-            'nom.pl': [headword],
-            'acc.pl': special.get('nom.pl') or [headword],
+            'nom.pl': [lemma],
+            'acc.pl': special.get('nom.pl') or [lemma],
             'gen.pl': [stem_pl + ('a' if not is_vowel(stem_pl[-1]) else 'na')],
             'dat.pl': [stem_pl + ('um' if not is_vowel(stem_pl[-1]) else 'm')],
         }
@@ -194,11 +193,11 @@ def gen_noun(headword, word_type, special):
         # Weak noun
         oblique = stem + 'an'
         if word_type[1:] == 'nw':
-            accusative = headword
+            accusative = lemma
         else:
             accusative = oblique
         forms = {
-            'nom.sg': [headword],
+            'nom.sg': [lemma],
             'acc.sg': [accusative],
             'gen.sg': [oblique],
             'dat.sg': [oblique],
@@ -209,14 +208,14 @@ def gen_noun(headword, word_type, special):
         }
     elif word_type[1:] in ('mv', 'fv'):
         # Vocalic noun
-        mutated = i_mutate(headword)
+        mutated = i_mutate(lemma)
         if word_type[1] == 'm':
             genitives = [stem + 'es']
         else:
             genitives = [stem + 'e', mutated]
         forms = {
-            'nom.sg': [headword],
-            'acc.sg': special.get('nom.sg') or [headword],
+            'nom.sg': [lemma],
+            'acc.sg': special.get('nom.sg') or [lemma],
             'gen.sg': genitives,     # no brackets!
             'dat.sg': [mutated],
             'nom.pl': [mutated],
@@ -226,7 +225,7 @@ def gen_noun(headword, word_type, special):
         }
     else:
         # Other (TODO: implement all types and throw an error here instead)
-        forms = {'nom.sg': [headword]}
+        forms = {'nom.sg': [lemma]}
     special_forms = { key: value for (key, value) in special.items() if key in [
         'nom.sg', 'acc.sg', 'gen.sg', 'dat.sg',
         'nom.pl', 'acc.pl', 'gen.pl', 'dat.pl',
@@ -235,14 +234,14 @@ def gen_noun(headword, word_type, special):
     return forms
 
 
-def gen_adjective(headword, word_type, special):
+def gen_adjective(lemma, word_type, special):
     has_strong = word_type != 'adjw'
     has_weak = word_type != 'adjs'
-    stem = headword[:-1] if headword[-1] in ('a', 'e') else headword
+    stem = lemma[:-1] if lemma[-1] in ('a', 'e') else lemma
     forms = {}
     if has_strong:
         forms.update({
-            'masc.nom.sg': [headword],
+            'masc.nom.sg': [lemma],
             'masc.acc.sg': [stem + 'ne'],
             'masc.gen.sg': [stem + 'es'],
             'masc.dat.sg': [stem + 'um'],
@@ -250,7 +249,7 @@ def gen_adjective(headword, word_type, special):
             'masc.acc.pl': [stem + 'e'],
             'masc.gen.pl': [stem + 'ra'],
             'masc.dat.pl': [stem + 'um'],
-            'fem.nom.sg': [headword],
+            'fem.nom.sg': [lemma],
             'fem.acc.sg': [stem + 'e'],
             'fem.gen.sg': [stem + 're'],
             'fem.dat.sg': [stem + 're'],
@@ -258,8 +257,8 @@ def gen_adjective(headword, word_type, special):
             'fem.acc.pl': [stem + 'e', stem + 'a'],
             'fem.gen.pl': [stem + 'ra'],
             'fem.dat.pl': [stem + 'um'],
-            'neut.nom.sg': [headword],
-            'neut.acc.sg': [headword],
+            'neut.nom.sg': [lemma],
+            'neut.acc.sg': [lemma],
             'neut.gen.sg': [stem + 'es'],
             'neut.dat.sg': [stem + 'um'],
             'neut.nom.pl': [stem + 'e'],
@@ -312,73 +311,73 @@ def gen_adjective(headword, word_type, special):
     return forms
 
 
-def gen_pronoun(headword, word_type, special):
+def gen_pronoun(lemma, word_type, special):
     # Pronouns in the lexicon file define all their forms explicitly
-    forms = {'nom': [headword]}
+    forms = {'nom': [lemma]}
     forms.update({key: value for (key, value) in special.items() if key in [
         'acc', 'dat', 'gen'
     ]})
     return forms
 
 
-def gen_verb(headword, word_type, special):
-    long_infinitives = [headword + 'ne']
-    if headword.endswith(('ēan', 'ēon', 'ān', 'ōn')):
+def gen_verb(lemma, word_type, special):
+    long_infinitives = [lemma + 'ne']
+    if lemma.endswith(('ēan', 'ēon', 'ān', 'ōn')):
         # Irregular infinitive
-        inf_stem = headword[:-1]
+        inf_stem = lemma[:-1]
         pres_1sg = inf_stem
         subjs = special.get('subj') or [inf_stem]
-        pres_participles = special.get('pres.p') or [headword + 'de']
+        pres_participles = special.get('pres.p') or [lemma + 'de']
         irregular_infinitive = True
-    elif headword.endswith('an'):
+    elif lemma.endswith('an'):
         # Regular infinitive
-        inf_stem = headword[:-2]
+        inf_stem = lemma[:-2]
         pres_1sg = inf_stem + 'e'
         long_infinitives.append(inf_stem + 'enne')
         subjs = special.get('subj') or [inf_stem + 'e']
-        pres_participles = special.get('pres.p') or [headword[:-2] + 'ende']
+        pres_participles = special.get('pres.p') or [lemma[:-2] + 'ende']
         irregular_infinitive = False
     else:
-        raise LexiconError(f"invalid infinitive: {headword}")
+        raise LexiconError(f"invalid infinitive: {lemma}")
     result = {
-        'inf': [headword],
+        'inf': [lemma],
         'long.inf': long_infinitives,
         'pres.p': pres_participles,
         '1sg': [pres_1sg],
         'subj.sg': subjs,
         'subj.pl': [subj + 'n' for subj in subjs],
-        'imp.pl': [headword[:-1] + 'þ'],
+        'imp.pl': [lemma[:-1] + 'þ'],
     }
     if word_type[1] == 'w':
         # Weak verb
-        long_stem = headword[:-2]
+        long_stem = lemma[:-2]
         if word_type[2] == '1':
             # Weak class I
-            if not headword.endswith('an'):
+            if not lemma.endswith('an'):
                 raise LexiconError("weak class I verbs must end in -an")
-            if headword.endswith('bban'):
-                short_stem = headword[:-4] + 'f'
-            elif headword.endswith('ċġan'):
-                short_stem = headword[:-4] + 'ġ'
+            if lemma.endswith('bban'):
+                short_stem = lemma[:-4] + 'f'
+            elif lemma.endswith('ċġan'):
+                short_stem = lemma[:-4] + 'ġ'
             else:
-                if headword.endswith(('ċċan', 'llan', 'mman', 'nnan', 'ppan', 'rian', 'rran', 'ssan')):
-                    short_stem = headword[:-3] + 'e'
+                if lemma.endswith(('ċċan', 'llan', 'mman', 'nnan', 'ppan', 'rian', 'rran', 'ssan')):
+                    short_stem = lemma[:-3] + 'e'
                 else:
                     short_stem = long_stem
-            if headword.endswith('eċċan'):
-                past_stem = headword[:-5] + 'eaht'
-            elif headword.endswith('ellan'):
-                past_stem = headword[:-5] + 'eald'
+            if lemma.endswith('eċċan'):
+                past_stem = lemma[:-5] + 'eaht'
+            elif lemma.endswith('ellan'):
+                past_stem = lemma[:-5] + 'eald'
             elif short_stem.endswith(('t', 'd')):
                 past_stem = short_stem
             else:
                 past_stem = short_stem + 'd'
         elif word_type[2] == '2':
             # Weak class II
-            if not headword.endswith('ian'):
+            if not lemma.endswith('ian'):
                 raise LexiconError("weak class II verbs must end in -ian")
-            short_stem = headword[:-3] + 'a'
-            past_stem = headword[:-3] + 'od'
+            short_stem = lemma[:-3] + 'a'
+            past_stem = lemma[:-3] + 'od'
         elif word_type[2] == '3':
             # Weak class III
             # These are so irregular that the lexicon file contains most of the forms
@@ -601,4 +600,61 @@ def normalize(text):
     elif text.endswith(('ngc', 'ncg')):
         text = text[:-3] + 'ng'
     return text
+
+
+def expand_word_type(word_type):
+    if word_type == 'adv':
+        return "adverb"
+    elif word_type == 'prep':
+        return "preposition"
+    elif word_type == 'conj':
+        return "conjunction"
+    elif word_type == 'int':
+        return "interjection"
+    elif word_type == 'particle':
+        return "particle"
+    elif word_type == 'pron':
+        return "pronoun"
+    elif word_type[0] == 'n':
+        match = re.match(r"^n([mfn])([wv])?(\.(?:sg|pl))?$", word_type)
+        gender = {
+            'm': "masculine ",
+            'f': "feminine ",
+            'n': "neuter ",
+        }[match.group(1)]
+        subtype = {
+            None: "strong ",
+            'w': "weak ",
+            'v': "vocalic ",
+        }[match.group(2)]
+        plurality = {
+            None: "",
+            '.sg': "singular-only ",
+            '.pl': "plural-only ",
+        }[match.group(3)]
+        return f"{gender}{subtype}{plurality}noun"
+    elif word_type.startswith('adj'):
+        # TODO: subtypes
+        return "adjective"
+    elif word_type[0] == 'v':
+        match = re.match(r"^v([wsi]|pp)([1-7])?$", word_type)
+        subtype = {
+            'w': "weak ",
+            's': "strong ",
+            'pp': "preterite-present ",
+            'i': "irregular ",
+        }[match.group(1)]
+        class_ = {
+            None: "",
+            '1': "class I ",
+            '2': "class II ",
+            '3': "class III ",
+            '4': "class IV ",
+            '5': "class V ",
+            '6': "class VI ",
+            '7': "class VII ",
+        }[match.group(2)]
+        return f"{subtype}{class_}verb"
+    else:
+        return "unknown"
 

@@ -1,11 +1,13 @@
 #!/usr/bin/env python
 import html
-from flask import Flask
+
+import flask
+import markdown
 
 import lexicon
 
 
-application = Flask(__name__)
+application = flask.Flask(__name__)
 
 @application.route('/search/oe/')
 @application.route('/search/oe/<search_terms>')
@@ -38,10 +40,9 @@ def search_reverse(search_string="nothing"):
 def format_entries(entries):
     text = ""
     for entry in entries:
+        types = "; ".join(lexicon.expand_word_type(word_type) for word_type in entry.word_types)
         text += f"<h2 lang=\"ang\">{html.escape(entry.lemma)}</h2>\n"
-        text += "<ol>\n"
-        for definition in entry.definitions:
-            text += f"<li>{html.escape(definition)}</li>\n"
-        text += "</ol>\n"
+        text += f"<p><i>{html.escape(types)}</i></p>\n"
+        text += markdown.markdown(entry.text)
     return text
 
