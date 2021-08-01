@@ -56,6 +56,8 @@ Declension of ōþer
 
 Ensure twēġen and þrī are declined correctly
 
+beadu has alternative stems beaduw-, beadow-
+
 
 Respect vowel length, diacritics, etc. when following redirects
 
@@ -65,6 +67,8 @@ Add a way to optionally specify part of speech when following redirects
 The code to generate variants is a bit of a joke right now. It generates many implausible forms and probably misses many plausible ones.
 
 Don't generate silly forms like sweryan, or lufi (from 'lufie').
+
+Generate sċe for sċ[^iey] (e.g. sċop → sċeop)
 
 
 brōþor: make sure brōþer- vs. brōþr- is consistent in both special and generated forms (note that, I believe, broþeru is attested but perhaps e.g. sweosteru is not)
@@ -83,6 +87,8 @@ hwelċhwugu (and hwilċhwugu)
 
 maniġ, mā, mǣst: but these latter two are indeclinable and take the genitive, so they're not true comparative and superlative forms.
 
+mǣd has alternative stem mǣd-
+
 medu has an alternative stem medwes with a different declension
 
 miċle, yfle, etc: don't generate adverbial forms for their comparative and superlative
@@ -91,13 +97,11 @@ rūh has an alternate stem rūw- (at least according to Wiktionary)
 
 sǣ can be masc. or fem. with different irregular declensions
 
-twigu: ensure its "g" is hard
-
 þætte should redirect only to the conjunction form of þæt
 
-weċġan
+wæter: multi-stem (wæter, wætr)
 
-weġ, wegas
+weċġan
 
 wōh
 
