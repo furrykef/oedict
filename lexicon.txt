@@ -107,12 +107,12 @@ assa, nmw:
 # BT has a short vowel here, but Eagles disagrees, and BT has a long vowel for ǣmettiġ
 ǣmtiġ, adj:
     SEE ǣmettiġ
+ǣne, adv:
+    once, one time
 ænglisċ, adj:
     English
 ænglisċ, nn.sg:
     the English language
-ǣne, adv:
-    once, one time
 ǣniġ, adj:
     any
 æppel, nm: stem æppl
@@ -139,14 +139,14 @@ bæc, nn: stem.pl bac; nom.pl bacu
     back (of a person or animal's body)
 bæc-bord, nn:
     port, the left side of a ship
-bæc-hūs, nn: dat.sg bæc-hūs|bæc-hūse
-    bakery
 bæcere, nm:
     male baker
 bæcern, nn: nom.pl bæcernu
     bakery
 bæcestre, nfw:
     female baker
+bæc-hūs, nn: dat.sg bæc-hūs|bæc-hūse
+    bakery
 # TODO: forms
 bær, adj:
     bare, naked
@@ -168,8 +168,6 @@ be-lādian, vw2:
     to excuse, forgive
 belle, nfw:
     bell
-be-sċītan, vs1:
-    to cover with feces; to soil
 bēo, nf:
     bee
 bēodan, vs2:
@@ -194,6 +192,8 @@ bere, nfw:
     female bear
 berstan, vs3:
     to burst
+be-sċītan, vs1:
+    to cover with feces; to soil
 biblioþēċe, nfw:
     library; collection of books in one volume; the Bible
 biċċe, nfw:
@@ -277,6 +277,8 @@ byrdling, nm:
     turtle
 byrġan, vw1:
     to bury, inter
+camb, nm:
+    comb (for hair); crest, coxcomb
 caru, nf: acc.sg ċeare; gen.sg ċeare; dat.sg ċeare; nom.pl cara|ċeare; gen.pl cara; dat.pl carum
     grief
 cāsere, nm:
@@ -305,6 +307,8 @@ catte, nfw:
     child
 ċirice, nfw:
     church
+climban, vs3:
+    to climb
 cnāwan, vs7:
     to know
 cnīf, nm:
@@ -313,14 +317,10 @@ cniht, nm:
     boy; knight
 cocc, nm:
     rooster, cock, male bird
-coss, nm:
-    kiss
-camb, nm:
-    comb (for hair); crest, coxcomb
-climban, vs3:
-    to climb
 corn, nn:
     grain, cereal plant; seed, berry
+coss, nm:
+    kiss
 cræft, nm:
     art, craft, skill
 # TODO: Vowel length. BT and Wiktionary have a short vowel. Eagles has a long vowel, and the modern pronunciation suggests a long vowel, too.
@@ -438,12 +438,12 @@ dung, nfv:
     underground chamber; dungeon
 durran, vpp: 1sg dearr; 2sg dearst; past dorst; pp durren
     to dare
+dwellan, vw1:
+    to mislead; to linger
 dysiġ, adj:
     stupid, dumb, foolish, dimwitted
 dysiġ, nn:
     folly, foolish or stupid act; foolishness, stupidity
-dwellan, vw1:
-    to mislead; to linger
 ēa, nf: acc.sg ēa; gen.sg ēa; dat.sg ēa; nom.pl ēa; gen.pl ēa; dat.pl ēam|ēaum
     river
 ēac, adv:
@@ -562,14 +562,14 @@ feorting, nf:
     fart, flatulence
 fēower, adji:
     four
-fēowerþa, adjw:
-    fourth
 fēowertīene, adji:
     fourteen
 fēowertiġ, adji:
     forty
 fēowertigoþa, adjw:
     fortieth
+fēowerþa, adjw:
+    fourth
 # TODO: redirect to faran?
 # BT and Wiktionary disagree on vowel length, but it's likely long as this seems to be derived from the verb fōr ("fēr-" would thus be its i-mutation).
 fēran, vw1:
@@ -719,20 +719,16 @@ gǣst, nm:
     everyone
 ġe-hwilċ, pron:
     SEE ġehwelċ
+ġe-lēafa, nmw:
+    belief, faith
+ġe-lēdan, vw1:
+    to lead
+ġe-lēfan, vw1:
+    to believe, trust
 ġe-līċ, adj:
     similar
-ġeon, adj: fem.nom.sg ġeonu
-    yon, yonder, that over there
-ġeond, prep:
-    through, throughout; beyond
-ġeond, adv:
-    to yonder, over there
-ġeong, adj: comp ġingra; sup ġinġest
-    young
-ġeondan, prep:
-    beyond
-ġeonre, adv:
-    to yonder, over there
+ġe-losian, vw2:
+    to perish, be lost; to lose (something); to destroy
 ġe-munan, vpp: 1sg ġe-man; 2sg ġe-manst; past ġe-mund; pp ġe-munen
     to remember
 ġe-nōg, adj:
@@ -749,22 +745,26 @@ gǣst, nm:
     once (upon a time), formerly
 ġēol, nn:
     yule, yuletide, Christmas
-ġe-lēafa, nmw:
-    belief, faith
-ġe-lēdan, vw1:
-    to lead
-ġe-lēfan, vw1:
-    to believe, trust
-ġe-losian, vw2:
-    to perish, be lost; to lose (something); to destroy
+ġeon, adj: fem.nom.sg ġeonu
+    yon, yonder, that over there
+ġeond, prep:
+    through, throughout; beyond
+ġeond, adv:
+    to yonder, over there
+ġeondan, prep:
+    beyond
+ġeong, adj: comp ġingra; sup ġinġest
+    young
+ġeonre, adv:
+    to yonder, over there
 ġe-reorde, nn: nom.pl ġe-reordu
     language
-ġe-sewen-līċ:
-    visible
 ġēse, int:
     yes
 ġe-sēon, vs5: 2sg ġe-siehst; 3sg ġe-siehþ; past.1sg ġe-seah; past.pl ġe-sāwon; pp ġe-sewen
     to see
+ġe-sewen-līċ:
+    visible
 ġe-strēonan, vw1:
     SEE strēonan
 ġe-strīenan, vw1:
@@ -813,10 +813,10 @@ grēat, adj:
     big, large
 grēne, adj: fem.nom.sg grēnu
     green
-grōwan, vs7:
-    to grow
 grim, adj: fem.nom.sg grimu
     severe, cruel, savage
+grōwan, vs7:
+    to grow
 grund, nm:
     ground
 guma, nmw:
@@ -853,10 +853,10 @@ hatian, vw2:
     to hate
 hǣlan, vw1:
     to heal, cure
-hǣlend, nm:
-    healer; Jesus Christ
 hæle, nm:
     SEE hæleþ
+hǣlend, nm:
+    healer; Jesus Christ
 hæleþ, nm:
     hero
 hærfest, nm:
@@ -943,13 +943,15 @@ hring, nm:
     ring
 hrinġan, vw1:
     to ring
+hū, adv:
+    how, by what means, to what extent
 hund, nm:
     dog, hound
 hund, adji:
     hundred
 hund-eahtatiġ, adji:
     eighty
-hund-eahtatigoþaa, adjw:
+hund-eahtatigoþa, adjw:
     eightieth
 hund-endleftiġ, adji:
     hundred and ten
@@ -971,7 +973,7 @@ hund-tēontigoþa, adjw:
     hundredth
 hund-twelftiġ, adji:
     hundred and twenty
-hund-twelfigoþa, adjw:
+hund-twelftigoþa, adjw:
     hundred and twentieth
 hungor, nm: stem hungr
     hunger
@@ -985,8 +987,6 @@ hunta, nmw:
     hunter
 huntian, vw2:
     to hunt
-hū, adv:
-    how, by what means, to what extent
 hūs, nn: dat.sg hūs|hūse
     house
 hwā, pron: acc hwone|hwæne; gen hwæs; dat hwǣm|hwām
@@ -1139,10 +1139,10 @@ libban, vw3: 2sg leofast|lifast; 3sg leofaþ|lifaþ; past lifd; imp leofa
     to live
 līċ, nn: stem.pl līc
     body, esp. dead; corpse, cadaver
-līċ-hama, nmw:
-    body, esp. of a living person
 liccian, vw2:
     to lick
+līċ-hama, nmw:
+    body, esp. of a living person
 līcian, vw2:
     to be liked [+dat: by someone]; to be pleasing
 līf, nn:
@@ -1202,12 +1202,10 @@ miċel, adj: comp māra; sup mǣst
     big, large
 miċle, adv: comp mā; sup mǣst
     greatly, much
-mis-dǣd, nf:
-    misdeed
-mīere, nfw:
-    mare, female horse
 mid, prep:
     [+dat] with; [+instr] using
+mīere, nfw:
+    mare, female horse
 miht, nf:
     might, power, strength, ability
 miht-līċ, adj:
@@ -1216,6 +1214,8 @@ mīn, adjs:
     my, mine
 minte, nfw:
     mint plant
+mis-dǣd, nf:
+    misdeed
 miþ, prep:
     SEE mid
 mōdor, nf: acc.sg mōdor; gen.sg mōdor|mēder; dat.sg mēder; nom.pl mōdor|mōdra|mōdru; gen.pl mōdra; dat.pl mōdrum
@@ -1240,10 +1240,24 @@ mynet, nn:
     coin
 mynster, nn: stem mynstr; nom.pl mynstru
     monastery
+nā, int:
+    no, nay, nah
 nacod, adj:
     naked, bare, nude
+nā-hwanan, adv:
+    from nowhere
+nā-hwæder, adv:
+    to nowhere
+nā-hwǣr, adv:
+    nowhere
+nā-hwæþer, adj: stem nā-hwæþr
+    neither
 nama, nmw:
     name
+nān, adj:
+    not a, not one, none
+nā-wiht, pron: acc nā-wiht; gen nā-wihtes; dat nā-wihte
+    nothing
 # TODO: Wiktionary and BT disagree on vowel length
 næddre, nfw:
     SEE nædre
@@ -1252,24 +1266,10 @@ nǣdl, nf:
 # TODO: Wiktionary and BT disagree on vowel length
 nædre, nfw:
     snake
-nǣniġ, adj:
-    not any, no, none
-nā, int:
-    no, nay, nah
-nā-hwanan, adv:
-    from nowhere
-nā-hwǣr, adv:
-    nowhere
-nā-hwæder, adv:
-    to nowhere
-nā-hwæþer, adj: stem nā-hwæþr
-    neither
-nān, adj:
-    not a, not one, none
-nā-wiht, pron: acc nā-wiht; gen nā-wihtes; dat nā-wihte
-    nothing
 nǣfre, adv:
     never
+nǣniġ, adj:
+    not any, no, none
 ne, adv:
     1. not
     2. [ne ... ne] neither ... nor
@@ -1339,13 +1339,13 @@ on, prep:
     on, in, at
 on-eardian, vw2:
     to inhabit, live in
-on-ġēan, prep:
-    SEE on-ġeaġn
-on-ġēn, prep:
-    SEE on-ġeaġn
 on-ġeaġn, prep:
     toward; against
+on-ġēan, prep:
+    SEE on-ġeaġn
 on-ġeġn, prep:
+    SEE on-ġeaġn
+on-ġēn, prep:
     SEE on-ġeaġn
 on-ġinnan, vs3:
     to begin
@@ -1469,12 +1469,12 @@ sċildan, vw1:
     to shield, protect
 sċīnan, vs1:
     to shine
+sċip, nn: nom.pl sċipu
+    ship
 sċītan, vs1:
     to defecate
 sċitte, nfw:
     diarrhea
-sċip, nn: nom.pl sċipu
-    ship
 sċōgan, vw1:
     to shoe, put shoes on (someone or a horse)
 sċōh, nm: stem sċō
@@ -1493,10 +1493,10 @@ sċūr, nm, nf:
     shower, rainfall, downpour
 sē, pron: acc þone; gen þæs; dat þǣm|þām; inst þȳ|þon|þē
     the, that (masculine)
-seax, nn:
-    knife, dagger
 sealt, nn:
     salt
+seax, nn:
+    knife, dagger
 seċġan, vw3: 2sg sæġst|sagast; 3sg sæġþ|sagaþ; past sæġd|sǣd; imp saga|sæġe
     to say
 seġel, nm: stem seġl
@@ -1529,10 +1529,10 @@ seofontīen, adji:
     seventeen
 seofoþa, adjw:
     seventh
-seolfren, adj:
-    silver, silvery
 seolfor, nn.sg: stem seolfr
     silver
+seolfren, adj:
+    silver, silvery
 sēon, vs5: 2sg siehst; 3sg siehþ; past.1sg seah; past.pl sāwon; pp sewen
     to see
 seowian, vw2:
@@ -1549,8 +1549,6 @@ siextiġ, adji:
     sixty
 siextigoþa, adjw:
     sixtieth
-siwian, vw2:
-    to sew
 simle, adv:
     always
 sīn, adjs:
@@ -1559,6 +1557,8 @@ sincan, vs3:
     to sink
 singan, vs3:
     to sing
+siwian, vw2:
+    to sew
 slǣp, nm:
     sleep
 slǣpan, vs7:  past.1sg slēp; past.pl slēpon
@@ -1642,6 +1642,8 @@ stingan, vs3:
     to sting
 stōw, nf:
     place
+strang, adj:
+    strong
 # TODO: BT notes "uninflected forms occur". What does this mean?
 strǣt, nf:
     road, street
@@ -1649,12 +1651,6 @@ strēonan, vw1:
     get, gain, acquire; beget, produce, sire, father
 strīenan, vw1:
     SEE strēonan
-strang, adj:
-    strong
-swerian, vs6: 2sg swerest; 3sg swereþ; pp sworen
-    to swear
-swēte, adj: fem.nom.sg swētu
-    sweet
 sū, nfv: gen.sg sȳ|sūe|sūwe; gen.pl sūa|sūwa; dat.pl sūm|sūum|sūwum
     sow, female pig
 sugu, nf:
@@ -1688,10 +1684,10 @@ sweart, adj:
     dark, black, swarthy
 swefan, vs5:
     to sleep
-swefn, nn: nom.pl swefnu
-    SEE swefen
 swefen, nn: stem swefn; nom.pl swefnu
     sleep; dream
+swefn, nn: nom.pl swefnu
+    SEE swefen
 # TODO: other sources call this a pronoun, but is it?
 swelċ, adj:
     such
@@ -1699,12 +1695,14 @@ swellan, vs3:
     to swell
 sweltan, vs3:
     to die
-swerian, vs6: 2sg swerest; 3sg swereþ; past.1sg swōr; past.pl swōron; pp sworen
-    to swear
 sweord, nn:
     sword
 sweostor, nf: acc.sg sweostor; gen.sg sweostor; dat.sg sweostor; nom.pl sweostor|sweostra|sweostru; gen.pl sweostra; dat.pl sweostrum
     mother
+swerian, vs6: 2sg swerest; 3sg swereþ; past.1sg swōr; past.pl swōron; pp sworen
+    to swear
+swēte, adj: fem.nom.sg swētu
+    sweet
 # TODO: other sources call this a pronoun, but is it?
 swilċ, adj:
     SEE swelċ
@@ -1781,8 +1779,6 @@ twiġ, nn: stem.pl twig; nom.pl twigu
     2. [þā ... þā] when ... then
 þanan, adv:
     from there, thence
-þās, pron: acc þās; gen þissa; dat þissum
-    these
 þancian, vw2:
     to thank [+dat: someone] [+gen: for something]
 þanne, adv:
@@ -1790,8 +1786,8 @@ twiġ, nn: stem.pl twig; nom.pl twigu
 þanne, conj:
     1. then; when
     2. [þanne ... þanne] when ... then
-þūma, nmw:
-    thumb
+þās, pron: acc þās; gen þissa; dat þissum
+    these
 þæder, adv:
     to there, thither
 þǣr, adv:
@@ -1850,6 +1846,8 @@ twiġ, nn: stem.pl twig; nom.pl twigu
     to push, press
 þū, pron: acc þē|þec; gen þīn; dat þē
     thou, thee, you (singular)
+þūma, nmw:
+    thumb
 þurfan, vpp: 1sg þearf; 2sg þearft; subj þearfte|þyrfte; past þorft; pres.p þearfende|þurfende|þyrfende; pp þurfen
     to need
 þurh, prep:
@@ -1881,12 +1879,12 @@ un-miht-līċ, adj:
     possible
 unnan, vpp: 1sg ann; 2sg anst; past ūþ; pp unnen
     to grant
+un-trum, adj: fem.nom.sg un-trumu
+    weak; sick, ill
 upp, adv:
     up, upward, upstairs
 uppe, adv:
     up, in a high position
-un-trum, adj: fem.nom.sg un-trumu
-    weak; sick, ill
 ūre, adjs:
     our, ours
 ūt, adv:
@@ -1902,6 +1900,8 @@ wāc, nn:
     a weakness
 wacian, vw2:
     to be awake; to guard, watch
+wandrian, vw2:
+    to wander, rove, roam
 wǣpen, nn: stem wǣpn; nom.pl wǣpnu
     weapon; penis
 # TODO: BT and Wiktionary disagree on gender
@@ -1932,8 +1932,6 @@ weard, nf:
     guard, watch, act of guarding; guardianship
 wearm, adj:
     warm
-wandrian, vw2:
-    to wander, rove, roam
 weċġ, nm:
     wedge
 weċġan, vw1:
@@ -1969,11 +1967,11 @@ were-gild, nn:
     SEE wergild
 were-wulf, nm:
     SEE werwulf
-wēriġ, adj:
-    weary, tired, exhausted
 # TODO: nom.pl?
 wer-gild, nn:
     weregild, money paid as compensation for the death or serious injury of a man
+wēriġ, adj:
+    weary, tired, exhausted
 wer-wulf, nm:
     werewolf
 wesan, vi: 1sg eom; 2sg eart; 3sg is; pl sind|sindon; subj sīe; past.1sg wæs; past.pl wǣron; imp wes
@@ -2085,12 +2083,12 @@ wyrþ, nn, adj:
     SEE weorþ
 wyrþan, vs3:
     SEE weorþan
-ymb, prep:
-    around; about, concerning
-ymbe, prep:
-    SEE ymb
 yfel, adj: comp wyrsa; sup wyrst
     bad, unskilled; evil
 yfle, adv: comp wyrs; sup wyrst
     badly
+ymb, prep:
+    around; about, concerning
+ymbe, prep:
+    SEE ymb
 
