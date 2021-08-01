@@ -125,7 +125,7 @@ def parse_special(special):
 
 
 def gen_forms(lemma, word_type, special):
-    if word_type in ('adji', 'adv', 'prep', 'conj', 'int', 'particle'):
+    if word_type in ('adji', 'nmi', 'nfi', 'nni', 'adv', 'prep', 'conj', 'int', 'particle'):
         return {'invariable': [lemma]}
     elif word_type[0] == 'n':
         return gen_noun(lemma, word_type, special)
@@ -616,7 +616,7 @@ def expand_word_type(word_type):
     elif word_type == 'pron':
         return "pronoun"
     elif word_type[0] == 'n':
-        match = re.match(r"^n([mfn])([wv])?(\.(?:sg|pl))?$", word_type)
+        match = re.match(r"^n([mfn])([wvi])?(\.(?:sg|pl))?$", word_type)
         gender = {
             'm': "masculine ",
             'f': "feminine ",
@@ -626,6 +626,7 @@ def expand_word_type(word_type):
             None: "strong ",
             'w': "weak ",
             'v': "vocalic ",
+            'i': "indeclinable ",
         }[match.group(2)]
         plurality = {
             None: "",
