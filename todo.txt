@@ -28,7 +28,7 @@ pp ġehīered, not ġehīerd
 
 Declension of cardinal numerals, including above þrēo (see Quirk & Wrenn)
 
-Don't generate adverbial forms of numbers, whether adverbial
+Don't generate adverbial forms of numbers
 
 Numerals in -feald (twifeald, etc.)
 
@@ -57,6 +57,8 @@ Declension of ōþer
 Ensure twēġen and þrī are declined correctly
 
 beadu has alternative stems beaduw-, beadow-
+
+Don't generate superlative forms of adverbs like ǣr
 
 
 Respect vowel length, diacritics, etc. when following redirects

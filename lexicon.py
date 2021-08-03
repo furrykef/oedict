@@ -322,7 +322,7 @@ def gen_pronoun(lemma, word_type, special):
 
 def gen_verb(lemma, word_type, special):
     long_infinitives = [lemma + 'ne']
-    if lemma.endswith(('ēan', 'ēon', 'ān', 'ōn')):
+    if lemma.endswith(('ēan', 'ēon', 'ān', 'ōn', 'ȳn')):
         # Irregular infinitive
         inf_stem = lemma[:-1]
         pres_1sg = inf_stem
@@ -353,9 +353,9 @@ def gen_verb(lemma, word_type, special):
         long_stem = lemma[:-2]
         if word_type[2] == '1':
             # Weak class I
-            if not lemma.endswith('an'):
-                raise LexiconError("weak class I verbs must end in -an")
-            if lemma.endswith('bban'):
+            if irregular_infinitive:
+                short_stem = inf_stem
+            elif lemma.endswith('bban'):
                 short_stem = lemma[:-4] + 'f'
             elif lemma.endswith('ċġan'):
                 short_stem = lemma[:-4] + 'ġ'

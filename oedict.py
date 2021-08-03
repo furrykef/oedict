@@ -50,7 +50,7 @@ def lookup(lex, search_str, reverse):
         print("Not found:", search_str, "\n")
     else:
         for entry in entries:
-            print(entry.lemma, ':')
+            print(entry.lemma + ':')
             print(textwrap.indent(entry.text, " "*4))
 
 
