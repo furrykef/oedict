@@ -60,6 +60,8 @@ beadu has alternative stems beaduw-, beadow-
 
 Don't generate superlative forms of adverbs like ǣr
 
+Searching for "gehaten" pulls up "ġehātan", which says "SEE hātan", which pulls up the adjective "hāt" ('cause it has "hātan" as a derived form)
+
 
 Respect vowel length, diacritics, etc. when following redirects
 
@@ -98,6 +100,8 @@ miċle, yfle, etc: don't generate adverbial forms for their comparative and supe
 rūh has an alternate stem rūw- (at least according to Wiktionary)
 
 sǣ can be masc. or fem. with different irregular declensions
+
+stīpel: alternate stem stīpl-
 
 þætte should redirect only to the conjunction form of þæt
 

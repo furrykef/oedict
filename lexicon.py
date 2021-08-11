@@ -385,8 +385,6 @@ def gen_verb(lemma, word_type, special):
         else:
             raise LexiconError("invalid weak verb class")
         past_stems = special.get('past') or [past_stem]
-        past_participles = (special.get('pp') or past_stems)[:]
-        past_participles += ['ġe-' + x for x in past_participles if not x.startswith('ġe-')]
         result.update({
             '2sg': [assimilate(short_stem, 'st')],
             '3sg': [assimilate(short_stem, 'þ')],
@@ -398,7 +396,7 @@ def gen_verb(lemma, word_type, special):
             'past.subj.sg': [x + 'e' for x in past_stems],
             'past.subj.pl': [x + 'en' for x in past_stems],
             'imp': [short_stem],
-            'pp': past_participles,
+            'pp': past_stems,
         })
     elif word_type[1] == 's':
         # Strong verb
@@ -439,8 +437,7 @@ def gen_verb(lemma, word_type, special):
             pp_repl = lambda nucleus: nucleus
         past_pls = special.get('past.pl') or [mutate(inf_stem, past_pl_repl) + 'on']
         past_pl_stems = [x[:-2] for x in past_pls]
-        past_participles = (special.get('pp') or [mutate(inf_stem, pp_repl) + 'en'])[:]
-        past_participles += ['ġe-' + x for x in past_participles if not x.startswith('ġe-')]
+        past_participles = [mutate(inf_stem, pp_repl) + 'en']
         result.update({
             '2sg': [assimilate(i_mutate(inf_stem), 'st')],
             '3sg': [assimilate(i_mutate(inf_stem), 'þ')],
@@ -489,6 +486,10 @@ def gen_verb(lemma, word_type, special):
         'imp', 'imp.pl', 'pres.p', 'pp'
     ] }
     result.update(special_forms)
+    if 'pp' in result and result['pp'] != ['-']:
+        result['pp'] = result['pp'] + [
+            'ġe-' + x for x in result['pp'] if not x.startswith('ġe-')
+        ]
     return result
 
 
@@ -524,7 +525,7 @@ def mutate(word, replacement):
     return initial + nucleus + final
 
 def split_word(word):
-    match = re.match(r"(.*?)(īe|ie|ēa|ea|ēo|eo|[āaǣæēeīiōoūuȳy])([b-df-hj-np-tv-zþð]*)$", word)
+    match = re.match(r"(.*?)(īe|ie|ēa|ea|ēo|eo|[āaǣæēeīiōoūuȳy])([b-df-hj-np-tv-zþðċġ]*)$", word)
     return match.groups()
 
 def get_nucleus(word):
@@ -581,6 +582,8 @@ def gen_variants_impl(next, results, preceding=""):
         gen_variants_impl(next[1:], results, preceding + 'o')
     elif next.startswith(('on', 'om')) and not preceding.endswith(('ē', 'e')):
         gen_variants_impl(next[1:], results, preceding + 'a')
+    elif next.startswith('sel'):
+        gen_variants_impl(next[3:], results, preceding + 'syl')
     gen_variants_impl(next[1:], results, preceding + next[0])
 
 

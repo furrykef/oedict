@@ -4,7 +4,7 @@ To search the dictionary online, go to http://oedict.furrykef.com/
 
 This project is currently a work in progress, but it should at least contain a few hundred of the most common words, and a few words that aren't so common. It is inspired in large part by Whitaker's Words (https://archives.nd.edu/whitaker/words.htm), and compiled mainly as a way to study the language rather than out of any particular need for a new dictionary.
 
-Thanks to the Ænglisċ Discord (https://discord.gg/9rwnDRC) for all their help!
+Thanks to the Englisċ Discord (https://discord.gg/9rwnDRC) for all their help!
 
 
 ## About the dictionary
