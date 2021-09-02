@@ -62,6 +62,8 @@ Don't generate superlative forms of adverbs like ǣr
 
 Searching for "gehaten" pulls up "ġehātan", which says "SEE hātan", which pulls up the adjective "hāt" ('cause it has "hātan" as a derived form)
 
+It seems a little odd to call "niht" vocalic, since it shows no umlaut.
+
 
 Respect vowel length, diacritics, etc. when following redirects
 
@@ -73,6 +75,8 @@ The code to generate variants is a bit of a joke right now. It generates many im
 Don't generate silly forms like sweryan, or lufi (from 'lufie').
 
 Generate sċe for sċ[^iey] (e.g. sċop → sċeop)
+
+Generate correct weak forms for adjectives such as hēah
 
 
 brōþor: make sure brōþer- vs. brōþr- is consistent in both special and generated forms (note that, I believe, broþeru is attested but perhaps e.g. sweosteru is not)

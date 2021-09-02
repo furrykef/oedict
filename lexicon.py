@@ -564,6 +564,10 @@ def gen_variants_impl(next, results, preceding=""):
         # Reached end of word
         results.append(preceding)
         return
+    if next == 'w' and preceding.endswith('ēo'):
+        # This is a word like trēow, which can also be spelled trēo
+        results += [preceding, preceding + 'w']
+        return
     if next.startswith('īe'):
         gen_variants_impl(next[2:], results, preceding + 'ī')
         gen_variants_impl(next[2:], results, preceding + 'ȳ')
