@@ -75,6 +75,8 @@ assa, nmw:
 # TODO: BT claims this is indeclinable, but Wiktionary has the forms ǣwa and ǣwum
 ǣ, nfi:
     law, statute, custom, rite; marriage
+æcer, nm:
+    field, farmland; acre
 ǣcern, nn: nom.pl ǣcernu
     acorn
 ǣfen, nm:
@@ -153,6 +155,8 @@ assa, nmw:
     earliest, first
 ǣrest, adv:
     first, at first
+ærs, nm:
+    SEE ears
 æt, prep:
     at
 æt-fōran, prep:
@@ -166,6 +170,8 @@ bacan, vs6:
     to bake
 bān, nn:
     bone
+bannan, vs7:
+    to summon
 bār, nm:
     boar
 bāt, nm, nf:
@@ -375,6 +381,8 @@ byċġan, vw1: 2sg byġst; 3sg byġþ; past boht
     to buy
 byldan, vw1:
     to embolden
+byrden, nf:
+    burden
 byrdling, nm:
     turtle
 byrġan, vw1:
@@ -395,6 +403,8 @@ catte, nfw:
     plaster, cement, chalk
 ċeald, adj:
     cold
+ċēap-mann, nmv:
+    merchant, peddler, dealer
 ċēap-stōw, nf:
     market
 ċearu, nf:
@@ -407,6 +417,8 @@ cemban, vw1:
     man; husband; free peasant
 ċēosan, vs2: past.pl curon; pp coren
     to choose
+cēpan, vw1: pp cēped|cēpt
+    to observe; keep
 ċicen, nm:
     chicken
 ċīese, nm:
@@ -426,8 +438,16 @@ clawu, nf:
     claw, nail, hoof
 clæfre, nfw:
     clover
+clenċan, vw1:
+    to clinch, hold fast
+clēofan, vs2:
+    to cleave
 climban, vs3:
     to climb
+cloccian, vw2:
+    to cluck
+clūd, nm:
+    stone, rock, boulder; hill
 cnāwan, vs7:
     to know
 # cnēo is the more conservative form (according to Wiktionary)
@@ -438,8 +458,32 @@ cnīf, nm:
     knife
 cniht, nm:
     boy; knight
+cnocian, vw2:
+    SEE cnucian
+cnoll, nm:
+    knoll
+cnotta, nmw:
+    knot, fastening, knitting
+cnucel, nm: stem cnucl
+    knuckle
+cnucian, vw2:
+    to knock, beat, pound
+cnyll, nm:
+    knell
+cnyllan, vw1:
+    to knell
+cnyttan, vw1:
+    to knit, tie, bind
+cōc, nm:
+    cook
 cocc, nm:
     rooster, cock, male bird
+cōl, adj:
+    cool
+cōlian, vw2:
+    to cool
+coliandre, nfw:
+    coriander, cilantro
 corn, nn:
     grain, cereal plant; seed, berry
 coss, nm:
@@ -455,6 +499,10 @@ cræft, nm:
 # TODO: seems to me the plural stem can be either crat- or cræt-
 cræt, nn: stem.pl crat; nom.pl cratu
     chariot, cart
+crēodan, vw1:
+    to crowd
+crēopan, vs2:
+    to creep, crawl
 # TODO: Vowel length. BT and Wiktionary have a short vowel. Eagles has a long vowel, and the modern pronunciation suggests a long vowel, too.
 Crīst, nm:
     Christ, messiah
@@ -462,6 +510,8 @@ cropp, nm:
     1. sprout, stalk, ear of corn, berry
     2. crop of a bird
     3. kidney
+crūdan, vw1:
+    SEE crēodan
 cruma, nmw:
     crumb
 cū, nfv: gen.sg cūe|cūs|cȳ; nom.pl cȳ|cȳe; gen.pl cūa|cūna; dat.pl cūum
@@ -565,6 +615,10 @@ dōn, vi: 2sg dēst; 3sg dēþ; past dyd; pp dōn
     to do
 draca, nmw:
     snake, serpent, dragon
+drān, nf:
+    drone, male bee
+drǣn, nf:
+    SEE drān
 drænċ, nm:
     SEE drenċ
 drenċ, nm:
@@ -573,6 +627,12 @@ dreng, nm:
     warrior, soldier
 drīfan, vs1:
     to drive
+# TODO: BT and Wiktionary disagree on vowel length
+driġan, vw1:
+    to dry
+# TODO: BT and Wiktionary disagree on vowel length
+driġe, adj: fem.nom.sg driġu
+    dry
 drincan, vs3:
     to drink
 dryhten, nm: stem dryhtn
@@ -595,6 +655,9 @@ dung, nfv:
     underground chamber; dungeon
 durran, vpp: 1sg dearr; 2sg dearst; past dorst; pp durren
     to dare
+# TODO: full declension
+duru, nm, nf, nn: gen.sg dura; dat.sg dura; nom.pl dura
+    door
 dūst, nn:
     dust
 dwellan, vw1:
@@ -617,6 +680,8 @@ dysiġ, nn:
     together with, in addition to
 ēage, nnw:
     eye
+ēag-þyrel, nn: stem ēag-þyrl; nom.pl ēag-þyrlu
+    window
 eahta, adji:
     eight
 eahtatīene, adji:
@@ -650,6 +715,16 @@ earm, nm:
     arm
 earm, adj:
     poor, destitute; wretched
+earnian, vw2:
+    to earn, merit, deserve, receive
+earpa, nmw:
+    SEE hearpa
+ēar-ring, nm:
+    earring
+ears, nm:
+    buttocks, hindquarters
+ears-þyrel, nn: stem ears-þyrl; nom.pl ears-þyrlu
+    anus
 ēast, nm.sg:
     the east
 ēast, adj:
@@ -755,6 +830,8 @@ fela, adji:
     many (usu. used w/ genitive)
 fellan, vw1:
     to fell, cause to fall, knock down, cut down
+fenester, nn:
+    window
 fēnix, nm:
     1. phoenix
     2. date tree
@@ -919,6 +996,8 @@ fuglere, nm:
     fowler
 fugol, nm: stem fugl
     bird, fowl
+fūl, adj:
+    foul
 full, adj:
     full
 full, adv:
@@ -927,6 +1006,8 @@ full, nn:
     cup
 fyllan, vw1:
     to fill
+fȳlþ, nf:
+    filth
 fȳr, nn:
     fire
 fyrest, adj: comp -; sup -
@@ -1116,11 +1197,17 @@ glæs, nn: stem.pl glas; nom.pl glasu
     glass
 glæsen, adj:
     glass
+glēow, nn:
+    glee, joy, mirth; music
+glēowian, vw2:
+    to joke, jest; to play music
 # TODO: what verb class?
 #glēsan, vw1:
 #    to gloss, explain
 glēsing, nf:
     gloss, interpretation, explanation
+glid, adj: fem.nom.sg glidu
+    slippery
 glida, nmw:
     kite (bird)
 glīdan, vw1:
@@ -1166,6 +1253,8 @@ grund, nm:
     ground
 guma, nmw:
     man
+gutt, nm:
+    gut, entrail
 gylden, adj: stem gyldn; fem.nom.sg gyldnu
     golden
 gyrnan, vw1:
@@ -1242,6 +1331,8 @@ heall, nf:
     hall, large room
 heard, adj:
     hard, firm; stern, stubborn
+hearpa, nmw:
+    harp
 hebban, vs6: 2sg hefst; 3sg hefþ; past.1sg hōf; past.pl hōfon; pp hafen
     to heave, lift up, raise
 heċġ, nf:
@@ -1302,6 +1393,8 @@ hliehhan, vs6: past.1sg hlōg|hlōh; past.pl hlōgon; pp hlagen
     to laugh
 hlinian, vw2:
     to lean, bend, lie down, recline, rest
+hlūd, adj:
+    loud
 hnecca, nmw:
     neck; nape of the neck, back of the head
 hnesċe, adj: fem.nom.sg hnesċu
@@ -1716,6 +1809,8 @@ mōn-dæġ, nm: stem.pl mōn-dag
     Monday
 morgen, nm: stem morgn
     morning; the next day
+mot, nn:
+    mote, particle, speck
 mōt, nn:
     meeting, court
 mōtan, vpp: 1sg mōt; 2sg mōst; past mōst; pp mōten
@@ -1818,8 +1913,12 @@ norþ, adv:
     north, northward
 norþan, adv:
     from the north
+nos-þyrel, nn: stem nos-þyrl; nom.pl nos-þyrlu
+    nostril
 nosu, nf:
     nose
+notere, nm:
+    note-taker
 notian, vw2:
     to use [+gen, dat, or acc of the thing used]
 nū, adv:
@@ -1912,6 +2011,8 @@ rǣdan, vs7: past.1sg rēd; past.pl rēdon
     to read; to advise
 rēad, adj:
     red
+reċċan, vw1:
+    to stretch, extend
 reġn, nm:
     rain
 reġn-boga, nmw:
@@ -2334,6 +2435,8 @@ swāt, nn:
     sweat
 swātiġ, adj:
     sweaty
+swealwe, nfw:
+    swallow (bird)
 sweart, adj:
     dark, black, swarthy
 swebban, vw1:
@@ -2347,6 +2450,8 @@ swefn, nn: nom.pl swefnu
 # TODO: other sources call this a pronoun, but is it?
 swelċ, adj:
     such
+swelgan, vs3:
+    to swallow
 swellan, vs3:
     to swell
 sweltan, vs3:
@@ -2366,6 +2471,8 @@ swimman, vs3:
     to swim
 swīn, nn:
     swine, pig; pork
+swingan, vs3:
+    to whip, flog, strike, beat
 swīn-hierde, nm:
     swineherd, pig farmer
 swīþ, adj:
@@ -2464,10 +2571,29 @@ trumian, vw2:
     to grow strong, recover from illness
 trymman, vw1:
     to strengthen
+tūn, nm:
+    an enclosed yard or court; town
 tunge, nfw:
     tongue; language
 tungol, nn: stem tungl; nom.pl tunglu
     star
+tunne, nfw:
+    barrel, cask
+tūr, nm:
+    tower
+turf, nfv:
+    turf, sod
+turnian, vw2:
+    to turn (intransitive)
+turtle, nfw:
+    turtle-dove
+turtur, nm:
+    turtle-dove
+turture, nfw:
+    SEE turtur
+# TODO: Wiktionary and BT disagree on vowel length
+tusc, nm:
+    tusk, molar
 twēġen, adjs.pl: fem.nom.pl twā; neut.nom.pl tū|twā; gen.pl twēġra|twēġa; dat.pl twǣm|twām
     two
 twelf, adji:
@@ -2598,6 +2724,14 @@ tȳn, vw1:
     thin
 þynnian, vw2:
     to thin, make or become thin
+# TODO: BT and Eagles think the vowel is short; Wiktionary thinks it's long
+# If changed, also change derived forms
+þyrel, nn: stem þyrl; nom.pl þyrlu
+    hole
+þyrelian, vw2:
+    to make a hole through, pierce, perforate
+þyrlian, vw2:
+    SEE þyrelian
 # TODO: BT has no indication of gender or declension
 ūder, nn: stem ūdr; nom.pl ūdru
     udder, mammary, breast
@@ -2668,6 +2802,8 @@ wæps, nf:
 # TODO: BT and Wiktionary disagree on gender
 wæsp, nf:
     SEE wæps
+wǣt, adj:
+    wet
 wǣtan, vw1:
     to wet, dampen, moisten
 wæter, nn: nom.pl wæter|wætru|wæteru; gen.pl wætra|wætera; dat.pl wætrum|wæterum
@@ -2832,6 +2968,11 @@ wītega, nmw:
     wise man, prophet
 wiþ, prep:
     against
+wlitiġ, adj:
+    beautiful
+# TODO: g or ġ?
+wlitigian, vw2:
+    to make beautiful, beautify
 wodnes-dæġ, nm: stem.pl wodnes-dag
     Wednesday
 wōh, adj:
