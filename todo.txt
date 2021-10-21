@@ -87,6 +87,8 @@ glæd, smæl
 
 gōd: don't generate adverbial forms (or else add a way to provide the comparative and superlative of "wel")
 
+grimre and grimra, not grimmre and grimmra
+
 hātan has a passive form (iċ hātte, þū hāttest, hē hātte, wē hātton), which we should probably consider a separate, defective verb.
 
 hwæþer: Eagles seems to suggest the fem.acc.sg is hwæþere but the stem is otherwise hwæþr-; I suspect this might have been a mistake.

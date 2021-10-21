@@ -15,6 +15,7 @@ def main(argv=None):
     p.add_argument('-r', '--reverse', action='store_true', help="reverse lookup")
     p.add_argument('--dump-index', action='store_true', help="dump debug stuff")
     p.add_argument('--dump-lemmas', action='store_true', help="dump debug stuff")
+    p.add_argument('--type', default="", help="word type for --dump-lemmas (regex)")
     p.add_argument('--abc', action='store_true', help="check lexicon is in alphabetical order")
     p.add_argument('search_terms', nargs='*')
     args = p.parse_args(argv)
@@ -22,7 +23,7 @@ def main(argv=None):
     if args.dump_index:
         lex.dump_index()
     if args.dump_lemmas:
-        lex.dump_lemmas()
+        lex.dump_lemmas(args.type)
     if args.abc:
         check_alphabetization(lex)
     for term in args.search_terms:

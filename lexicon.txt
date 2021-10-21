@@ -10,12 +10,19 @@ abbud, nm:
     SEE abbad
 abbudisse, nfw:
     SEE abbadisse
+ā-bīdan, vs1:
+    to abide, remain, wait, wait for, await
 ac, conj:
     but
 āc, nfv: gen.sg āce|ǣċ; dat.sg ǣċ; nom.pl ǣċ
     oak
 ā-cennan, vw1:
     to bring forth, produce, beget, give birth to
+ācweorna, nmw:
+    SEE ācwern
+# TODO: verify -u
+ācwern, nn: nom.pl ācwernu
+    squirrel
 adela, nmw:
     filth
 āgan, vpp: 1sg āh; 2sg āhst; past āht; pp āgen
@@ -57,7 +64,6 @@ apostol, nm:
     ore, brass, copper
 ār, nf:
     oar
-# BT has a short a- here, but this seems to be a mistake
 ā-rīsan, vs1:
     to rise up, arise
 āscian, vw2:
@@ -160,6 +166,8 @@ assa, nmw:
     SEE ār
 ǣr, adj:
     early
+ǣrende, nn: nom.pl ǣrendu
+    errand; message
 ǣrest, adj:
     earliest, first
 ǣrest, adv:
@@ -241,6 +249,8 @@ be-fōran, prep:
     before
 be-ġietan, vs5: past.1sg be-ġeat; past.pl be-ġēaton
     to get, receive
+be-hēafdian, vw2:
+    to behead
 be-lādian, vw2:
     to excuse, forgive
 bellan, vs3:
@@ -251,6 +261,10 @@ belt, nm:
     belt, girdle
 bēo, nf:
     bee
+bēo-ċeorl, nm:
+    beekeeper
+bēoċere, nm:
+    beekeeper
 bēodan, vs2:
     to command, order, bid
 bēon, vi: 1sg bēo; 2sg bist; 3sg biþ; past.1sg wæs; past.pl wǣron
@@ -313,6 +327,13 @@ bīta, nmw:
     2. biter
 bītan, vs1:
     to bite
+bīte, nm:
+    bite; pain of wound
+# TODO: alternate stem bitr-
+biter, adj:
+    bitter, sharp, severe, dire
+biterian, vw2:
+    to embitter, make sharp
 blanc, adj:
     blank; white, gray
 blanca, nmw:
@@ -321,8 +342,8 @@ bland, nn:
     blend, mixture
 blandan, vs7: past.1sg blēnd; past.pl blēndon
     to blend, mix
-blase, nf:
-    torch, lamp
+blase, nfw:
+    SEE blæse
 blasere, nm:
     incendiary
 blāwan, vs7:
@@ -332,6 +353,8 @@ blæc, adj:
     black
 blæd, nn: stem.pl blad; nom.pl bladu
     leaf; broad, flat blade, such as of an oar
+blæse, nfw:
+    blaze, flame; torch, lamp
 blǣt, nm:
     bleating, bleat
 blǣtan, vw1:
@@ -354,7 +377,7 @@ bōc, nfv: gen.sg bōce|bēċ; dat.sg bēċ; nom.pl bēċ
     book
 bōc-hord, nn:
     library, archive of texts
-bōc-hūs, nf: dat.sg bōc-hūs|bōc-hūse
+bōc-hūs, nn: dat.sg bōc-hūs|bōc-hūse
     library, archive of texts
 boda, nmw:
     messenger; prophet
@@ -404,6 +427,11 @@ brid, nm:
     SEE bird
 bringan, vw1: past brōht
     to bring
+brōc, nm:
+    brook
+brōc, nfv: gen.sg brōce|brēċ; dat.sg brēċ; nom.pl brēċ
+    1. buttocks, rear end
+    2. [in plural] trousers, pants, breeches, britches
 brōþor, nf: gen.sg brōþor; dat.sg brēþer; nom.pl brōþor|brōþra|brōþru; gen.pl brōþra; dat.pl brōþrum
     brother
 brū, nf: stem brūw
@@ -621,12 +649,24 @@ cradel, nm:
     cradle
 cradol, nm:
     SEE cradel
+crafian, vw2:
+    to crave
+crammian, vw2:
+    to cram, stuff
+cran, nm:
+    crane (bird)
 crāwan, vs7:
     to crow
 crāwe, nfw:
     crow, raven
 cræft, nm:
     art, craft, skill
+cræn, nm:
+    SEE cran
+crænc-stæf, nm: stem.pl crænc-staf
+    crank
+cræsta, nmw:
+    crest
 # TODO: seems to me the plural stem can be either crat- or cræt-
 cræt, nn: stem.pl crat; nom.pl cratu
     chariot, cart
@@ -679,7 +719,7 @@ cuppe, nfw:
 curs, nm:
     curse
 cūþ, adj:
-    known, familiar
+    known, plain, obvious, evident; familiar
 cwacian, vw2:
     to quake, shake, tremble
 cwalu, nf:
@@ -715,6 +755,11 @@ dā, nfw: acc.sg dān; gen.sg dān; dat.sg dān; nom.pl dān; gen.pl dāna; dat.
 # TODO: BT and Wiktionary disagree on gender. BT thinks it's neuter, but is uncertain; Wiktionary says masculine.
 dāg, nn:
     dough
+dagian, vw2:
+    to dawn, become day, be day
+# TODO: BT and Wiktionary disagree on gender. BT thinks it's neuter, but is uncertain; Wiktionary says masculine.
+dāh, nn: stem dāg
+    SEE dāg
 dǣd, nf:
     deed, act
 dæġ, nm: stem.pl dag
@@ -722,8 +767,12 @@ dæġ, nm: stem.pl dag
 # TODO: Wiktionary seems to disagree
 dǣġe, nfw:
     female baker
+dæl, nn: stem.pl dal; nom.pl dalu
+    dale
 dǣl, nm:
     part, portion
+dǣlan, vw1:
+    to divide, separate; to distribute, bestow, spend, dispense, deal, dole
 dēad, adj:
     dead
 dēaf, adj:
@@ -773,6 +822,9 @@ dīegol, nn: stem dīegl; nom.pl dīeglu
     SEE dēagol
 dīere, adj: fem.nom.sg dīeru
     dear, beloved; expensive, precious, costly
+# TODO: what paradigm?
+#dīgan, vs?:
+#    to die
 dimm, adj:
     dim, dark, obscure, hidden
 docga, nmw:
@@ -785,14 +837,28 @@ dōm, nm:
     judgment
 dōn, vi: 2sg dēst; 3sg dēþ; past dyd; pp dōn
     to do
+dott, nm:
+    dot, small spot, speck
 draca, nmw:
     snake, serpent, dragon
+dragan, vs6: past.1sg drōg|drōh
+    to drag, draw
 drān, nf:
     drone, male bee
+# TODO: redirect to drīfan?
+drǣfan, vw1:
+    to drive
 drǣn, nf:
     SEE drān
 drænċ, nm:
     SEE drenċ
+dreahnian, vw2:
+    to strain, drain
+drēam, nm:
+    1. joy, pleasure, gladness, mirth, rejoicing
+    2. music, melody, song
+drēamere, nm:
+    musician
 drenċ, nm:
     drink; draught
 dreng, nm:
@@ -881,6 +947,8 @@ ealu, nn: gen.sg ealoþ; dat.sg ealoþ; nom.pl -; gen.pl ealeþa; dat.pl -
     ale, beer, intoxicating drink
 ear, nn:
     ear of corn
+eardian, vw2:
+    to dwell, live, feed; to inhabit
 ēare, nnw:
     ear
 earfoþ, nn: nom.pl earfoþu
@@ -990,6 +1058,8 @@ fām, nn:
     foam
 fāmiġ, adj:
     foamy
+fara, nmw:
+    farer, traveler
 faran, vs6:
     to travel; fare
 fæder, nm:
@@ -1008,6 +1078,8 @@ fēawa, adjw:
     few
 fēawe, adj.pl:
     few
+fēdan, vw1:
+    to feed, nourish; to support, sustain, bring up, educate
 fela, adji:
     many (usu. used w/ genitive)
 fēlan, vw1:
@@ -1105,6 +1177,10 @@ flēotan, vs2:
     to float, swim
 flēote, nfw:
     SEE flēot
+flocc, nm:
+    flock, band, company, division
+flōd, nn, nm:
+    flow, wave, tide, flood, sea, river
 flōr, nm:
     floor
 flota, nmw:
@@ -1119,12 +1195,20 @@ fnēosan, vs2: past.pl fnuron; pp fnoren
     to sneeze
 fnora, nmw:
     sneeze
+fōda, nmw:
+    food
+fōdder, nn: stem fōdr; nom.pl fōdru
+    fodder, food
+fōder, nn: stem fōdr; nom.pl fōdru
+    SEE fōdder
 fola, nmw:
     foal, colt
 folc, nn:
     folk, people, tribe
 fōn, vs7: 2sg fēhst; 3sg fēhþ; past.1sg fēng; past.pl fēngon; pp fangen
     to seize, take
+font, nm:
+    fountain, spring; baptismal font
 for, prep:
     for; because of
 forca, nmw:
@@ -1133,6 +1217,8 @@ for-ċēowan, vs2: past.pl for-cuwon; pp for-cowen
     to bite off
 for-ċippian, vw2:
     to cut off
+ford, nm: dat.sg forde|forda
+    shallow, shoal, ford
 # TODO: past participle (see ġiefan)
 for-ġiefan, vs5: past.1sg for-ġeaf; past.pl for-ġēafon
     to give; to forgive [+dat: someone] [+acc: for something]
@@ -1183,6 +1269,8 @@ fremede, adj: fem.nom.sg fremedu
     strange, foreign
 fremman, vw1:
     to do, perform
+frēo, adj:
+    free, having liberty or immunity; noble, glad, joyful
 frēond, nm, nmv:
     friend
 frēond-līċ, adj:
@@ -1197,6 +1285,10 @@ friġnan, vs3: past.pl frugnon; pp frugnen
     to ask, inquire
 frocga, nmw:
     SEE frogga
+frōd, adj:
+    wise, prudent, sage, skillful; venerable
+frōdian, vw2:
+    to be wise or prudent
 frogga, nmw:
     frog
 fuglere, nm:
@@ -1269,6 +1361,8 @@ gǣst, nm:
     year
 ġēar-dagas, nm.pl:
     days of yore
+ġearn, nn:
+    yarn, spun wool
 ġeat, nn: nom.pl gatu; stem.pl gat
     gate
 ġe-beorhtian, vw2:
@@ -1477,7 +1571,7 @@ grētan, vw1: past grētt; pp grēted
     to greet, approach; to call out to, bid farewell to
 grētan, vs7:
     SEE grǣtan
-grim, adj: fem.nom.sg grimu
+grimm, adj:
     severe, cruel, savage
 grōwan, vs7:
     to grow
@@ -1515,6 +1609,8 @@ hām, adv:
     home, homeward
 hama, nmw:
     covering
+hamer, nm:
+    hammer
 hana, nmw:
     rooster; cock
 hand, nf:
@@ -1548,7 +1644,12 @@ hæle, nm:
 hǣlend, nm:
     healer; Jesus Christ
 hæleþ, nm:
-    hero
+    man, warrior, hero
+hǣlþ, nf:
+    health; healing, cure
+# TODO: BT claims this is invariable, which it does seem to be
+hǣlu, nf:
+    health, safety, salvation
 hǣmed, nn: stem.pl hǣmdr; nom.pl hǣmdru
     sexual intercourse, coitus
 hæpse, nfw:
@@ -1653,6 +1754,10 @@ hnesċe, adj: fem.nom.sg hnesċu
     soft, delicate, tender, effeminate
 hnutu, nfv: gen.sg hnute|hnyte; dat.sg hnyte; nom.pl hnyte
     nut
+hof, nn: nom.pl hofu
+    house, hall, dwelling, building
+hōf, nm:
+    hoof
 hogian, vw2:
     SEE hyċġan
 hol, nn: nom.pl holu
@@ -1686,6 +1791,8 @@ hræfn, nm:
     raven
 hræmm, nm:
     SEE hræfn
+hrēaw, adj:
+    raw, uncooked
 hreddan, vw1:
     to save, rescue, liberate
 hrēow, nf:
@@ -1748,6 +1855,16 @@ huntian, vw2:
     to hunt
 hūs, nn: dat.sg hūs|hūse
     house
+hūsel, nn:
+    SEE hūsl
+hūsian, vw2:
+    to house, shelter
+hūsl, nn:
+    Eucharist, housel
+hūslian, vw2:
+    to housel, administer the Eucharist
+hūsul, nn:
+    SEE hūsl
 hwā, pron: acc hwone|hwæne; gen hwæs; dat hwǣm|hwām
     who
 hwanan, adv:
@@ -2009,6 +2126,8 @@ maniġ, adjs: comp -; sup -
     many
 mann, nmv:
     man, person
+mannian, vw2:
+    to man, garrison
 maþa, nmw:
     grub, worm, maggot
 mǣd, nf: stem mǣdw
@@ -2024,6 +2143,10 @@ mǣne, adj: fem.nom.sg mǣnu
     2. mean, wicked, false, evil
 mæsse, nfw:
     mass, church service; religious holiday
+mearc, nf:
+    mark, sign
+mearcian, vw2:
+    to mark
 # TODO: confirm declension
 medu, nm: gen.sg meda|medwes; dat.sg meda|medwe; nom.pl meda|medwas; gen.pl meda|medwa; dat.pl medum|medwum
     mead
@@ -2071,6 +2194,8 @@ milde, adj: fem.nom.sg mildu
     mild, gentle, meek, benign
 milte, nm, nfw:
     spleen
+miltestre, nfw:
+    prostitute
 mīn, adjs:
     my, mine
 minte, nfw:
@@ -2117,6 +2242,10 @@ myċġ, nm:
     midge: a small fly or gnat
 myġġ, nm:
     SEE myċġ
+mylen, nm:
+    mill
+myln, nm:
+    SEE mylen
 mynet, nn:
     coin
 mynster, nn: stem mynstr; nom.pl mynstru
@@ -2178,6 +2307,14 @@ nēah, prep:
     near
 nearu, adj: neut.nom.pl nearu
     narrow
+nēat, nn:
+    ox, cow, cattle, beast
+nebb, nn:
+    neb, nib, beak; nose; face, countenance
+nebbian, vw2:
+    to face
+neb-corn, nn:
+    facial pimple
 nerian, vw1:
     to save
 nesan, vi: 1sg neom; 2sg neart; 3sg nis; pl ne_sind|ne_sindon; subj ne_sīe; past.1sg næs; past.pl nǣron; imp nes
@@ -2251,6 +2388,7 @@ olfenda, nmw:
     SEE olfend
 on, prep:
     on, in, at
+# TODO: add "see also" for "eardian"
 on-eardian, vw2:
     to inhabit, live in
 on-fōn, vs7: 2sg on-fēhst; 3sg on-fēhþ; past.1sg on-fēng; past.pl on-fēngon; pp on-fangen
@@ -2275,6 +2413,10 @@ openian, vw2:
     to open, be opened
 ōra, nmw:
     ore
+orċ-eard, nm:
+    SEE ort-ġeard
+ort-ġeard, nm:
+    orchard, garden
 ostre, nfw:
     oyster
 otor, nm: stem otr
@@ -2321,6 +2463,8 @@ plume, nfw:
     plum (fruit); plum tree
 pott, nm:
     pot
+prāfost, nm:
+    officer, esp. of a monastery
 prēost, nm:
     priest
 pullian, vw2:
@@ -2345,6 +2489,8 @@ rǣpan, vw1: past rǣpt; pp rǣped
     to bind with rope, tie up, make captive
 rǣpling, nm:
     captive, prisoner
+rǣs, nm:
+    race, rush; attack, onslaught
 rēad, adj:
     red
 rēafian, vw2:
@@ -2458,10 +2604,22 @@ sæp, nn: stem.pl sap; nom.pl sapu
     sap
 sæternes-dæġ, nm: stem.pl sæternes-dag
     Saturday
+sċamu, nf:
+    shame, modesty, disgrace
+sċand, nf:
+    1. shame, disgrace, infamy, ignominy
+    2. a shameful or disgraceful thing
+# TODO: BT says it's masculine. Why?
+sċand-hūs, nn: dat.sg sċand-hūs|sċand-hūse
+    brothel
 sċeabb, nm:
     scab
 sċeadu, nf: stem sċeadw
     shadow
+sċeaft, nm:
+    shaft, pole; spear
+sċealu, nf:
+    shell, husk
 sċeap, nn: nom.pl sċeapu
     genital, private part
 sċēap, nf:
@@ -2476,12 +2634,18 @@ sċēawere, nm:
     observer, spy; watchtower; mirror
 sċēawian, vw2:
     to look at, observe, behold, see
+sċendan, vw1:
+    to put to shame, abuse, insult, harm
 sċēotan, vs2:
     to shoot
+sċeran, vs4:
+    to cut, shear, shave
 sċield, nm:
     shield
 sċiell, nf:
     shell; scale (of animal's hide)
+sċieppan, vs6: past.1sg sċōp|sċēop; past.pl sċōpon; pp sċeapen|sċepen
+    to shape, form, create
 sċildan, vw1:
     to shield, protect
 sċilfe, nfw:
@@ -2500,10 +2664,14 @@ sċītan, vs1:
     to defecate
 sċitte, nfw:
     diarrhea
+sċofl, nf:
+    shovel
 sċōġan, vw1: 2sg sċōst; 3sg sċōþ; past sċōd; imp sċō
     to shoe, put shoes on (someone or a horse)
 sċōh, nm: stem sċō
     shoe
+sċōhere, nm:
+    shoemaker, cobbler
 sċōh-wyrhta, nmw:
     shoemaker, cobbler
 sċop, nm:
@@ -2518,6 +2686,14 @@ sċotere, nm:
     shooter
 sċotian, vw2:
     to shoot
+sċrēad, nf:
+    SEE sċrēade
+sċrēade, nfw:
+    shred
+sċrēadian, vw2:
+    to shred
+sċrēawa, nmw:
+    shrew
 sċulan, vpp: 1sg sċeal; 2sg sċealt; subj sċyle; past sċeold|sċold; pp sċulen
     shall, should, must; to owe
 sċuldra, nmw:
@@ -2538,6 +2714,10 @@ sealten, adj: fem.nom.sg sealtenu
     salt, salted
 sealtere, nm:
     salt worker
+sēam, nm:
+    seam
+sēamere, nm:
+    tailor
 seax, nn:
     knife, dagger
 sēċan, vw1: 2sg sēċest|sēcst; 3sg sēċeþ|sēcþ; past sōht
@@ -2731,6 +2911,8 @@ spell, nn:
 spellian, vw2:
     1. [trans.] to tell, announce, proclaim
     2. [intrans.] to talk, speak, converse
+spendan, vw1:
+    to spend
 spere, nn: nom.pl speru
     spear, lance, pike, javelin
 spillan, vw1:
@@ -2753,6 +2935,8 @@ sponge, nfw:
     sponge
 spor, nn: nom.pl sporu
     track, footprint, vestige
+spora, nmw:
+    SEE spura
 spornan, vs3:
     to kick
 sprǣċ, nf:
@@ -2770,6 +2954,8 @@ springan, vs3:
     to jump, leap, spring
 sprūtan, vs2:
     to sprout
+spura, nmw:
+    spur
 spurnan, vs3:
     SEE spornan
 spyrian, vw1:
@@ -2794,6 +2980,8 @@ stēda, nmw:
     steed, stallion
 stede, nm:
     place, spot; position
+stelan, vs4:
+    to steal
 stellan, vw1:
     to place
 stenċ, nm:
@@ -2871,6 +3059,8 @@ sumor, nm: dat.sg sumora|sumore
     summer
 sumur, nm: dat.sg sumura|sumure
     SEE sumor
+sunna, nmw:
+    SEE sunne
 sunnan-dæġ, nm: stem.pl sunnan-dag
     Sunday
 sunne, nfw:
@@ -2927,6 +3117,10 @@ swerian, vs6: 2sg swerest; 3sg swereþ; past.1sg swōr; past.pl swōron; pp swor
     to swear
 swēte, adj: fem.nom.sg swētu
     sweet
+swīfan, vs1:
+    to move, sweep
+swift, adj:
+    swift, quick, fast
 # TODO: other sources call this a pronoun, but is it?
 swilċ, adj:
     SEE swelċ
@@ -2954,6 +3148,12 @@ tabula, nmw:
     SEE tabule
 tabule, nfw:
     tablet
+tacan, vs6:
+    to take
+tācn, nn:
+    token, sign
+tācnian, vw2:
+    to mark, indicate, signify
 talu, nf:
     tale, story
 tam, adj: fem.nom.sg tamu
@@ -2964,6 +3164,8 @@ targe, nfw:
     targe, small shield
 tāxe, nfw:
     toad
+tǣċan, vw1: past tǣht
+    to show, teach
 tæġl, nm:
     tail
 tēag, nf:
@@ -2978,6 +3180,10 @@ tellan, vw1:
     to count; to tell
 temian, vw2:
     to tame
+# TODO: BT and Wiktionary disagree on vowel length
+teorian, vw2:
+    1. [intrans.] to tire; to faint, fail, cease
+    2. [trans.] to tire; to cause to faint, fail, cease
 teors, nm:
     penis
 tēoþa, adjw:
@@ -2992,6 +3198,8 @@ tīen, adji:
     ten
 tigele, nfw:
     tile, brick
+tilia, nmw:
+    farmer, farmhand, cultivator, tiller
 tīma, nmw:
     time
 tīman, vw1:
@@ -3121,6 +3329,8 @@ tȳn, vw1:
     to there, thither
 þǣr, adv:
     there, in that place
+þæs, adv:
+    therefore, afterwards
 þæt, pron: acc þæt; gen þæs; dat þǣm|þām; inst þȳ|þon|þē
     the, that (neuter)
 þæt, conj:
@@ -3134,7 +3344,9 @@ tȳn, vw1:
 þēah, adv:
     yet, still, however, nevertheless
 þeġn, nm:
-    thane, knight, mid-ranking nobleman
+    thane, knight, mid-ranking nobleman; servant
+þeġnian, vw2:
+    to serve
 þenċan, vw1: 2sg þenċest|þencst; 3sg þenċeþ|þencþ; past þōht
     to think, opine
 þēod, nf:
@@ -3177,6 +3389,10 @@ tȳn, vw1:
     thorny
 þrǣd, nm:
     thread
+þrǣl, nm:
+    thrall, slave, servant
+þræsċe, nfw:
+    SEE þrysċe
 þrēat, nm:
     1. crowd, band, multitude, army
     2. violence, force
@@ -3195,6 +3411,8 @@ tȳn, vw1:
     thirtieth
 þryċċan, vw1: past þryht|þryct; pp þryht|þryċċed
     to push, press
+þrysċe, nfw:
+    thrush
 þū, pron: acc þē|þec; gen þīn; dat þē
     thou, thee, you (singular)
 þūma, nmw:
@@ -3242,6 +3460,10 @@ uncer, adjs:
     our (of two people)
 under, prep:
     under
+underling, nm:
+    underling, subordinate, subject
+under-neoþan, prep:
+    underneath
 under-standan, vs6: past.1sg under-stōd; past.pl under-stōdon
     to understand
 un-dīere, adj: fem.nom.sg un-dīeru
@@ -3282,6 +3504,10 @@ wāc, nn:
     a weakness
 wacian, vw2:
     to be awake; to guard, watch
+wād, nn:
+    woad
+wadan, vs6:
+    to go, pass, proceed
 wafian, vw2:
     1. to wonder, be amazed
     2. to wave
@@ -3297,6 +3523,11 @@ wascan, vs6: 2sg wasċst; 3sg wasċþ
     to wash
 waxan, vs6:
     SEE wascan
+wæbb, nn:
+    SEE webb
+# TODO: any palatalization?
+wǣcan, vw1: past wǣht; pp wǣht|wǣced
+    to weaken, afflict, oppress
 wæflian, vw2:
     to utter foolish things, babble
 wæġn, nm:
@@ -3379,6 +3610,8 @@ wēnan, vw1:
     2. to hope for, expect
 wendan, vw1:
     to go
+wēoce, nfw:
+    wick
 # TODO: -u?
 wēo-fod, nn:
     altar
@@ -3430,6 +3663,9 @@ wīċing, nm:
     pirate, Viking
 wīd, adj:
     wide
+# TODO: many variant forms
+widuwe, nfw:
+    widow
 wīf, nn:
     woman; wife
 wīf-mann, nmv:
@@ -3462,6 +3698,8 @@ wine, nm:
     friend
 winestra, adjw:
     left, left-hand
+winna, nmw:
+    opponent
 winnan, vs3:
     to work, labor, toil; to contend, fight, struggle
 # TODO: BT notes neuter plural form wintru; does this make the noun actually neuter in such a case?
@@ -3469,6 +3707,10 @@ winter, nm: stem wintr; dat.sg wintre|wintra
     winter
 wīn-trēow, nn:
     vine
+wīpian, vw2:
+    to wipe
+wīr, nm:
+    wire
 wīs, adj:
     wise
 wīs-dōm, nm:
@@ -3522,6 +3764,14 @@ wrǣne, adj: fem.nom.sg wrǣnu
     lustful; sexually aroused
 wrecan, vs5:
     to drive, press; to punish; to avenge
+wrenċ, nm:
+    trick, artifice, wile, stratagem
+wrenċan, vw1: past wrenct; pp wrenċed
+    to twist
+wrenna, nmw:
+    wren
+wrenne, nfw:
+    SEE wrenna
 wringan, vs3:
     to wring, twist
 wrist, nf:

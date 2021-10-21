@@ -103,9 +103,11 @@ class Lexicon(object):
         for word, entries in self.index.items():
             print(word, ":", [entry.lemma for entry in entries])
 
-    def dump_lemmas(self):
+    def dump_lemmas(self, word_type_regex):
+        word_type_regex = re.compile(word_type_regex)
         for entry in self.entries:
-            print(entry.lemma)
+            if any(word_type_regex.match(x) for x in entry.word_types):
+                print(entry.lemma)
 
 
 # Parses a list of special forms
