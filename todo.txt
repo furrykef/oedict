@@ -79,6 +79,8 @@ Generate sċe for sċ[^iey] (e.g. sċop → sċeop)
 Generate correct weak forms for adjectives such as hēah
 
 
+ælċ, but ælcre
+
 brōþor: make sure brōþer- vs. brōþr- is consistent in both special and generated forms (note that, I believe, broþeru is attested but perhaps e.g. sweosteru is not)
 
 ġehwelc (and ġehwilc)
