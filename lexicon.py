@@ -18,10 +18,13 @@ SPECIAL_TYPES = set((
 
 
 class Entry(object):
-    def __init__(self, lemma, word_types):
+    def __init__(self, lemma, word_types, special, text, file_pos, num_lines):
         self.lemma = lemma
         self.word_types = word_types
-        self.text = ""
+        self.special = special
+        self.text = text
+        self.file_pos = file_pos
+        self.num_lines = num_lines
 
 
 class LexiconError(Exception):
@@ -33,42 +36,23 @@ class Lexicon(object):
         self.entries = []
         self.index = {}
         entry = None
-        line_num = 0
+        line_num = 1
         with open(filename, 'r', encoding='utf-8') as infile:
             try:
-                for line in infile:
-                    line_num += 1
-                    if line.startswith(" "):
-                        # Add to most recent entry's definition
-                        line = line.strip()
-                        entry.text += line + "\n"
-                    else:
-                        # Create a new entry if there's anything on this line
-                        line = line.strip()
-                        if len(line) == 0 or line[0] == '#':
-                            continue
-                        if ':' not in line:
-                            raise LexiconError("missing colon")
-                        split_line = line.split(':')
-                        if len(split_line) > 2:
-                            raise LexiconError("too many colons")
-                        lemma_section = [x.strip() for x in split_line[0].split(",")]
-                        lemma = lemma_section[0]
-                        word_types = lemma_section[1:]
-                        special = parse_special(split_line[1])
-                        entry = Entry(lemma, word_types)
-                        self.entries.append(entry)
-                        for word_type in word_types:
-                            forms = gen_forms(lemma, word_type, special)
-                            for key, value in forms.items():
-                                assert isinstance(value, list)
-                                for form in value:
-                                    if form != '-':
-                                        for variant in gen_variants(form):
-                                            variant = normalize(variant)
-                                            if variant not in self.index:
-                                                self.index[variant] = set()
-                                            self.index[variant].add(entry)
+                while entry := read_next_entry(infile):
+                    line_num += entry.num_lines
+                    self.entries.append(entry)
+                    for word_type in entry.word_types:
+                        forms = gen_forms(entry.lemma, word_type, entry.special)
+                        for key, value in forms.items():
+                            assert isinstance(value, list)
+                            for form in value:
+                                if form != '-':
+                                    for variant in gen_variants(form):
+                                        variant = normalize(variant)
+                                        if variant not in self.index:
+                                            self.index[variant] = set()
+                                        self.index[variant].add(entry)
             except LexiconError as err:
                 # TODO: do something else here??
                 print("Line", line_num, ":", err, file=sys.stderr)
@@ -108,6 +92,43 @@ class Lexicon(object):
         for entry in self.entries:
             if any(word_type_regex.match(x) for x in entry.word_types):
                 print(entry.lemma)
+
+
+def read_next_entry(infile):
+    num_lines = 0
+    pos = infile.tell()
+    # Skip comments and blank lines
+    while True:
+        line = infile.readline()
+        if not line:
+            # Hit end of file without finding an entry
+            return None
+        num_lines += 1
+        line = line.strip()
+        if len(line) != 0 and not line.startswith("#"):
+            break
+    if ':' not in line:
+        raise LexiconError("missing colon")
+    split_line = line.split(':')
+    if len(split_line) > 2:
+        raise LexiconError("too many colons")
+    lemma_section = [x.strip() for x in split_line[0].split(",")]
+    lemma = lemma_section[0]
+    word_types = lemma_section[1:]
+    special = parse_special(split_line[1])
+    text = ""
+    backup = infile.tell()
+    while line := infile.readline()
+        if line.startswith(" "):
+            num_lines += 1
+            text += line.strip() + "\n"
+            backup = infile.tell()
+        else:
+            # Whoops, this line isn't part of this entry
+            # We've finished reading the entry
+            infile.seek(backup)
+            break
+    return Entry(lemma, word_types, special, text, pos, num_lines)
 
 
 # Parses a list of special forms
