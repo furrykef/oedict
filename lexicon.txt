@@ -208,6 +208,8 @@ balsam, nn: nom.pl balsamu
     balsam, balm
 bān, nn:
     bone
+bana, nmw:
+    killer, murderer
 bannan, vs7:
     to summon
 bār, nm:
@@ -1505,6 +1507,8 @@ frēond-līċ, adj:
     friendly
 frēosan, vs2: past.pl fruron; pp froren
     to freeze
+friþ, nm, nn:
+    peace
 frīend, nmv:
     SEE frēond
 frīġ-dæġ, nm: stem.pl frīġ-dag
@@ -2018,6 +2022,8 @@ hēr, nn:
 # TODO: alternate stem heriġ, also possibly just her
 here, nm: stem herġ
     army
+here-toga, nmw:
+    leader of an army: commander, general
 herm, nm:
     SEE hearm
 hīd, nf:

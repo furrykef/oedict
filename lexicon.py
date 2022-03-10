@@ -17,8 +17,9 @@ SPECIAL_TYPES = set((
 ))
 
 
+# NB: num_lines is only a crude hack to aid tracking the line number when parsing the file
 class Entry(object):
-    def __init__(self, lemma, word_types, special, text, file_pos, num_lines):
+    def __init__(self, lemma, word_types, special, text, file_pos=0, num_lines=0):
         self.lemma = lemma
         self.word_types = word_types
         self.special = special

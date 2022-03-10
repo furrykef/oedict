@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 import html
+import sqlite3
 
 import flask
 import markdown
-from sqlitedict import SqliteDict
 
-import index
+import lexdb
 import lexicon
 
 
@@ -17,9 +17,10 @@ def search_oe(search_terms="nawiht"):
     search_terms = search_terms.split()
     text = ""
     with open('lexicon.txt', 'r', encoding='utf-8') as lexfile:
-        with SqliteDict('index.sqlite') as db:
+        with sqlite3.connect('file:lexicon.out.sqlite3?mode=ro', uri=True) as con:
+            cur = con.cursor()
             for term in search_terms:
-                entries = index.lookup(term, lexfile, db)
+                entries = lexdb.lookup(term, cur)
                 if len(entries) == 0:
                     text += f"<h2>Not found: {html.escape(term)}</h2>\n"
                 else:
