@@ -19,12 +19,11 @@ SPECIAL_TYPES = set((
 
 # NB: num_lines is only a crude hack to aid tracking the line number when parsing the file
 class Entry(object):
-    def __init__(self, lemma, word_types, special, text, file_pos=0, num_lines=0):
+    def __init__(self, lemma, word_types, special, text, num_lines=0):
         self.lemma = lemma
         self.word_types = word_types
         self.special = special
         self.text = text
-        self.file_pos = file_pos
         self.num_lines = num_lines
 
 
@@ -97,7 +96,6 @@ class Lexicon(object):
 
 def read_next_entry(infile):
     num_lines = 0
-    pos = infile.tell()
     # Skip comments and blank lines
     while True:
         line = infile.readline()
@@ -129,7 +127,7 @@ def read_next_entry(infile):
             # We've finished reading the entry
             infile.seek(backup)
             break
-    return Entry(lemma, word_types, special, text, pos, num_lines)
+    return Entry(lemma, word_types, special, text, num_lines)
 
 
 # Parses a list of special forms
