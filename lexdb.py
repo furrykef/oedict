@@ -6,14 +6,7 @@ import sqlite3
 import lexicon
 
 
-def gen_db(lex, filename):
-    try:
-        os.unlink(filename)
-    except FileNotFoundError:
-        pass
-    with sqlite3.connect(filename) as con:
-        cur = con.cursor()
-        cur.executescript("""
+SCHEMA = """
 CREATE TABLE entries (
     id INT PRIMARY KEY,
     lemma TEXT NOT NULL,
@@ -38,7 +31,18 @@ CREATE TABLE lex_index (
     entry_id INT REFERENCES entries(id) NOT NULL,
     UNIQUE(word, entry_id)
 );
-""")
+"""
+
+
+def gen_db(lex, filename):
+    try:
+        os.unlink(filename)
+    except FileNotFoundError:
+        pass
+    conn = sqlite3.connect(filename)
+    try:
+        cur = conn.cursor()
+        cur.executescript(SCHEMA)
         ids = {}
         for num, entry in enumerate(lex.entries):
             id = num + 1
@@ -61,20 +65,24 @@ CREATE TABLE lex_index (
                 "INSERT INTO lex_index VALUES (?, ?)",
                 ((word, ids[entry]) for entry in entries)
             )
+        conn.commit()
+    finally:
+        conn.close()
 
 
-def lookup(word, cursor):
+def lookup(word, conn):
     results = []
-    _lookup_impl(word, cursor, results)
+    _lookup_impl(word, conn, results)
     return results
 
-# TODO: code duplication with Lexicon._lookup_impl
+# @TODO@: code duplication with Lexicon._lookup_impl
 # (We should probably get rid of that one anyway)
-def _lookup_impl(word, cursor, results):
+def _lookup_impl(word, conn, results):
+    cursor = conn.cursor()
     word = lexicon.normalize(word)
     cursor.execute("SELECT entry_id FROM lex_index WHERE word = ?", (word,))
     entry_ids = [x[0] for x in cursor.fetchall()]
-    entries = [fetch_entry(id, cursor) for id in entry_ids]
+    entries = [fetch_entry(id, conn) for id in entry_ids]
     for entry in entries:
         if entry not in results:
             results.append(entry)
@@ -84,7 +92,23 @@ def _lookup_impl(word, cursor, results):
                 _lookup_impl(matches.group(1), cursor, results)
 
 
-def fetch_entry(id, cursor):
+# @TODO@: code duplication with Lexicon.reverse_lookup
+# (We should probably get rid of that one anyway)
+# TODO: use FTS? This is what it's made for, but it's quite limited...
+def reverse_lookup(search_string, conn):
+    cursor = conn.cursor()
+    search_string = search_string.lower()
+    results = []
+    for row in cursor.execute("SELECT id, definition FROM entries"):
+        id, definition = row
+        if not definition.startswith("SEE"):
+            if search_string in definition.lower():
+                results.append(fetch_entry(id, conn))
+    return results
+
+
+def fetch_entry(id, conn):
+    cursor = conn.cursor()
     cursor.execute("SELECT lemma, definition FROM entries WHERE id = ?", (id,))
     entry = cursor.fetchone()
     cursor.execute("SELECT word_type FROM word_types WHERE id = ?", (id,))

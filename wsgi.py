@@ -9,35 +9,41 @@ import lexdb
 import lexicon
 
 
+DB_URI = 'file:lexicon.out.sqlite3?mode=ro'
+
+
 application = flask.Flask(__name__)
 
 @application.route('/search/oe/')
 @application.route('/search/oe/<search_terms>')
 def search_oe(search_terms="nawiht"):
-    search_terms = search_terms.split()
-    text = ""
-    with open('lexicon.txt', 'r', encoding='utf-8') as lexfile:
-        with sqlite3.connect('file:lexicon.out.sqlite3?mode=ro', uri=True) as con:
-            cur = con.cursor()
-            for term in search_terms:
-                entries = lexdb.lookup(term, cur)
-                if len(entries) == 0:
-                    text += f"<h2>Not found: {html.escape(term)}</h2>\n"
-                else:
-                    text += format_entries(entries)
-            return text
+    conn = sqlite3.connect(DB_URI, uri=True)
+    try:
+        search_terms = search_terms.split()
+        text = ""
+        for term in search_terms:
+            entries = lexdb.lookup(term, conn)
+            if len(entries) == 0:
+                text += f"<h2>Not found: {html.escape(term)}</h2>\n"
+            else:
+                text += format_entries(entries)
+    finally:
+        conn.close()
+    return text
 
 
 @application.route('/search/reverse/')
 @application.route('/search/reverse/<search_string>')
 def search_reverse(search_string="nothing"):
-    lex = lexicon.Lexicon('lexicon.txt')
-    entries = lex.reverse_lookup(search_string)
-    text = ""
-    if len(entries) == 0:
-        text += f"<h2>Not found: {html.escape(search_string)}</h2>\n"
-    else:
-        text += format_entries(entries)
+    conn = sqlite3.connect(DB_URI, uri=True)
+    try:
+        entries = lexdb.reverse_lookup(search_string, conn)
+        if len(entries) == 0:
+            text = f"<h2>Not found: {html.escape(search_string)}</h2>\n"
+        else:
+            text = format_entries(entries)
+    finally:
+        conn.close()
     return text
 
 
