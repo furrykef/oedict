@@ -3,6 +3,7 @@ import argparse
 import sys
 import textwrap
 
+import index
 import lexicon
 
 
@@ -13,6 +14,8 @@ def main(argv=None):
     p.add_argument('-l', '--lexicon', default='lexicon.txt', help="filename of lexicon")
     p.add_argument('-i', '--interactive', action='store_true', help="interactive mode")
     p.add_argument('-r', '--reverse', action='store_true', help="reverse lookup")
+    p.add_argument('-d', '--db', default='index.sqlite', help="filename of index database")
+    p.add_argument('-g', '--gen-db', action='store_true', help="generate index database")
     p.add_argument('--dump-index', action='store_true', help="dump debug stuff")
     p.add_argument('--dump-lemmas', action='store_true', help="dump debug stuff")
     p.add_argument('--type', default="", help="word type for --dump-lemmas (regex)")
@@ -20,6 +23,8 @@ def main(argv=None):
     p.add_argument('search_terms', nargs='*')
     args = p.parse_args(argv)
     lex = lexicon.Lexicon(args.lexicon)
+    if args.gen_db:
+        index.gen_index_db(lex, args.db)
     if args.dump_index:
         lex.dump_index()
     if args.dump_lemmas:

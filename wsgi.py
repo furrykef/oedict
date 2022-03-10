@@ -3,7 +3,9 @@ import html
 
 import flask
 import markdown
+from sqlitedict import SqliteDict
 
+import index
 import lexicon
 
 
@@ -12,16 +14,17 @@ application = flask.Flask(__name__)
 @application.route('/search/oe/')
 @application.route('/search/oe/<search_terms>')
 def search_oe(search_terms="nawiht"):
-    lex = lexicon.Lexicon('lexicon.txt')
     search_terms = search_terms.split()
     text = ""
-    for term in search_terms:
-        entries = lex.lookup(term)
-        if len(entries) == 0:
-            text += f"<h2>Not found: {html.escape(term)}</h2>\n"
-        else:
-            text += format_entries(entries)
-    return text
+    with open('lexicon.txt', 'r', encoding='utf-8') as lexfile:
+        with SqliteDict('index.sqlite') as db:
+            for term in search_terms:
+                entries = index.lookup(term, lexfile, db)
+                if len(entries) == 0:
+                    text += f"<h2>Not found: {html.escape(term)}</h2>\n"
+                else:
+                    text += format_entries(entries)
+            return text
 
 
 @application.route('/search/reverse/')

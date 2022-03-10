@@ -118,7 +118,7 @@ def read_next_entry(infile):
     special = parse_special(split_line[1])
     text = ""
     backup = infile.tell()
-    while line := infile.readline()
+    while line := infile.readline():
         if line.startswith(" "):
             num_lines += 1
             text += line.strip() + "\n"
@@ -622,6 +622,7 @@ def normalize(text):
                 .replace('&', 'and')
                 .replace('⁊', 'and')
                 .replace('ꝥ', 'thaet')
+                .replace('x', 'cs')
                 .replace('-', ""))
     text = unidecode.unidecode(text)
     if len(text) >= 2 and text[-2] == text[-1]:
