@@ -856,9 +856,14 @@ cwelan, vs4:
 cwellan, vw1:
     to kill; quell
 cwēn, nf:
-    queen; wife
+    woman; wife; queen
+# Yes, with short vowel!
+cwene, nfw:
+    SEE cwēn
 cweþan, vs5: past.pl cwǣdon; pp cweden
     to say
+cweoc, adj: fem.nom.sg cweocu
+    SEE cwic
 cwic, adj: fem.nom.sg cwicu
     alive
 cyċene, nfw:
@@ -1507,8 +1512,6 @@ frēond-līċ, adj:
     friendly
 frēosan, vs2: past.pl fruron; pp froren
     to freeze
-friþ, nm, nn:
-    peace
 frīend, nmv:
     SEE frēond
 frīġ-dæġ, nm: stem.pl frīġ-dag
@@ -1520,6 +1523,8 @@ frīġe-dæġ, nm: stem.pl frīġe-dag
     Friday
 friġnan, vs3: past.pl frugnon; pp frugnen
     to ask, inquire
+friþ, nm, nn:
+    peace
 frocga, nmw:
     SEE frogga
 frōd, adj:
@@ -4392,6 +4397,7 @@ wynn, nf:
     delight, pleasure
 wyn-sum, adj: fem.nom.sg wyn-sumu
     nice, pleasant
+# TODO: Wiktionary suggests the -ċ- is depalatalized in 2sg and 3sg
 wyrċan, vw1: past worht|wroht
     to work, make
 wyrd, nf:

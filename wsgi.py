@@ -9,7 +9,9 @@ import lexdb
 import lexicon
 
 
-DB_URI = 'file:lexicon.out.sqlite3?mode=ro'
+LEXICON_FILENAME = 'lexicon.txt'
+DB_FILENAME = 'lexicon.out.sqlite3'
+DB_URI = f'file:{DB_FILENAME}?mode=ro'
 
 
 application = flask.Flask(__name__)
@@ -17,6 +19,7 @@ application = flask.Flask(__name__)
 @application.route('/search/oe/')
 @application.route('/search/oe/<search_terms>')
 def search_oe(search_terms="nawiht"):
+    #gen_db_if_outdated()
     conn = sqlite3.connect(DB_URI, uri=True)
     try:
         search_terms = search_terms.split()
@@ -35,6 +38,7 @@ def search_oe(search_terms="nawiht"):
 @application.route('/search/reverse/')
 @application.route('/search/reverse/<search_string>')
 def search_reverse(search_string="nothing"):
+    #gen_db_if_outdated()
     conn = sqlite3.connect(DB_URI, uri=True)
     try:
         entries = lexdb.reverse_lookup(search_string, conn)
@@ -55,4 +59,8 @@ def format_entries(entries):
         text += f"<p><i>{html.escape(types)}</i></p>\n"
         text += markdown.markdown(entry.text)
     return text
+
+
+def gen_db_if_outdated():
+    lexdb.gen_db_if_outdated(LEXICON_FILENAME, DB_FILENAME)
 

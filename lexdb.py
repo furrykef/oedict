@@ -1,5 +1,6 @@
 import os
 import re
+import tempfile
 
 import sqlite3
 
@@ -35,10 +36,38 @@ CREATE TABLE lex_index (
 
 
 def gen_db(lex, filename):
+    # Write the new database to a temporary file, then move it to the
+    # desired location. This way it should be friendly to concurrent
+    # processes, and should still do the Right Thing when two processes
+    # run this function at the same time. The temporary file is created
+    # in the same directory as its final location in case /tmp is on
+    # another filesystem; this way the move should be atomic.
+    dirname, basename = os.path.split(filename)
+    tmpfile, tmp_filename = tempfile.mkstemp(".tmp", f"{basename}-", dirname)
+    os.close(tmpfile)       # sqlite3 will reopen it
+    os.chmod(tmp_filename, 0o664)
     try:
-        os.unlink(filename)
-    except FileNotFoundError:
-        pass
+        gen_db_impl(lex, tmp_filename)
+        os.rename(tmp_filename, filename)
+    except:
+        # Something went wrong; delete our temporary file
+        try:
+            os.remove(tmp_filename)
+        except:
+            pass
+        raise
+
+
+# NB: Takes a lexicon *filename*, not a Lexicon!
+def gen_db_if_outdated(lex_filename, db_filename):
+    lex_stats = os.stat(lex_filename)
+    db_stats = os.stat(db_filename)
+    if lex_stats.st_mtime > db_stats.st_mtime:
+        lex = lexicon.Lexicon(lex_filename)
+        gen_db(lex, db_filename)
+
+
+def gen_db_impl(lex, filename):
     conn = sqlite3.connect(filename)
     try:
         cur = conn.cursor()
@@ -89,7 +118,7 @@ def _lookup_impl(word, conn, results):
             matches = re.match(r"^SEE(?:\s+?)(.+)", entry.text)
             if matches:
                 # Follow redirect
-                _lookup_impl(matches.group(1), cursor, results)
+                _lookup_impl(matches.group(1), conn, results)
 
 
 # @TODO@: code duplication with Lexicon.reverse_lookup
