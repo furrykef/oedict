@@ -3417,6 +3417,8 @@ spēd, nf:
     2. speed, quickness
 spēdan, vw1:
     to succeed
+spēdiġ, adj:
+    successful, wealthy
 spell, nn:
     story, narrative, account, speech, sermon
 spellian, vw2:

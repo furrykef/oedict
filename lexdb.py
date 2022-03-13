@@ -61,8 +61,11 @@ def gen_db(lex, filename):
 # NB: Takes a lexicon *filename*, not a Lexicon!
 def gen_db_if_outdated(lex_filename, db_filename):
     lex_stats = os.stat(lex_filename)
-    db_stats = os.stat(db_filename)
-    if lex_stats.st_mtime > db_stats.st_mtime:
+    try:
+        db_stats = os.stat(db_filename)
+    except FileNotFoundError:
+        db_stats = None
+    if db_stats is None or lex_stats.st_mtime > db_stats.st_mtime:
         lex = lexicon.Lexicon(lex_filename)
         gen_db(lex, db_filename)
 
