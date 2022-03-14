@@ -860,10 +860,10 @@ cwēn, nf:
 # Yes, with short vowel!
 cwene, nfw:
     SEE cwēn
-cweþan, vs5: past.pl cwǣdon; pp cweden
-    to say
 cweoc, adj: fem.nom.sg cweocu
     SEE cwic
+cweþan, vs5: past.pl cwǣdon; pp cweden
+    to say
 cwic, adj: fem.nom.sg cwicu
     alive
 cyċene, nfw:
@@ -2733,8 +2733,9 @@ nesan, vi: 1sg neom; 2sg neart; 3sg nis; pl ne_sind|ne_sindon; subj ne_sīe; pas
     to not be; [with past participle] to have (done something)
 nese, int:
     no, nay
+# TODO: different etymologies
 nest, nn:
-    1. nest
+    1. nest, or the chicks within
     2. provisions, victuals, rations
 nestlian, vw2:
     to make a nest

@@ -58,41 +58,6 @@ class Lexicon(object):
                 print("Line", line_num, ":", err, file=sys.stderr)
                 sys.exit(1)
 
-    def lookup(self, word):
-        results = []
-        self._lookup_impl(word, results)
-        return results
-
-    def _lookup_impl(self, word, results):
-        word = normalize(word)
-        entries = self.index.get(word, [])
-        for entry in entries:
-            if entry not in results:
-                results.append(entry)
-                matches = re.match(r"^SEE(?:\s+?)(.+)", entry.text)
-                if matches:
-                    # Follow redirect
-                    self._lookup_impl(matches.group(1), results)
-
-    def reverse_lookup(self, search_string):
-        search_string = search_string.lower()
-        results = []
-        for entry in self.entries:
-            if not entry.text.startswith("SEE"):
-                if search_string in entry.text.lower():
-                    results.append(entry)
-        return results
-
-    def dump_index(self):
-        for word, entries in self.index.items():
-            print(word, ":", [entry.lemma for entry in entries])
-
-    def dump_lemmas(self, word_type_regex):
-        word_type_regex = re.compile(word_type_regex)
-        for entry in self.entries:
-            if any(word_type_regex.match(x) for x in entry.word_types):
-                print(entry.lemma)
-
 
 def read_next_entry(infile):
     num_lines = 0
