@@ -14,8 +14,8 @@ DB_FILENAME = 'lexicon.out.sqlite3'
 
 application = flask.Flask(__name__)
 
-@application.route('/search/oe/')
-@application.route('/search/oe/<search_terms>')
+@application.route('/api/search/oe/')
+@application.route('/api/search/oe/<search_terms>')
 def search_oe(search_terms="nawiht"):
     with lexdb.LexDB(LEX_FILENAME, DB_FILENAME) as db:
         search_terms = search_terms.split()
@@ -29,8 +29,8 @@ def search_oe(search_terms="nawiht"):
     return text
 
 
-@application.route('/search/reverse/')
-@application.route('/search/reverse/<search_string>')
+@application.route('/api/search/reverse/')
+@application.route('/api/search/reverse/<search_string>')
 def search_reverse(search_string="nothing"):
     with lexdb.LexDB(LEX_FILENAME, DB_FILENAME) as db:
         entries = db.reverse_lookup(search_string)

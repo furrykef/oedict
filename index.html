@@ -28,15 +28,43 @@
       });
 
       function search() {
-        let search_terms = document.getElementById("search_terms").value;
-        let search_type = document.querySelector("input[name=search_type]:checked").value;
+        const search_terms = document.getElementById("search_terms").value;
+        const search_type = document.querySelector("input[name=search_type]:checked").value;
+        search_impl(search_terms, search_type);
+        history.pushState({}, "", `/dict/${search_type}/${encodeURIComponent(search_terms)}`);
+      }
+
+      function search_impl(search_terms, search_type) {
         let xhr = new XMLHttpRequest();
         xhr.onload = function () {
           document.getElementById("definitions").innerHTML = xhr.responseText;
         };
-        xhr.open("GET", `search/${search_type}/${encodeURIComponent(search_terms)}`);
+        xhr.open("GET", `/api/search/${search_type}/${encodeURIComponent(search_terms)}`);
         xhr.send();
       }
+
+      function loadFromUrl(url) {
+        const result = url.match(/\/dict\/(oe|reverse)\/(.*)/);
+        if (result) {
+          const search_type = result[1];
+          const search_terms = result[2];
+          document.getElementById("search_terms").value = search_terms;
+          if (search_type == "reverse") {
+            document.getElementById("reverse").checked = true;
+          } else {
+            document.getElementById("oe").checked = true;
+          }
+          search_impl(search_terms, search_type);
+        }
+      }
+
+      addEventListener("popstate", (event) => {
+        loadFromUrl(location.pathname)
+      });
+
+      // If the URL has a search in it when we first load,
+      // conduct the search
+      loadFromUrl(location.pathname);
     </script>
   </body>
 </html>

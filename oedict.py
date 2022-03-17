@@ -46,7 +46,8 @@ def lookup(db, search_str, reverse):
         print("Not found:", search_str, "\n")
     else:
         for entry in entries:
-            print(entry.lemma + ':')
+            types = "; ".join(lexicon.expand_word_type(word_type) for word_type in entry.word_types)
+            print(f"{entry.lemma}: {types}")
             print(textwrap.indent(entry.text, " "*4))
 
 
