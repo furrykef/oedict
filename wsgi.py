@@ -41,6 +41,13 @@ def search_reverse(search_string="nothing"):
     return text
 
 
+@application.route('/api/search/random/')
+def random():
+    with lexdb.LexDB(LEX_FILENAME, DB_FILENAME) as db:
+        text = format_entries([db.random_lookup()])
+    return text
+
+
 def format_entries(entries):
     text = ""
     for entry in entries:

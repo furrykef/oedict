@@ -151,6 +151,10 @@ class LexDB(object):
                     results.append(self.fetch_entry(id))
         return results
 
+    def random_lookup(self):
+        result = self.conn.execute("SELECT id FROM entries WHERE definition NOT GLOB 'SEE *' ORDER BY RANDOM() LIMIT 1")
+        return self.fetch_entry(result.fetchone()[0])
+
     def check_alphabetization(self):
         alphabet = "aæbcdefghijklmnopqrstþuvwxyz"
         xlate = str.maketrans("āǣēīōūȳċġ", "aæeiouycg")
