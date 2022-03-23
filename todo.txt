@@ -64,6 +64,8 @@ Searching for "gehaten" pulls up "ġehātan", which says "SEE hātan", which pul
 
 It seems a little odd to call "niht" vocalic, since it shows no umlaut.
 
+ġenumen, not ġenomen (the "m" is nasal, raising the vowel); see Q&R §186
+
 
 Respect vowel length, diacritics, etc. when following redirects
 

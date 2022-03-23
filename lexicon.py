@@ -309,7 +309,7 @@ def gen_pronoun(lemma, word_type, special):
 
 def gen_verb(lemma, word_type, special):
     long_infinitives = [lemma + 'ne']
-    if lemma.endswith(('ēan', 'ēon', 'ān', 'ōn', 'ȳn')):
+    if lemma.endswith(('ēan', 'ēon', 'īon', 'ān', 'ōn', 'ȳn')):
         # Irregular infinitive
         inf_stem = lemma[:-1]
         pres_1sg = inf_stem
@@ -490,9 +490,9 @@ def is_vowel(ch):
 #   Is that OK?
 def i_mutate(word):
     initial, nucleus, final = split_word(word)
-    if nucleus in ('ēa', 'ēo', 'īe'):
+    if nucleus in ('ēa', 'ēo', 'īo', 'īe'):
         nucleus = 'īe'
-    elif nucleus in ('ea', 'eo', 'ie'):
+    elif nucleus in ('ea', 'eo', 'io', 'ie'):
         nucleus = 'ie'
     elif nucleus == 'a':
         # This bit is why we can't just call mutate()
@@ -512,7 +512,7 @@ def mutate(word, replacement):
     return initial + nucleus + final
 
 def split_word(word):
-    match = re.match(r"(.*?)(īe|ie|ēa|ea|ēo|eo|[āaǣæēeīiōoūuȳy])([b-df-hj-np-tv-zþðċġ]*)$", word)
+    match = re.match(r"(.*?)(ēa|ea|ēo|eo|īo|io|īe|ie|[āaǣæēeīiōoūuȳy])([b-df-hj-np-tv-zþðċġ]*)$", word)
     return match.groups()
 
 def get_nucleus(word):
@@ -555,7 +555,11 @@ def gen_variants_impl(next, results, preceding=""):
         # This is a word like trēow, which can also be spelled trēo
         results += [preceding, preceding + 'w']
         return
-    if next.startswith('īe'):
+    if next.startswith('īo'):
+        gen_variants_impl(next[2:], results, preceding + 'ēo')
+    elif next.startswith('io'):
+        gen_variants_impl(next[2:], results, preceding + 'eo')
+    elif next.startswith('īe'):
         gen_variants_impl(next[2:], results, preceding + 'ī')
         gen_variants_impl(next[2:], results, preceding + 'ȳ')
     elif next.startswith('ie'):
