@@ -294,13 +294,6 @@ belt, nm:
 bendan, vw1:
     1. to bend
     2. to bind, fetter
-bīo, nf:
-    bee
-# TODO: ċeorl or ċiorl?
-bīo-ċiorl, nm:
-    beekeeper
-bīoċere, nm:
-    beekeeper
 bēodan, vs2:
     to command, order, bid
 bēon, vi: 1sg bēo; 2sg bist; 3sg biþ; past.1sg wæs; past.pl wǣron
@@ -317,8 +310,6 @@ beorht, adj:
     bright
 beorhtian, vw2:
     to shine, brighten
-biornan, vs3:
-    SEE biernan
 bēor-sċipe, nm:
     feast
 bēor-sele, nm:
@@ -361,6 +352,15 @@ biernan, vs3:
     to burn (intrans.)
 bindan, vs3:
     to bind
+bīo, nf:
+    bee
+bīoċere, nm:
+    beekeeper
+# TODO: ċeorl or ċiorl?
+bīo-ċiorl, nm:
+    beekeeper
+biornan, vs3:
+    SEE biernan
 # TODO: Wiktionary thinks this was "bierċe" in WS. Why?
 birċe, nfw:
     birch tree
@@ -659,9 +659,6 @@ cemban, vw1:
     to comb
 ċeorfan, vs3: past.pl curfon; pp corfen
     to cut, cut down, carve
-# TODO: ċeorl or ċiorl?
-ċiorl, nm:
-    man; husband; free peasant
 ċēosan, vs2: past.pl curon; pp coren
     to choose
 ċēowan, vs2: past.pl cuwon; pp cowen
@@ -682,6 +679,9 @@ cēpan, vw1: pp cēped|cēpt
     cheese
 ċild, nn: nom.pl ċild|ċildru|ċildra; gen.pl ċilda|ċildra; dat.pl ċildum|ċildrum
     child
+# TODO: ċeorl or ċiorl?
+ċiorl, nm:
+    man; husband; free peasant
 ċipp, nm:
     beam, log, stock
 ċirċe, nfw: acc.sg ċircan; gen.sg ċircan; dat.sg ċircan; nom.pl ċircan; dat.pl ċircum
@@ -711,8 +711,6 @@ clǣsnian, vw2:
     SEE clǣnsian
 clenċan, vw1:
     to clinch, hold fast
-cliof, nn: nom.pl cliofu
-    SEE clif
 clēofan, vs2:
     to cleave
 clif, nn: nom.pl clifu
@@ -721,6 +719,8 @@ climban, vs3:
     to climb
 clingan, vs3:
     to wither, shrink
+cliof, nn: nom.pl cliofu
+    SEE clif
 clipian, vw2:
     to vocalize; to call, address; to summon by calling
 cloccian, vw2:
@@ -887,12 +887,12 @@ cwēn, nf:
 # Yes, with short vowel!
 cwene, nfw:
     SEE cwēn
-cwioc, adj: fem.nom.sg cwiocu
-    SEE cwic
 cweþan, vs5: past.pl cwǣdon; pp cweden
     to say
 cwic, adj: fem.nom.sg cwicu
     alive
+cwioc, adj: fem.nom.sg cwiocu
+    SEE cwic
 cyċene, nfw:
     kitchen
 cylen, nf:
@@ -983,8 +983,6 @@ dēman, vw1:
     to deem, consider
 denn, nn:
     den, cave, lair
-dīofol, nn: stem dīofl; nom.pl dīoflu
-    devil, Satan
 dēogol, adj: stem dēogl; fem.nom.sg dēoglu
     SEE dēagol
 dēogol, nn: stem dēogl; nom.pl dēoglu
@@ -993,8 +991,6 @@ dēop, adj:
     deep
 dēor, nn:
     wild animal, beast
-dīoran, vw1: pp dīored
-    to hold dear, love
 deorc, adj:
     dark, obscure, gloomy, sad
 derian, vw1:
@@ -1021,6 +1017,10 @@ dilgian, vw2:
     SEE dilegian
 dimm, adj:
     dim, dark, obscure, hidden
+dīofol, nn: stem dīofl; nom.pl dīoflu
+    devil, Satan
+dīoran, vw1: pp dīored
+    to hold dear, love
 docga, nmw:
     dog
 dohtor, nf: acc.sg dohtor; gen.sg dohtor|dehter; dat.sg dehter; nom.pl dohtor|dohtra|dohtru; gen.pl dohtra; dat.pl dohtrum
@@ -1267,10 +1267,6 @@ eorþ, nf:
     SEE eorþe
 eorþe, nfw:
     earth, ground
-īow, nm:
-    SEE īw
-īower, adjs: fem.nom.sg īoweru
-    your (of multiple people)
 esol, nm:
     donkey, ass
 ēst, nf:
@@ -1338,8 +1334,6 @@ feoh, nn.sg: stem fēo
     money, goods, property, wealth; cattle
 feohtan, vs3:
     to fight
-fīond, nm:
-    enemy, fiend
 feord, nf:
     SEE fierd
 feorr, adj:
@@ -1398,6 +1392,8 @@ finger, nm: stem fingr
     finger
 finn, nm:
     fin
+fīond, nm:
+    enemy, fiend
 firen, nf:
     sin, crime; suffering; violence
 firenian, vw2:
@@ -1539,24 +1535,9 @@ fremede, adj: fem.nom.sg fremedu
     strange, foreign
 fremman, vw1:
     to do, perform
-frīo, adj:
-    free, having liberty or immunity; noble, glad, joyful
 # Probably related to frowe, but the precise etymology is unclear
 frēo, nf:
     woman
-frīo-dom, nm:
-    freedom, liberty
-# TODO: classification and forms
-frīoġan, vi:
-    1. to free, liberate
-    2. to love
-# TODO: classification and forms
-frīon, vi:
-    SEE frīoġan
-frīond, nm, nmv:
-    friend
-frīond-līċ, adj:
-    friendly
 frēosan, vs2: past.pl fruron; pp froren
     to freeze
 frīend, nmv:
@@ -1570,6 +1551,21 @@ frīġe-dæġ, nm: stem.pl frīġe-dag
     Friday
 friġnan, vs3: past.pl frugnon; pp frugnen
     to ask, inquire
+frīo, adj:
+    free, having liberty or immunity; noble, glad, joyful
+frīo-dom, nm:
+    freedom, liberty
+# TODO: classification and forms
+frīoġan, vi:
+    1. to free, liberate
+    2. to love
+# TODO: classification and forms
+frīon, vi:
+    SEE frīoġan
+frīond, nm, nmv:
+    friend
+frīond-līċ, adj:
+    friendly
 friþ, nm, nn:
     peace
 frocga, nmw:
@@ -1743,8 +1739,6 @@ gǣst, nm:
     to be enough, suffice
 ġeō, adv:
     once (upon a time), formerly
-ġioc, nn: nom.pl ġiocu
-    yoke
 ġeofa, nmw:
     SEE ġiefa
 ġēol, nn:
@@ -1761,8 +1755,6 @@ gǣst, nm:
     to yonder, over there
 ġeondan, prep:
     beyond
-ġiong, adj: comp ġingra; sup ġinġest
-    young
 ġeonre, adv:
     to yonder, over there
 ġeorn, adj:
@@ -1776,18 +1768,18 @@ gǣst, nm:
 # TODO: Wiktionary suggests ġīese
 ġēse, int:
     yes
-# TODO: past ġe-seowen or ġe-siowen?
-ġe-sīon, vs3: 2sg ġe-sīehst; 3sg ġe-sīehþ; past.1sg ġe-sāh; past.pl ġe-sigon; pp ġe-siġen|ġe-seowen|ġe-siwen
-    to strain, filter
 ġe-sēon, vs5: 2sg ġe-siehst; 3sg ġe-siehþ; past.1sg ġe-seah; past.pl ġe-sāwon; pp ġe-sewen
     SEE sēon
 ġe-sewen-līċ:
     visible
 ġe-sibbian, vw2:
     to pacify, appease; to ally, confederate; to gladden
-ġe-strīonan, vw1:
-    SEE strīonan
+# TODO: past ġe-seowen or ġe-siowen?
+ġe-sīon, vs3: 2sg ġe-sīehst; 3sg ġe-sīehþ; past.1sg ġe-sāh; past.pl ġe-sigon; pp ġe-siġen|ġe-seowen|ġe-siwen
+    to strain, filter
 ġe-strīenan, vw1:
+    SEE strīonan
+ġe-strīonan, vw1:
     SEE strīonan
 ġe-sund, adj:
     healthy, sound
@@ -1829,6 +1821,10 @@ gieltend, nm:
     gem, jewel
 ġim-stān, nm:
     gemstone, jewel
+ġioc, nn: nom.pl ġiocu
+    yoke
+ġiong, adj: comp ġingra; sup ġinġest
+    young
 ġit, pron: acc inc|incet; gen incer; dat inc
     you two
 gladian, vw2:
@@ -1840,10 +1836,6 @@ glæs, nn: stem.pl glas; nom.pl glasu
     glass
 glæsen, adj:
     glass
-glīow, nn:
-    glee, joy, mirth; music
-glīowian, vw2:
-    to joke, jest; to play music
 # TODO: what verb class?
 #glēsan, vw1:
 #    to gloss, explain
@@ -1855,6 +1847,10 @@ glida, nmw:
     kite (bird)
 glīdan, vw1:
     to glide
+glīow, nn:
+    glee, joy, mirth; music
+glīowian, vw2:
+    to joke, jest; to play music
 glōf, nf:
     glove
 # TODO: BT doesn't know the verb class, but Wiktionary thinks it's strong VII
@@ -2056,12 +2052,8 @@ henġest, nm:
     stallion, male horse
 henn, nf:
     hen
-hīo, pron: acc hīe; gen hire; dat hire
-    she, her; it (referring to a feminine noun)
 hēo, pron: acc hēo; gen heora; dat him
     SEE hīe
-hīo-dæġ, adv:
-    today
 heofon, nm:
     heaven
 heonan, adv:
@@ -2094,6 +2086,10 @@ hīeran, vw1:
 # TODO: confirm vowel length
 hīew, nn:
     shape, form, color, hue, beauty
+hīo, pron: acc hīe; gen hire; dat hire
+    she, her; it (referring to a feminine noun)
+hīo-dæġ, adv:
+    today
 hit, pron: acc hit; gen his; dat him
     it
 hlāf, nm:
@@ -2108,12 +2104,12 @@ hleahtor, nm:
     laughter
 hlēapan, vs7:
     to leap, jump; dance; run
-hlionian, vw2:
-    SEE hlinian
 hliehhan, vs6: past.1sg hlōg|hlōh; past.pl hlōgon; pp hlagen; imp hlieh
     to laugh
 hlinian, vw2:
     to lean, bend, lie down, recline, rest
+hlionian, vw2:
+    SEE hlinian
 hlūd, adj:
     loud
 hnǣgan, vw1:
@@ -2365,6 +2361,10 @@ innan, prep:
     in, within, inside
 inne, adv:
     inside
+īow, nm:
+    SEE īw
+īower, adjs: fem.nom.sg īoweru
+    your (of multiple people)
 īren, nn.sg:
     SEE īsen
 īren, adj: fem.nom.sg īrenu
@@ -2481,14 +2481,8 @@ lēof, adj:
     desirable, pleasant, acceptable, loved, beloved, dear
 lēogan, vs2: 2sg līeġst; 3sg līeġþ; past.1sg lēag|lēah
     to lie, tell a falsehood, deceive
-līoht, adj:
-    light, lightweight
 lēoht, nn:
     light, illumination
-līon, vs1: 2sg līehst; 3sg līehþ; past.1sg lāh; past.pl ligon; pp liġen
-    to lend
-liornian, vw2:
-    to learn
 lēoþ, nn:
     song, poem
 lettan, vw1:
@@ -2521,6 +2515,12 @@ limpan, vs3:
     to happen
 līnen, adj:
     linen, flaxen
+līoht, adj:
+    light, lightweight
+līon, vs1: 2sg līehst; 3sg līehþ; past.1sg lāh; past.pl ligon; pp liġen
+    to lend
+liornian, vw2:
+    to learn
 lippa, nmw:
     lip
 līþe, adj: fem.nom.sg līþu
@@ -3298,18 +3298,12 @@ seofontīen, adji:
     seventeen
 seofoþa, adjw:
     seventh
-siolfor, nn.sg: stem siolfr
-    silver
-siolfren, adj: fem.nom.sg siolfrenu
-    silver, silvery
 seolh, nm: stem seol
     seal (animal)
 sēon, vs5: 2sg siehst; 3sg siehþ; past.1sg seah; past.pl sāwon; pp sewen
     to see
 sēoþan, vs2:
     to seethe, boil
-siowian, vw2:
-    SEE siwian
 serc, nm:
     shirt, smock, tunic
 serce, nfw:
@@ -3342,6 +3336,12 @@ sincan, vs3:
     to sink
 singan, vs3:
     to sing
+siolfor, nn.sg: stem siolfr
+    silver
+siolfren, adj: fem.nom.sg siolfrenu
+    silver, silvery
+siowian, vw2:
+    SEE siwian
 sittan, vs5:
     to sit
 sīþe, nm:
@@ -3564,14 +3564,6 @@ stenċ, nm:
     2. sense of smell
 stēor, nm:
     steer, young bull or cow
-stīor, nf:
-    guidance, direction
-stīor, nn:
-    rudder, helm
-stīoran, vw1:
-    to steer
-stīor-bord, nn:
-    starboard, the right side of a ship
 steorfan, vs3:
     to die
 steorra, nmw:
@@ -3582,6 +3574,14 @@ stincan, vs3:
     to give off a smell; to stink
 stingan, vs3:
     to sting
+stīor, nf:
+    guidance, direction
+stīor, nn:
+    rudder, helm
+stīoran, vw1:
+    to steer
+stīor-bord, nn:
+    starboard, the right side of a ship
 stīpel, nm:
     tower
 stoppian, vw2:
@@ -3610,13 +3610,13 @@ strēawian, vw2:
     to straw, strew
 streċċan, vw1:
     to stretch, extend, spread out
-# TODO: Why is strīenan more common?
-strīonan, vw1:
-    get, gain, acquire; beget, produce, sire, father
 strīcan, vs1:
     to stroke; to strike
 strīenan, vw1:
     SEE strīonan
+# TODO: Why is strīenan more common?
+strīonan, vw1:
+    get, gain, acquire; beget, produce, sire, father
 stubb, nm:
     stump, stub
 stunian, vw2:
@@ -3894,10 +3894,10 @@ twentiġ, adji:
     twenty
 twentigoþa, adjw:
     twentieth
-twiowa, adv:
-    twice, two times
 twiġ, nn: stem.pl twig; nom.pl twigu
     twig
+twiowa, adv:
+    twice, two times
 tȳn, vw1:
     to teach
 # Only attested in plural
@@ -3999,15 +3999,15 @@ tyrdel, nn: stem tyrdl; nom.pl tyrdlu
 þrēat, nm:
     1. crowd, band, multitude, army
     2. violence, force
-þrīotīene, adji:
-    thirteen
-þrīowa, adv:
-    three times, thrice
 # TODO: Wiktionary and Quirk & Wrenn disagree on vowel length of þrīm
 þrī, adjs.pl: fem.nom.pl þrīo; neut.nom.pl þrīo; gen.pl þriora; dat.pl þrīm
     three
 þridda, adjw:
     third
+þrīotīene, adji:
+    thirteen
+þrīowa, adv:
+    three times, thrice
 þrītiġ, adji:
     thirty
 þrītigoþa, adjw:
@@ -4246,8 +4246,6 @@ wendan, vw1:
     to go
 wēoce, nfw:
     wick
-wīo-fod, nn: nom.pl wīo-fodu
-    altar
 weorc, nn:
     work
 weorċan, vw1: past worht|wroht
@@ -4348,6 +4346,8 @@ winter, nm: stem wintr; dat.sg wintre|wintra
     winter
 wīn-trēow, nn:
     vine
+wīo-fod, nn: nom.pl wīo-fodu
+    altar
 wīpian, vw2:
     to wipe
 wīr, nm:
