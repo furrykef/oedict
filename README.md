@@ -21,8 +21,10 @@ In any case, the dictionary tool attempts to account for variations in spelling,
 Assume that any dictionaries or glossaries listed as public domain have been mercilessly ransacked for definitions. With other dictionaries, including Wiktionary, we have tried to be careful not to copy them too closely.
 
 * Wiktionary, by many authors. CC BY-SA 3.0.
-* _An Anglo-Saxon Dictionary_, by Joseph Bosworth and T. Northcote Toller. Public domain.
+* _[An Anglo-Saxon Dictionary](https://bosworthtoller.com/)_, by Joseph Bosworth and T. Northcote Toller. Public domain.
 * _An Anglo-Saxon Reader_, by Henry Sweet. Public domain.
 * _An Old English Grammar_, by Randolph Quirk and C.L. Wrenn.
 * _Old English Dictionary_, by Matthew Eagles
+* _[Old English Grammar and Exercise Book](http://web.uvic.ca/hrd/oe/docs/oe_grammar.htm)_, by C. Alphonso Smith. Public domain.
+* _[An Introductory Grammar of Old English with an Anthology of Readings](https://scholarworks.iu.edu/dspace/bitstream/handle/2022/25547/Fulk_Print4.pdf?sequence=3)_, by R.D. Fulk. Open Access.
 

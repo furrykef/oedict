@@ -133,24 +133,18 @@ assa, nmw:
     each
 æl-mihtiġ, adj:
     SEE ealmihtiġ
-# TODO: BT and Wiktionary disagree on the vowel length
-æmet-hyll, nm:
+ǣmet-hyll, nm:
     anthill
-# BT has a short vowel here, but Eagles has a long one
 ǣmetta, nmw:
     leisure, rest
-# TODO: BT and Wiktionary disagree on the vowel length
-æmette, nfw:
+ǣmette, nfw:
     ant
-# TODO: BT and Wiktionary disagree on the vowel length
-æmett-hyll, nm:
+ǣmett-hyll, nm:
     SEE æmethyll
 ǣmettiġ, adj:
     empty
-# BT has a short vowel here, but it seems unlikely given "ǣmetta"
 ǣmta, nmw:
     SEE ǣmetta
-# BT has a short vowel here, but Eagles disagrees, and BT has a long vowel for ǣmettiġ
 ǣmtiġ, adj:
     SEE ǣmettiġ
 ǣne, adv:
@@ -253,6 +247,10 @@ bæþian, vw2:
     SEE baþian
 be, prep:
     by, about
+bēacnian, vw2:
+    1. to beckon
+    2. to signal, make a sign
+    3. to show, indicate
 beadu, nf: stem beadw
     battle, war
 beald, adj:
@@ -332,6 +330,10 @@ berg, nm:
     SEE beorg
 bern, nn:
     SEE bere-ærn
+besema, nmw:
+    broom
+besma, nmw:
+    SEE besema
 berstan, vs3:
     to burst
 berþ, nf:
@@ -361,6 +363,8 @@ bīo-ċiorl, nm:
     beekeeper
 biornan, vs3:
     SEE biernan
+Bīo-wulf, nm.sg:
+    Beowulf, protagonist of the eponymous epic poem
 # TODO: Wiktionary thinks this was "bierċe" in WS. Why?
 birċe, nfw:
     birch tree
@@ -522,6 +526,8 @@ brōc, nfv: gen.sg brōce|brēċ; dat.sg brēċ; nom.pl brēċ
 brōd, nf:
     1. brood
     2. breeding; hatching
+brōm, nm:
+    broom (plant of the tribe Genisteae)
 brōþor, nf: gen.sg brōþor; dat.sg brēþer; nom.pl brōþor|brōþra|brōþru; gen.pl brōþra; dat.pl brōþrum
     brother
 brū, nf: stem brūw
@@ -891,6 +897,8 @@ cweþan, vs5: past.pl cwǣdon; pp cweden
     to say
 cwic, adj: fem.nom.sg cwicu
     alive
+cwic-siolfor, nn.sg: stem cwic-siolfr
+    quicksilver, mercury
 cwioc, adj: fem.nom.sg cwiocu
     SEE cwic
 cyċene, nfw:
@@ -903,8 +911,12 @@ cyng, nm:
     SEE cyning
 cyning, nm:
     king
+cyninge, nf:
+    queen
 cynn, nn:
     kind; family; race; grammatical gender
+cyre, nm:
+    choice
 cyrnel, nn: stem cyrnl; nom.pl cyrnlu
     kernel, grain
 cyssan, vw1: past cysst
@@ -1021,6 +1033,11 @@ dīofol, nn: stem dīofl; nom.pl dīoflu
     devil, Satan
 dīoran, vw1: pp dīored
     to hold dear, love
+# TODO: dīere?
+dīore, adj:
+    dear, precious, glorious, magnificent
+dīore, adv:
+    dearly
 docga, nmw:
     dog
 dohtor, nf: acc.sg dohtor; gen.sg dohtor|dehter; dat.sg dehter; nom.pl dohtor|dohtra|dohtru; gen.pl dohtra; dat.pl dohtrum
@@ -1164,7 +1181,7 @@ eal-mihtiġ, adj:
 eal-swā, adv:
     SEE eall-swā
 ealu, nn: gen.sg ealoþ; dat.sg ealoþ; nom.pl -; gen.pl ealeþa; dat.pl -
-    ale, beer, intoxicating drink
+    ale, beer, alcoholic beverage
 ear, nn:
     ear of corn
 eardian, vw2:
@@ -1332,6 +1349,8 @@ fēnix, nm:
     2. date tree
 feoh, nn.sg: stem fēo
     money, goods, property, wealth; cattle
+feoht, nn:
+    fight, battle
 feohtan, vs3:
     to fight
 feord, nf:
@@ -1477,6 +1496,10 @@ for, prep:
     for; because of
 forca, nmw:
     fork
+force, nfw:
+    SEE forca
+forcel, nm: stem forcl
+    pitchfork
 for-ċēowan, vs2: past.pl for-cuwon; pp for-cowen
     to bite off
 for-ċippian, vw2:
@@ -1501,8 +1524,10 @@ for-lǣtan, vs7: past.1sg for-lēt; past.pl for-lēton
     2. [transitive] to leave a place; to relinquish, give up, abandon (something)
 forma, adjw:
     first
+forsċ, nm:
+    frog
 forst, nm:
-    frost
+    SEE frost
 forþ, adv:
     forth, forward
 for-þām, adv:
@@ -1576,9 +1601,15 @@ frōdian, vw2:
     to be wise or prudent
 frogga, nmw:
     frog
+frosċ, nm:
+    frog
+frost, nm:
+    frost
 # TODO: BT and Wiktionary disagree on vowel length
 frowe, nfw:
     lady
+frox, nm:
+    SEE frosċ
 fuglere, nm:
     fowler
 fugol, nm: stem fugl
@@ -1779,6 +1810,8 @@ gǣst, nm:
     to strain, filter
 ġe-strīenan, vw1:
     SEE strīonan
+ġe-strīon, nn:
+    SEE strīon
 ġe-strīonan, vw1:
     SEE strīonan
 ġe-sund, adj:
@@ -1890,6 +1923,10 @@ grǣtan, vs7:
     to cry, weep, bewail
 grēat, adj:
     big, large
+gremian, vw2:
+    to provoke, irritate
+Grendel, nm.sg:
+    Grendel, a giant, monstrous antagonist of _Beowulf_
 grēne, adj: fem.nom.sg grēnu
     green
 grētan, vw1: past grētt; pp grēted
@@ -1972,6 +2009,8 @@ hara, nmw:
     hare, rabbit, bunny
 hāt, adj:
     hot
+hāt, nn:
+    promise, vow
 hātan, vs7: past.1sg hēt; past.pl hēton
     to call; order, command
 hatian, vw2:
@@ -2071,6 +2110,8 @@ here, nm: stem herġ
     army
 here-toga, nmw:
     leader of an army: commander, general
+herian, vw1, vw2:
+    to praise
 herm, nm:
     SEE hearm
 hīd, nf:
@@ -2094,6 +2135,8 @@ hit, pron: acc hit; gen his; dat him
     it
 hlāf, nm:
     bread
+hlāf-ǣta, nm:
+    bread eater; servant
 hlāford, nm:
     lord; God, Jehovah
 hlǣfdīġe, nfw:
@@ -2159,6 +2202,8 @@ hors-hwæl, nm: stem.pl hors-hwal
     walrus
 hran, nm:
     whale
+hran-rād, nf:
+    whale road; i.e., the sea
 hræfn, nm:
     raven
 hræmm, nm:
@@ -2501,6 +2546,8 @@ līċ-hama, nmw:
     body, esp. of a living person
 līcian, vw2:
     to be liked [+dat: by someone]; to be pleasing
+līehtan, vw1:
+    SEE līohtan
 līf, nn:
     life
 lifer, nf:
@@ -2517,6 +2564,8 @@ līnen, adj:
     linen, flaxen
 līoht, adj:
     light, lightweight
+līohtan, vw1:
+    to light, illuminate
 līon, vs1: 2sg līehst; 3sg līehþ; past.1sg lāh; past.pl ligon; pp liġen
     to lend
 liornian, vw2:
@@ -2546,6 +2595,8 @@ los, nn: nom.pl losu
     loss, destruction
 losian, vw2:
     to perish, be lost, stray, escape
+lūcan, vs2:
+    to close, fasten, lock
 lufian, vw2:
     to love
 lufu, nf:
@@ -2641,6 +2692,9 @@ mēting, nf:
     painting, picture
 miċel, adj: comp māra; sup mǣst
     big, large
+# TODO: cg or ċġ?
+micga, nmw:
+    urine
 miċle, adv: comp mā; sup mǣst
     greatly, much
 mid, prep:
@@ -2649,6 +2703,10 @@ mieltan, vw1:
     SEE meltan
 mīere, nfw:
     mare, female horse
+mīgan, vs1: 2sg mīġst; 3sg mīġþ
+    to urinate
+migoþa, nmw:
+    urine
 miht, nf:
     might, power, strength, ability
 miht-līċ, adj:
@@ -2788,7 +2846,7 @@ nemnan, vw1:
     to name; to mention
 nerian, vw1:
     to save
-nesan, vi: 1sg niom; 2sg neart; 3sg nis; pl ne_sind|ne_sindon; subj ne_sīe; past.1sg næs; past.pl nǣron; imp nes
+nesan, vi: 1sg niom|neam|nam; 2sg neart|nart; 3sg nis; pl ne_sind|ne_sint|ne_sindon; subj ne_sīe; past.1sg næs; past.pl nǣron; imp nes
     to not be; [with past participle] to have (done something)
 nese, int:
     no, nay
@@ -2990,7 +3048,8 @@ rabbian, vw2:
 raca, nmw:
     rake
 rād, nf:
-    ride; raid
+    1. ride; raid
+    2. road (only attested in compounds)
 ramm, nm:
     ram, male sheep; battering ram
 rāp, nm:
@@ -3422,6 +3481,8 @@ smoca, nmw:
     smoke
 smocian, vw2:
     to smoke, give off smoke
+smūgan, vs2: 2sg smȳġst; 3sg smȳġþ; past.1sg smēag|smēah
+    to creep, crawl
 snaca, nmw:
     snake, serpent
 snāw, nm:
@@ -3614,6 +3675,8 @@ strīcan, vs1:
     to stroke; to strike
 strīenan, vw1:
     SEE strīonan
+strīon, nn:
+    gain, wealth, riches, treasure
 # TODO: Why is strīenan more common?
 strīonan, vw1:
     get, gain, acquire; beget, produce, sire, father
@@ -3942,6 +4005,9 @@ tyrdel, nn: stem tyrdl; nom.pl tyrdlu
     SEE þæt
 þe, particle:
     that, who [optionally preceded by a form of sē]
+þe, conj:
+    1. or (especially in questions or with _hwæþer_)
+    2. [þe ... þe] whether ... or
 þēah, conj:
     though, although
 þēah, adv:
@@ -4054,6 +4120,8 @@ tyrdel, nn: stem tyrdl; nom.pl tyrdlu
     hole
 þyrelian, vw2:
     to make a hole through, pierce, perforate
+þyrstan, vw1:
+    to thirst [+acc/dat: _hine/him þyrst_ = he is thirsty]
 þyrlian, vw2:
     SEE þyrelian
 # TODO: BT has no indication of gender or declension
@@ -4172,6 +4240,8 @@ wǣtan, vw1:
     to wet, dampen, moisten
 wæter, nn: nom.pl wæter|wætru|wæteru; gen.pl wætra|wætera; dat.pl wætrum|wæterum
     water
+wæterian, vw2:
+    to water, give water to, irrigate
 wē, pron: acc ūs|ūsic; gen ūre; dat ūs
     we, us
 wealcan, vs7:
@@ -4276,7 +4346,7 @@ wēriġ, adj:
     weary, tired, exhausted
 wer-wulf, nm:
     werewolf
-wesan, vi: 1sg iom; 2sg eart; 3sg is; pl sind|sindon; subj sīe; past.1sg wæs; past.pl wǣron; imp wes
+wesan, vi: 1sg iom|eam|am; 2sg eart|art; 3sg is; pl sind|sint|sindon; subj sīe; past.1sg wæs; past.pl wǣron; imp wes
     to be; [with past participle] to have (done something)
 wesend, nm:
     buffalo, wild ox; European bison, aurochs, wisent
@@ -4358,6 +4428,8 @@ wīs-dōm, nm:
     wisdom
 wīse, nfw:
     way, manner, mode, fashion
+wist, nf, nm:
+    being, entity
 wit, pron: acc unc|uncet; gen uncer; dat unc
     we two, us two
 wita, nmw:

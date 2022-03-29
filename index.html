@@ -50,7 +50,7 @@
       }
 
       function loadFromUrl(url) {
-        const result = url.match(/\/dict\/(oe|reverse)\/(.*)/);
+        const result = decodeURI(url).match(/\/dict\/(oe|reverse)\/(.*)/);
         if (result) {
           const search_type = result[1];
           const search_terms = result[2];
