@@ -372,6 +372,12 @@ def gen_verb(lemma, word_type, special):
         else:
             raise LexiconError("invalid weak verb class")
         past_stems = special.get('past') or [past_stem]
+        if len(past_stems) == 1 and re.match(r"^.*[^ol]d$", past_stems[0]):
+            # Transform e.g. hīerd into hīered
+            # (but not seald into sealed or lufod into lufed)
+            pps = [past_stems[0][:-1] + 'ed']
+        else:
+            pps = past_stems
         result.update({
             '2sg': [assimilate(short_stem, 'st')],
             '3sg': [assimilate(short_stem, 'þ')],
@@ -383,7 +389,7 @@ def gen_verb(lemma, word_type, special):
             'past.subj.sg': [x + 'e' for x in past_stems],
             'past.subj.pl': [x + 'en' for x in past_stems],
             'imp': [short_stem],
-            'pp': past_stems,
+            'pp': pps,
         })
     elif word_type[1] == 's':
         # Strong verb
@@ -525,7 +531,7 @@ def assimilate(root, suffix):
             return root[:-2] + 'tt'
         elif root.endswith(('d', 't', 's')):
             return root[:-1] + 't'
-        elif root.endswith('g') == 'g' and not root.endswith('ng'):
+        elif root[-1] == 'g' and not root.endswith('ng'):
             return root[:-1] + 'ġþ'
         else:
             return root + suffix
@@ -536,7 +542,7 @@ def assimilate(root, suffix):
             return root[:-1] + 'tst'
         elif root.endswith(('s', 'þ')):
             return root[:-1] + 'st'
-        elif root.endswith('g') and not root.endswith('ng'):
+        elif root[-1] == 'g' and not root.endswith('ng'):
             return root[:-1] + 'ġst'
         else:
             return root + suffix

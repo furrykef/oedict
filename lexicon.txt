@@ -237,7 +237,7 @@ bærm, nm:
     SEE bearm
 bærn, nn:
     SEE bere-ærn
-bærnan, vw1: pp bærned
+bærnan, vw1:
     to kindle, light, set on fire, burn
 bærs, nm:
     perch, bass (fish)
@@ -913,7 +913,7 @@ cyre, nm:
     choice
 cyrnel, nn: stem cyrnl; nom.pl cyrnlu
     kernel, grain
-cyssan, vw1: past cysst
+cyssan, vw1: past cysst; pp cyssed
     to kiss
 dā, nfw: acc.sg dān; gen.sg dān; dat.sg dān; nom.pl dān; gen.pl dāna; dat.pl dām|dāum
     doe, female deer
@@ -1020,7 +1020,7 @@ dimm, adj:
     dim, dark, obscure, hidden
 dīofol, nn: stem dīofl; nom.pl dīoflu
     devil, Satan
-dīoran, vw1: pp dīored
+dīoran, vw1:
     to hold dear, love
 # TODO: dīere?
 dīore, adj:
@@ -1169,6 +1169,8 @@ eal-swā, adv:
     SEE eall-swā
 ealu, nn: gen.sg ealoþ; dat.sg ealoþ; nom.pl -; gen.pl ealeþa; dat.pl -
     ale, beer, alcoholic beverage
+ēam, nm:
+    uncle, especially maternal
 ear, nn:
     ear of corn
 eardian, vw2:
@@ -1271,6 +1273,8 @@ eorþ, nf:
     SEE eorþe
 eorþe, nfw:
     earth, ground
+eapl, nm:
+    SEE æppel
 esol, nm:
     donkey, ass
 ēst, nf:
@@ -1296,8 +1300,14 @@ fara, nmw:
     farer, traveler
 faran, vs6:
     to travel; fare
+faþe, nfw:
+    SEE faþu
+faþu, nf:
+    paternal aunt
 fæder, nm:
     father
+fædera, nmw:
+    paternal uncle
 fǣġe, adj: fem.nom.sg fǣġu
     1. fated, doomed, destined; doomed to die; damned
     2. dead, killed, slain
@@ -1475,6 +1485,8 @@ fola, nmw:
     foal, colt
 folc, nn:
     folk, people, tribe
+folgian, vw2:
+    to follow
 fōn, vs7: 2sg fēhst; 3sg fēhþ; past.1sg fēng; past.pl fēngon; pp fangen
     to seize, take
 font, nm:
@@ -2479,6 +2491,9 @@ lǣran, vw1:
     to teach
 lǣrestre, nfw:
     female teacher
+lǣstan, vw1: pp lǣsted
+    1. to follow
+    2. to carry out, execute
 # TODO: forms
 læt, adj:
     slow, sluggish, tardy; late
@@ -2498,7 +2513,7 @@ lēasian, vw2:
     to lie
 leċċan, vw1:
     to wet, water, moisten
-leċġan, vw1:
+leċġan, vw1: pp leġd|lēd
     to lay, put, place
 # TODO: alternate stem leġer
 leġer, nn: stem leġr; nom.pl leġru
@@ -2718,6 +2733,8 @@ mōd, nn:
     mind, soul
 mōdor, nf: acc.sg mōdor; gen.sg mōdor|mēder; dat.sg mēder; nom.pl mōdor|mōdra|mōdru; gen.pl mōdra; dat.pl mōdrum
     mother
+mōdriġe, nfw:
+    maternal aunt
 mōna, nmw:
     moon
 mōnaþ, nm: nom.pl mōnaþ|mōnaþas
