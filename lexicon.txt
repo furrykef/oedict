@@ -300,10 +300,8 @@ bēor, nm:
     beer, mead
 beorg, nm:
     hill, mountain
-beorgan, vs3: 2sg bierġst; 3sg bierġþ; past.1sg bearg|bearh
+beorgan, vs3:
     to save, protect, defend, fortify
-beorh, nm: stem beorg
-    SEE beorg
 beorht, adj:
     bright
 beorhtian, vw2:
@@ -461,8 +459,6 @@ borg, nm:
     security, loan, pledge
 borgian, vw2:
     to borrow; to lend
-borh, nm: stem borg
-    SEE borg
 # Bosworth has bōrian, apparently in error
 borian, vw2:
     to bore, pierce, perforate
@@ -551,14 +547,12 @@ bucc, nm:
     buck, male deer
 bucca, nmw:
     male goat
-būgan, vs2: 2sg bȳġst; 3sg bȳġþ; past.1sg bēag|bēah
+būgan, vs2:
     to bow, bend; to submit, yield; to flee
 būgian, vw2:
     SEE būan
 burg, nfv: gen.sg byrġ|byriġ; dat.sg byrġ|byriġ; nom.pl byrġ|byriġ
     city; fortress, castle
-burh, nfv: gen.sg byrġ|byriġ; dat.sg byrġ|byriġ; nom.pl byrġ|byriġ; gen.pl burga; dat.pl burgum
-    SEE burg
 burse, nfw:
     bag, pouch
 būtan, conj:
@@ -573,7 +567,7 @@ būtū, pron:
     both
 būwian, vw2:
     SEE būan
-byċġan, vw1: 2sg byġst; 3sg byġþ; past boht
+byċġan, vw1: past boht
     to buy
 byldan, vw1:
     to embolden
@@ -928,9 +922,6 @@ dāg, nn:
     dough
 dagian, vw2:
     to dawn, become day, be day
-# TODO: BT thinks it's masculine, but is uncertain
-dāh, nn: stem dāg
-    SEE dāg
 dǣd, nf:
     deed, act
 dæġ, nm: stem.pl dag
@@ -973,8 +964,6 @@ dēagol, adj: stem dēagl; fem.nom.sg dēaglu
     secret
 dēagol, nn: stem dēagl; nom.pl dēaglu
     secret
-deah, nf: stem deag
-    SEE deag
 dēaþ, nm:
     death
 dēaw, nm, nn:
@@ -1052,7 +1041,7 @@ dott, nm:
     dot, small spot, speck
 draca, nmw:
     snake, serpent, dragon
-dragan, vs6: past.1sg drōg|drōh
+dragan, vs6:
     to drag, draw
 drān, nf:
     drone, male bee
@@ -1092,7 +1081,7 @@ dūce, nfw:
     duck
 dūfan, vs2:
     to dive
-dugan, vpp: 1sg dēag|dēah; 2sg dēaht; past doht; pp dugen
+dugan, vpp: 1sg dēag; 2sg dēaht; past doht; pp dugen
     to be useful, avail
 dumb, adj:
     dumb, mute, speechless
@@ -1115,8 +1104,6 @@ dwellan, vw1:
     to mislead; to hinder; to linger
 dweorg, nm:
     dwarf
-dweorh, nm: stem dweorg
-    SEE dweorg
 dyne, nm:
     din, racket, loud noise
 dynn, nm:
@@ -1762,10 +1749,6 @@ gǣst, nm:
     enough, sufficient
 ġe-nōg, adv:
     enough, sufficiently
-ġe-nōh, adj:
-    SEE ġenōg
-ġe-nōh, adv:
-    SEE ġenōg
 ġe-nugan, vpp: 1sg ġe-nēah; 2sg ġe-nēaht; past ġe-noht; pp ġe-nugen
     to be enough, suffice
 ġeō, adv:
@@ -1889,7 +1872,7 @@ glōf, nf:
 # TODO: BT doesn't know the verb class, but Wiktionary thinks it's strong VII
 #glōwan, vs7:
 #    to glow
-gnagan, vs6: 2sg gnæġst; 3sg gnæġþ; past.1sg gnōg|gnōh
+gnagan, vs6:
     to gnaw, bite
 gnætt, nm:
     gnat
@@ -2155,7 +2138,7 @@ hlionian, vw2:
     SEE hlinian
 hlūd, adj:
     loud
-hnǣgan, vw1:
+hnǣġan, vw1:
     to neigh
 hnecca, nmw:
     neck; nape of the neck, back of the head
@@ -2524,7 +2507,7 @@ lencten, nm:
     spring, Lent
 lēof, adj:
     desirable, pleasant, acceptable, loved, beloved, dear
-lēogan, vs2: 2sg līeġst; 3sg līeġþ; past.1sg lēag|lēah
+lēogan, vs2:
     to lie, tell a falsehood, deceive
 lēoht, nn:
     light, illumination
@@ -2540,7 +2523,7 @@ līċ, nn: stem.pl līc
     body, esp. dead; corpse, cadaver
 liccian, vw2:
     to lick
-liċġan, vs5: 2sg liġst; 3sg liġþ; past.1sg læġ; past.pl lǣgon; pp leġen
+liċġan, vs5: past.1sg læġ; past.pl lǣgon; pp leġen
     to lie, rest
 līċ-hama, nmw:
     body, esp. of a living person
@@ -2583,8 +2566,6 @@ lōg, nn:
 # Not actually etymologically related to "lodge"
 lōgian, vw2:
     to place, put
-lōh, nn:
-    SEE lōg
 loppe, nfw:
     spider
 loppestre, nfw:
@@ -2703,7 +2684,7 @@ mieltan, vw1:
     SEE meltan
 mīere, nfw:
     mare, female horse
-mīgan, vs1: 2sg mīġst; 3sg mīġþ
+mīgan, vs1:
     to urinate
 migoþa, nmw:
     urine
@@ -3481,7 +3462,7 @@ smoca, nmw:
     smoke
 smocian, vw2:
     to smoke, give off smoke
-smūgan, vs2: 2sg smȳġst; 3sg smȳġþ; past.1sg smēag|smēah
+smūgan, vs2:
     to creep, crawl
 snaca, nmw:
     snake, serpent
@@ -3695,7 +3676,7 @@ sū, nfv: gen.sg sȳ|sūe|sūwe; gen.pl sūa|sūwa; dat.pl sūm|sūum|sūwum
     sow, female pig
 sūcan, vs2:
     to suck
-sūgan, vs2: 2sg sȳġst; 3sg sȳġþ; past.1sg sēag|sēah
+sūgan, vs2:
     SEE sūcan
 sugu, nf:
     sow, female pig
@@ -3825,10 +3806,9 @@ tæġl, nm:
     tail
 tēag, nf:
     tie, band
-tēagan, vw1: past tēad
+# TODO: also irregular infinitive tēan
+tēaġan, vw1: past tēad
     to dress, prepare
-tēah, nf: stem tēag
-    SEE tēag
 tēar, nm:
     tear, teardrop
 tellan, vw1:
@@ -4139,8 +4119,6 @@ under, prep:
     under
 under-burg, nfv: gen.sg under-byrġ|under-byriġ; dat.sg under-byrġ|under-byriġ; nom.pl under-byrġ|under-byriġ
     suburb
-under-burh, nfv: gen.sg under-byrġ|under-byriġ; dat.sg under-byrġ|under-byriġ; nom.pl under-byrġ|under-byriġ; gen.pl under-burga; dat.pl under-burgum
-    SEE under-burg
 underling, nm:
     underling, subordinate, subject
 under-nioþan, prep:
@@ -4264,8 +4242,6 @@ weardian, vw2:
     to guard, keep, defend
 wearg, nm:
     criminal, evildoer
-wearh, nm: stem wearg
-    SEE wearg
 wearm, adj:
     warm
 wearte, nfw:

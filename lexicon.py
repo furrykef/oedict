@@ -525,6 +525,8 @@ def assimilate(root, suffix):
             return root[:-2] + 'tt'
         elif root.endswith(('d', 't', 's')):
             return root[:-1] + 't'
+        elif root.endswith('g') == 'g' and not root.endswith('ng'):
+            return root[:-1] + 'ġþ'
         else:
             return root + suffix
     elif suffix == 'st':
@@ -534,6 +536,8 @@ def assimilate(root, suffix):
             return root[:-1] + 'tst'
         elif root.endswith(('s', 'þ')):
             return root[:-1] + 'st'
+        elif root.endswith('g') and not root.endswith('ng'):
+            return root[:-1] + 'ġst'
         else:
             return root + suffix
     else:
@@ -555,6 +559,9 @@ def gen_variants_impl(next, results, preceding=""):
         # This is a word like trēow, which can also be spelled trēo
         results += [preceding, preceding + 'w']
         return
+    if next == 'g' and preceding[-1] != 'n':
+        # This is a word like burg, dēag, etc.
+        results += [preceding, preceding + 'h']
     if next.startswith('īo'):
         gen_variants_impl(next[2:], results, preceding + 'ēo')
     elif next.startswith('io'):
