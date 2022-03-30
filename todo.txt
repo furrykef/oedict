@@ -52,7 +52,7 @@ Declension of ōþer
 
 āgen, stem āgen|āgn ?
 
-Ensure twēġen and þrī are declined correctly
+Generate forms for twēġen and þrī
 
 beadu has alternative stems beaduw-, beadow-
 

@@ -166,13 +166,14 @@ def gen_noun(lemma, word_type, special):
         }
     elif word_type[1:] == 'n':
         # Strong neuter noun
+        nom_pl = add_u(lemma, stem_pl)
         forms = {
             'nom.sg': [lemma],
             'acc.sg': special.get('nom.sg') or [lemma],
             'gen.sg': [stem + ('es' if not is_vowel(stem[-1]) else 's')],
             'dat.sg': [stem + ('e' if not is_vowel(stem[-1]) else "")],
-            'nom.pl': [lemma],
-            'acc.pl': special.get('nom.pl') or [lemma],
+            'nom.pl': [nom_pl],
+            'acc.pl': special.get('nom.pl') or [nom_pl],
             'gen.pl': [stem_pl + ('a' if not is_vowel(stem_pl[-1]) else 'na')],
             'dat.pl': [stem_pl + ('um' if not is_vowel(stem_pl[-1]) else 'm')],
         }
@@ -236,7 +237,7 @@ def gen_adjective(lemma, word_type, special):
             'masc.acc.pl': [stem + 'e'],
             'masc.gen.pl': [stem + 'ra'],
             'masc.dat.pl': [stem + 'um'],
-            'fem.nom.sg': [lemma],
+            'fem.nom.sg': [add_u(lemma, stem)],
             'fem.acc.sg': [stem + 'e'],
             'fem.gen.sg': [stem + 're'],
             'fem.dat.sg': [stem + 're'],
@@ -244,8 +245,8 @@ def gen_adjective(lemma, word_type, special):
             'fem.acc.pl': [stem + 'e', stem + 'a'],
             'fem.gen.pl': [stem + 'ra'],
             'fem.dat.pl': [stem + 'um'],
-            'neut.nom.sg': [lemma],
-            'neut.acc.sg': [lemma],
+            'neut.nom.sg': [add_u(lemma, stem)],
+            'neut.acc.sg': [add_u(lemma, stem)],
             'neut.gen.sg': [stem + 'es'],
             'neut.dat.sg': [stem + 'um'],
             'neut.nom.pl': [stem + 'e'],
@@ -518,11 +519,26 @@ def mutate(word, replacement):
     return initial + nucleus + final
 
 def split_word(word):
-    match = re.match(r"(.*?)(ēa|ea|ēo|eo|īo|io|īe|ie|[āaǣæēeīiōoūuȳy])([b-df-hj-np-tv-zþðċġ]*)$", word)
+    match = re.match(r"(.*?)(ēa|ea|ēo|eo|īo|io|īe|ie|[āaǣæēeīiōoūuȳy])([b-df-hj-np-tvwxzþðċġ]*)$", word, re.IGNORECASE)
     return match.groups()
 
 def get_nucleus(word):
     return split_word(word)[1]
+
+
+# Add -u to form neuter plurals and feminine singulars
+# according to syllable structure of the lemma
+# The stem argument allows things such as hēafod → hēafdu
+# TODO: support uppercase??
+def add_u(lemma, stem):
+    if lemma[-1] == 'e':
+        # -e always becomes -u
+        return stem + 'u'
+    _, vowel, end = split_word(lemma)
+    if vowel in ['ā', 'ǣ', 'ē', 'ī', 'ō', 'ū', 'ēa', 'ēo', 'īo', 'īe'] or len(end) > 1 or end == 'x':
+        # Lemma ends in heavy syllable; no -u
+        return lemma
+    return stem + 'u'
 
 
 def assimilate(root, suffix):
@@ -531,7 +547,7 @@ def assimilate(root, suffix):
             return root[:-2] + 'tt'
         elif root.endswith(('d', 't', 's')):
             return root[:-1] + 't'
-        elif root[-1] == 'g' and not root.endswith('ng'):
+        elif root.endswith('g') and not root.endswith('ng'):
             return root[:-1] + 'ġþ'
         else:
             return root + suffix
@@ -542,7 +558,7 @@ def assimilate(root, suffix):
             return root[:-1] + 'tst'
         elif root.endswith(('s', 'þ')):
             return root[:-1] + 'st'
-        elif root[-1] == 'g' and not root.endswith('ng'):
+        elif root.endswith('g') and not root.endswith('ng'):
             return root[:-1] + 'ġst'
         else:
             return root + suffix
