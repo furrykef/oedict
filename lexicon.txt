@@ -328,16 +328,16 @@ berg, nm:
     SEE beorg
 bern, nn:
     SEE bere-ærn
-besema, nmw:
-    broom
-besma, nmw:
-    SEE besema
 berstan, vs3:
     to burst
 berþ, nf:
     SEE byrþ
 be-sċītan, vs1:
     to cover with feces; to soil
+besema, nmw:
+    broom
+besma, nmw:
+    SEE besema
 be-twux, prep:
     between, among
 biblioþēċe, nfw:
@@ -1170,6 +1170,8 @@ ealu, nn: gen.sg ealoþ; dat.sg ealoþ; nom.pl -; gen.pl ealeþa; dat.pl -
     ale, beer, alcoholic beverage
 ēam, nm:
     uncle, especially maternal
+eapl, nm:
+    SEE æppel
 ear, nn:
     ear of corn
 eardian, vw2:
@@ -1272,8 +1274,6 @@ eorþ, nf:
     SEE eorþe
 eorþe, nfw:
     earth, ground
-eapl, nm:
-    SEE æppel
 esol, nm:
     donkey, ass
 ēst, nf:
@@ -2781,6 +2781,8 @@ nacod, adj:
     naked, bare, nude
 nafola, nmw:
     navel
+nāgan, vpp: 1sg nāh; 2sg nāhst; past nāht; pp nāgen
+    to not own
 nāht, pron: acc nāht; gen nāhtes; dat nāhte
     SEE nā-wiht
 nā-hwanan, adv:
@@ -4112,10 +4114,10 @@ tyrdel, nn: stem tyrdl
     hole
 þyrelian, vw2:
     to make a hole through, pierce, perforate
-þyrstan, vw1:
-    to thirst [+acc/dat: _hine/him þyrst_ = he is thirsty]
 þyrlian, vw2:
     SEE þyrelian
+þyrstan, vw1:
+    to thirst [+acc/dat: _hine/him þyrst_ = he is thirsty]
 # TODO: BT has no indication of gender or declension
 ūder, nn: stem ūdr
     udder, mammary, breast
