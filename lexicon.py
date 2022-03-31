@@ -140,7 +140,7 @@ def gen_noun(lemma, word_type, special):
             raise LexiconError(f"{lemma}: multiple plural stems not supported")
         stem_pl = special['stem.pl'][0]
     else:
-        stem_pl = stem
+        stem_pl = lower_ae(stem)
     if word_type[1:] == 'm':
         # Strong masculine noun
         forms = {
@@ -226,60 +226,61 @@ def gen_adjective(lemma, word_type, special):
     has_strong = word_type != 'adjw'
     has_weak = word_type != 'adjs'
     stem = lemma[:-1] if lemma[-1] in ('a', 'e') else lemma
+    lowered_stem = lower_ae(stem)
     forms = {}
     if has_strong:
         forms.update({
             'masc.nom.sg': [lemma],
             'masc.acc.sg': [stem + 'ne'],
-            'masc.gen.sg': [stem + 'es'],
-            'masc.dat.sg': [stem + 'um'],
-            'masc.nom.pl': [stem + 'e'],
-            'masc.acc.pl': [stem + 'e'],
+            'masc.gen.sg': [lowered_stem + 'es'],
+            'masc.dat.sg': [lowered_stem + 'um'],
+            'masc.nom.pl': [lowered_stem + 'e'],
+            'masc.acc.pl': [lowered_stem + 'e'],
             'masc.gen.pl': [stem + 'ra'],
-            'masc.dat.pl': [stem + 'um'],
-            'fem.nom.sg': [add_u(lemma, stem)],
-            'fem.acc.sg': [stem + 'e'],
+            'masc.dat.pl': [lowered_stem + 'um'],
+            'fem.nom.sg': [add_u(lemma, lowered_stem)],
+            'fem.acc.sg': [lowered_stem + 'e'],
             'fem.gen.sg': [stem + 're'],
             'fem.dat.sg': [stem + 're'],
-            'fem.nom.pl': [stem + 'e', stem + 'a'],
-            'fem.acc.pl': [stem + 'e', stem + 'a'],
+            'fem.nom.pl': [lowered_stem + 'e', lowered_stem + 'a'],
+            'fem.acc.pl': [lowered_stem + 'e', lowered_stem + 'a'],
             'fem.gen.pl': [stem + 'ra'],
-            'fem.dat.pl': [stem + 'um'],
-            'neut.nom.sg': [add_u(lemma, stem)],
-            'neut.acc.sg': [add_u(lemma, stem)],
-            'neut.gen.sg': [stem + 'es'],
-            'neut.dat.sg': [stem + 'um'],
-            'neut.nom.pl': [stem + 'e'],
-            'neut.acc.pl': [stem + 'e'],
+            'fem.dat.pl': [lowered_stem + 'um'],
+            'neut.nom.sg': [add_u(lemma, lowered_stem)],
+            'neut.acc.sg': [add_u(lemma, lowered_stem)],
+            'neut.gen.sg': [lowered_stem + 'es'],
+            'neut.dat.sg': [lowered_stem + 'um'],
+            'neut.nom.pl': [lowered_stem + 'e'],
+            'neut.acc.pl': [lowered_stem + 'e'],
             'neut.gen.pl': [stem + 'ra'],
-            'neut.dat.pl': [stem + 'um'],
+            'neut.dat.pl': [lowered_stem + 'um'],
         })
     if has_weak:
         forms.update({
-            'w.masc.nom.sg': [stem + 'a'],
-            'w.masc.acc.sg': [stem + 'an'],
-            'w.masc.gen.sg': [stem + 'an'],
-            'w.masc.dat.sg': [stem + 'an'],
-            'w.masc.nom.pl': [stem + 'an'],
-            'w.masc.acc.pl': [stem + 'an'],
-            'w.masc.gen.pl': [stem + 'ra', stem + 'ena'],
-            'w.masc.dat.pl': [stem + 'um'],
-            'w.fem.nom.sg': [stem + 'e'],
-            'w.fem.acc.sg': [stem + 'an'],
-            'w.fem.gen.sg': [stem + 'an'],
-            'w.fem.dat.sg': [stem + 'an'],
-            'w.fem.nom.pl': [stem + 'an'],
-            'w.fem.acc.pl': [stem + 'an'],
-            'w.fem.gen.pl': [stem + 'ra', stem + 'ena'],
-            'w.fem.dat.pl': [stem + 'um'],
-            'w.neut.nom.sg': [stem + 'e'],
-            'w.neut.acc.sg': [stem + 'e'],
-            'w.neut.gen.sg': [stem + 'an'],
-            'w.neut.dat.sg': [stem + 'an'],
-            'w.neut.nom.pl': [stem + 'an'],
-            'w.neut.acc.pl': [stem + 'an'],
-            'w.neut.gen.pl': [stem + 'ra', stem + 'ena'],
-            'w.neut.dat.pl': [stem + 'um'],
+            'w.masc.nom.sg': [lowered_stem + 'a'],
+            'w.masc.acc.sg': [lowered_stem + 'an'],
+            'w.masc.gen.sg': [lowered_stem + 'an'],
+            'w.masc.dat.sg': [lowered_stem + 'an'],
+            'w.masc.nom.pl': [lowered_stem + 'an'],
+            'w.masc.acc.pl': [lowered_stem + 'an'],
+            'w.masc.gen.pl': [stem + 'ra', lowered_stem + 'ena'],
+            'w.masc.dat.pl': [lowered_stem + 'um'],
+            'w.fem.nom.sg': [lowered_stem + 'e'],
+            'w.fem.acc.sg': [lowered_stem + 'an'],
+            'w.fem.gen.sg': [lowered_stem + 'an'],
+            'w.fem.dat.sg': [lowered_stem + 'an'],
+            'w.fem.nom.pl': [lowered_stem + 'an'],
+            'w.fem.acc.pl': [lowered_stem + 'an'],
+            'w.fem.gen.pl': [stem + 'ra', lowered_stem + 'ena'],
+            'w.fem.dat.pl': [lowered_stem + 'um'],
+            'w.neut.nom.sg': [lowered_stem + 'e'],
+            'w.neut.acc.sg': [lowered_stem + 'e'],
+            'w.neut.gen.sg': [lowered_stem + 'an'],
+            'w.neut.dat.sg': [lowered_stem + 'an'],
+            'w.neut.nom.pl': [lowered_stem + 'an'],
+            'w.neut.acc.pl': [lowered_stem + 'an'],
+            'w.neut.gen.pl': [stem + 'ra', lowered_stem + 'ena'],
+            'w.neut.dat.pl': [lowered_stem + 'um'],
         })
     special_forms = { key: value for (key, value) in special.items() if key in [
         'masc.nom.sg', 'masc.acc.sg', 'masc.gen.sg', 'masc.dat.sg',
@@ -539,6 +540,15 @@ def add_u(lemma, stem):
         # Lemma ends in heavy syllable; no -u
         return lemma
     return stem + 'u'
+
+
+# Lowers æ to a if stem ends with a single consonant (not x)
+# e.g. smæl → smal
+def lower_ae(stem):
+    match = re.match(r"^(.*)æ([b-df-hj-np-tvwzþðċġ])$", stem, re.IGNORECASE)
+    if not match:
+        return stem
+    return match[1] + 'a' + match[2]
 
 
 def assimilate(root, suffix):

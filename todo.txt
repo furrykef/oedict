@@ -85,8 +85,6 @@ brōþor: make sure brōþer- vs. brōþr- is consistent in both special and gen
 
 ġehwelc (and ġehwilc)
 
-glæd, smæl
-
 gōd: don't generate adverbial forms (or else add a way to provide the comparative and superlative of "wel")
 
 grimre and grimra, not grimmre and grimmra

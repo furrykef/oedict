@@ -214,7 +214,7 @@ bāt, nm:
 #    bat, club, cudgel
 baþian, vw2:
     to wash, bathe
-bæc, nn: stem.pl bac
+bæc, nn:
     back (of a person or animal's body)
 bæc-bord, nn:
     port, the left side of a ship
@@ -241,7 +241,7 @@ bærnan, vw1:
     to kindle, light, set on fire, burn
 bærs, nm:
     perch, bass (fish)
-bæþ, nn: stem.pl baþ
+bæþ, nn:
     bath
 bæþian, vw2:
     SEE baþian
@@ -407,7 +407,7 @@ blāwan, vs7:
 # TODO: forms
 blæc, adj:
     black
-blæd, nn: stem.pl blad
+blæd, nn:
     leaf; broad, flat blade, such as of an oar
 blæse, nfw:
     blaze, flame; torch, lamp
@@ -814,14 +814,14 @@ crāwe, nfw:
     crow, raven
 cræft, nm:
     art, craft, skill
-cræn, nm: stem.pl cran
+cræn, nm:
     SEE cran
-crænc-stæf, nm: stem.pl crænc-staf
+crænc-stæf, nm:
     crank
 cræsta, nmw:
     crest
 # TODO: seems to me the plural stem can be either crat- or cræt-
-cræt, nn: stem.pl crat
+cræt, nn:
     chariot, cart
 crēodan, vs2:
     to crowd
@@ -936,7 +936,7 @@ dæġ-hwāmlīċ, adj:
     daily
 dæġ-hwǣm, adv:
     SEE dæġhwām
-dæl, nn: stem.pl dal
+dæl, nn:
     dale
 dǣl, nm:
     part, portion
@@ -1856,10 +1856,9 @@ gieltend, nm:
     you two
 gladian, vw2:
     to be glad; to gladden
-# TODO: stem
 glæd, adj:
     glad, cheerful
-glæs, nn: stem.pl glas
+glæs, nn:
     glass
 glæsen, adj:
     glass
@@ -1907,11 +1906,11 @@ gōs, nfv:
     goose
 graf, nn:
     SEE græf
-græf, nn: stem.pl graf
+græf, nn:
     grave, trench
 grǣġ, adj:
     gray, grey
-græs, nn: stem.pl gras
+græs, nn:
     grass
 grǣtan, vs7:
     to cry, weep, bewail
@@ -2189,7 +2188,7 @@ horn, nm:
     horn
 hors, nn:
     horse
-hors-hwæl, nm: stem.pl hors-hwal
+hors-hwæl, nm:
     walrus
 hran, nm:
     whale
@@ -2296,7 +2295,7 @@ hwæder, adv:
     to there, thither
 hwæder-hwugu, adv:
     to somewhere, to some place
-hwæl, nm: stem.pl hwal
+hwæl, nm:
     whale
 hwǣr, adv:
     where, in what place
@@ -2968,7 +2967,7 @@ palm, nm:
 panne, nfw:
     pan
 # TODO: Toller seems to suggest this word is neuter
-pæþ, nm: stem.pl paþ
+pæþ, nm:
     path, track
 pealma, nmw:
     SEE palm
@@ -3178,11 +3177,11 @@ sǣ, nm: acc.sg sǣ; dat.sg sǣ; gen.pl sǣ; nom.pl sǣ; gen.pl sǣwa; dat.pl s�
     sea
 sǣd, nn:
     seed
-sæl, nn: stem.pl sal
+sæl, nn:
     hall, esp. a great hall
 sǣliġ, adj:
     blessed, fortunate
-sæp, nn: stem.pl sap
+sæp, nn:
     sap
 sæternes-dæġ, nm: stem.pl sæternes-dag
     Saturday
@@ -3406,7 +3405,6 @@ slāw, adj:
     slow
 slāwian, vw2:
     to slow, become slow
-# TODO: stem
 slæc, adj:
     slack; lazy
 slǣp, nm:
@@ -3445,7 +3443,6 @@ smæċċ, nm:
     taste, flavor
 smæċċan, vw1: past smæht
     to taste
-# TODO: stem
 smæl, adj:
     small
 smearcian, vw2:
@@ -3593,7 +3590,7 @@ standan, vs6:  past.1sg stōd; past.pl stōdon
     to stand
 starian, vw2:
     to stare; to gaze upon (with _on_ or _tō_)
-stæf, nm: stem.pl staf
+stæf, nm:
     1. staff, stick
     2. letter, character, glyph
     3. [plural] a letter, text; literature (cf. Latin _litterae_)
@@ -3732,7 +3729,7 @@ swātiġ, adj:
     sweaty
 swǣ, adv:
     SEE swā
-swæþ, nn: stem.pl swaþ
+swæþ, nn:
     track, footprint, vestige
 swealwe, nfw:
     swallow (bird)
@@ -3983,7 +3980,7 @@ tyrdel, nn: stem tyrdl
 þāwian, vw2:
     to thaw (something)
 # TODO: verify lack of palatalization
-þæc, nn: stem.pl þac
+þæc, nn:
     1. roof
     2. roofing material: thatch
 þæder, adv:
