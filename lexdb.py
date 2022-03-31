@@ -8,6 +8,8 @@ import lexicon
 
 
 SCHEMA = """
+PRAGMA foreign_keys = ON;
+
 CREATE TABLE entries (
     id INT PRIMARY KEY,
     lemma TEXT NOT NULL,

@@ -212,34 +212,34 @@ def gen_adjective(lemma, word_type, special):
     has_strong = word_type != 'adjw'
     has_weak = word_type != 'adjs'
     stem = lemma[:-1] if lemma[-1] in ('a', 'e', 'h') else lemma
-    lowered_stem = lower_ae(stem)
+    light_stem = lower_ae(stem)
     forms = {}
     if has_strong:
         forms.update({
             'masc.nom.sg': [lemma],
             'masc.acc.sg': [stem + 'ne'],
-            'masc.gen.sg': [lowered_stem + ('es' if not is_vowel(stem[-1]) else 's')],
-            'masc.dat.sg': [lowered_stem + 'um'],
-            'masc.nom.pl': [lowered_stem + ('e' if not is_vowel(stem[-1]) else "")],
-            'masc.acc.pl': [lowered_stem + ('e' if not is_vowel(stem[-1]) else "")],
+            'masc.gen.sg': [light_stem + ('es' if not is_vowel(stem[-1]) else 's')],
+            'masc.dat.sg': [light_stem + 'um'],
+            'masc.nom.pl': [light_stem + ('e' if not is_vowel(stem[-1]) else "")],
+            'masc.acc.pl': [light_stem + ('e' if not is_vowel(stem[-1]) else "")],
             'masc.gen.pl': [stem + 'ra'],
-            'masc.dat.pl': [lowered_stem + 'um'],
-            'fem.nom.sg': [add_u(lemma, lowered_stem)],
-            'fem.acc.sg': [lowered_stem + ('e' if not is_vowel(stem[-1]) else "")],
+            'masc.dat.pl': [light_stem + 'um'],
+            'fem.nom.sg': [add_u(lemma, light_stem)],
+            'fem.acc.sg': [light_stem + ('e' if not is_vowel(stem[-1]) else "")],
             'fem.gen.sg': [stem + 're'],
             'fem.dat.sg': [stem + 're'],
-            'fem.nom.pl': [lowered_stem + 'a', lowered_stem + 'e'] if not is_vowel(lowered_stem[-1]) else [lowered_stem],
-            'fem.acc.pl': [lowered_stem + 'a', lowered_stem + 'e'] if not is_vowel(lowered_stem[-1]) else [lowered_stem],
+            'fem.nom.pl': [light_stem + 'a', light_stem + 'e'] if not is_vowel(light_stem[-1]) else [light_stem],
+            'fem.acc.pl': [light_stem + 'a', light_stem + 'e'] if not is_vowel(light_stem[-1]) else [light_stem],
             'fem.gen.pl': [stem + 'ra'],
-            'fem.dat.pl': [lowered_stem + 'um'],
-            'neut.nom.sg': [add_u(lemma, lowered_stem)],
-            'neut.acc.sg': [add_u(lemma, lowered_stem)],
-            'neut.gen.sg': [lowered_stem + ('es' if not is_vowel(stem[-1]) else 's')],
-            'neut.dat.sg': [lowered_stem + 'um'],
-            'neut.nom.pl': [lowered_stem + ('e' if not is_vowel(stem[-1]) else "")],
-            'neut.acc.pl': [lowered_stem + ('e' if not is_vowel(stem[-1]) else "")],
+            'fem.dat.pl': [light_stem + 'um'],
+            'neut.nom.sg': [add_u(lemma, light_stem)],
+            'neut.acc.sg': [add_u(lemma, light_stem)],
+            'neut.gen.sg': [light_stem + ('es' if not is_vowel(stem[-1]) else 's')],
+            'neut.dat.sg': [light_stem + 'um'],
+            'neut.nom.pl': [light_stem + ('e' if not is_vowel(stem[-1]) else "")],
+            'neut.acc.pl': [light_stem + ('e' if not is_vowel(stem[-1]) else "")],
             'neut.gen.pl': [stem + 'ra'],
-            'neut.dat.pl': [lowered_stem + 'um'],
+            'neut.dat.pl': [light_stem + 'um'],
         })
     if has_weak:
         forms.update(gen_weak_nominal(stem, 'm', True, 'w.masc.'))
@@ -270,13 +270,13 @@ def gen_weak_nominal(stem, gender, adjective=False, prefix=""):
         gen_pls = [stem + 'ra', stem + 'rra']
         dat_pls = [stem + 'm', stem + 'um']
     else:
-        lowered_stem = lower_ae(stem)
-        nominative = lowered_stem + 'a' if gender == 'm' else lowered_stem + 'e'
-        oblique = lowered_stem + 'an'
-        gen_pls = [lowered_stem + 'ena']
+        light_stem = lower_ae(stem)
+        nominative = light_stem + 'a' if gender == 'm' else light_stem + 'e'
+        oblique = light_stem + 'an'
+        gen_pls = [light_stem + 'ena']
         if adjective:
             gen_pls.append(stem + 'ra')
-        dat_pls = [lowered_stem + 'um']
+        dat_pls = [light_stem + 'um']
     if gender == 'n':
         accusative = nominative
     else:
@@ -367,7 +367,7 @@ def gen_verb(lemma, word_type, special):
         else:
             raise LexiconError("invalid weak verb class")
         past_stems = special.get('past') or [past_stem]
-        if len(past_stems) == 1 and re.match(r"^.*[^ol]d$", past_stems[0]):
+        if len(past_stems) == 1 and re.search(r"[^ol]d$", past_stems[0]):
             # Transform e.g. hīerd into hīered
             # (but not seald into sealed or lufod into lufed)
             pps = [past_stems[0][:-1] + 'ed']
@@ -388,7 +388,7 @@ def gen_verb(lemma, word_type, special):
         })
     elif word_type[1] == 's':
         # Strong verb
-        # Me strong. Smash programmer with club.
+        mutated_stem = palatalize_g(i_mutate(inf_stem))
         if word_type[2] == '1':
             past_1sg_repl = 'ā'
             past_pl_repl = 'i'
@@ -427,8 +427,8 @@ def gen_verb(lemma, word_type, special):
         past_pl_stems = [x[:-2] for x in past_pls]
         past_participles = [mutate(inf_stem, pp_repl) + 'en']
         result.update({
-            '2sg': [assimilate(i_mutate(inf_stem), 'st')],
-            '3sg': [assimilate(i_mutate(inf_stem), 'þ')],
+            '2sg': [assimilate(mutated_stem, 'st')],
+            '3sg': [assimilate(mutated_stem, 'þ')],
             'pl': [inf_stem + 'aþ'],
             'past.1sg': [mutate(inf_stem, past_1sg_repl)],
             'past.2sg': [x + 'e' for x in past_pl_stems],
@@ -516,9 +516,6 @@ def split_word(word):
     match = re.match(r"(.*?)(ēa|ea|ēo|eo|īo|io|īe|ie|[āaǣæēeīiōoūuȳy])([b-df-hj-np-tvwxzþðċġ]*)$", word, re.IGNORECASE)
     return match.groups()
 
-def get_nucleus(word):
-    return split_word(word)[1]
-
 
 # Add -u to form neuter plurals and feminine singulars
 # according to syllable structure of the lemma
@@ -538,10 +535,10 @@ def add_u(lemma, stem):
 # Lowers æ to a if stem ends with a single consonant (not x)
 # e.g. smæl → smal
 def lower_ae(stem):
-    match = re.match(r"^(.*)æ([b-df-hj-np-tvwzþðċġ])$", stem, re.IGNORECASE)
-    if not match:
-        return stem
-    return match[1] + 'a' + match[2]
+    return re.sub(r"^(.*)æ([b-df-hj-np-tvwzþðċġ])$", r"\1a\2", stem, re.IGNORECASE)
+
+def palatalize_g(stem):
+    return re.sub(r"^(.*[^n])g$", r"\1ġ", stem)
 
 
 def assimilate(root, suffix):
@@ -647,7 +644,7 @@ def expand_word_type(word_type):
     elif word_type == 'pron':
         return "pronoun"
     elif word_type[0] == 'n':
-        match = re.match(r"^n([mfn])([wvi])?(\.(?:sg|pl))?$", word_type)
+        match = re.match(r"n([mfn])([wvi])?(\.(?:sg|pl))?$", word_type)
         gender = {
             'm': "masculine ",
             'f': "feminine ",
@@ -669,7 +666,7 @@ def expand_word_type(word_type):
         # TODO: subtypes
         return "adjective"
     elif word_type[0] == 'v':
-        match = re.match(r"^v([wsi]|pp)([1-7])?$", word_type)
+        match = re.match(r"v([wsi]|pp)([1-7])?$", word_type)
         subtype = {
             'w': "weak ",
             's': "strong ",

@@ -77,6 +77,9 @@ Don't generate silly forms like sweryan, or lufi (from 'lufie').
 Generate sċe for sċ[^iey] (e.g. sċop → sċeop)
 
 
+Depalatalize -līċ in forms like -līcre (but don't do this for -iġ)
+
+
 ælċ, but ælcre
 
 brōþor: make sure brōþer- vs. brōþr- is consistent in both special and generated forms (note that, I believe, broþeru is attested but perhaps e.g. sweosteru is not)

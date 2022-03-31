@@ -999,7 +999,8 @@ derian, vw1:
     to injure
 diācon, nm:
     deacon
-dīċ, nf:
+# TODO: BT seems to suggest the feminine forms are sometimes indeclinable
+dīċ, nm, nf:
     ditch, trench
 dīcian, vw2:
     to dig a ditch
@@ -1409,6 +1410,7 @@ firen, nf:
 firenian, vw2:
     to sin
 # TODO: is the fix- stem really only for the plural?
+# TODO: just use 'stem' special once it supports multiple stems
 fisċ, nm: nom.pl fiscas|fixas; gen.pl fisca|fixa; dat.pl fiscum|fixum
     fish
 fiscian, vw2:
