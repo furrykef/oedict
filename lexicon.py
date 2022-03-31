@@ -179,21 +179,7 @@ def gen_noun(lemma, word_type, special):
         }
     elif word_type[1:] in ('mw', 'fw', 'nw'):
         # Weak noun
-        oblique = stem + 'an'
-        if word_type[1:] == 'nw':
-            accusative = lemma
-        else:
-            accusative = oblique
-        forms = {
-            'nom.sg': [lemma],
-            'acc.sg': [accusative],
-            'gen.sg': [oblique],
-            'dat.sg': [oblique],
-            'nom.pl': [oblique],
-            'acc.pl': special.get('nom.pl') or [oblique],
-            'gen.pl': [stem + 'ena'],
-            'dat.pl': [stem + 'um'],
-        }
+        forms = gen_weak_nominal(stem, word_type[1])
     elif word_type[1:] in ('mv', 'fv'):
         # Vocalic noun
         mutated = i_mutate(lemma)
@@ -256,36 +242,9 @@ def gen_adjective(lemma, word_type, special):
             'neut.dat.pl': [lowered_stem + 'um'],
         })
     if has_weak:
-        if is_vowel(stem[-1]):
-            oblique = lowered_stem + 'n'
-        else:
-            oblique = lowered_stem + 'an'
-        forms.update({
-            'w.masc.nom.sg': [lowered_stem + ('a' if not is_vowel(stem[-1]) else "")],
-            'w.masc.acc.sg': [oblique],
-            'w.masc.gen.sg': [oblique],
-            'w.masc.dat.sg': [oblique],
-            'w.masc.nom.pl': [oblique],
-            'w.masc.acc.pl': [oblique],
-            'w.masc.gen.pl': [stem + 'ra', lowered_stem + 'ena'] if not is_vowel(stem[-1]) else [stem + 'ra'],
-            'w.masc.dat.pl': [lowered_stem + 'um'],
-            'w.fem.nom.sg': [lowered_stem + ('e' if not is_vowel(stem[-1]) else "")],
-            'w.fem.acc.sg': [oblique],
-            'w.fem.gen.sg': [oblique],
-            'w.fem.dat.sg': [oblique],
-            'w.fem.nom.pl': [oblique],
-            'w.fem.acc.pl': [oblique],
-            'w.fem.gen.pl': [stem + 'ra', lowered_stem + 'ena'] if not is_vowel(stem[-1]) else [stem + 'ra'],
-            'w.fem.dat.pl': [lowered_stem + 'um'],
-            'w.neut.nom.sg': [lowered_stem + ('e' if not is_vowel(stem[-1]) else "")],
-            'w.neut.acc.sg': [lowered_stem + ('e' if not is_vowel(stem[-1]) else "")],
-            'w.neut.gen.sg': [oblique],
-            'w.neut.dat.sg': [oblique],
-            'w.neut.nom.pl': [oblique],
-            'w.neut.acc.pl': [oblique],
-            'w.neut.gen.pl': [stem + 'ra', lowered_stem + 'ena'] if not is_vowel(stem[-1]) else [stem + 'ra'],
-            'w.neut.dat.pl': [oblique],
-        })
+        forms.update(gen_weak_nominal(stem, 'm', True, 'w.masc.'))
+        forms.update(gen_weak_nominal(stem, 'f', True, 'w.fem.'))
+        forms.update(gen_weak_nominal(stem, 'm', True, 'w.neut.'))
     special_forms = { key: value for (key, value) in special.items() if key in [
         'masc.nom.sg', 'masc.acc.sg', 'masc.gen.sg', 'masc.dat.sg',
         'masc.nom.pl', 'masc.acc.pl', 'masc.gen.pl', 'masc.dat.pl',
@@ -302,6 +261,36 @@ def gen_adjective(lemma, word_type, special):
     ] }
     forms.update(special_forms)
     return forms
+
+
+def gen_weak_nominal(stem, gender, adjective=False, prefix=""):
+    if is_vowel(stem[-1]):
+        nominative = stem
+        oblique = stem + 'n'
+        gen_pls = [stem + 'ra', stem + 'rra']
+        dat_pls = [stem + 'm', stem + 'um']
+    else:
+        lowered_stem = lower_ae(stem)
+        nominative = lowered_stem + 'a' if gender == 'm' else lowered_stem + 'e'
+        oblique = lowered_stem + 'an'
+        gen_pls = [lowered_stem + 'ena']
+        if adjective:
+            gen_pls.append(stem + 'ra')
+        dat_pls = [lowered_stem + 'um']
+    if gender == 'n':
+        accusative = nominative
+    else:
+        accusative = oblique
+    return {
+        f'{prefix}nom.sg': [nominative],
+        f'{prefix}acc.sg': [accusative],
+        f'{prefix}gen.sg': [oblique],
+        f'{prefix}dat.sg': [oblique],
+        f'{prefix}nom.pl': [oblique],
+        f'{prefix}acc.pl': [oblique],
+        f'{prefix}gen.pl': gen_pls,
+        f'{prefix}dat.pl': dat_pls,
+    }
 
 
 def gen_pronoun(lemma, word_type, special):
