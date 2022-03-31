@@ -159,8 +159,8 @@ def gen_noun(lemma, word_type, special):
             'acc.sg': [stem + ('e' if not is_vowel(stem[-1]) else "")],
             'gen.sg': [stem + ('e' if not is_vowel(stem[-1]) else "")],
             'dat.sg': [stem + ('e' if not is_vowel(stem[-1]) else "")],
-            'nom.pl': [stem_pl + 'a', stem_pl + 'e'],
-            'acc.pl': special.get('nom.pl') or [stem_pl + 'a', stem_pl + 'e'],
+            'nom.pl': [stem_pl + 'a', stem_pl + 'e'] if not is_vowel(stem_pl[-1]) else [stem_pl],
+            'acc.pl': special.get('nom.pl') or [stem_pl + 'a', stem_pl + 'e'] if not is_vowel(stem_pl[-1]) else [stem_pl],
             'gen.pl': [stem_pl + ('a' if not is_vowel(stem_pl[-1]) else 'na')],
             'dat.pl': [stem_pl + ('um' if not is_vowel(stem_pl[-1]) else 'm')],
         }
@@ -225,62 +225,66 @@ def gen_noun(lemma, word_type, special):
 def gen_adjective(lemma, word_type, special):
     has_strong = word_type != 'adjw'
     has_weak = word_type != 'adjs'
-    stem = lemma[:-1] if lemma[-1] in ('a', 'e') else lemma
+    stem = lemma[:-1] if lemma[-1] in ('a', 'e', 'h') else lemma
     lowered_stem = lower_ae(stem)
     forms = {}
     if has_strong:
         forms.update({
             'masc.nom.sg': [lemma],
             'masc.acc.sg': [stem + 'ne'],
-            'masc.gen.sg': [lowered_stem + 'es'],
+            'masc.gen.sg': [lowered_stem + ('es' if not is_vowel(stem[-1]) else 's')],
             'masc.dat.sg': [lowered_stem + 'um'],
-            'masc.nom.pl': [lowered_stem + 'e'],
-            'masc.acc.pl': [lowered_stem + 'e'],
+            'masc.nom.pl': [lowered_stem + ('e' if not is_vowel(stem[-1]) else "")],
+            'masc.acc.pl': [lowered_stem + ('e' if not is_vowel(stem[-1]) else "")],
             'masc.gen.pl': [stem + 'ra'],
             'masc.dat.pl': [lowered_stem + 'um'],
             'fem.nom.sg': [add_u(lemma, lowered_stem)],
-            'fem.acc.sg': [lowered_stem + 'e'],
+            'fem.acc.sg': [lowered_stem + ('e' if not is_vowel(stem[-1]) else "")],
             'fem.gen.sg': [stem + 're'],
             'fem.dat.sg': [stem + 're'],
-            'fem.nom.pl': [lowered_stem + 'e', lowered_stem + 'a'],
-            'fem.acc.pl': [lowered_stem + 'e', lowered_stem + 'a'],
+            'fem.nom.pl': [lowered_stem + 'a', lowered_stem + 'e'] if not is_vowel(lowered_stem[-1]) else [lowered_stem],
+            'fem.acc.pl': [lowered_stem + 'a', lowered_stem + 'e'] if not is_vowel(lowered_stem[-1]) else [lowered_stem],
             'fem.gen.pl': [stem + 'ra'],
             'fem.dat.pl': [lowered_stem + 'um'],
             'neut.nom.sg': [add_u(lemma, lowered_stem)],
             'neut.acc.sg': [add_u(lemma, lowered_stem)],
-            'neut.gen.sg': [lowered_stem + 'es'],
+            'neut.gen.sg': [lowered_stem + ('es' if not is_vowel(stem[-1]) else 's')],
             'neut.dat.sg': [lowered_stem + 'um'],
-            'neut.nom.pl': [lowered_stem + 'e'],
-            'neut.acc.pl': [lowered_stem + 'e'],
+            'neut.nom.pl': [lowered_stem + ('e' if not is_vowel(stem[-1]) else "")],
+            'neut.acc.pl': [lowered_stem + ('e' if not is_vowel(stem[-1]) else "")],
             'neut.gen.pl': [stem + 'ra'],
             'neut.dat.pl': [lowered_stem + 'um'],
         })
     if has_weak:
+        if is_vowel(stem[-1]):
+            oblique = lowered_stem + 'n'
+        else:
+            oblique = lowered_stem + 'an'
         forms.update({
-            'w.masc.nom.sg': [lowered_stem + 'a'],
-            'w.masc.acc.sg': [lowered_stem + 'an'],
-            'w.masc.gen.sg': [lowered_stem + 'an'],
-            'w.masc.dat.sg': [lowered_stem + 'an'],
-            'w.masc.nom.pl': [lowered_stem + 'an'],
-            'w.masc.acc.pl': [lowered_stem + 'an'],
-            'w.masc.gen.pl': [stem + 'ra', lowered_stem + 'ena'],
+            'w.masc.nom.sg': [lowered_stem + ('a' if not is_vowel(stem[-1]) else "")],
+            'w.masc.acc.sg': [oblique],
+            'w.masc.gen.sg': [oblique],
+            'w.masc.dat.sg': [oblique],
+            'w.masc.nom.pl': [oblique],
+            'w.masc.acc.pl': [oblique],
+            'w.masc.gen.pl': [stem + 'ra', lowered_stem + 'ena'] if not is_vowel(stem[-1]) else [stem + 'ra'],
             'w.masc.dat.pl': [lowered_stem + 'um'],
-            'w.fem.nom.sg': [lowered_stem + 'e'],
-            'w.fem.acc.sg': [lowered_stem + 'an'],
-            'w.fem.gen.sg': [lowered_stem + 'an'],
-            'w.fem.dat.sg': [lowered_stem + 'an'],
-            'w.fem.nom.pl': [lowered_stem + 'an'],
-            'w.fem.acc.pl': [lowered_stem + 'an'],
-            'w.fem.gen.pl': [stem + 'ra', lowered_stem + 'ena'],
+            'w.fem.nom.sg': [lowered_stem + ('e' if not is_vowel(stem[-1]) else "")],
+            'w.fem.acc.sg': [oblique],
+            'w.fem.gen.sg': [oblique],
+            'w.fem.dat.sg': [oblique],
+            'w.fem.nom.pl': [oblique],
+            'w.fem.acc.pl': [oblique],
+            'w.fem.gen.pl': [stem + 'ra', lowered_stem + 'ena'] if not is_vowel(stem[-1]) else [stem + 'ra'],
             'w.fem.dat.pl': [lowered_stem + 'um'],
-            'w.neut.nom.sg': [lowered_stem + 'e'],
-            'w.neut.acc.sg': [lowered_stem + 'e'],
-            'w.neut.gen.sg': [lowered_stem + 'an'],
-            'w.neut.dat.sg': [lowered_stem + 'an'],
-            'w.neut.nom.pl': [lowered_stem + 'an'],
-            'w.neut.acc.pl': [lowered_stem + 'an'],
-            'w.neut.gen.pl': [stem + 'ra', lowered_stem + 'ena'],
-            'w.neut.dat.pl': [lowered_stem + 'um'],
+            'w.neut.nom.sg': [lowered_stem + ('e' if not is_vowel(stem[-1]) else "")],
+            'w.neut.acc.sg': [lowered_stem + ('e' if not is_vowel(stem[-1]) else "")],
+            'w.neut.gen.sg': [oblique],
+            'w.neut.dat.sg': [oblique],
+            'w.neut.nom.pl': [oblique],
+            'w.neut.acc.pl': [oblique],
+            'w.neut.gen.pl': [stem + 'ra', lowered_stem + 'ena'] if not is_vowel(stem[-1]) else [stem + 'ra'],
+            'w.neut.dat.pl': [oblique],
         })
     special_forms = { key: value for (key, value) in special.items() if key in [
         'masc.nom.sg', 'masc.acc.sg', 'masc.gen.sg', 'masc.dat.sg',
@@ -536,7 +540,7 @@ def add_u(lemma, stem):
         # -e always becomes -u
         return stem + 'u'
     _, vowel, end = split_word(lemma)
-    if vowel in ['ā', 'ǣ', 'ē', 'ī', 'ō', 'ū', 'ēa', 'ēo', 'īo', 'īe'] or len(end) > 1 or end == 'x':
+    if vowel in ('ā', 'ǣ', 'ē', 'ī', 'ō', 'ū', 'ēa', 'ēo', 'īo', 'īe') or len(end) > 1 or end == 'x':
         # Lemma ends in heavy syllable; no -u
         return lemma
     return stem + 'u'

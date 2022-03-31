@@ -76,8 +76,6 @@ Don't generate silly forms like sweryan, or lufi (from 'lufie').
 
 Generate sċe for sċ[^iey] (e.g. sċop → sċeop)
 
-Generate correct weak forms for adjectives such as hēah
-
 
 ælċ, but ælcre
 
@@ -117,5 +115,10 @@ wæter: multi-stem (wæter, wætr)
 
 weċġan
 
-wōh
+wōh:
+  * masc.acc wōne *and* wōnne
+  * fem.gen/dat wōre *and* wōrre
+  * gen.pl wōra *and* wōrra
+  * dative form wōum *and* wōm (both strong and weak)
+  * comparative and superlative?
 

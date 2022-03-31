@@ -906,7 +906,7 @@ cyng, nm:
     SEE cyning
 cyning, nm:
     king
-cyninge, nf:
+cyninge, nfw:
     queen
 cynn, nn:
     kind; family; race; grammatical gender
@@ -1281,10 +1281,6 @@ esol, nm:
 # BT has "æt", but it's since been found it was ēt in PGmc (I'm told Ringe mentions this)
 etan, vs5: past.1sg ǣt; past.pl ǣton
     to eat
-# TODO: declension
-fāh, nm:
-    foe, enemy
-# TODO: declension
 fāh, adj:
     enemy, hostile
 fāh-mann, nm:
@@ -2046,7 +2042,7 @@ hē, pron: acc hine; gen his; dat him
     he, him; it (referring to a masculine noun)
 hēafod, nn: stem hēafd
     head
-hēah, adj: stem hēa
+hēah, adj:
     high, tall; exalted
 healdan, vs7:
     to hold
@@ -2822,7 +2818,8 @@ nǣp, nm:
 ne, adv:
     1. not
     2. [ne ... ne] neither ... nor
-nēah, adj: stem nēa; comp nēar; sup nīehst|nēhst
+# TODO: a strong comparative?
+nēah, adj: comp nēar; sup nīehst|nēhst
     near
 nēah, prep:
     near
@@ -4540,7 +4537,8 @@ wysċ, nm:
     choice
 wysċan, vw1:
     to wish
-yfel, adj: comp wyrsa; sup wyrst
+# TODO: why wiers- and not wirs- or wyrs-?
+yfel, adj: comp wiersa; sup wierst
     bad, unskilled; evil
 yfel, nn:
     evil
