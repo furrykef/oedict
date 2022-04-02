@@ -1614,13 +1614,11 @@ frīond-līċ, adj:
 friþ, nm, nn:
     peace
 frocga, nmw:
-    SEE frogga
+    frog
 frōd, adj:
     wise, prudent, sage, skillful; venerable
 frōdian, vw2:
     to be wise or prudent
-frogga, nmw:
-    frog
 frosċ, nm:
     frog
 frost, nm:
@@ -2181,15 +2179,13 @@ hnesċe, adj:
 hnutu, nfv: gen.sg hnute|hnyte; dat.sg hnyte; nom.pl hnyte
     nut
 hocg, nm:
-    SEE hogg
+    hog
 hōd, nm:
     hood
 hof, nn:
     house, hall, dwelling, building
 hōf, nm:
     hoof
-hogg, nm:
-    hog
 hogian, vw2:
     SEE hyċġan
 hol, nn:
@@ -2517,7 +2513,6 @@ lǣrestre, nfw:
 lǣstan, vw1: pp lǣsted
     1. to follow
     2. to carry out, execute
-# TODO: forms
 læt, adj:
     slow, sluggish, tardy; late
 lǣtan, vs7: past.1sg lēt; past.pl lēton

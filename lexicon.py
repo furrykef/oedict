@@ -612,6 +612,10 @@ def gen_variants_impl(next, results, preceding=""):
         gen_variants_impl(next[1:], results, preceding + 'o')
     elif next.startswith(('on', 'om')) and not preceding.endswith(('ē', 'e')):
         gen_variants_impl(next[1:], results, preceding + 'a')
+    elif next.startswith('cg'):
+        gen_variants_impl(next[2:], results, preceding + 'gg')
+    elif next.startswith('ċġ'):
+        gen_variants_impl(next[2:], results, preceding + 'ġġ')
     elif next.startswith('sel'):
         gen_variants_impl(next[3:], results, preceding + 'syl')
     gen_variants_impl(next[1:], results, preceding + next[0])
