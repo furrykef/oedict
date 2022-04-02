@@ -547,27 +547,34 @@ def palatalize_g(stem):
     return re.sub(r"^(.*[^n])g$", r"\1ġ", stem)
 
 
-def assimilate(root, suffix):
+def assimilate(stem, suffix):
+    # TODO: this condition is a hack we shouldn't need
+    if len(stem) == 0:
+        return ""
     if suffix == 'þ':
-        if root.endswith(('dd', 'tt')):
-            return root[:-2] + 'tt'
-        elif root.endswith(('d', 't', 's')):
-            return root[:-1] + 't'
-        elif root.endswith('g') and not root.endswith('ng'):
-            return root[:-1] + 'ġþ'
+        if stem.endswith(('dd', 'tt')):
+            return stem[:-2] + 'tt'
+        elif stem.endswith(('d', 't', 's')):
+            return stem[:-1] + 't'
+        elif stem.endswith('g') and not stem.endswith('ng'):
+            return stem[:-1] + 'ġþ'
+        elif stem[-1] == stem[-2]:
+            return stem[:-1] + 'þ'
         else:
-            return root + suffix
+            return stem + suffix
     elif suffix == 'st':
-        if root.endswith(('dd', 'tt')):
-            return root[:-2] + 'tst'
-        elif root.endswith(('d', 't')):
-            return root[:-1] + 'tst'
-        elif root.endswith(('s', 'þ')):
-            return root[:-1] + 'st'
-        elif root.endswith('g') and not root.endswith('ng'):
-            return root[:-1] + 'ġst'
+        if stem.endswith(('dd', 'tt')):
+            return stem[:-2] + 'tst'
+        elif stem.endswith(('d', 't')):
+            return stem[:-1] + 'tst'
+        elif stem.endswith(('s', 'þ')):
+            return stem[:-1] + 'st'
+        elif stem.endswith('g') and not stem.endswith('ng'):
+            return stem[:-1] + 'ġst'
+        elif stem[-1] == stem[-2]:
+            return stem[:-1] + 'st'
         else:
-            return root + suffix
+            return stem + suffix
     else:
         assert False
 

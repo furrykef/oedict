@@ -99,6 +99,8 @@ brōþor: make sure brōþer- vs. brōþr- is consistent in both special and gen
 
 gōd: don't generate adverbial forms (or else add a way to provide the comparative and superlative of "wel")
 
+gydenne should generate gyden- as a variant stem
+
 grimre and grimra, not grimmre and grimmra
 
 hātan has a passive form (iċ hātte, þū hāttest, hē hātte, wē hātton), which we should probably consider a separate, defective verb.

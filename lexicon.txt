@@ -42,6 +42,7 @@ anclēow, nm:
 and, conj:
     and
 # BT seems to be mistaken in parsing this as on-drǣdan
+# TODO: vw1 variant
 and-rǣdan, vs7: past.1sg and-rēd; past.pl and-rēdon
     to fear, be scared
 and-swarian, vw1, vw2:
@@ -1973,6 +1974,8 @@ guma, nmw:
     man
 gutt, nm:
     gut, entrail
+gydenn, nf:
+    goddess
 gydiġ, adj:
     possessed, mad
 gylden, adj: stem gyldn
@@ -3083,6 +3086,7 @@ rāp, nm:
     rope, cord, cable
 rārian, vw2:
     [of humans] to wail; [of animals] to roar, bellow
+# TODO: vw1 variant
 rǣdan, vs7: past.1sg rēd; past.pl rēdon
     to read; to advise
 rǣpan, vw1: past rǣpt; pp rǣped
@@ -3455,7 +3459,8 @@ slæc, adj:
     slack; lazy
 slǣp, nm:
     sleep
-slǣpan, vs7:  past.1sg slēp; past.pl slēpon
+# TODO: vw1 variant
+slǣpan, vs7: past.1sg slēp; past.pl slēpon
     to sleep
 slǣpern, nn:
     bedroom, place for sleeping
@@ -3471,7 +3476,8 @@ slēf, nf:
     SEE slīf
 slēfe, nfw:
     SEE slīf
-slēpan, vs7:
+# TODO: vw1 variant
+slēpan, vs7: past.1sg slēp; past.pl slēpon
     SEE slǣpan
 slīdan, vs1:
     to slide, slip, fall; to err
