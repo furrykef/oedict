@@ -131,6 +131,10 @@ assa, nmw:
     SEE ǣġhwæþer
 ǣlċ, adj:
     each
+# TODO: Toller seems to think this is feminine??
+# TODO: Eagles suggests ielfe was the plural of this noun
+ælf, nm:
+    SEE ielf
 æl-mihtiġ, adj:
     SEE ealmihtiġ
 ǣmet-hyll, nm:
@@ -176,6 +180,8 @@ assa, nmw:
     earliest, first
 ǣrest, adv:
     first, at first
+ǣrist, nf: acc ǣrist|ǣriste
+    rising; resurrection
 ǣr-līċ, adj:
     early
 ærs, nm:
@@ -186,7 +192,7 @@ assa, nmw:
     before, in front of
 æþeling, nm:
     prince
-æx, nf:
+æx, nf: acc æx|æxe
     axe, hatchet, pickaxe
 ǣxian, vw2:
     SEE āscian
@@ -289,9 +295,17 @@ belle, nfw:
     bell
 belt, nm:
     belt, girdle
+bēn, nf: acc bēn|bēne
+    prayer, petition, demand
+be-nacian, vw2:
+    to bare, make naked
+benċ, nf: acc benċ|benċe
+    bench
 bendan, vw1:
     1. to bend
     2. to bind, fetter
+benn, nf:
+    wound, injury
 bēodan, vs2:
     to command, order, bid
 bēon, vi: 1sg bēo; 2sg bist; 3sg biþ; past.1sg wæs; past.pl wǣron
@@ -472,6 +486,7 @@ botm, nm:
     bottom
 box, nm:
     box tree
+# TODO: comparative also brǣdra
 brād, adj:
     broad, typically describing land or sea: wide, open, large, spacious
 brand, nm:
@@ -532,9 +547,11 @@ brūcan, vs2:
     to use [+gen of the thing used]
 brūn, adj:
     brown, dark, dusky
+brȳċe, adj:
+    useful
 bryċġ, nf:
     bridge
-brȳd, nf:
+brȳd, nf: acc brȳd|brȳde
     bride, wife
 brȳd-guma, nmw:
     bridegroom, suitor
@@ -883,7 +900,7 @@ cwelan, vs4:
     to die
 cwellan, vw1:
     to kill; quell
-cwēn, nf:
+cwēn, nf: acc cwēn|cwēne
     woman; wife; queen
 # Yes, with short vowel!
 cwene, nfw:
@@ -902,6 +919,9 @@ cylen, nf:
     kiln, oven
 cyln, nf:
     SEE cylen
+# TODO: fem. is i-stem
+cynd, nf, nm:
+    nature; kind
 cyng, nm:
     SEE cyning
 cyning, nm:
@@ -916,14 +936,14 @@ cyrnel, nn: stem cyrnl
     kernel, grain
 cyssan, vw1: past cysst; pp cyssed
     to kiss
-dā, nfw: acc.sg dān; gen.sg dān; dat.sg dān; nom.pl dān; gen.pl dāna; dat.pl dām|dāum
+dā, nfw:
     doe, female deer
 # TODO: Toller thinks it's masculine, but is uncertain
 dāg, nn:
     dough
 dagian, vw2:
     to dawn, become day, be day
-dǣd, nf:
+dǣd, nf: acc dǣd|dǣde
     deed, act
 dæġ, nm: stem.pl dag
     day
@@ -977,6 +997,8 @@ declīnian, vw2:
     to decline (a noun or adjective)
 declīnung, nf:
     declension
+dēd, nf: acc dēd|dēde
+    SEE dǣd
 delfan, vs3:
     to dig
 dēma, nmw:
@@ -1209,7 +1231,7 @@ ears-þyrel, nn: stem ears-þyrl
     easily
 ēaþelīċ, adj:
     easy
-eax, nf:
+eax, nf: acc eax|eaxe
     SEE æx
 eaxl, nf:
     shoulder
@@ -1379,8 +1401,10 @@ feþer, nf:
     feather; pen; [in plural] wings
 fīend, nmv:
     SEE fīond
-fierd, nf:
+fierd, nf: acc fierd|fierde
     army, force, expedition
+fierdung, nf:
+    SEE fierd
 fierdian, vw2:
     to march
 fīf, adji:
@@ -1634,7 +1658,7 @@ fyrhtan, vw1:
 # TODO: indeclinable in singular
 fyrhtu, nf:
     fear, fright, dread, terror
-fȳst, nf:
+fȳst, nf: acc fȳst|fȳste
     fist
 # Wiktionary instead has a strong feminine noun "fyxen", but this appears spurious or at least unattested
 fyxe, nfw:
@@ -1713,7 +1737,7 @@ gǣst, nm:
 ġe-endian, vw2:
     SEE endian
 # See also fāh
-ġe-fā, nmw: acc.sg ġe-fān; gen.sg ġe-fān; dat.sg ġe-fān; nom.pl ġe-fān; gen.pl ġe-fāna; dat.pl ġe-fām|ġe-fāum
+ġe-fā, nmw:
     foe, enemy
 ġe-feoht, nn:
     fight, battle, contest, war
@@ -1786,8 +1810,10 @@ gǣst, nm:
     to yearn
 ġe-reorde, nn:
     language
+# TODO: acc ġe-sċeaft|ġe-ṡceafte for feminine only
+# TODO: redirect to sense
 ġe-sċeaft, nf, nn:
-    creation, creature
+    SEE sċeaft
 # TODO: Wiktionary suggests ġīese
 ġēse, int:
     yes
@@ -1848,7 +1874,7 @@ gieltend, nm:
     gemstone, jewel
 ġioc, nn:
     yoke
-ġiong, adj: comp ġingra; sup ġinġest
+ġiong, adj: comp ġiengra; sup ġinġest
     young
 ġit, pron: acc inc|incet; gen incer; dat inc
     you two
@@ -2044,7 +2070,7 @@ hē, pron: acc hine; gen his; dat him
     he, him; it (referring to a masculine noun)
 hēafod, nn: stem hēafd
     head
-hēah, adj:
+hēah, adj: comp hīerra; sup hīehst
     high, tall; exalted
 healdan, vs7:
     to hold
@@ -2285,6 +2311,9 @@ hūsul, nn:
     SEE hūsl
 hwā, pron: acc hwone|hwæne; gen hwæs; dat hwǣm|hwām
     who
+# LWS
+hwā, pron: acc hwǣre; gen hwǣre; dat hwǣre
+    who
 hwanan, adv:
     from where, whence
 hwanne, adv:
@@ -2353,7 +2382,7 @@ hwīt, adj:
     white
 hyċġan, vw3: 2sg hyġst|hogast; 3sg hyġþ|hogaþ; past hogd|hogod; imp hyġe|hoga
     to think, cogitate
-hȳd, nf:
+hȳd, nf: acc hȳd|hȳde
     hide, skin
 hȳdan, vw1:
     to hide, conceal
@@ -2381,6 +2410,8 @@ iċ, pron: acc mē|mec; gen mīn; dat mē
     island
 īeġ-land, nn:
     SEE ēaland
+ielf, nm: nom.pl ielfe
+    elf
 ilca, adjw:
     same
 incer, adjs:
@@ -2448,7 +2479,7 @@ lamb, nn: nom.pl lambru; stem.pl lambr
     lamb
 land, nn:
     land
-lang, adj:
+lang, adj: comp lengra; sup lenġest
     long
 lār, nf:
     teaching, instruction, lore
@@ -2505,7 +2536,8 @@ lēasian, vw2:
     to lie
 leċċan, vw1:
     to wet, water, moisten
-leċġan, vw1: pp leġd|lēd
+# This is the only wk I -ċġan verb to have syncope according to Alphonso Smith
+leċġan, vw1: 2sg leġst; 3sg leġþ past leġd|lēd
     to lay, put, place
 # TODO: alternate stem leġer
 leġer, nn: stem leġr
@@ -2552,6 +2584,10 @@ limpan, vs3:
     to happen
 līnen, adj:
     linen, flaxen
+līod, nm:
+    man, esp. a leader
+līod, nf: acc līod|līode
+    people, nation, race; country
 līoht, adj:
     light, lightweight
 līohtan, vw1:
@@ -2639,6 +2675,9 @@ mearc, nf:
     mark, sign
 mearcian, vw2:
     to mark
+# TODO: confirm vowel is long on stem
+mearh, nm: stem mēar
+    horse, steed
 # TODO: confirm declension
 medu, nm: gen.sg meda|medwes; dat.sg meda|medwe; nom.pl meda|medwas; gen.pl meda|medwa; dat.pl medum|medwum
     mead
@@ -2695,7 +2734,7 @@ mīgan, vs1:
     to urinate
 migoþa, nmw:
     urine
-miht, nf:
+miht, nf: acc miht|mihte
     might, power, strength, ability
 miht-līċ, adj:
     possible
@@ -2709,7 +2748,7 @@ mīn, adjs:
     my, mine
 minte, nfw:
     mint plant
-mis-dǣd, nf:
+mis-dǣd, nf: acc mis-dǣd|mis-dǣde
     misdeed, transgression, offense, injury
 missan, vw1: past mist
     to miss
@@ -3034,7 +3073,7 @@ pusa, nmw:
     bag, scrip
 pytt, nm:
     pit, hole in ground; grave
-rā, nmw: acc.sg rān; gen.sg rān; dat.sg rān; nom.pl rān; gen.pl rāna; dat.pl rām|rāum
+rā, nmw:
     roe deer, roebuck
 rabbian, vw2:
     to rage
@@ -3180,6 +3219,10 @@ sǣd, nn:
     seed
 sæl, nn:
     hall, esp. a great hall
+# TODO: fem. is i-stem
+sǣl, nm, nf:
+    1. time, occasion; opportunity
+    2. happiness
 sǣliġ, adj:
     blessed, fortunate
 sæp, nn:
@@ -3200,6 +3243,9 @@ sċeadu, nf: stem sċeadw
     shadow
 sċeaft, nm:
     shaft, pole; spear
+# TODO: i-stem feminine only
+sċeaft, nm, nf:
+    creation; creature
 sċealu, nf:
     shell, husk
 sċeap, nn:
@@ -3236,6 +3282,8 @@ sċilling, nm:
     shilling
 sċīnan, vs1:
     to shine
+scinn, nn:
+    skin, hide
 sċinu, nf:
     shin
 sċip, nn:
@@ -3326,6 +3374,8 @@ seġlan, vw1:
     to sail
 seġlian, vw2:
     SEE seġlan
+sel, nn:
+    SEE sæl
 seldan, adv:
     seldom, rarely
 seld-cūþ:
@@ -3446,6 +3496,9 @@ smæċċan, vw1: past smæht
     to taste
 smæl, adj:
     small
+# TODO: contracted form smēan
+smēaġan, vw1: 2sg smēast; 3sg smēaþ; past smēad
+    to think, consider
 smearcian, vw2:
     to smirk, smile
 smēocan, vs2:
@@ -3524,7 +3577,7 @@ spearcian, vw2:
     to sparkle, emit sparks
 spearwa, nmw:
     sparrow
-spēd, nf:
+spēd, nf: acc spēd|spēde
     1. success
     2. speed, quickness
 spēdan, vw1:
@@ -3646,7 +3699,7 @@ stōwian, vw2:
     to hold back, restrain
 strand, nn:
     strand, shore, beach
-strang, adj:
+strang, adj: comp strengra; sup strenġest
     strong
 strangian, vw2:
     1. to grow strong; to be strong, prevail, flourish
@@ -3671,6 +3724,9 @@ strīon, nn:
 # TODO: Why is strīenan more common?
 strīonan, vw1:
     get, gain, acquire; beget, produce, sire, father
+# TODO: gender
+#stropp, n?:
+#    strap, strop
 stubb, nm:
     stump, stub
 stunian, vw2:
@@ -3786,7 +3842,7 @@ sylian, vw2:
     to sully, soil, pollute, defile
 synn, nf:
     sin
-tā, nmw: acc.sg tān; gen.sg tān; dat.sg tān; nom.pl tān; gen.pl tāna; dat.pl tām|tāum
+tā, nmw:
     toe
 tabula, nmw:
     SEE tabule
@@ -3817,7 +3873,7 @@ tæġl, nm:
 tēag, nf:
     tie, band
 # TODO: also irregular infinitive tēan
-tēaġan, vw1: past tēad
+tēaġan, vw1: 2sg tēast; 3sg tēaþ past tēad
     to dress, prepare
 tēar, nm:
     tear, teardrop
@@ -3837,7 +3893,7 @@ tēoþa, adjw:
     tenth
 teran, vs4:
     to tear
-tīd, nf:
+tīd, nf: acc tīd|tīde
     time, hour; grammatical tense
 tider, adj: stem tidr
     weak, fragile, frail
@@ -4146,6 +4202,8 @@ un-ġe-līċ, adj:
     different
 un-ġe-sewen-līċ:
     invisible
+un-miht, nf: acc un-miht|un-mihte
+    weakness, lack of power
 un-miht-līċ, adj:
     possible
 unnan, vpp: 1sg ann; 2sg anst; past ūþ; pp unnen
@@ -4370,6 +4428,7 @@ wiga, nmw:
     fighter, warrior
 wīgan, vs1:
     to fight, do battle
+# TODO: fem. is i-stem
 wiht, nn, nf:
     thing; creature
 wild-dēor, nn:
@@ -4415,6 +4474,7 @@ wīs-dōm, nm:
     wisdom
 wīse, nfw:
     way, manner, mode, fashion
+# TODO: fem. is i-stem
 wist, nf, nm:
     being, entity
 wit, pron: acc unc|uncet; gen uncer; dat unc
@@ -4494,6 +4554,14 @@ wulf, nm:
     wolf
 wull, nf:
     wool
+wund, nf:
+    wound, injury
+wund, adj:
+    wounded
+wundel, nf: stem wundl
+    SEE wund
+wundele, nfw: stem wundl
+    SEE wund
 wundor, nn:
     wonder, miracle; admiration
 wundor-līċ:
@@ -4513,6 +4581,10 @@ wurþan, vs3:
 # TODO: Move to "witon"? Supposedly it's the oldest form
 wuton, particle:
     let's, let us
+wylf, nf: acc wylf|wylfe
+    female wolf
+wylfenn, nf:
+    SEE wylf
 # TODO: alternate stem wyln-
 wyllen, adj:
     woolen
@@ -4529,7 +4601,7 @@ wyrhta, nmw:
     worker, maker
 wyrm, nm:
     worm; snake, serpent, dragon
-wyrt, nf:
+wyrt, nf: acc wyrt|wyrte
     herb, plant, vegetable, wort
 wyrþ, nn, adj:
     SEE weorþ

@@ -267,7 +267,9 @@ def gen_weak_nominal(stem, gender, adjective=False, prefix=""):
     if is_vowel(stem[-1]):
         nominative = stem
         oblique = stem + 'n'
-        gen_pls = [stem + 'ra', stem + 'rra']
+        gen_pls = [stem + 'na']
+        if adjective:
+            gen_pls += [stem + 'ra', stem + 'rra']
         dat_pls = [stem + 'm', stem + 'um']
     else:
         light_stem = lower_ae(stem)
@@ -338,9 +340,9 @@ def gen_verb(lemma, word_type, special):
             if irregular_infinitive:
                 short_stem = inf_stem
             elif lemma.endswith('bban'):
-                short_stem = lemma[:-4] + 'f'
+                short_stem = lemma[:-4] + 'fe'
             elif lemma.endswith('ċġan'):
-                short_stem = lemma[:-4] + 'ġ'
+                short_stem = lemma[:-4] + 'ġe'
             else:
                 if lemma.endswith(('ċċan', 'llan', 'mman', 'nnan', 'ppan', 'rian', 'rran', 'ssan')):
                     short_stem = lemma[:-3] + 'e'
@@ -367,10 +369,14 @@ def gen_verb(lemma, word_type, special):
         else:
             raise LexiconError("invalid weak verb class")
         past_stems = special.get('past') or [past_stem]
-        if len(past_stems) == 1 and re.search(r"[^ol]d$", past_stems[0]):
-            # Transform e.g. hīerd into hīered
-            # (but not seald into sealed or lufod into lufed)
-            pps = [past_stems[0][:-1] + 'ed']
+        if len(past_stems) == 1 and re.search(r"[^eol]d$", past_stems[0]):
+            if inf_stem[-1] == 'd':
+                # Transform e.g. bend into bended
+                pps = [past_stems[0] + 'ed']
+            else:
+                # Transform e.g. hīerd into hīered
+                # (but not seald into sealed or lufod into lufed)
+                pps = [past_stems[0][:-1] + 'ed']
         else:
             pps = past_stems
         result.update({

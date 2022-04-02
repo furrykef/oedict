@@ -80,6 +80,17 @@ Generate sċe for sċ[^iey] (e.g. sċop → sċeop)
 Depalatalize -līċ in forms like -līcre (but don't do this for -iġ)
 
 
+Strong verbs:
+  * No i-mutation in Anglian
+  * Sometimes -est and -eþ, especially (always?) in Anglian
+  * -gst/-gþ may become -hst/hþ
+    * Is the palatalization that Wiktionary uses here actually a mainstream interpretation?
+  * Fulk has e.g. iċ stīġe, not stīge
+
+
+Make sure all feminine i-stems have bare accusative as a possible form
+
+
 ælċ, but ælcre
 
 brōþor: make sure brōþer- vs. brōþr- is consistent in both special and generated forms (note that, I believe, broþeru is attested but perhaps e.g. sweosteru is not)
@@ -115,8 +126,6 @@ stīpel: alternate stem stīpl-
 þætte should redirect only to the conjunction form of þæt
 
 wæter: multi-stem (wæter, wætr)
-
-weċġan
 
 wōh:
   * masc.acc wōne *and* wōnne
