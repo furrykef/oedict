@@ -352,6 +352,8 @@ def gen_verb(lemma, word_type, special):
                 past_stem = lemma[:-5] + 'eaht'
             elif lemma.endswith('ellan'):
                 past_stem = lemma[:-5] + 'eald'
+            elif re.search(r"[āaǣæēeīiōoūu]tan$", lemma, re.IGNORECASE):
+                past_stem = lemma[:-2] + 't'
             elif short_stem.endswith(('t', 'd')):
                 past_stem = short_stem
             else:
@@ -369,16 +371,23 @@ def gen_verb(lemma, word_type, special):
         else:
             raise LexiconError("invalid weak verb class")
         past_stems = special.get('past') or [past_stem]
-        if len(past_stems) == 1 and re.search(r"[^eol]d$", past_stems[0]):
-            if inf_stem[-1] == 'd':
-                # Transform e.g. bend into bended
-                pps = [past_stems[0] + 'ed']
-            else:
-                # Transform e.g. hīerd into hīered
-                # (but not seald into sealed or lufod into lufed)
-                pps = [past_stems[0][:-1] + 'ed']
-        else:
-            pps = past_stems
+        pps = past_stems
+        if len(past_stems) == 1:
+            if re.search(r"[^eol]d$", past_stems[0]):
+                if inf_stem[-1] == 'd':
+                    # Transform e.g. bend into bended
+                    pps = [past_stems[0] + 'ed']
+                else:
+                    # Transform e.g. hīerd into hīered
+                    # (but not seald into sealed or lufod into lufed)
+                    pps = [past_stems[0][:-1] + 'ed']
+            elif past_stems[0][-1] == 't':
+                if past_stems[0].endswith('tt'):
+                    # Transform e.g. grētt into grēted
+                    pps = [past_stems[0][:-1] + 'ed']
+                else:
+                    # Transform e.g. rēst into rēsted
+                    pps = [past_stems[0] + 'ed']
         result.update({
             '2sg': [assimilate(short_stem, 'st')],
             '3sg': [assimilate(short_stem, 'þ')],
@@ -625,6 +634,7 @@ def gen_variants_impl(next, results, preceding=""):
         gen_variants_impl(next[2:], results, preceding + 'ġġ')
     elif next.startswith('sel'):
         gen_variants_impl(next[3:], results, preceding + 'syl')
+        gen_variants_impl(next[3:], results, preceding + 'sil')
     gen_variants_impl(next[1:], results, preceding + next[0])
 
 

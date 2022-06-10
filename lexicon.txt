@@ -91,6 +91,9 @@ assa, nmw:
     oath
 ā-wrītan, vs1:
     to write down, write out
+# TODO: gender
+#awul, n?:
+#    awl
 āxian, vw2:
     SEE āscian
 āxung, nf:
@@ -130,6 +133,8 @@ assa, nmw:
     all
 ǣġ-þer, adj:
     SEE ǣġhwæþer
+ǣl, nm:
+    eel
 ǣlċ, adj:
     each
 # TODO: Toller seems to think this is feminine??
@@ -282,6 +287,8 @@ be-bēodan, vs2:
     to command
 bedd, nn:
     bed
+bedecian, vw2:
+    to beg
 be-fōran, prep:
     before
 be-ġietan, vs5: past.1sg be-ġeat; past.pl be-ġēaton
@@ -313,6 +320,8 @@ bēon, vi: 1sg bēo; 2sg bist; 3sg biþ; past.1sg wæs; past.pl wǣron
     to be, esp. in the future; [with past participle] to have (done something)
 bēor, nm:
     beer, mead
+beorcan, vs3:
+    to bark
 beorg, nm:
     hill, mountain
 beorgan, vs3:
@@ -341,6 +350,8 @@ bere-ærn, nn:
     a place for storing barley or grain: barn
 berg, nm:
     SEE beorg
+berġe, nfw:
+    berry
 bern, nn:
     SEE bere-ærn
 berstan, vs3:
@@ -613,6 +624,9 @@ bȳtlian, vw2:
     to build
 byxen, adj:
     made of boxwood
+# TODO: declension
+calu, adj: stem calw
+    bald
 camb, nm:
     comb (for hair); crest, coxcomb
 car-ful, adj:
@@ -675,6 +689,8 @@ cǣġe, nfw:
     city; fortress, castle
 cemban, vw1:
     to comb
+cēne, adj:
+    keen, fierce, bold, brave, warlike
 ċeorfan, vs3: past.pl curfon; pp corfen
     to cut, cut down, carve
 ċēosan, vs2: past.pl curon; pp coren
@@ -697,6 +713,10 @@ cēpan, vw1: pp cēped|cēpt
     cheese
 ċild, nn: nom.pl ċild|ċildru|ċildra; gen.pl ċilda|ċildra; dat.pl ċildum|ċildrum
     child
+ċimbal, nm:
+    cymbal
+ċimbala, nmw:
+    SEE ċimbal
 # TODO: ċeorl or ċiorl?
 ċiorl, nm:
     man; husband; free peasant
@@ -808,8 +828,13 @@ cors, nm:
     SEE curs
 coss, nm:
     kiss
+cost, adj:
+    tried
+costian, vw2:
+    1. to tempt
+    2. to try, test
 costnian, vw2:
-    to tempt
+    SEE costian
 costnung, nf:
     temptation
 crabba, nmw:
@@ -923,10 +948,17 @@ cyln, nf:
 # TODO: fem. is i-stem
 cynd, nf, nm:
     nature; kind
+cyneg, nm:
+    SEE cyning
 cyng, nm:
+    SEE cyning
+cynig, nm:
     SEE cyning
 cyning, nm:
     king
+# Does NOT mean "kingdom"
+cyning-dōm, nm:
+    kingship, sovereignty
 cyninge, nfw:
     queen
 cynn, nn:
@@ -1404,10 +1436,10 @@ fīend, nmv:
     SEE fīond
 fierd, nf: acc fierd|fierde
     army, force, expedition
-fierdung, nf:
-    SEE fierd
 fierdian, vw2:
     to march
+fierdung, nf:
+    SEE fierd
 fīf, adji:
     five
 fīfta, adjw:
@@ -1541,8 +1573,8 @@ for-hwon, adv:
 for-hwȳ, adv:
     why
 for-lǣtan, vs7: past.1sg for-lēt; past.pl for-lēton
-    1. [intransitive] to leave
-    2. [transitive] to leave a place; to relinquish, give up, abandon (something)
+    1. [intrans.] to leave
+    2. [trans.] to leave a place; to relinquish, give up, abandon (something)
 forma, adjw:
     first
 forsċ, nm:
@@ -1674,6 +1706,8 @@ gamen, nn:
     game, sport, pastime
 gamenian, vw2:
     to play
+gamnian, vw2:
+    SEE gamenian
 gān, vi: 2sg gǣst; 3sg gǣþ; past īod; pp gān
     to go
 gandra, nmw:
@@ -1719,6 +1753,8 @@ gǣst, nm:
     yarn, spun wool
 ġeat, nn: stem.pl gat
     gate
+ġēatan, vw1:
+    to grant, affirm, assent, say yes to
 ġe-beorhtian, vw2:
     SEE beorhtian
 ġe-bēor-sċipe, nm:
@@ -1781,6 +1817,7 @@ gǣst, nm:
     enough, sufficient
 ġe-nōg, adv:
     enough, sufficiently
+# 2sg unattested, but conjugates like dugan
 ġe-nugan, vpp: 1sg ġe-nēah; 2sg ġe-nēaht; past ġe-noht; pp ġe-nugen
     to be enough, suffice
 ġeō, adv:
@@ -1816,14 +1853,14 @@ gǣst, nm:
 # TODO: Wiktionary suggests ġīese
 ġēse, int:
     yes
-ġe-sēon, vs5: 2sg ġe-siehst; 3sg ġe-siehþ; past.1sg ġe-seah; past.pl ġe-sāwon; pp ġe-sewen
+ġe-sēon, vs5: 2sg ġe-siehst; 3sg ġe-siehþ; past.1sg ġe-seah; past.pl ġe-sāwon; pp ġe-sewen; imp ġe-seoh
     SEE sēon
 ġe-sewen-līċ:
     visible
 ġe-sibbian, vw2:
     to pacify, appease; to ally, confederate; to gladden
 # TODO: past ġe-seowen or ġe-siowen?
-ġe-sīon, vs3: 2sg ġe-sīehst; 3sg ġe-sīehþ; past.1sg ġe-sāh; past.pl ġe-sigon; pp ġe-siġen|ġe-seowen|ġe-siwen
+ġe-sīon, vs3: 2sg ġe-sīehst; 3sg ġe-sīehþ; past.1sg ġe-sāh; past.pl ġe-sigon; pp ġe-siġen|ġe-seowen|ġe-siwen; imp ġe-sīoh
     to strain, filter
 ġe-strīenan, vw1:
     SEE strīonan
@@ -1902,6 +1939,9 @@ glīowian, vw2:
     to joke, jest; to play music
 glōf, nf:
     glove
+# TODO: mark gender as uncertain, but *probably* masculine
+glōm, nm:
+    gloom, twilight, darkness
 # TODO: BT doesn't know the verb class, but Wiktionary thinks it's strong VII
 #glōwan, vs7:
 #    to glow
@@ -1945,7 +1985,7 @@ Grendel, nm.sg:
     Grendel, a giant, monstrous antagonist of _Beowulf_
 grēne, adj:
     green
-grētan, vw1: past grētt; pp grēted
+grētan, vw1:
     to greet, approach; to call out to, bid farewell to
 grētan, vs7:
     SEE grǣtan
@@ -2087,6 +2127,8 @@ hearm, nm:
     harm
 hearpa, nmw:
     harp
+hēawan, vs7:
+    to hew, cut, strike
 hebban, vs6: 2sg hefst; 3sg hefþ; past.1sg hōf; past.pl hōfon; pp hafen; imp hefe
     to heave, lift up, raise
 heċġ, nf:
@@ -2411,6 +2453,12 @@ iċ, pron: acc mē|mec; gen mīn; dat mē
     SEE ēaland
 ielf, nm: nom.pl ielfe
     elf
+iġil, nm:
+    hedgehog
+iil, nm:
+    SEE iġil
+īl, nm:
+    SEE iġil
 ilca, adjw:
     same
 incer, adjs:
@@ -2467,6 +2515,8 @@ lācan, vs7: past.1sg leolc|lēc; past.pl leolcon|lēcon
     to sway
 lacu, nf:
     lake, pond, pool
+lafian, vw2:
+    to bathe, pour water on
 lagu, nm: gen.sg laga; dat.sg laga; nom.pl laga
     sea, water
 # Often becomes lah- in compounds
@@ -2513,7 +2563,7 @@ lǣran, vw1:
     to teach
 lǣrestre, nfw:
     female teacher
-lǣstan, vw1: pp lǣsted
+lǣstan, vw1:
     1. to follow
     2. to carry out, execute
 læt, adj:
@@ -2862,7 +2912,8 @@ nēah, adj: comp nēar; sup nīehst|nēhst
     near
 nēah, prep:
     near
-nearu, adj:
+# TODO: declension
+nearu, adj: stem nearw
     narrow
 nēat, nn:
     ox, cow, cattle, beast
@@ -2994,7 +3045,8 @@ oþ, prep:
 ōþer, adjs: stem ōþr
     other, another, second
 oþþe, conj:
-    or
+    1. or
+    2. [oþþe ... oþþe] either ... or
 oxa, nmw:
     ox
 # TODO: declension?
@@ -3063,6 +3115,8 @@ prȳd, nf:
     SEE prȳt
 prȳt, nf:
     pride
+pūca, nmw:
+    goblin, mischievous spirit
 pullian, vw2:
     to pull, pluck
 purpuren, adj:
@@ -3124,8 +3178,18 @@ rīċe, adj:
     rich
 rīċe, nn:
     kingdom
+rīcsian, vw2:
+    to rule, govern, reign
+rīcsiend, nm:
+    ruler
 rīdan, vs1:
     to ride
+ridda, nmw:
+    horseman, knight, rider
+rīdend, nm:
+    horseman, knight, rider
+rīdere, nm:
+    horseman, knigtht, rider
 rīfe, adj:
     rife, abundant
 rift, nn:
@@ -3236,6 +3300,8 @@ sċand, nf:
 # TODO: BT says it's masculine. Why?
 sċand-hūs, nn: dat.sg sċand-hūs|sċand-hūse
     brothel
+sċǣþ, nf:
+    SEE sċēaþ
 sċeabb, nm:
     scab
 sċeadu, nf: stem sċeadw
@@ -3255,6 +3321,8 @@ sċēap-hierde, nm:
     shepherd
 sċearp, adj:
     sharp
+sċēaþ, nf:
+    sheath, scabbard
 sċeaþa, nmw:
     one who inflicts harm: criminal, enemy; (more positively) warrior
 sċēawere, nm:
@@ -3401,7 +3469,7 @@ seofoþa, adjw:
     seventh
 seolh, nm: stem seol
     seal (animal)
-sēon, vs5: 2sg siehst; 3sg siehþ; past.1sg seah; past.pl sāwon; pp sewen
+sēon, vs5: 2sg siehst; 3sg siehþ; past.1sg seah; past.pl sāwon; pp sewen; imp seoh
     to see
 sēoþan, vs2:
     to seethe, boil
@@ -3568,7 +3636,7 @@ spātl, nn:
     spit, saliva
 spātlian, vw2:
     to spit out
-spǣtan, vw1: past spǣtt; pp spǣted
+spǣtan, vw1:
     to spit
 spǣtl, nn:
     SEE spātl
@@ -3649,6 +3717,10 @@ stæf, nm:
     1. staff, stick
     2. letter, character, glyph
     3. [plural] a letter, text; literature (cf. Latin _litterae_)
+stæl, nn:
+    place, stead
+stæppan, vs6: past.1sg stōp; past.pl stōpon; pp stapen
+    to step, go, proceed
 stēam, nm:
     steam
 stēap, adj:
@@ -3674,6 +3746,13 @@ steorfan, vs3:
     to die
 steorra, nmw:
     star
+steppan, vs6: past.1sg stōp; past.pl stōpon; pp stapen
+    SEE stæppan
+sticca, nmw:
+    1. stick, peg
+    2. spoon
+stician, vw2:
+    to stick, stab, pierce, prick
 stille, adj:
     still, quiet
 stincan, vs3:
@@ -4397,7 +4476,7 @@ wesan, vi: 1sg iom|eam|am; 2sg eart|art; 3sg is; pl sind|sint|sindon; subj sīe;
 wesend, nm:
     buffalo, wild ox; European bison, aurochs, wisent
 wesle, nfw:
-    weasel
+    SEE wiosule
 west, adj:
     west, western
 west, adv:
@@ -4465,6 +4544,8 @@ wīn-trēow, nn:
     vine
 wīo-fod, nn:
     altar
+wiosule, nfw:
+    weasel
 wīpian, vw2:
     to wipe
 wīr, nm:
@@ -4492,7 +4573,7 @@ wītega, nmw:
 witon, particle:
     SEE wuton
 wiþ, prep:
-    against
+    against; compared to
 wiþ-ūtan, prep:
     outside of
 wlitiġ, adj:
