@@ -12,6 +12,8 @@ abbudisse, nfw:
     SEE abbadisse
 ā-bīdan, vs1:
     to abide, remain, wait, wait for, await
+ā-bufan, adv:
+    above
 ac, conj:
     but
 āc, nfv: gen.sg āce|ǣċ; dat.sg ǣċ; nom.pl ǣċ
@@ -75,6 +77,8 @@ apostol, nm:
     to rise up, arise
 ār-līċ, adj:
     SEE ǣrlīċ
+ā-sċacan, vs6:
+    to shake off; to shake, brandish
 asċe, nfw:
     ash, ashes
 āscian, vw2:
@@ -291,10 +295,16 @@ bedecian, vw2:
     to beg
 be-fōran, prep:
     before
+be-ġeondan, prep:
+    beyond
+be-ġeondan, adv:
+    beyond
 be-ġietan, vs5: past.1sg be-ġeat; past.pl be-ġēaton
     to get, receive
 be-hēafdian, vw2:
     to behead
+be-hōfian, vw2:
+    to need, require
 be-lādian, vw2:
     to excuse, forgive
 bellan, vs3:
@@ -316,7 +326,7 @@ benn, nf:
     wound, injury
 bēodan, vs2:
     to command, order, bid
-bēon, vi: 1sg bēo; 2sg bist; 3sg biþ; past.1sg wæs; past.pl wǣron
+bēon, vi: 1sg bēo|bēom; 2sg bist; 3sg biþ; past.1sg wæs; past.pl wǣron
     to be, esp. in the future; [with past participle] to have (done something)
 bēor, nm:
     beer, mead
@@ -376,8 +386,14 @@ biddan, vs5:
     to request, ask for
 biernan, vs3:
     to burn (intrans.)
+bi-hōfian, vw2:
+    SEE behōfian
 bindan, vs3:
     to bind
+binnan, adv:
+    in, within, inside
+binnan, prep:
+    in, within, inside
 bīo, nf:
     bee
 bīoċere, nm:
@@ -576,6 +592,10 @@ bucc, nm:
     buck, male deer
 bucca, nmw:
     male goat
+bufan, prep:
+    above
+bufan, adv:
+    above, before
 būgan, vs2:
     to bow, bend; to submit, yield; to flee
 būgian, vw2:
@@ -816,6 +836,8 @@ cōc, nm:
     cook
 cocc, nm:
     rooster, cock, male bird
+col, nn:
+    coal
 cōl, adj:
     cool
 cōlian, vw2:
@@ -1373,6 +1395,10 @@ fǣttian, vw2:
     to fatten; to grow fat
 fæþm, nm, nf:
     embracing arms; fathom, six feet (the span of two outstretched arms)
+fealg, nf:
+    fallow land
+fealgian, vw2:
+    to fallow
 feallan, vs7:
     to fall, fall down
 fearh, nm: stem fēar
@@ -1673,6 +1699,9 @@ full, adv:
     fully
 full, nn:
     cup
+furh, nfv: gen.sg fyrh|fūre; gen.pl fūra; dat.pl fūrum
+    1. furrow, trench
+    2. fir, pine
 fyllan, vw1:
     to fill
 fȳlþ, nf:
@@ -1846,6 +1875,8 @@ gǣst, nm:
     to yearn
 ġe-reorde, nn:
     language
+ġe-sċafan, vs6:
+    to shave
 # TODO: acc ġe-sċeaft|ġe-ṡceafte for feminine only
 # TODO: redirect to sense
 ġe-sċeaft, nf, nn:
@@ -1870,6 +1901,10 @@ gǣst, nm:
     SEE strīonan
 ġe-sund, adj:
     healthy, sound
+ġe-twinn, nm:
+    twin
+ġe-twisa, nmw:
+    twin
 ġe-þēode, nn:
     language
 ġe-weorċan, vw1: past ġe-worht|ġe-wroht
@@ -2195,7 +2230,7 @@ hit, pron: acc hit; gen his; dat him
     it
 hlāf, nm:
     bread
-hlāf-ǣta, nm:
+hlāf-ǣta, nmw:
     bread eater; servant
 hlāford, nm:
     lord; God, Jehovah
@@ -2544,6 +2579,8 @@ lāþ, adj:
     loathsome
 lāþ, nn:
     a loathsome thing; loathsomeness
+lāwerce, nfw:
+    lark
 læċċan, vw1: past lǣht
     to catch
 lǣċe, nm:
@@ -3221,8 +3258,6 @@ Rōm, nf.sg:
     Rome
 Rōm-burg, nf.sg: gen.sg Rōm-byrġ|Rōm-byriġ; dat.sg Rōm-byrġ|Rōm-byriġ
     the city of Rome
-Rōm-burh, nf.sg: gen.sg Rōm-byrġ|Rōm-byriġ; dat.sg Rōm-byrġ|Rōm-byriġ
-    SEE Rōm-burg
 rōse, nfw:
     rose
 rotian, vw2:
@@ -3292,6 +3327,9 @@ sæp, nn:
     sap
 sæternes-dæġ, nm: stem.pl sæternes-dag
     Saturday
+sċacan, vs6:
+    1. to shake, quiver
+    2. to shake [something]
 sċamu, nf:
     shame, modesty, disgrace
 sċand, nf:
@@ -3396,6 +3434,8 @@ sċrēadian, vw2:
     to shred
 sċrēawa, nmw:
     shrew
+sċrincan, vs3:
+    to shrink, shrivel, contract, wither
 sċrybb, nf:
     scrub, underwood, shrubbery
 sċucca, nmw:
@@ -3557,6 +3597,8 @@ slīfe, nfw:
     SEE slīf
 slincan, vs3:
     to crawl; to slink away
+slūma, nmw:
+    slumber, sleep
 smalian, vw2:
     to become small, slender, etc.
 smæċċ, nm:
@@ -3707,6 +3749,10 @@ spurnan, vs3:
     SEE spornan
 spyrian, vw1:
     to track, follow
+staca, nmw:
+    stake
+stacga, nmw:
+    stag
 stān, nm:
     stone
 standan, vs6:  past.1sg stōd; past.pl stōdon
@@ -3847,6 +3893,8 @@ sunu, nm: gen.sg suna; dat.sg suna; nom.pl suna
     son
 sūr, adj:
     sour
+sūtere, nm:
+    shoemaker, cobbler
 sūþ, adj:
     south, southern
 sūþ, adv:
@@ -4256,6 +4304,8 @@ tyrdel, nn: stem tyrdl
 # TODO: BT has no indication of gender or declension
 ūder, nn: stem ūdr
     udder, mammary, breast
+ufan, adv:
+    from above
 ūle, nfw:
     owl
 umb, prep:
