@@ -606,10 +606,21 @@ def gen_variants_impl(next, results, preceding=""):
     if next == 'g' and preceding[-1] != 'n':
         # This is a word like burg, dēag, etc.
         results += [preceding, preceding + 'h']
+        return
     if next.startswith('īo'):
         gen_variants_impl(next[2:], results, preceding + 'ēo')
     elif next.startswith('io'):
         gen_variants_impl(next[2:], results, preceding + 'eo')
+        # Anglian smoothing
+        if next.startswith(('ioh', 'iorc', 'iorg', 'iorh')):
+            gen_variants_impl(next[2:], results, preceding + 'i')
+    elif next.startswith('ēo'):
+        gen_variants_impl(next[2:], results, preceding + 'īo')
+    elif next.startswith('eo'):
+        gen_variants_impl(next[2:], results, preceding + 'io')
+        # Anglian smoothing
+        if next.startswith(('eoh', 'eorc', 'eorg', 'eorh')):
+            gen_variants_impl(next[2:], results, preceding + 'e')
     elif next.startswith('īe'):
         gen_variants_impl(next[2:], results, preceding + 'ī')
         gen_variants_impl(next[2:], results, preceding + 'ȳ')
