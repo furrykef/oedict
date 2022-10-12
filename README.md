@@ -9,9 +9,9 @@ Thanks to the Englisċ Discord (https://discord.gg/9rwnDRC) for all their help!
 
 ## About the dictionary
 
-This dictionary attempts to prefer conservative spellings, on the grounds that it is easier to predict later forms from earlier ones than the other way around. Thus, for example, we prefer _burg_ to _burh_, since the Proto-Germanic form was _*burgz_; likewise, we prefer _ēaland_ to _īeġland_, since it is a compound of _ēa_ and _land_, and this spelling is attested. This is contrary to the practice of some dictionaries to prefer Late West Saxon forms. However, it is often tricky to determine which spelling is the most conservative, especially with our limited knowledge and resources, so we may not have always been successful.
+This dictionary attempts to prefer conservative spellings, on the grounds that it is easier to predict later forms from earlier ones than the other way around. Thus, for example, we prefer _burg_ to _burh_, since the Proto-Germanic form was _*burgz_; likewise, we prefer the Early West Saxon form _hīeran_ to the Late West Saxon form _hȳran_, since _īe_ indicates the vowel was produced by i-mutation of a diphthong. This is contrary to the practice of some dictionaries to prefer Late West Saxon forms. However, it is often tricky to determine which spelling is the most conservative, especially with our limited knowledge and resources, so we may not have always been successful.
 
-In any case, the dictionary tool attempts to account for variations in spelling, so, for example, looking up _iegland_ will correctly pull up _ēaland_, _kiningc_ will correctly pull up _cyning_, etc. This feature is not complete, however, and will probably miss many common spellings.
+In any case, the dictionary tool attempts to account for variations in spelling, so, for example, looking up `hyran` will correctly pull up _hīeran_, `kiningc` will correctly pull up _cyning_, etc. This feature is not complete, however, and will probably miss many common spellings.
 
 
 ## References
