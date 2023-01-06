@@ -26,6 +26,12 @@ class Entry(object):
         self.text = text
         self.num_lines = num_lines
 
+    def __eq__(self, other):
+        return (self.lemma == other.lemma
+            and self.word_types == other.word_types
+            and self.special == other.special
+            and self.text == other.text)
+
 
 class LexiconError(Exception):
     pass
