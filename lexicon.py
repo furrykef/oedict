@@ -1,3 +1,4 @@
+import dataclasses
 import re
 import sys
 import unicodedata
@@ -18,19 +19,25 @@ SPECIAL_TYPES = set((
 
 
 # NB: num_lines is only a crude hack to aid tracking the line number when parsing the file
+# TODO: list and dict (and therefore 'word_type' and 'special') are mutable
+@dataclasses.dataclass(frozen=True)
 class Entry(object):
-    def __init__(self, lemma, word_types, special, text, num_lines=0):
-        self.lemma = lemma
-        self.word_types = word_types
-        self.special = special
-        self.text = text
-        self.num_lines = num_lines
+    lemma: str
+    word_types: list
+    special: dict
+    text: str
+    num_lines: int
 
+    # TODO: ignores self.num_lines; good idea?
     def __eq__(self, other):
         return (self.lemma == other.lemma
             and self.word_types == other.word_types
             and self.special == other.special
             and self.text == other.text)
+
+    def __hash__(self):
+        # TODO: doesn't hash everything
+        return hash((self.lemma, self.text))
 
 
 class LexiconError(Exception):

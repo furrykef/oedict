@@ -181,6 +181,7 @@ class LexDB(object):
             entry[0],
             [x[0] for x in word_types],
             {x[0]: x[1] for x in special},
-            entry[1]
+            entry[1],
+            0
         )
 
