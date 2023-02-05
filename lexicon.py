@@ -7,7 +7,7 @@ import unidecode
 
 SPECIAL_TYPES = set((
     '1sg', '2sg', '3sg', 'pl', 'subj',
-    'past', 'past.1sg', 'past.pl',
+    'past', 'past.1sg', 'past.2sg', 'past.3sg', 'past.pl',
     'long.inf', 'pres.p', 'pp', 'imp',
     'acc', 'gen', 'dat', 'inst',
     'stem', 'stem.pl',
