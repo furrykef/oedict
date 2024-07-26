@@ -7,7 +7,7 @@ import unidecode
 
 SPECIAL_TYPES = set((
     '1sg', '2sg', '3sg', 'pl', 'subj',
-    'past', 'past.1sg', 'past.2sg', 'past.3sg', 'past.pl',
+    'past', 'past.1sg', 'past.2sg', 'past.pl',
     'long.inf', 'pres.p', 'pp', 'imp',
     'acc', 'gen', 'dat', 'inst',
     'stem', 'stem.pl',
@@ -407,7 +407,6 @@ def gen_verb(lemma, word_type, special):
             'pl': [inf_stem + 'aþ'],
             'past.1sg': [x + 'e' for x in past_stems],
             'past.2sg': [x + 'est' for x in past_stems],
-            'past.3sg': [x + 'e' for x in past_stems],
             'past.pl': [x + 'on' for x in past_stems],
             'past.subj.sg': [x + 'e' for x in past_stems],
             'past.subj.pl': [x + 'en' for x in past_stems],
@@ -460,7 +459,6 @@ def gen_verb(lemma, word_type, special):
             'pl': [inf_stem + 'aþ'],
             'past.1sg': [mutate(inf_stem, past_1sg_repl)],
             'past.2sg': [x + 'e' for x in past_pl_stems],
-            'past.3sg': [mutate(inf_stem, past_1sg_repl)],
             'past.pl': past_pls,
             'past.subj.sg': [x + 'e' for x in past_pl_stems],
             'past.subj.pl': [x + 'en' for x in past_pl_stems],
@@ -476,7 +474,6 @@ def gen_verb(lemma, word_type, special):
             result.update({
                 'past.1sg': [x + 'e' for x in special['past']],
                 'past.2sg': [x + 'est' for x in special['past']],
-                'past.3sg': [x + 'e' for x in special['past']],
                 'past.pl': [x + 'on' for x in special['past']],
                 'past.subj.sg': [x + 'e' for x in special['past']],
                 'past.subj.pl': [x + 'en' for x in special['past']],
@@ -497,7 +494,7 @@ def gen_verb(lemma, word_type, special):
         'inf', 'long.inf',
         '1sg', '2sg', '3sg', 'pl',
         'subj.sg', 'subj.pl',
-        'past.1sg', 'past.2sg', 'past.3sg', 'past.pl',
+        'past.1sg', 'past.2sg', 'past.pl',
         'past.subj.sg', 'past.subj.pl',
         'imp', 'imp.pl', 'pres.p', 'pp'
     ] }
