@@ -288,7 +288,7 @@ baþian, vw2:
 bæc, nn:
     back (of a person or animal's body)
 bæc-bord, nn:
-    port, the left side of a ship
+    port (side of ship)
 bæcere, nm:
     male baker
 bæcern, nn:
@@ -599,12 +599,22 @@ bodan, nm:
     SEE botm
 bodian, vw2:
     to tell, announce; to foretell, predict
+bodiġ, nm:
+    1. body
+    2. trunk (as opposed to head or limbs)
+    3. stature
+bog, nm:
+    1. arm, shoulder
+    2. bough
+    3. family branch
 boga, nmw:
     bow (weapon), arch
 bold, nn:
     building
 bolla, nmw:
     bowl, cup, pot
+bolle, nfw:
+    SEE bolla
 bolster, nm:
     pillow
 bolt, nm:
@@ -910,6 +920,8 @@ cēpan, vw1: past cēpt; pp cēped
     to sell
 ċīese, nm:
     cheese
+ċietel, nm:
+    kettle, pot, cauldron
 ċild, nn: nom.pl ċild|ċildru|ċildra; gen.pl ċilda|ċildra; dat.pl ċildum|ċildrum
     child
 ċild-hād, nm:
@@ -1632,6 +1644,10 @@ elpend-bǣnen, adj:
     ivory
 elpend-tōþ, nmv:
     elephant tusk
+el-þēod, nf:
+    foreign country
+el-þēodiġ, adj:
+    foreign, strange; barbarous
 emb, prep:
     SEE ymb
 embe, prep:
@@ -2642,6 +2658,20 @@ handle, nn:
     handle
 handlian, vw2:
     to handle, feel
+handlung, nf:
+    touching, handling
+hand-seax, nn:
+    short sword, dagger
+hand-tam, adj:
+    tame enough to be handled
+hand-weorc, nn:
+    handiwork
+hand-worht, adj:
+    hand-worked: made by hand
+hand-wundor, nn:
+    wondrous thing made by hand
+hangian, vw2:
+    to hang, be suspended
 hār, adj:
     hoar, hoary, gray, old
 hara, nmw:
@@ -4111,12 +4141,23 @@ rēad, adj:
     red
 rēafian, vw2:
     to plunder, rob
+# TODO: g or ġ?
+rēafiġend, nm:
+    plunderer, robber
+rēafol, adj:
+    rapacious
+rēafol-ness, nf:
+    rapacity
 rēam, nm:
     cream
 rēaw, nf:
     SEE rǣw
+rēc, nm:
+    smoke
+rēcan, vw1: past rēht
+    to smoke, steam (trans.)
 rēċan, vw1: past rōht
-    to care
+    to care [+gen: about something]
 reċċan, vw1:
     to stretch, extend
 reġn, nm:
@@ -4701,6 +4742,10 @@ smirian, vw2:
     SEE smirwan
 smirwan, vw1:
     to smear, anoint
+# TODO: should also mean "smite", but is such usage attested?
+smītan, vs1:
+    1. to daub, smear, smudge
+    2. to pollute
 smiþ, nm:
     smith, blacksmith, metalworker
 smiþian, vw2:
@@ -4818,8 +4863,10 @@ sperring, nf:
     strike, blow; striking
 spīcing, nm:
     spike
-spillan, vw1:
+spildan, vw1:
     to destroy
+spillan, vw1:
+    SEE spildan
 spinnan, vs3:
     to spin
 spitu, nf:
@@ -4880,6 +4927,20 @@ stæf, nm:
     1. staff, stick
     2. letter, character, glyph
     3. [plural] a letter, text; literature (cf. Latin _litterae_)
+stæf-craft, nm:
+    1. grammar
+    2. skill in letters; learning, study
+stæf-cræftiġ, adj:
+    skilled in letters; learned
+stæf-liornere, nm:
+    scholar
+stæf-wīs, adj:
+    literate
+# TODO: Wiktionary claims also masculine
+stǣġer, nf:
+    staircase
+stǣġer, adj:
+    steep
 stæl, nn:
     place, stead
 stǣnan, vw1:
@@ -4900,17 +4961,37 @@ stēda, nmw:
     steed, stallion
 stede, nm:
     place, spot; position
+stefn, nm:
+    SEE stemn
 stefn, nf:
     voice; vocalization
 stelan, vs4:
     to steal
 stellan, vw1:
     to place
+stemn, nm:
+    stem
 stemn, nf:
     SEE stefn
+stempan, vw1:
+    to stamp one's feet
 stenċ, nm:
     1. smell, scent, odor, stench
     2. sense of smell
+stēop-bearn, nn:
+    1. stepchild
+    2. orphan
+stēop-ċild, nn:
+    1. stepchild
+    2. orphan
+stēop-dohtor, nf: acc.sg stēop-dohtor; gen.sg stēop-dohtor|stēop-dehter; dat.sg stēop-dehter; nom.pl stēop-dohtor|stēop-dohtra|stēop-dohtru; gen.pl stēop-dohtra; dat.pl stēop-dohtrum
+    stepdaughter
+stēop-fæder, nm:
+    stepfather
+stēop-mōdor, nf: acc.sg stēop-mōdor; gen.sg stēop-mōdor|stēop-mēder; dat.sg stēop-mēder; nom.pl stēop-mōdor|stēop-mōdra|stēop-mōdru; gen.pl stēop-mōdra; dat.pl stēop-mōdrum
+    stepmother
+stēop-sunu, nm: gen.sg stēop-suna; dat.sg stēop-suna; nom.pl stēop-suna
+    stepson
 stēor, nm:
     steer, young bull or cow
 steorfan, vs3:
@@ -4924,6 +5005,26 @@ sticca, nmw:
     2. spoon
 stician, vw2:
     to stick, stab, pierce, prick
+stīf, adj:
+    stuff, unbending, rigid
+stīfian, vw2:
+    to be or become stiff
+stiġ, nn:
+    sty, pen
+stīg, nf:
+    path
+stīgan, vs1:
+    to go, esp. upwards or downwards; ascend; descend
+stiġel, nf:
+    stile
+# TODO: different etymologies, I presume
+stīgend, nm:
+    1. sailor
+    2. stye
+stigian, vw2:
+    to put in a sty or pen
+stiġ-rāp, nm:
+    stirrup
 stīlan, vw1:
     to steel, temper, harden
 stīle, nn:
@@ -4941,7 +5042,7 @@ stīor, nn:
 stīoran, vw1:
     to steer
 stīor-bord, nn:
-    starboard, the right side of a ship
+    starboard
 stīpel, nm:
     tower
 stocc, nm:
@@ -5079,6 +5180,11 @@ swefen, nn: stem swefn
     SEE swefn
 swefn, nn:
     sleep; dream
+swefnian, vw2:
+    to dream [w/ nom. or acc. of dreamer]
+# TODO: g or ġ?
+swefniġend, nm:
+    dreamer
 sweġer, nf: stem sweġr
     mother-in-law
 # TODO: other sources call this a pronoun, but is it?
@@ -5102,6 +5208,8 @@ swellan, vs3: past.1sg sweall
     to swell
 sweltan, vs3: past.1sg swealt
     to die
+sweofot, nn:
+    sleep
 swēor, nm:
     1. father-in-law
     2. cousin
@@ -5403,6 +5511,9 @@ tyhtan, vw1:
     2. to incite, exhort, provoke, solicit, prompt, urge, persuade
 tȳn, vw1:
     to teach
+# TODO: variant forms
+tynder, nf:
+    tinder
 # Only attested in plural
 # Appears to be diminutive of tord
 tyrdel, nn: stem tyrdl
@@ -5820,6 +5931,9 @@ wefan, vs5:
     to weave
 weġ, nm: stem.pl weg
     way, path, road
+wegan, vs5:
+    1. to carry, bear
+    2. to support
 wel, adv: comp bet|sēl; sup betest|betst|sēlest
     1. well; fastidiously
     2. about, approximately
