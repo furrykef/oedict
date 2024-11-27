@@ -1,2 +1,0 @@
-unidecode >= 1.3
-

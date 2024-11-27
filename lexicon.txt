@@ -100,6 +100,8 @@ asċe, nfw:
     question, asking
 assa, nmw:
     donkey, ass
+āte, nfw:
+    oat
 ātor, nn: stem ātr
     poison, venom
 ātor-coppe, nfw:
@@ -238,6 +240,8 @@ assa, nmw:
     before
 æt, prep:
     at
+ǣte, nfw:
+    SEE āte
 æt-fōran, prep:
     before, in front of
 æt-wesan, vi: 1sg æt-iom|æt-eam|æt-am; 2sg æt-eart|æt-art; 3sg æt-is; pl æt-sind|æt-sint|æt-sindon; subj æt-sīe; past.1sg æt-wæs; past.pl æt-wǣron; imp æt-wes
@@ -337,6 +341,15 @@ bēacnian, vw2:
     3. to show, indicate
 beadu, nf: stem beadw
     battle, war
+Beadu-wulf, nm.sg:
+    Beowulf
+bēag, nm:
+    ring, crown
+bēagian, vw2:
+    to crown
+# TODO: make sure bēah- is also generated
+bēag-ġiefa, nmw:
+    ring-giver; i.e., king
 beald, adj:
     bold, brave, confident, courageous
 bealluc, nm:
@@ -408,6 +421,8 @@ bendan, vw1:
     2. to bind, fetter
 benn, nf:
     wound, injury
+bēod, nm:
+    table
 bēodan, vs2:
     to command, order, bid
 beofor, nm:
@@ -442,6 +457,7 @@ bere, nfw:
     female bear
 be-rēafian, vw2:
     to bereave, seize, take away
+# TODO: alternate forms
 bere-ærn, nn:
     a place for storing barley or grain: barn
 # TODO: merge definition with be-rēafian?
@@ -683,6 +699,8 @@ brēad, nn:
     morsel, crumb; bread
 brecan, vs4:
     to break
+brēdan, vw1:
+    to cherish, nurture, hatch an egg
 breġdan, vs3: past.1sg bræġd|brǣd; past.pl brugdon; pp brogden
     to pull, drag; weave, braid; draw (a sword)
 brēmbel, nm:
@@ -806,6 +824,9 @@ bȳtlian, vw2:
     to build
 byxen, adj:
     made of boxwood
+# TODO: Wiktionary claims this is impersonal
+calan, vs6:
+    to be or become cool or cold
 # TODO: declension
 calu, adj: stem calw
     bald
@@ -894,6 +915,13 @@ cēne, adj:
 cennan, vw1:
     1. to make known
     2. to beget, conceive, create, bring forth
+ċēoce, nfw:
+    cheekbone, cheek
+# Wiktionary claims this also means "keel", but Toller said "dele" of this sense
+ċēol, nm:
+    ship
+ċeole, nfw:
+    throat, jowl
 ċeorfan, vs3: past.pl curfon; pp corfen
     to cut, cut down, carve
 ċeorl, nm:
@@ -930,6 +958,8 @@ cēpan, vw1: past cēpt; pp cēped
     womb, uterus
 ċild-isċ, adj:
     childish, puerile
+ċilian, vw2:
+    to be cold
 ċimbal, nm:
     cymbal
 ċimbala, nmw:
@@ -986,6 +1016,8 @@ clipian, vw2:
     to vocalize; to call, address; to summon by calling
 cloccian, vw2:
     to cluck
+clucge, nfw:
+    bell
 clūd, nm:
     stone, rock, boulder; hill
 clufu, nf:
@@ -1562,6 +1594,8 @@ earfoþe, adj:
 earg, adj:
     1. weak, timid, cowardly
     2. evil, wretched, vile
+ēar-læppa, nmw:
+    earlobe
 earm, nm:
     arm
 earm, adj:
@@ -1634,6 +1668,8 @@ el-boga, nmw:
     elbow
 ellen, nm, nn: stem eln
     courage, bravery, valor
+elles, adv:
+    else, otherwise
 eln-boga, nmw:
     SEE elboga
 elpend, nm:
@@ -1723,6 +1759,9 @@ fara, nmw:
 # Alternative past tense is from fēran. Ælfric apparently conspicuously avoided the strong preterite forms
 faran, vs6: past.1sg fōr|fērde; past.2sg fōre|fērdest
     to travel; fare
+faru, nf:
+    1. journey
+    2. family
 faþe, nfw:
     SEE faþu
 faþu, nf:
@@ -1737,6 +1776,11 @@ fǣġe, adj:
     3. feeble, timid
 fæġer, adj:
     beautiful, fair
+# Curiously NOT related to Lat. fēmina
+fǣmne, nfw:
+    virgin, young woman
+fǣmn-hād, nm:
+    virginity (of a female)
 fæng-tōþ, nmv:
     SEE feng-tōþ
 fǣr, nm:
@@ -1745,6 +1789,11 @@ fær, nn:
     journey
 fæst, adj:
     fast, fixed, firm, stiff; solid, constant, fortified
+fæstan, vw1:
+    1. to fasten
+    2. to fast, abstain (esp. from food)
+fæstnian, vw2:
+    to fasten
 fæt, nn:
     vessel, cup, vat
 fǣtt, adj:
@@ -1761,6 +1810,8 @@ fealgian, vw2:
     to fallow
 feallan, vs7:
     to fall, fall down
+fealle, nfw:
+    trap
 fearh, nm: stem fēar
     piglet
 fearn, nn:
@@ -1784,6 +1835,8 @@ feld, nm:
     field
 fellan, vw1:
     to fell, cause to fall, knock down, cut down
+fēmne, nfw:
+    SEE fǣmne
 fenester, nn: stem fenestr
     window
 # BT has "molar" for some reason, but this appears to be incorrect
@@ -1841,6 +1894,11 @@ field, nm:
     fold
 field-stōl, nm:
     folding chair
+fiell, nm:
+    1. fall; ruin, destruction, death
+    2. grammatical case
+fiellan, vw1:
+    to fell, cause to fall; to destroy
 fīend, nmv:
     SEE fīond
 fierd, nf: acc fierd|fierde
@@ -1954,7 +2012,12 @@ flocc, nm:
     flock, band, company, division
 flōd, nn, nm:
     flow, wave, tide, flood, sea, river
-flōr, nm:
+# TODO: g or ġ?
+flogettan, vw1:
+    1. to fly about, flutter
+    2. to be uncertain, waver
+# TODO: also u-stem?
+flōr, nf:
     floor
 flota, nmw:
     ship, vessel; fleet; sailor, pirate
@@ -2001,6 +2064,7 @@ for-ċēowan, vs2: past.pl for-cuwon; pp for-cowen
     to bite off
 for-ċippian, vw2:
     to cut off
+# TODO: also u-stem?
 ford, nm: dat.sg forde|forda
     shallow, shoal, ford
 # TODO: past participle (see ġiefan)
@@ -2340,6 +2404,8 @@ gealga, nmw:
     yoke
 ġeofa, nmw:
     SEE ġiefa
+ġeoguþ, nf:
+    youth
 ġēol, nn:
     yule, yuletide, Christmas
 ġeolca, nmw:
@@ -2435,8 +2501,8 @@ gealga, nmw:
     to recover from illness
 ġe-wyrċan, vw1: past ġe-worht|ġe-wroht
     SEE wyrċan
-ġicce, nfw:
-    itch
+ġicel, nm:
+    icicle
 ġiefa, nmw:
     giver
 # TODO: BT has pp "ġifen", Eagles has "ġiefen", Wiktionary has "ġefen" (which is also generated by our tool). When this is resolved, be sure to do this for derived forms as well.
@@ -2596,10 +2662,19 @@ guma, nmw:
     man
 gutt, nm:
     gut, entrail
+# TODO: is the verb class confirmed?
+ġyċċan, vw1:
+    to itch
+ġyċċe, nfw:
+    itch
+ġyċċiġ, adj:
+    itchy, irritating (of skin diseases)
 gydenn, nf:
     goddess
 gydiġ, adj:
     possessed, mad
+gyldan, vw1:
+    to gild
 gylden, adj: stem gyldn
     golden
 gylt, nm:
@@ -2615,6 +2690,8 @@ habban, vw3: long.inf hæbbenne|habbanne; 1sg hæbbe; 2sg hæfst|hafast; 3sg hæ
     to have, possess; to have (done something)
 haccian, vw2:
     to hack
+hacele, nfw:
+    cloak
 hād, nm:
     1. person
     2. sex, gender
@@ -2684,8 +2761,14 @@ hātan, vs7: past.1sg hēt; past.pl hēton
     to call; order, command
 hatian, vw2:
     to hate
+hātian, vw2:
+    to be or become hot
 hæċċ, nf:
     hatch
+# TODO: Wiktionary calls this feminine, but were there feminine -a nouns?
+# (This form is probably Northumbrian, which may be relevant here)
+hæcla, nmw:
+    SEE hacele
 hæġel, nm: stem hæġl
     SEE hæġl
 hæġl, nm:
@@ -2703,7 +2786,9 @@ hǣlþ, nf:
 # TODO: BT claims this is invariable, which it does seem to be
 hǣlu, nf:
     health, safety, salvation
-hǣmed, nn: stem.pl hǣmdr
+hǣman, vw1:
+    to have sexual intercourse; to marry; to commit adultery
+hǣmed, nn:
     sexual intercourse, coitus
 hænep, nm:
     SEE henep
@@ -2735,6 +2820,10 @@ hēah-fore, nfw:
     heifer, female cow
 hēah-fru, nf:
     heifer, female cow
+hēah-weġ, nm: stem.pl hēah-weg
+    highway, main road
+hēah-weorc, nn:
+    lofty work
 healdan, vs7:
     to hold
 healf, nf:
@@ -2749,6 +2838,8 @@ heard, adj:
     hard, firm; stern, stubborn
 hearm, nm:
     harm
+hearma, nmw:
+    ermine; shrewmouse; field mouse, dormouse
 hearpa, nmw:
     harp
 hēawan, vs7:
@@ -2830,6 +2921,10 @@ hīew, nn:
     shape, form, color, hue, beauty
 hīgian, vw2:
     to hie, hurry, hasten, strive
+hilt, nm, nn:
+    hilt, handle
+hilte, nfw:
+    hilt, handle
 hindan, adv:
     from behind
 hind-beriġe, nfw:
@@ -2844,6 +2939,12 @@ hīo, pron: acc hīe; gen hire; dat hire
     she, her; it (referring to a feminine noun)
 hīo-dæġ, adv:
     today
+# TODO: etymology. Bosworth had this at hȳpe and Toller said to move it to hīpe but did not explain why.
+hīpe, nfw:
+    heap
+# TODO: etymology. Bosworth had this at hȳpel and Toller said to move it to hīpe but did not explain why.
+hīpel, nm:
+    heap
 hit, pron: acc hit; gen his; dat him
     it
 hlāf, nm:
@@ -2862,6 +2963,9 @@ hlēapan, vs7:
     to leap, jump; dance; run
 hliehhan, vs6: past.1sg hlōg|hlōh; past.pl hlōgon; pp hlagen; imp hlieh
     to laugh
+# Origin of "links" as in golf course
+hlinc, nm:
+    rising ground, ridge
 hlinian, vw2:
     to lean, bend, lie down, recline, rest
 hlionian, vw2:
@@ -2875,6 +2979,20 @@ hlōwan, vs7:
     to low, bellow
 hlūd, adj:
     loud
+hlūd-ness, nf:
+    loudness, clamor
+hlȳd, nm:
+    noise, sound, tumult
+hlȳd, nf:
+    rumor, chatter
+Hlȳda, nmw.sg:
+    March
+hlȳdan, vw1:
+    to make a noise, chatter, shout
+hlȳdiġ, adj:
+    garrulous, talkative
+hlysnan, vw1:
+    to listen
 hnappian, vw2:
     to nap, doze; to get drowsy
 hnǣġan, vw1:
@@ -3082,6 +3200,12 @@ hwæt, adj:
     quick, active, vigorous, stout, bold, brave
 hwǣte, nm:
     wheat
+hwǣte-corn, nn:
+    grain of wheat
+hwǣte-land, nm:
+    wheatland
+hwǣten, adj:
+    wheat
 hwæt-hwugu, pron: acc hwæt-hwugu; gen hwæs-hwugu; dat hwǣm-hwugu|hwām-hwugu; inst hwȳ-hwugu|hwon-hwugu
     something
 hwæt-hwugu, adv:
@@ -3145,12 +3269,21 @@ hyngriġ, adj:
     SEE hungriġ
 hype, nm:
     hip
-hȳpe, nfw:
-    heap
 hype-bān, nn:
     hipbone, pelvis
+hype-seax, nn:
+    dagger or short sword hanging at the hip
+# Origin of "hire"
 hȳr, nf:
     wages, payment for services, interest
+hȳrling, nm:
+    hireling, one who works for hire
+hyrnan, vw1:
+    to project in the shape of a horn or wedge
+hyrne, nfw:
+    horn; corner, angle
+hyrned, adj:
+    horned; having angles or corners
 hyrnet, nf:
     SEE hyrnetu
 hyrnetu, nf:
@@ -3181,12 +3314,16 @@ incer, adjs:
     your (of two people)
 inn, adv:
     in, within, inside
+inn, nn:
+    dwelling, house, chamber, lodging
 innan, adv:
     in, within, inside
 innan, prep:
     in, within, inside
 inne, adv:
     inside
+innian, vw2:
+    to get in or put in; to lodge
 in-timbrian, vw2:
     to instruct, teach
 in-tinga, nmw:
@@ -3286,6 +3423,9 @@ lǣfan, vw1:
     2. to remain, be left
 læfel, nm:
     cup, vessel, bowl
+læppa, nmw:
+    1. skirt of a garment
+    2. lobe
 lǣran, vw1:
     to teach
 lǣrestre, nfw:
@@ -3453,12 +3593,19 @@ magan, vpp: 1sg mæġ; 2sg meaht|miht; subj mæġe; past meaht|miht; pp magen
 # TODO: redirect specifically to sense of "stomach"
 mage, nfw:
     SEE maga
+maġister, nm:
+    master
 magu, nm: gen.sg maga; dat.sg maga; nom.pl maga
     child, son, boy
 māl, nn:
     mole, spot, mark
 mangere, nm:
     merchant, vendor, trader, dealer
+mangian, vw2:
+    to trade, act as a monger
+mangung, nf:
+    1. trade, traffic, business, commerce, dealing
+    2. merchandise
 maniġ, adjs: comp -; sup -
     many
 mann, nmv:
@@ -3470,7 +3617,7 @@ mann-cynn, nn:
     2. mankind, humanity
 mannian, vw2:
     to man, garrison
-# TODO: BT claims this is weak, despite the -u nominative
+# TODO: BT claims this is weak, despite the -u nominative. Wiktionary believes it declines like wudu.
 manu, nf: acc.sg manu; nom.pl mana
     mane
 # Attested in masculine despite trēow being neuter
@@ -3494,9 +3641,10 @@ masc, nn:
     mesh, net
 māse, nfw:
     titmouse
+# TODO: which should be headword, matt, matte, or meatte?
 matt, nf:
     mat
-matte, nf:
+matte, nfw:
     SEE matt
 matte, nfw:
     mat
@@ -3518,6 +3666,17 @@ mæġden-ċild, nn:
     girl, female child
 mæġen, nn: stem mæġn
     might, strength, force, power
+mæġeþ-hād, nm:
+    virginity (of either male or female)
+mǣġ-hǣmed, nn:
+    incest
+mæġister, nm:
+    SEE maġister
+mǣġþ, nf:
+    1. family, stock, race, kindred
+    2. tribe, people
+mæġþ-hād, nm:
+    SEE mæġeþ-hād
 mǣne, adj:
     1. common, general, mutual
     2. mean, wicked, false, evil
@@ -3543,7 +3702,7 @@ mearg, nn, nm:
 mearh, nm: stem mēar
     horse, steed
 meatte, nfw:
-    SEE matte
+    SEE matt
 # TODO: confirm declension
 medu, nm: gen.sg meda|medwes; dat.sg meda|medwe; nom.pl meda|medwas; gen.pl meda|medwa; dat.pl medum|medwum
     mead
@@ -3634,8 +3793,12 @@ minte, nfw:
     mint plant
 mis-dǣd, nf: acc mis-dǣd|mis-dǣde
     misdeed, transgression, offense, injury
+# TODO: BT does not include gender
+miss, nn:
+    loss
 missan, vw1: past mist
-    to miss
+    1. to miss, fail to hit [+gen]
+    2. to escape the notice of [+dat]
 mist, nm:
     mist; dimness, darkness
 mistiġ, adj:
@@ -3961,6 +4124,15 @@ or-dāl, nn:
     judgment
 ord-fruma, nmw:
     source, origin; beginning
+# TODO: BT uncertain of gender
+or-læġ, nn:
+    fate
+or-leġe, nn:
+    war, strife, hostility
+or-leġe, adj:
+    hostile
+or-leg-hwīl, nf:
+    wartime
 or-sorg, adj:
     carefree
 ort-ġeard, nm:
@@ -4282,6 +4454,8 @@ saga, nmw:
 sagu, nf:
     1. saw
     2. saying, statement, story, report
+sala, nmw:
+    sale
 samod, adv:
     together, at the same time, simultaneously
 samod, prep:
@@ -4302,6 +4476,9 @@ sārian, vw2:
 # Sense of "(I'm) sorry" seems to be unattested
 sāriġ, adj:
     grieving
+sār-līċ, adj:
+    1. sad, mournful, lamentable, grievous
+    2. expressing sorrow or grief: sad, mournful
 sāwan, vs7:
     to sow
 sāwel, nf: stem sāwl
@@ -4317,6 +4494,10 @@ sāwul, nf: stem sāwl
 # TODO: BT lists some odd forms. Can we find examples for them all?
 sǣ, nm: acc.sg sǣ; dat.sg sǣ; gen.pl sǣ; nom.pl sǣ; gen.pl sǣwa; dat.pl sǣm|sǣwum
     sea
+sǣ-cyning, nm:
+    sea king, a king who was powerful on the sea
+sæd, adj:
+    sated, weary, filled; having had one's fill
 sǣd, nn:
     seed
 sæl, nn:
@@ -4369,11 +4550,23 @@ sċeap, nn:
     genital, private part
 sċēap, nf:
     sheep
+sċēapen, adj:
+    of a sheep
 sċēap-hierde, nm:
     shepherd
+sċēap-wīc, nn:
+    sheepfold
 # TODO: plural only?
 sċēar, nf:
     scissor, shear
+sċeard, nn:
+    shard, potsherd, tile
+sċearn, nn:
+    dung, manure
+sċearn-wibba, nmw:
+    dung beetle
+sċearn-wifel, nm:
+    dung beetle
 sċearp, adj:
     sharp
 sċear-seax, nn:
@@ -4516,6 +4709,8 @@ sealten, adj:
     salt, salted
 sealtere, nm:
     salt worker
+sealtian, vw2:
+    to dance
 sēam, nm:
     seam
 sēamere, nm:
@@ -4593,9 +4788,19 @@ setlan, vw1:
 settan, vw1:
     to set, put down
 sibb, nf:
-    relationship; peace, friendliness
+    1. relationship
+    2. peace, friendliness
 sibling, nm:
     relative, kinsman
+sīcan, vs1:
+    1. to sigh, groan
+    2. to long for
+siċettan, vw1:
+    to sigh, groan
+sīcle, adj:
+    sickly
+sīclian, vw2:
+    to become sick
 sicol, nm:
     sickle
 sicor, adj:
@@ -4618,6 +4823,14 @@ sife, nn:
     sieve
 siftan, vw1:
     to sift, pass through a sieve
+siġe, nm:
+    victory, triumph
+sihþ, nf:
+    sight, vision
+sigor, nm:
+    victory, triumph
+sigorian, vw2:
+    to vanquish, triumph (over)
 simle, adv:
     always
 sīn, adjs:
@@ -4682,10 +4895,22 @@ slēfe, nfw:
 # TODO: vw1 variant
 slēpan, vs7: past.1sg slēp; past.pl slēpon
     SEE slǣpan
+slīc, adj:
+    sleek, smooth
+slician, vw2:
+    to make sleek, smooth, or glossy 
 slīdan, vs1:
     to slide, slip, fall; to err
 slide, nm:
     slip, fall; error
+slidor, adj:
+    slippery
+# TODO: really weak 1?
+slidorian, vw1:
+    to slither, slide
+# TODO: really weak 1?
+slidrian, vw1:
+    SEE slidorian
 slīf, nf:
     sleeve
 slīfan, vs1:
@@ -4782,12 +5007,16 @@ snīþan, vs1:
     to cut
 snīwan, vw1:
     to snow
-snōd, nfw:
+snōd, nf:
     snood, fillet, headdress
 snoffa, nmw:
     nausea
 snoru, nf:
     daughter-in-law
+snotor, adj:
+    prudent, wise, sagacious
+snottor, adj:
+    SEE snotor
 socc, nm:
     sock
 socian, vw2:
@@ -4824,7 +5053,8 @@ spannan, vs7:
 spanu, nf:
     teat
 sparian, vw2:
-    to spare, show mercy to
+    1. to spare, show mercy to
+    2. to spare, preserve, not use
 spātl, nn:
     spit, saliva
 spātlian, vw2:
@@ -4923,6 +5153,17 @@ stān-wyrhta, nmw:
     stonemason
 starian, vw2:
     to stare; to gaze upon (with _on_ or _tō_)
+staþol, nm:
+    1. foundation
+    2. fixed position: place, site
+staþol-fæst, adj:
+    1. fixed in place
+    2. firm, unwavering
+staþolian, vw2:
+    1. to establish, found
+    2. to make steadfast
+staþoliend, nm:
+    founder
 stæf, nm:
     1. staff, stick
     2. letter, character, glyph
@@ -4958,9 +5199,11 @@ stearcian, vw2:
 stebb, nm:
     SEE stybb
 stēda, nmw:
-    steed, stallion
+    steed, stallion, camel
 stede, nm:
     place, spot; position
+stede-fæst, adj:
+    steadfast, constant; holding one's ground
 stefn, nm:
     SEE stemn
 stefn, nf:
@@ -5005,6 +5248,12 @@ sticca, nmw:
     2. spoon
 stician, vw2:
     to stick, stab, pierce, prick
+stīelan, vw1:
+    to steel, temper, harden
+stīele, nn:
+    steel
+stīelen, adj:
+    steel
 stīf, adj:
     stuff, unbending, rigid
 stīfian, vw2:
@@ -5025,12 +5274,11 @@ stigian, vw2:
     to put in a sty or pen
 stiġ-rāp, nm:
     stirrup
-stīlan, vw1:
-    to steel, temper, harden
-stīle, nn:
-    steel
+# TODO - check generated inflections
 stille, adj:
     still, quiet
+still-ness, nf:
+    quiet, silence; peace, tranquility
 stincan, vs3:
     to give off a smell; to stink
 stingan, vs3:
@@ -5170,6 +5418,8 @@ swæþ, nn:
     track, footprint, vestige
 swealwe, nfw:
     swallow (bird)
+swearm, nm:
+    swarm, crowd
 sweart, adj:
     dark, black, swarthy
 swebban, vw1:
@@ -5215,6 +5465,8 @@ swēor, nm:
     2. cousin
 sweord, nn:
     sword
+sweorfan, vs3:
+    to rub, scour, file
 sweostor, nf: acc.sg sweostor; gen.sg sweostor; dat.sg sweostor; nom.pl sweostor|sweostra|sweostru; gen.pl sweostra; dat.pl sweostrum
     mother
 swerian, vs6: 2sg swerest; 3sg swereþ; past.1sg swōr; past.pl swōron; pp sworen; imp swere
@@ -5245,6 +5497,13 @@ swingan, vs3:
     to whip, flog, strike, beat
 swīn-hierde, nm:
     swineherd, pig farmer
+# TODO: check generated forms
+Swīon, nmw.pl:
+    the Swedes
+Swīo-land, nn:
+    Sweden
+Swīo-rīċe, nn:
+    Sweden
 swīþ, adj:
     strong
 swīþe, adv:
@@ -5277,6 +5536,9 @@ tācn, nn:
     token, sign
 tācnian, vw2:
     to mark, indicate, signify
+# TODO: inflected forms
+tādiġe, nfw:
+    toad
 talu, nf:
     tale, story
 tam, adj:
@@ -5362,6 +5624,7 @@ tīen-nihte, adj:
     ten days old; ten days long
 tīen-wintre, adj:
     ten years old; ten years long
+# TODO: g or ġ?
 tigele, nfw:
     tile, brick
 tilia, nmw:
@@ -5462,8 +5725,14 @@ trum, adj:
     strong, firm; healthy
 trumian, vw2:
     to grow strong, recover from illness
+trymian, vw2:
+    SEE trymman
 trymman, vw1:
     to strengthen
+trymmian, vw2:
+    SEE trymman
+trymþ, nf:
+    strength, support
 tūn, nm:
     an enclosed yard or court; town
 tunge, nfw:
@@ -5547,6 +5816,9 @@ tyrning, nf:
 þæc, nn:
     1. roof
     2. roofing material: thatch
+# TODO: g or ġ?
+þæc-tigele, nfw:
+    roof tile
 þæder, adv:
     to there, thither
 þǣr, adv:
@@ -5568,6 +5840,8 @@ tyrning, nf:
     though, although
 þēah, adv:
     yet, still, however, nevertheless
+þeċċan, vw1:
+    to cover
 þeġn, nm:
     thane, knight, mid-ranking nobleman; servant
 þeġnian, vw2:
@@ -5576,6 +5850,8 @@ tyrning, nf:
     to think, opine
 þēod, nf:
     nation, people
+þēoden, nm:
+    chief, lord
 þēod-wita, nmw:
     wise man, sage; senator
 þēof, nm:
@@ -5624,6 +5900,12 @@ tyrning, nf:
     thing
 þis, pron: acc þis; gen þisses; dat þissum; inst þȳs
     this (neuter)
+þole-mōd, adj:
+    patient; long-suffering
+þole-mōd-ness, nf:
+    patience, long-suffering, endurance
+þolian, vw2:
+    to suffer, endure
 þorn, nm:
     thorn
 þorniġ, adj:
@@ -5875,6 +6157,8 @@ weald, adj:
 weald, conj:
     1. [with þēah] perhaps, maybe
     2. in case
+wealda, nmw:
+    ruler, monarch
 wealdan, vs7:
     have power over; wield
 wealh, nm: stem wēal
@@ -6121,6 +6405,9 @@ witt, nm:
     right mind, wits; intelligence; mind
 wiþ, prep:
     against; compared to
+# TODO: This form is more conservative than wiþ; should it be the main entry?
+wiþer, prep:
+    SEE wiþ
 wiþ-ūtan, prep:
     outside of
 wlitiġ, adj:
@@ -6146,8 +6433,18 @@ wolcne, nfw:
     SEE wolcen
 word, nn:
     word
+word-fæst, adj:
+    reliable, keeping one's word
+wordian, vw2:
+    to speak
+wordiġ, adj:
+    wordy, verbose
 woruld, nf:
     SEE weorold
+wōs, nm:
+    moisture, juice
+wōsiġ, adj:
+    juicy, succulent
 wracu, nf:
     pain, suffering, misery
 wrang, nn:
@@ -6213,6 +6510,10 @@ wurþ, nn, adj:
     SEE weorþ
 wurþan, vs3:
     SEE weorþan
+wūsc, nm: gen.sg wūsċes; dat.sg wūsċe
+    wish, choice
+wūsc-bearn, nm:
+    adopted child
 # TODO: Better word type?
 # TODO: Move to "witon"? Supposedly it's the oldest form
 wuton, particle:
@@ -6245,9 +6546,10 @@ wyrþ, nn, adj:
     SEE weorþ
 wyrþan, vs3:
     SEE weorþan
-wysċ, nm:
-    choice
-wysċan, vw1:
+# TODO: automatically copy definition from wūsc
+wȳsċ, nm:
+    wish, choice
+wȳsċan, vw1:
     to wish
 # TODO: why wiers- and not wirs- or wyrs-?
 yfel, adj: comp wiersa; sup wierst

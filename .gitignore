@@ -132,5 +132,4 @@ dmypy.json
 ### KEF'S ADDITIONS
 
 *.out.sqlite3
-venv/
 

@@ -4,7 +4,7 @@ import tempfile
 
 import sqlite3
 
-import lexicon
+from . import lexicon
 
 
 SCHEMA = """

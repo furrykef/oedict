@@ -1,11 +1,10 @@
-#!/usr/bin/env python
 import html
 
 import flask
 import markdown
 
-import lexdb
-import lexicon
+from . import lexdb
+from . import lexicon
 
 
 LEX_FILENAME = 'lexicon.txt'

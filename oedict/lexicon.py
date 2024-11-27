@@ -19,7 +19,7 @@ SPECIAL_TYPES = set((
 
 
 # NB: num_lines is only a crude hack to aid tracking the line number when parsing the file
-# TODO: list and dict (and therefore 'word_type' and 'special') are mutable
+# TODO: list and dict (and therefore 'word_types' and 'special') are mutable
 @dataclasses.dataclass(frozen=True)
 class Entry(object):
     lemma: str

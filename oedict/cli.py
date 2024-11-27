@@ -1,10 +1,9 @@
-#!/usr/bin/env python
 import argparse
 import sys
 import textwrap
 
-import lexdb
-import lexicon
+from . import lexdb
+from . import lexicon
 
 
 def main(argv=None):
@@ -49,8 +48,4 @@ def lookup(db, search_str, reverse):
             types = "; ".join(lexicon.expand_word_type(word_type) for word_type in entry.word_types)
             print(f"{entry.lemma}: {types}")
             print(textwrap.indent(entry.text, " "*4))
-
-
-if __name__ == '__main__':
-    main()
 
